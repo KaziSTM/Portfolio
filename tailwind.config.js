@@ -8,9 +8,6 @@ export default {
 
     theme: {
         extend: {
-            fontFamily: {
-                sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-            },
             colors: {
                 primary: colors.teal,
                 secondary: colors.gray,
@@ -18,6 +15,12 @@ export default {
                 negative: colors.red,
                 warning: colors.amber,
                 info: colors.cyan,
+            },
+            fontFamily: {
+                sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+            },
+            rotate: {
+                10: "10deg",
             },
         },
     },

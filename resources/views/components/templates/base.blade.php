@@ -14,22 +14,17 @@
     @endif
 
     <meta name="description" content="Laravel Jetstream">
-    <link rel="shortcut icon" href="{{ 'images/logo/logo.png' }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo/favicon.ico') }}">
 
-    <wireui:scripts />
-    {{-- @filamentStyles --}}
     @vite(['resources/css/app.css'])
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <wireui:scripts />
 
 </head>
 
 <body class="antialiased tracking-tight">
-    <x-dialog />
-    <x-notifications />
+
     @yield('body')
-    {{-- @filamentScripts --}}
 </body>
 
 </html>

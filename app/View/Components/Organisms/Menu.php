@@ -19,24 +19,19 @@ class Menu extends Component
             [
                 'label' => 'Home',
                 'route' => 'home',
-                'icon' => 'home',
-
             ],
-            // [
-            //     'label' => 'Organized events',
-            //     'route' => null,
-            //     'icon' => 'bookmark',
-            // ],
-            // [
-            //     'label' => 'New',
-            //     'route' => null,
-            //     'icon' => 'newspaper',
-            // ],
-            // [
-            //     'label' => 'Contacts',
-            //     'route' => null,
-            //     'icon' => 'user',
-            // ],
+            [
+                'label' => 'About',
+                'route' => '',
+            ],
+            [
+                'label' => 'Work',
+                'route' => '',
+            ],
+            [
+                'label' => 'Contact',
+                'route' => '',
+            ],
         ];
     }
 

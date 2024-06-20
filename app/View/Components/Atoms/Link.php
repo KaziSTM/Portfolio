@@ -19,7 +19,7 @@ class Link extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(string $route = '', string $label = '')
+    public function __construct( string $label = '',?string $route = null)
     {
         $this->label = $label;
         $this->route = $route;
