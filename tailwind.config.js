@@ -1,4 +1,5 @@
 /** @type {DefaultColors} */
+import forms from "@tailwindcss/forms";
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
@@ -32,7 +33,7 @@ export default {
             backgroundColor: ["active"],
         },
     },
-    presets: [require("./vendor/wireui/wireui/tailwind.config.js")],
+    presets: [require("./vendor/tallstackui/tallstackui/tailwind.config.js")],
     content: [
         "./resources/**/*.html",
         "./resources/**/*.js",
@@ -44,9 +45,7 @@ export default {
         "./resources/**/*.twig",
         "./storage/framework/views/*.php",
         "./node_modules/flowbite/**/*.js",
-        "./vendor/wireui/wireui/resources/**/*.blade.php",
-        "./vendor/wireui/wireui/ts/**/*.ts",
-        "./vendor/wireui/wireui/src/View/**/*.php",
+        "./vendor/tallstackui/tallstackui/src/**/*.php",
     ],
     safelist: [
         "max-w-xs",
@@ -67,6 +66,7 @@ export default {
         "2xl:max-w-7xl",
     ],
     plugins: [
+        forms,
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
         require("@tailwindcss/aspect-ratio"),
