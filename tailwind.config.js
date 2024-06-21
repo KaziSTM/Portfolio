@@ -10,7 +10,19 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: colors.teal,
+                primary: {
+                    50: "#f0faff",
+                    100: "#e0f3fe",
+                    200: "#bae5fd",
+                    300: "#7dcffc",
+                    400: "#38b4f8",
+                    500: "#0e9be9",
+                    600: "#0281c7",
+                    700: "#0369a1",
+                    800: "#075885",
+                    900: "#0c4b6e",
+                    950: "#083249",
+                },
                 secondary: colors.gray,
                 positive: colors.lime,
                 negative: colors.red,

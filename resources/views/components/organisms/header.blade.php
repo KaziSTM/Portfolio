@@ -1,4 +1,4 @@
-<header class="relative py-4 md:py-6 border-b border-secondary-200">
+<header class="relative py-4 md:py-6 border-b border-secondary-200 z-[99]">
     <div class="flex items-center justify-between w-full mx-auto max-w-8xl px-6 md:px-32">
         <div class="flex-shrink-0">
             <x-atoms.logo class="w-12 h-10" />
