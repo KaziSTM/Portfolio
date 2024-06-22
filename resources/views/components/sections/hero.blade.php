@@ -1,12 +1,12 @@
 <div class="relative">
     <img loading="lazy" width="1728" height="894" src="{{ asset('assets/svg/home-hero-gradient.svg') }}"
         class="absolute top-0">
-    <div class="relative py-20 px-4 md:py-28 lg:py-32 lg:px-8">
+    <x-atoms.section>
         <div class="container mx-auto text-center lg:text-left">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 xl:gap-32 items-center">
                 <div class="">
-                    <h1 class="space-y-4 text-2xl font-bold text-black md:text-4xl lg:text-5xl xl:text-6xl">
-                        <div class="relative text-primary-200 inline-flex">
+                    <x-atoms.title>
+                        <div class="relative text-primary-200 inline-flex mb-2">
                             <svg class="absolute w-2/5 inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249 22" fill="currentColor"
                                 class="dHctYWJzb2x1dGU dHctbGVmdC0w dHctdG9wLTIvMw dHctaC0[0.6em] dHctdy1mdWxs dHctZmlsbC1za3ktMjAwLzc1">
@@ -20,8 +20,8 @@
                             </h1>
                         </div>
                         turn their ideas into reality
-                    </h1>
-                    <p class="mt-6 text-lg lg:text-xl text-gray-700">{!! $description !!}</p>
+                    </x-atoms.title>
+                   <p class="mt-6 text-lg lg:text-xl text-gray-700">{!! $description !!}</p>
                     <div class="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
                         <button
                             class="bg-secondary-950 py-2 px-6 border rounded-2xl transition-color focus:outline-none hover:bg-primary-800 duration-75 hover:text-secondary-50">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="relative flex justify-center mb-12 lg:mb-0">
                     <div class="hidden md:block absolute -top-12 -left-2">
-                        <h3 class="text-3xl  -translate-x-6 -rotate-10">Hi,I'm Youcef!</h3>
+                        <h3 class="text-3xl -translate-x-6 -rotate-10">Hi,I'm Youcef!</h3>
                         <?xml version="1.0" encoding="utf-8"?>
                         <svg class="-rotate-[60deg] -translate-x-6 w-[200px]" id="master-artboard"
                             viewBox="0 0 1400 980" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -63,5 +63,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </x-atoms.section>
 </div>

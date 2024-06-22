@@ -9,6 +9,9 @@ export default {
 
     theme: {
         extend: {
+            animation: {
+                "spin-slow": "spin 5s linear infinite",
+            },
             colors: {
                 primary: {
                     50: "#f0faff",
@@ -35,6 +38,15 @@ export default {
             rotate: {
                 10: "10deg",
             },
+        },
+        screens: {
+            xxs: "370px",
+            xs: "475px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
         },
     },
     corePlugins: {

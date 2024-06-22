@@ -42,12 +42,11 @@ html {
 }
 
 h1,
-h2 {
+h2,
+h4 {
     font-family: "Lexend", sans-serif;
 }
 
 h3 {
     font-family: "Gochi Hand", cursive;
 }
-
-
