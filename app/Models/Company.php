@@ -2,10 +2,26 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Company extends Model
+class Company extends Model implements HasMedia
 {
-    use HasFactory;
+    use InteractsWithMedia;
+
+    protected $fillable = [
+        'name',
+        'headquarter',
+        'industry',
+        'size',
+        'website'
+    ];
+
+    public function projects(): HasMany
+    {
+        return $this->hasMany(Project::class);
+    }
 }

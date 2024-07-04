@@ -12,4 +12,17 @@ class Project extends Model implements HasMedia
 {
     use InteractsWithMedia;
     use HasTags;
+
+    protected $fillable=[
+        'name',
+        'slug',
+        'header',
+        'description',
+        'company_id',
+        'link',
+        'details',
+        'start',
+        'end',
+    ];
+    
 }
