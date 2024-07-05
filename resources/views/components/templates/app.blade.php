@@ -11,5 +11,5 @@
             @endif
         </main>
     </div>
-    {{-- <x-organisms::footer /> --}}
+    <x-organisms.footer />
 @endsection
