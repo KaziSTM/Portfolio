@@ -1,7 +1,7 @@
 <div>
-    <x-sections.hero />
-    <x-sections.features />
-    <livewire:components.sections.tools />
-    <x-sections.work />
-    <x-sections.companies />
+    <x-sections.home.hero />
+    <x-sections.home.features />
+    <livewire:components.sections.home.tools />
+    <x-sections.home.work />
+    <x-sections.home.companies />
 </div>

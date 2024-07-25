@@ -1,7 +1,7 @@
 <div>
     <x-atoms.section class="bg-slate-100 ">
         <div class="container mx-auto text-center lg:text-left space-y-20">
-            <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 md:gap-24 xl:gap-32 items-center">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 md:gap-24 xl:gap-32 items-center px-16">
                 <x-atoms.subtitle class="leading-loose">
                     I'm your
                     <div class="relative text-primary-200 inline-flex mb-2 ">
@@ -20,7 +20,7 @@
                 </x-atoms.subtitle>
                 <p class="mt-6 text-lg lg:text-xl text-gray-700">{!! $description !!}</p>
             </div>
-            <div class="flex flex-col lg:flex-row gap-12 md:gap-12 lg:gap-16 xl:gap-20 items-center">
+            <div class="flex flex-col lg:flex-row gap-12 md:gap-12 lg:gap-16 xl:gap-20 items-center px-16">
                 <div class="relative grid gap-10 xxs:gap-20 xs:gap-20 sm:gap-28 md:gap-14 lg:gap-24 grid-cols-1 ">
                     @foreach ($features as $feature)
                         <div

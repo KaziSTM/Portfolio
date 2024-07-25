@@ -42,7 +42,7 @@ class Footer extends Component
             ],
             [
                 'label' => 'About',
-                'route' => '',
+                'route' => 'about',
             ],
             [
                 'label' => 'Work',

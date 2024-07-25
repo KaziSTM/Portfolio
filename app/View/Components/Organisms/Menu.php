@@ -22,7 +22,7 @@ class Menu extends Component
             ],
             [
                 'label' => 'About',
-                'route' => '',
+                'route' => 'about',
             ],
             [
                 'label' => 'Work',

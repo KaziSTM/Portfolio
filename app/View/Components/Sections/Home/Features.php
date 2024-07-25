@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Sections;
+namespace App\View\Components\Sections\Home;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -42,6 +42,6 @@ class Features extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.sections.features');
+        return view('components.sections.home.features');
     }
 }

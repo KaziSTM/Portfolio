@@ -1,5 +1,4 @@
 @extends('components.templates.base')
-
 @section('body')
     <div class="flex flex-col w-full min-h-screen overflow-hidden bg-slate-50 text-secondary-900">
         <x-organisms.header />

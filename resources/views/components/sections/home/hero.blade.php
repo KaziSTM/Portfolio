@@ -3,7 +3,7 @@
         class="absolute top-0">
     <x-atoms.section>
         <div class="container mx-auto text-center lg:text-left">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 xl:gap-32 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 xl:gap-32 items-center px-16">
                 <div class="">
                     <x-atoms.title>
                         <div class="relative text-primary-200 inline-flex mb-2">

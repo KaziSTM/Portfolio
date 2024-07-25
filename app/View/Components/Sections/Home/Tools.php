@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Sections;
+namespace App\View\Components\Sections\Home;
 
 use Closure;
 use Livewire\Component;
@@ -57,6 +57,6 @@ class Tools extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.sections.tools');
+        return view('components.sections.home.tools');
     }
 }

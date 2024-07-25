@@ -1,8 +1,8 @@
 <div>
     <section class="py-10 bg-slate-900 sm:pt-16 lg:pt-24">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="px-4 mx-auto sm:px-12 lg:px-8 max-w-7xl">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32">
                 <div class="space-y-16 ">
                     <x-atoms.subtitle class="text-white">Lets make something great together
                     </x-atoms.subtitle>
@@ -31,7 +31,7 @@
 
             <hr class="mt-16 mb-10 border-gray-200" />
 
-            <div class="flex justify-between">
+            <div class="flex md:flex-row flex-col md:justify-between">
                 <div class="w-full flex items-center space-x-4">
                     @foreach ($navigation as $link)
                         <li class=" list-none">
@@ -42,7 +42,7 @@
                         </li>
                     @endforeach
                 </div>
-                <p class="text-sm block w-full text-end text-gray-600">© 2024, All Rights Reserved by Nezrek Youcef</p>
+                <p class="text-sm block w-full text-end text-gray-600">© 2024, All Rights Reserved</p>
             </div>
         </div>
     </section>

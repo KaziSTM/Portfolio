@@ -1,21 +1,20 @@
 <?php
 
-namespace App\View\Components\Sections;
+namespace App\View\Components\Sections\About;
 
 use Closure;
 use Illuminate\Contracts\View\View;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\Component;
 
-class Companies extends Component
+class Intro extends Component
 {
-    public ?Collection $companies = null;
+
+
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        $this->companies = \App\Models\Company::take(10)->get();
     }
 
     /**
@@ -23,6 +22,6 @@ class Companies extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.sections.companies');
+        return view('components.sections.about.intro');
     }
 }
