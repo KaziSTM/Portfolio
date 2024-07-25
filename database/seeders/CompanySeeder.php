@@ -18,19 +18,22 @@ class CompanySeeder extends Seeder
             DB::beginTransaction();
 
             $companies = [
-                // [
-                //     'name' => 'Techfly',
-                //     'headquarter' => 'Oran, Oran',
-                //     'industry' => 'IT',
-                //     'size' => '11-50',
-                //     'website' => 'https://techfly.dz'
-                // ],
+                [
+                    'name' => 'Techfly',
+                    'headquarter' => 'Oran, Oran',
+                    'industry' => 'IT',
+                    'size' => '11-50',
+                    'website' => 'https://techfly.dz'
+                ],
                 [
                     'name' => 'Creative touch',
                     'headquarter' => 'Oran, Oran',
                     'industry' => 'Marketing',
                     'size' => '11-50',
                     'website' => 'https://creative-touch.dz/'
+                ],
+                     [
+                    'name' => 'Freelancer',
                 ],
             ];
             foreach ($companies as $company) {

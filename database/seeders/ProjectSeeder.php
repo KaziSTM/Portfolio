@@ -38,11 +38,11 @@ class ProjectSeeder extends Seeder
                 'end' => now(),
             ]);
 
-            $project->addMedia(public_path('storage/projects/kheops-main.jpg'))
+            $project->addMedia(public_path('storage/projects/'. str()->slug($project->name) .'-main.jpg'))
                 ->toMediaCollection('logo');
 
             foreach (range(1, 9) as $i) {
-                $project->addMedia(public_path('storage/projects/kheops-' . $i . '.jpg'))
+                $project->addMedia(public_path('storage/projects/'. str()->slug($project->name) .'-' . $i . '.jpg'))
                     ->toMediaCollection('images');
             }
 

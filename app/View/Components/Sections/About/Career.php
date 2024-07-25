@@ -1,21 +1,21 @@
 <?php
 
-namespace App\View\Components\Sections\Home;
+namespace App\View\Components\Sections\About;
 
 use Closure;
+use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\View\Component;
 
-class Companies extends Component
+class Career extends Component
 {
-    public ?Collection $companies = null;
+    public ?Collection $jobs = null;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        $this->companies = \App\Models\Company::where('id', '!=', 3)->take(10)->get();
+        $this->jobs = \App\Models\Career::all();
     }
 
     /**
@@ -23,6 +23,6 @@ class Companies extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.sections.home.companies');
+        return view('components.sections.about.career');
     }
 }

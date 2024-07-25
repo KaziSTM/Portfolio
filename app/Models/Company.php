@@ -24,4 +24,8 @@ class Company extends Model implements HasMedia
     {
         return $this->hasMany(Project::class);
     }
+    public function jobs(): HasMany
+    {
+        return $this->hasMany(Job::class);
+    }
 }

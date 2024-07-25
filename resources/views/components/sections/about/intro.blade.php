@@ -33,7 +33,7 @@
                 </div>
                 <div class="w-full relative flex lg:justify-end mb-12 lg:mb-0">
                     <div>
-                        <img sizes="(min-width: 1024px) 33vw, 100vw" src="{{ asset('assets/images/portrait.png') }}"
+                        <img sizes="(min-width: 1024px) 33vw, 100vw" src="{{ asset('assets/images/portrait-2.jpg') }}"
                             alt="About Image" class="">
                     </div>
                     <img class="absolute hidden lg:block lg:bottom-32 lg:-translate-x-1/2  lg:w-[700px]"
