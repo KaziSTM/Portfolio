@@ -24,6 +24,13 @@
                         stack and worked on diverse projects, from e-commerce platforms to custom CMS solutions.
                         Each project has helped me grow as a developer, reinforcing my passion for learning and
                         delivering high-quality, user-focused solutions.</p>
+
+                    <a href="{{ asset('assets/docs/Youcef_Nezrek_CV.pdf') }}"
+                        class="flex space-x-2 items-center w-1/2 bg-slate-100 mt-6 py-2 px-6 border rounded-2xl focus:outline-none">
+                        <span class="capitalize font-semibold text-secondary-900 ">Download CV</span>
+                        <x-icon name="download-simple"
+                            class="h-5 w-5 transform transition-transform duration-300 group-hover:translate-y-[-2px]" />
+                    </a>
                 </div>
                 <ol class="col-span-3 py-4 lg:py-32 lg:pr-28 xl:pr-36 grid grid-cols-1 md:grid-cols-2 gap-6">
                     @foreach ($jobs as $key => $job)
