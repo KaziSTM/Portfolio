@@ -18,3 +18,11 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+.agents
+.codex
+boost.json
+AGENTS.md
+package-lock.json
+composer.lock
+pnpm-lock.yaml
+artisan

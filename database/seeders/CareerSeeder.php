@@ -3,43 +3,51 @@
 namespace Database\Seeders;
 
 use App\Models\Career;
+use App\Models\Company;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CareerSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * @throws \Throwable
      */
     public function run(): void
     {
-        try {
-
-            DB::beginTransaction();
-
+        DB::transaction(function (): void {
             $careers = [
-
                 [
-                    'duration' => 'June 2021 – Present',
-                    'description' => 'Developed full-stack web applications from scratch, handling back-end services, front-end interfaces, and database management. Delivered tailored solutions that met clients\' specific needs and ensured robust, scalable, and user-friendly applications.',
-                    'company_id' => 3
+                    'company' => 'Zimou Group',
+                    'duration' => 'March 2025 – Present',
+                    'description' => 'Senior Backend / Full-Stack Developer working on MyEcom, a comprehensive e-commerce ERP system covering products, orders, stock, logistics, billing, and external integrations. Core contributor to MyEcom Cockpit, focusing on instance provisioning, deployment automation, backend architecture, performance optimization, and scalable API design.',
                 ],
                 [
-                    'duration' => 'December 2022 – Present',
-                    'description' => 'As a Full-Stack Web Developer at Techfly, I have played a crucial role in developing and enhancing various platforms and applications. My responsibilities included leading web development efforts, integrating APIs, and ensuring seamless functionality across web and mobile platforms. I focused on creating user-friendly dashboards, enhancing existing features, and developing new functionalities to optimize performance. My work consistently aimed to deliver high-quality, scalable solutions tailored to meet the specific needs of our clients.',
-                    'company_id' => 1
+                    'company' => 'Techfly',
+                    'duration' => 'December 2022 – February 2025',
+                    'description' => 'Full-Stack Developer contributing to multiple large-scale platforms: Kheops (AI-driven B2B personalization), DZIGNERD (multi-store e-commerce), PASSMEMO (AI-powered elderly care platform), CCO (event reservation system), Klassty (CRM), and Carloue (car reservation platform). Focused on backend architecture, API development, dashboard systems, and seamless integration with mobile applications.',
+                ],
+                [
+                    'company' => 'Freelancer',
+                    'duration' => 'June 2021 – present',
+                    'description' => 'Developed full-stack web applications from scratch, including backend services, frontend interfaces, and database design. Delivered scalable and customized solutions tailored to client requirements.',
                 ],
             ];
+
             foreach ($careers as $career) {
-                $career = Career::create($career);
+                $company = Company::query()
+                    ->where('name', $career['company'])
+                    ->firstOrFail();
+
+                Career::query()->updateOrCreate(
+                    [
+                        'company_id' => $company->id,
+                        'duration' => $career['duration'],
+                    ],
+                    [
+                        'description' => $career['description'],
+                    ],
+                );
             }
-            DB::commit();
-        } catch (\Exception $e) {
-
-            DB::rollBack();
-
-            throw $e;
-        }
+        });
     }
 }

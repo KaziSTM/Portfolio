@@ -15,7 +15,10 @@ class Companies extends Component
      */
     public function __construct()
     {
-        $this->companies = \App\Models\Company::where('id', '!=', 3)->take(10)->get();
+        $this->companies = \App\Models\Company::query()
+            ->where('name', '!=', 'Freelancer')
+            ->take(10)
+            ->get();
     }
 
     /**

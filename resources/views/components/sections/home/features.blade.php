@@ -26,7 +26,7 @@
                         <div
                             class="flex {{ $loop->last ? 'mt-0 xxs:mt-1 xs:mt-6 sm:mt-0 md:mt-0 lg:mt-0' : '' }} justify-start md:jsutify-center items-start space-x-7 ">
                             <div
-                                class="relative min-w-20 h-20 bg-slate-900 shadow-sm rounded-full flex flex-col items-center justify-center gap-y-6">
+                                class="relative min-w-20 h-20 bg-slate-900 shadow-xs rounded-full flex flex-col items-center justify-center gap-y-6">
                                 <x-icon name="{{ $feature['icon'] }}" class="text-secondary-100 font-bold w-8 h-6" />
                                 @if (!$loop->last)
                                     <div class="-ml-0.5 absolute top-24 w-px border-l-4 border-dotted border-secondary-300 h-full"
@@ -43,7 +43,7 @@
                         </div>
                     @endforeach
                     <div class="hidden lg:block absolute -bottom-32 left-12">
-                        <h3 class="text-xl w-[60%] translate-y-16 translate-x-20 -rotate-10">What differentiates me from
+                        <h3 class="text-xl w-[60%] translate-y-16 translate-x-20 -rotate-[10deg]">What differentiates me from
                             others</h3>
                         <?xml version="1.0" encoding="utf-8"?>
                         <svg xmlns="http://www.w3.org/2000/svg" width="81" height="83" viewBox="0 0 81 83"

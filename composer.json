@@ -1,4 +1,5 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
@@ -8,24 +9,25 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "bensampo/laravel-enum": "^6.11",
-        "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9",
-        "livewire/livewire": "^3.5",
-        "spatie/laravel-medialibrary": "^11.7",
-        "spatie/laravel-tags": "^4.6",
-        "tallstackui/tallstackui": "^1.30"
+        "php": "^8.3",
+        "bensampo/laravel-enum": "^6.14",
+        "laravel/framework": "^13.3",
+        "laravel/tinker": "^3.0",
+        "livewire/livewire": "^4.2",
+        "spatie/laravel-medialibrary": "^11.21",
+        "spatie/laravel-tags": "^4.11",
+        "tallstackui/tallstackui": "^3.1"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laradumps/laradumps": "3.0",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
+        "fakerphp/faker": "^1.24",
+        "laradumps/laradumps": "^5.3",
+        "laravel/boost": "^2.4",
+        "laravel/pint": "^1.29",
+        "laravel/sail": "^1.56",
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.0",
-        "pestphp/pest": "^2.34",
-        "pestphp/pest-plugin-laravel": "^2.4"
+        "nunomaduro/collision": "^8.9",
+        "pestphp/pest": "^4.4",
+        "pestphp/pest-plugin-laravel": "^4.1"
     },
     "autoload": {
         "psr-4": {
@@ -54,6 +56,9 @@
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
+        ],
+        "pre-package-uninstall": [
+            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
     },
     "extra": {

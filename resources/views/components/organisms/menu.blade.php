@@ -11,7 +11,7 @@
             class="relative flex xl:hidden z-50 w-auto h-auto">
             <div class="absolute z-[99] -top-6 right-1 ">
                 <button @click="modalOpen=!modalOpen;console.log(modalOpen)"
-                    class="flex flex-col rotate-45 w-full px-5 py-4 font-semibold text-left select-none focus:border-none focus-ring-none">
+                    class="flex flex-col rotate-45 w-full px-5 py-4 font-semibold text-left select-none focus:border-none focus:ring-0">
                     <div :class="modalOpen ? 'opacity-100 scale-150' : 'rotate-45'"
                         x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0"
                         x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-300"
@@ -40,7 +40,7 @@
                         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                         x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0" @click="modalOpen=false"
-                        class="absolute inset-0 w-full h-full bg-black bg-opacity-40"></div>
+                        class="absolute inset-0 w-full h-full bg-black/40"></div>
                     <div x-show="modalOpen" x-trap.inert.noscroll="modalOpen" x-transition:enter="ease-out duration-300"
                         x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                         x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
@@ -52,7 +52,7 @@
                             <div class="flex flex-col pb-2">
                                 @foreach ($navigation as $link)
                                     <a href="{{ $link['route'] }}"
-                                        class="relative flex cursor-default select-none hover:bg-primary-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+                                        class="relative flex cursor-default select-none hover:bg-primary-100 items-center rounded-sm px-2 py-1.5 text-sm outline-hidden transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
                                         <span>{{ $link['label'] }}</span>
                                     </a>
                                 @endforeach

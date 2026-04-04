@@ -2,10 +2,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lexend:wght@100..900&family=Mr+Dafoe&display=swap");
+@import "../../vendor/tallstackui/tallstackui/css/v4.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../../vendor/tallstackui/tallstackui/src/**/*.php";
+@source "../../vendor/tallstackui/tallstackui/src/**/*.js";
+@source "../../node_modules/flowbite";
+
+@plugin "@tailwindcss/typography";
+@plugin "flowbite/plugin";
+@plugin "tailwind-scrollbar";
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Lexend", ui-sans-serif, system-ui, sans-serif;
+    --breakpoint-xxs: 370px;
+    --breakpoint-xs: 475px;
+    --animate-spin-slow: spin 5s linear infinite;
+
+    --color-primary-50: #f0faff;
+    --color-primary-100: #e0f3fe;
+    --color-primary-200: #bae5fd;
+    --color-primary-300: #7dcffc;
+    --color-primary-400: #38b4f8;
+    --color-primary-500: #0e9be9;
+    --color-primary-600: #0281c7;
+    --color-primary-700: #0369a1;
+    --color-primary-800: #075885;
+    --color-primary-900: #0c4b6e;
+    --color-primary-950: #083249;
+
+    --color-secondary-50: var(--color-gray-50);
+    --color-secondary-100: var(--color-gray-100);
+    --color-secondary-200: var(--color-gray-200);
+    --color-secondary-300: var(--color-gray-300);
+    --color-secondary-400: var(--color-gray-400);
+    --color-secondary-500: var(--color-gray-500);
+    --color-secondary-600: var(--color-gray-600);
+    --color-secondary-700: var(--color-gray-700);
+    --color-secondary-800: var(--color-gray-800);
+    --color-secondary-900: var(--color-gray-900);
+    --color-secondary-950: var(--color-gray-950);
+
+    --color-positive-50: var(--color-lime-50);
+    --color-positive-100: var(--color-lime-100);
+    --color-positive-200: var(--color-lime-200);
+    --color-positive-300: var(--color-lime-300);
+    --color-positive-400: var(--color-lime-400);
+    --color-positive-500: var(--color-lime-500);
+    --color-positive-600: var(--color-lime-600);
+    --color-positive-700: var(--color-lime-700);
+    --color-positive-800: var(--color-lime-800);
+    --color-positive-900: var(--color-lime-900);
+    --color-positive-950: var(--color-lime-950);
+
+    --color-negative-50: var(--color-red-50);
+    --color-negative-100: var(--color-red-100);
+    --color-negative-200: var(--color-red-200);
+    --color-negative-300: var(--color-red-300);
+    --color-negative-400: var(--color-red-400);
+    --color-negative-500: var(--color-red-500);
+    --color-negative-600: var(--color-red-600);
+    --color-negative-700: var(--color-red-700);
+    --color-negative-800: var(--color-red-800);
+    --color-negative-900: var(--color-red-900);
+    --color-negative-950: var(--color-red-950);
+
+    --color-warning-50: var(--color-amber-50);
+    --color-warning-100: var(--color-amber-100);
+    --color-warning-200: var(--color-amber-200);
+    --color-warning-300: var(--color-amber-300);
+    --color-warning-400: var(--color-amber-400);
+    --color-warning-500: var(--color-amber-500);
+    --color-warning-600: var(--color-amber-600);
+    --color-warning-700: var(--color-amber-700);
+    --color-warning-800: var(--color-amber-800);
+    --color-warning-900: var(--color-amber-900);
+    --color-warning-950: var(--color-amber-950);
+
+    --color-info-50: var(--color-cyan-50);
+    --color-info-100: var(--color-cyan-100);
+    --color-info-200: var(--color-cyan-200);
+    --color-info-300: var(--color-cyan-300);
+    --color-info-400: var(--color-cyan-400);
+    --color-info-500: var(--color-cyan-500);
+    --color-info-600: var(--color-cyan-600);
+    --color-info-700: var(--color-cyan-700);
+    --color-info-800: var(--color-cyan-800);
+    --color-info-900: var(--color-cyan-900);
+    --color-info-950: var(--color-cyan-950);
+}
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
 
 [x-cloak] {
     display: none !important;
@@ -51,6 +150,7 @@ h4 {
 h3 {
     font-family: "Gochi Hand", cursive;
 }
+
 h5 {
     font-family: "Mr Dafoe", cursive;
     font-weight: 400;

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Company;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class CompanySeeder extends Seeder
 {
@@ -13,41 +14,53 @@ class CompanySeeder extends Seeder
      */
     public function run(): void
     {
-        try {
-
-            DB::beginTransaction();
-
+        DB::transaction(function (): void {
             $companies = [
+                [
+                    'name' => 'Zimou Group',
+                    'headquarter' => "local n° 980 Centre commercial et d'affaires, Mohammadia 16000, Algeria",
+                    'industry' => 'IT',
+                    'size' => '11-50',
+                    'website' => 'https://zimou.group/',
+                ],
                 [
                     'name' => 'Techfly',
                     'headquarter' => 'Oran, Oran',
                     'industry' => 'IT',
                     'size' => '11-50',
-                    'website' => 'https://techfly.dz'
+                    'website' => 'https://techfly.dz',
                 ],
                 [
                     'name' => 'Creative touch',
                     'headquarter' => 'Oran, Oran',
                     'industry' => 'Marketing',
                     'size' => '11-50',
-                    'website' => 'https://creative-touch.dz/'
+                    'website' => 'https://creative-touch.dz/',
                 ],
-                     [
+                [
                     'name' => 'Freelancer',
                 ],
             ];
+
             foreach ($companies as $company) {
-                $company = Company::create($company);
-                $company->addMedia(public_path('storage/companies/' . str()->slug($company->name) . '-logo.png'))
-                    ->toMediaCollection('logo');
+                $model = Company::query()->updateOrCreate(
+                    ['name' => $company['name']],
+                    $company,
+                );
+
+                $logoPath = public_path('assets/images/companies/'.Str::slug($model->name).'-logo.png');
+
+                if (! is_file($logoPath)) {
+                    continue;
+                }
+
+                if ($model->getFirstMedia('logo')?->file_name === basename($logoPath)) {
+                    continue;
+                }
+
+                $model->clearMediaCollection('logo');
+                $model->addMedia($logoPath)->preservingOriginal()->toMediaCollection('logo');
             }
-
-            DB::commit();
-        } catch (\Exception $e) {
-
-            DB::rollBack();
-
-            throw $e;
-        }
+        });
     }
 }

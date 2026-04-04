@@ -24,7 +24,7 @@
                    <p class="mt-6 text-lg lg:text-xl text-gray-700">{!! $description !!}</p>
                     <div class="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
                         <button
-                            class="bg-secondary-950 py-2 px-6 border rounded-2xl transition-color focus:outline-none hover:bg-primary-800 duration-75 hover:text-secondary-50">
+                            class="bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50">
                             <span class="capitalize font-semibold text-secondary-100 ">
                                 {{ 'Book a call with me' }}</span>
                         </button>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="relative flex justify-center mb-12 lg:mb-0">
                     <div class="hidden md:block absolute -top-12 -left-2">
-                        <h3 class="text-3xl -translate-x-6 -rotate-10">Hi,I'm Youcef!</h3>
+                        <h3 class="text-3xl -translate-x-6 -rotate-[10deg]">Hi,I'm Youcef!</h3>
                         <?xml version="1.0" encoding="utf-8"?>
                         <svg class="-rotate-[60deg] -translate-x-6 w-[200px]" id="master-artboard"
                             viewBox="0 0 1400 980" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
