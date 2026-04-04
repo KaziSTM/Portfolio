@@ -1,5 +1,6 @@
 <div>
-    <section class="relative flex flex-col items-center mt-12 px-4 sm:px-6 lg:px-8" x-data="{ tools: @entangle('tools') }">
+    <section class="relative flex flex-col items-center mt-12 px-4 sm:px-6 lg:px-8"
+             x-data="{ tools: @entangle('tools') }">
         <div class="flex flex-wrap justify-center space-x-4 sm:space-x-8 lg:space-x-12">
             @foreach ($tools as $index => $tool)
                 <div

@@ -1,15 +1,10 @@
 <?php
 
-namespace App\View\Components\Sections\Home;
-
-use Closure;
 use Livewire\Component;
-use Illuminate\Contracts\View\View;
 
-class Tools extends Component
-{
-
+new class extends Component {
     public array $tools = [];
+
     /**
      * Create a new component instance.
      */
@@ -49,14 +44,9 @@ class Tools extends Component
                 'src' => asset('assets/svg/icons/vue.svg'),
                 "alt" => 'VueJs'
             ],
-         
+
 
         ];
     }
 
-
-    public function render(): View|Closure|string
-    {
-        return view('components.sections.home.tools');
-    }
-}
+};
