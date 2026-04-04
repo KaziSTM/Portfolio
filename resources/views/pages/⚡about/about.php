@@ -1,11 +1,9 @@
 <?php
 
-
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-
-new #[Title('Home')]
+new #[Title('About me')]
 class extends Component {
 
 

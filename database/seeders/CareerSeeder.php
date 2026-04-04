@@ -19,17 +19,25 @@ class CareerSeeder extends Seeder
                 [
                     'company' => 'Zimou Group',
                     'duration' => 'March 2025 – Present',
-                    'description' => 'Senior Backend / Full-Stack Developer working on MyEcom, a comprehensive e-commerce ERP system covering products, orders, stock, logistics, billing, and external integrations. Core contributor to MyEcom Cockpit, focusing on instance provisioning, deployment automation, backend architecture, performance optimization, and scalable API design.',
+                    'description' => 'Senior Backend / Full-Stack Developer on MyEcom, a multi-tenant e-commerce ERP covering orders, stock, logistics, and billing.
+
+Focused on backend architecture, scalable APIs, and performance. Core contributor to MyEcom Cockpit, handling automated provisioning and deployment workflows.',
                 ],
+
                 [
                     'company' => 'Techfly',
                     'duration' => 'December 2022 – February 2025',
-                    'description' => 'Full-Stack Developer contributing to multiple large-scale platforms: Kheops (AI-driven B2B personalization), DZIGNERD (multi-store e-commerce), PASSMEMO (AI-powered elderly care platform), CCO (event reservation system), Klassty (CRM), and Carloue (car reservation platform). Focused on backend architecture, API development, dashboard systems, and seamless integration with mobile applications.',
+                    'description' => 'Full-Stack Developer across multiple platforms including Kheops (AI), DZIGNERD (multi-store e-commerce), PASSMEMO (data processing), and GCCO (reservation system).
+
+Specialized in backend architecture, API design, and complex business logic with strong integration between web and mobile systems.',
                 ],
+
                 [
-                    'company' => 'Freelancer',
-                    'duration' => 'June 2021 – present',
-                    'description' => 'Developed full-stack web applications from scratch, including backend services, frontend interfaces, and database design. Delivered scalable and customized solutions tailored to client requirements.',
+                    'company' => 'Freelance',
+                    'duration' => 'June 2021 – December 2022',
+                    'description' => 'Built full-stack applications from scratch, covering backend systems, frontend interfaces, and database design.
+
+Delivered scalable and customized solutions while establishing strong foundations in system architecture and API development.',
                 ],
             ];
 

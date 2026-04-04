@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use App\Enums\ProjectRole;
+use App\Enums\ProjectType;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Support\Collection as SupportCollection;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Tags\HasTags;
@@ -24,13 +24,19 @@ use Spatie\Tags\HasTags;
     'start',
     'end',
     'is_featured',
+    'type',
+    'is_in_progress',
 ])]
-#
 class Project extends Model implements HasMedia
 {
     use InteractsWithMedia;
     use HasTags;
 
+    /*
+    |--------------------------------------------------------------------------
+    | Casts
+    |--------------------------------------------------------------------------
+    */
 
     public function company(): BelongsTo
     {
@@ -43,10 +49,16 @@ class Project extends Model implements HasMedia
     |--------------------------------------------------------------------------
     */
 
-    public function roles(): SupportCollection
+    public function roles(): \Illuminate\Support\Collection
     {
         return collect($this->tagsWithType('main'))
-            ->map(fn($tag) => ProjectRole::from($tag->name));
+            ->map(fn($tag) => \App\Enums\ProjectRole::tryFrom($tag->name))
+            ->filter();
+    }
+
+    public function testimonials(): Project|HasMany
+    {
+        return $this->hasMany(Testimonial::class);
     }
 
     /*
@@ -63,6 +75,22 @@ class Project extends Model implements HasMedia
     public function techTags(): Collection
     {
         return $this->tagsWithType('tech');
+    }
+
+    public function isPackage(): bool
+    {
+        return $this->type === ProjectType::PACKAGE;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Helpers
+    |--------------------------------------------------------------------------
+    */
+
+    public function isProject(): bool
+    {
+        return $this->type === ProjectType::PROJECT;
     }
 
     #[Scope]
@@ -83,10 +111,26 @@ class Project extends Model implements HasMedia
         return $query->where('is_featured', true);
     }
 
+    #[Scope]
+    public function projects($query)
+    {
+        return $query->where('type', ProjectType::PROJECT);
+    }
+
+    #[Scope]
+    public function packages($query)
+    {
+        return $query->where('type', ProjectType::PACKAGE);
+    }
+
     protected function casts(): array
     {
         return [
-            'is_features' => 'bool'
+            'is_featured' => 'boolean',
+            'is_in_progress' => 'boolean',
+            'start' => 'date',
+            'end' => 'date',
+            'type' => ProjectType::class,
         ];
     }
 }

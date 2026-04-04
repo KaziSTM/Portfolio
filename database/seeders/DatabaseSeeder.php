@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             CompanySeeder::class,
             CareerSeeder::class,
             ProjectSeeder::class,
+            TestimonialSeeder::class,
         ]);
     }
 }

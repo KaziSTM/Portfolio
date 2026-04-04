@@ -13,45 +13,73 @@
         </div>
 
         {{-- Content --}}
-        <div class="p-4 sm:pt-8 sm:pl-16 sm:pb-24 sm:pr-4 grid gap-6 xl:order-1 order-2">
+        <div class="p-4 sm:pt-8 sm:pl-16 sm:pb-24 sm:pr-4 grid gap-5 xl:order-1 order-2">
 
-            {{-- Main Roles (subtle, uppercase, spaced) --}}
-            <div class="flex items-center gap-3 text-xs tracking-widest uppercase text-gray-400">
-                @foreach ($project->roles() as $role)
-                    <span>{{ $role->label() }}</span>
-                    @if (! $loop->last)
-                        <span class="opacity-30">•</span>
-                    @endif
-                @endforeach
+            {{-- Meta Line --}}
+            <div class="flex flex-wrap items-center gap-3 text-xs tracking-widest uppercase">
+
+                {{-- Type (slightly stronger, outlined pill) --}}
+                <span class="px-2 py-1 border border-gray-300 rounded-md text-gray-600 font-medium">
+                    {{ $project->type->label() }}
+                </span>
+
+                {{-- Roles (muted inline) --}}
+                <div class="flex items-center gap-2 text-gray-400">
+                    @foreach ($project->roles() as $role)
+                        <span>{{ $role->label() }}</span>
+                        @if (! $loop->last)
+                            <span class="opacity-30">•</span>
+                        @endif
+                    @endforeach
+                </div>
+
+                {{-- In Progress --}}
+                @if ($project->is_in_progress)
+                    <span class="px-2 py-1 rounded-md bg-amber-100 text-amber-600 normal-case tracking-normal">
+                        In progress
+                    </span>
+                @endif
             </div>
 
             {{-- Title --}}
-            <h4 class="text-xl lg:text-2xl font-semibold mt-1 leading-snug">
+            <h4 class="text-xl lg:text-2xl font-semibold leading-snug">
                 {{ $project->header }}
             </h4>
 
             {{-- Description --}}
-            <p class="text-gray-600 leading-relaxed">
+            <p class="text-gray-600 leading-relaxed line-clamp-3">
                 {!! $project->description !!}
             </p>
 
-            {{-- Tech Tags (inline / subtle / no pills) --}}
-            <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-400">
-                @foreach ($project->techTags() as $tag)
-                    <span class="hover:text-gray-600 transition">
-                        #{{ \Illuminate\Support\Str::slug($tag->name) }}
-                    </span>
-                @endforeach
-            </div>
 
-            {{-- CTA --}}
-            <a class="text-sm font-medium text-gray-900 mt-4 flex items-center space-x-2 group"
-               href="{{ $project->link }}"
-               target="_blank">
-                <span>View case study</span>
-                <x-icon name="arrow-up-right"
-                        class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-y-[-2px]"/>
-            </a>
+            {{-- Footer --}}
+            <div class="flex items-center justify-between mt-2">
+
+                {{-- Dates --}}
+                <div class="text-xs text-gray-400">
+                    @if ($project->start)
+                        <span>{{ $project->start->format('Y') }}</span>
+                    @endif
+
+                    @if ($project->end)
+                        <span>— {{ $project->end->format('Y') }}</span>
+                    @elseif ($project->is_in_progress)
+                        <span>— Present</span>
+                    @endif
+                </div>
+
+                {{-- CTA --}}
+                @if ($project->link)
+                    <a class="text-sm font-medium text-gray-900 flex items-center space-x-2 group"
+                       href="{{ route('projects.show',['projectId'=>$project->id]) }}"
+                       target="_blank">
+                        <span>{{ $project->isPackage() ? 'View package' : 'View case study' }}</span>
+                        <x-icon name="arrow-up-right"
+                                class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-y-[-2px]"/>
+                    </a>
+                @endif
+
+            </div>
 
         </div>
     </div>

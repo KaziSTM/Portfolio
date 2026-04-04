@@ -38,7 +38,7 @@ class CompanySeeder extends Seeder
                     'website' => 'https://creative-touch.dz/',
                 ],
                 [
-                    'name' => 'Freelancer',
+                    'name' => 'Freelance',
                 ],
             ];
 
@@ -48,9 +48,9 @@ class CompanySeeder extends Seeder
                     $company,
                 );
 
-                $logoPath = public_path('assets/images/companies/'.Str::slug($model->name).'-logo.png');
+                $logoPath = public_path('assets/images/companies/' . Str::slug($model->name) . '-logo.png');
 
-                if (! is_file($logoPath)) {
+                if (!is_file($logoPath)) {
                     continue;
                 }
 

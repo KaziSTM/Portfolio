@@ -1,35 +1,78 @@
 <?php
 
+use App\Enums\ProjectType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('projects', function (Blueprint $table) {
+
             $table->id();
+
             $table->string('name')->unique();
             $table->string('slug')->unique();
+
             $table->string('header');
             $table->longText('description');
-            $table->string('link');
-            $table->longText('details');
-            $table->dateTime('start');
-            $table->dateTime('end');
+            $table->longText('details')->nullable();
+
+            $table->string('link')->nullable();
+
+            /*
+            |--------------------------------------------------------------------------
+            | Dates
+            |--------------------------------------------------------------------------
+            */
+
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
+
+            /*
+            |--------------------------------------------------------------------------
+            | Flags
+            |--------------------------------------------------------------------------
+            */
+
             $table->boolean('is_featured')->default(false);
-            $table->unsignedBigInteger('company_id')->nullable();
-            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->boolean('is_in_progress')->default(false);
+
+            /*
+            |--------------------------------------------------------------------------
+            | Type (Enum-backed)
+            |--------------------------------------------------------------------------
+            */
+
+            $table->string('type')
+                ->default(ProjectType::PROJECT->value)
+                ->index();
+
+            /*
+            |--------------------------------------------------------------------------
+            | Relations
+            |--------------------------------------------------------------------------
+            */
+
+            $table->foreignId('company_id')
+                ->nullable()
+                ->constrained()
+                ->cascadeOnDelete();
+
+            /*
+            |--------------------------------------------------------------------------
+            | Indexes
+            |--------------------------------------------------------------------------
+            */
+
+            $table->index(['type', 'is_featured']);
+            $table->index(['start', 'end']);
+
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('projects');
