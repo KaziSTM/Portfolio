@@ -10,7 +10,6 @@
 @source "../**/*.js";
 @source "../../vendor/tallstackui/tallstackui/src/**/*.php";
 @source "../../vendor/tallstackui/tallstackui/src/**/*.js";
-@source "../../node_modules/flowbite";
 
 @plugin "@tailwindcss/typography";
 @plugin "flowbite/plugin";
@@ -117,6 +116,7 @@
 .overflow-x-scroll {
     @apply overflow-x-auto scrollbar-thin scrollbar-thumb-secondary-300 scrollbar-track-gray-100;
 }
+
 .underline-half::after {
     content: "";
     position: absolute;

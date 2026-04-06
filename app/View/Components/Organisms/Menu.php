@@ -26,7 +26,7 @@ class Menu extends Component
             ],
             [
                 'label' => 'Work',
-                'route' => '',
+                'route' => 'work',
             ],
             [
                 'label' => 'Contact',

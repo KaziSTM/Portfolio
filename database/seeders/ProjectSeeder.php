@@ -451,6 +451,76 @@ The SDK layer ensures:
 This project focuses on **API design and abstraction**, ensuring simplicity for consumers while handling complexity internally.",
                 'is_in_progress' => true,
             ],
+            [
+                'company' => 'OUTPUT ALGERIE',
+                'slug' => Str::slug('OUTPUT ALGERIE'),
+                'name' => 'MusicSpace',
+                'header' => 'Digital platform for a music academy, shop, and rental services.',
+                'description' => 'Landing page and dashboard system supporting music education, instrument sales, and equipment rental workflows.',
+                'link' => 'https://www.musicspacedz.com/en',
+                'main_tags' => [
+                    ProjectRole::BACKEND,
+                    ProjectRole::FULLSTACK,
+                ],
+                'tags' => [
+                    'Dashboard',
+                    'Booking',
+                    'E-commerce',
+                    'API',
+                    'TALL Stack',
+                ],
+                'start' => '2022-09-01',
+                'end' => '2023-02-01',
+                'details' => "# MusicSpace — Building a Unified Platform for a Music Ecosystem
+
+MusicSpace is a digital platform designed to support a complete music ecosystem, combining a music academy, instrument shop, and rental services into a single experience.
+
+The platform serves both as a public-facing landing page and an internal dashboard to manage operations.
+
+## The Challenge
+
+The main challenge was handling multiple business domains within one system:
+
+- Music academy (courses, students, scheduling)
+- Instrument shop (products and catalog)
+- Equipment rental (availability and bookings)
+- Content-driven landing page
+
+Each domain has its own logic and workflows, yet needed to feel unified and consistent.
+
+## The Approach
+
+A modular backend architecture was implemented to separate concerns while enabling seamless interaction between different parts of the system.
+
+The platform is structured around:
+- A centralized API layer
+- Flexible data models supporting multiple services
+- A dashboard for managing operations
+- A landing page acting as the main entry point for users
+
+Special attention was given to keeping the system scalable while maintaining simplicity for end users.
+
+## My Contribution
+
+- Designed and implemented backend architecture
+- Built APIs for academy, shop, and rental services
+- Developed dashboard logic and data flows
+- Structured booking and availability systems
+- Contributed to frontend using TALL stack
+
+## Outcome
+
+The platform provides a unified system where MusicSpace can:
+- Manage courses, products, and rentals in one place
+- Offer a seamless experience to users
+- Scale operations without increasing complexity
+
+## Takeaways
+
+This project highlighted the importance of **modular architecture** when dealing with multi-domain platforms.
+
+Designing clear boundaries between services while keeping a unified system is key to building scalable and maintainable applications.",
+            ],
 
         ];
     }

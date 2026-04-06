@@ -10,13 +10,14 @@ use Illuminate\View\Component;
 class Companies extends Component
 {
     public ?Collection $companies = null;
+
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
         $this->companies = \App\Models\Company::query()
-            ->where('name', '!=', 'Freelancer')
+            ->whereNotIn('name', ['Freelance', 'Personal'])
             ->take(10)
             ->get();
     }

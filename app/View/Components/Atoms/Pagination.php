@@ -1,20 +1,19 @@
 <?php
 
-namespace App\View\Components\Molecules;
+namespace App\View\Components\Atoms;
 
-use App\Models\Project;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class ProjectCard extends Component
+class Pagination extends Component
 {
-
     /**
      * Create a new component instance.
      */
-    public function __construct(public Project $project)
+    public function __construct()
     {
+        //
     }
 
     /**
@@ -22,6 +21,6 @@ class ProjectCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.molecules.project-card');
+        return view('components.atoms.pagination');
     }
 }

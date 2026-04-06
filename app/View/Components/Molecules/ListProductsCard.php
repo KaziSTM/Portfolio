@@ -7,14 +7,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class ProjectCard extends Component
+class ListProductsCard extends Component
 {
-
     /**
      * Create a new component instance.
      */
-    public function __construct(public Project $project)
+    public function __construct(public Project $project, public bool $reverse = false)
     {
+        //
     }
 
     /**
@@ -22,6 +22,6 @@ class ProjectCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.molecules.project-card');
+        return view('components.molecules.list-products-card');
     }
 }

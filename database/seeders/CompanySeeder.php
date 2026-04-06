@@ -38,6 +38,13 @@ class CompanySeeder extends Seeder
                     'website' => 'https://creative-touch.dz/',
                 ],
                 [
+                    'name' => 'OUTPUT',
+                    'headquarter' => 'SARL OUTPUT ALGERIE, 17 Avenue Larbi Alik Hydra paradou ',
+                    'industry' => 'Music Education & Services',
+                    'size' => '11-50',
+                    'website' => 'https://www.musicspacedz.com/en',
+                ],
+                [
                     'name' => 'Freelance',
                 ],
             ];
