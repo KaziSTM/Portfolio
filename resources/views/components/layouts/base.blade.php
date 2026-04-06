@@ -15,7 +15,8 @@
 
     <meta name="description" content="Laravel Jetstream">
     <link rel="shortcut icon" href="{{ asset('images/logo/favicon.ico') }}">
-    <tallstackui:script />
+    <tallstackui:script/>
+    @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -23,7 +24,7 @@
 
 <body class="antialiased tracking-tight">
 
-    @yield('body')
+@yield('body')
 </body>
 
 </html>

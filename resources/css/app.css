@@ -2,7 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lexend:wght@100..900&family=Mr+Dafoe&display=swap");
-@import "../../vendor/tallstackui/tallstackui/css/v4.css";
+@import '../../vendor/tallstackui/tallstackui/css/v4.css';
+
+@plugin '@tailwindcss/forms';
+@source '../../vendor/tallstackui/tallstackui/**/*.php';
 
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
 @source "../../storage/framework/views/*.php";

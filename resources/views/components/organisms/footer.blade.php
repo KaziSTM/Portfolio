@@ -8,6 +8,8 @@
                     </x-atoms.subtitle>
                     <div class="flex justify-start">
                         <button
+                            wire:navigate
+                            href="{{ route('contact') }}"
                             class=" cursor-pointer relative inline-flex items-center gap-2 px-4 py-2
            bg-white text-secondary-950
            border border-white/10 rounded-full
@@ -46,6 +48,7 @@
                     <div class="flex  space-x-4">
                         @foreach ($socials as $social)
                             <x-button
+
                                 class="bg-transparent backdrop-blur-md border border-white/10 text-secondary-50 hover:bg-secondary-700 "
                                 round text="{{ $social['name'] }}"
                                 href="{{ $social['link'] }}" position='right'
