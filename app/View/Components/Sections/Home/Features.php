@@ -17,22 +17,22 @@ class Features extends Component
      */
     public function __construct()
     {
-        $this->description = 'Where skill, efficiency, and responsiveness converge to deliver outstanding results tailored to your unique needs. I combine cutting-edge technology with creative solutions, ensuring the highest standards of excellence.';
+        $this->description = 'I focus on delivering reliable, scalable solutions with a strong emphasis on backend architecture, performance, and clean implementation of complex business logic.';
         $this->features = [
             [
-                'title' => 'Excellence',
-                'description' => 'I take pride in doing things well. All client work is done with the best quality possible.',
-                'icon' => 'trophy'
+                'title' => 'Scalable Architecture',
+                'description' => 'Systems designed to handle growth, complexity, and real-world usage without breaking down.',
+                'icon' => 'heroicon-o-rectangle-stack'
             ],
             [
-                'title' => 'Speed',
-                'description' => 'I like to work hard and fast. I know how important deadlines are to my clients.',
-                'icon' => 'hourglass-high'
+                'title' => 'Clean & Maintainable Code',
+                'description' => 'Well-structured, readable codebases that are easy to extend, debug, and maintain over time.',
+                'icon' => 'heroicon-o-code-bracket'
             ],
             [
-                'title' => 'Responsiveness',
-                'description' => 'You can rely on me to be responsive and clear whenever we work together.',
-                'icon' => 'users'
+                'title' => 'Reliable Delivery',
+                'description' => 'Consistent execution with attention to performance, edge cases, and production readiness.',
+                'icon' => 'heroicon-o-check-circle'
             ],
         ];
     }

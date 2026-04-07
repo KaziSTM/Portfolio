@@ -17,7 +17,7 @@ class Hero extends Component
      */
     public function __construct()
     {
-        $this->description = 'Enthusiastic Full-Stack Web Developer with 3 years of experience in building and maintaining web applications. Dedicated to delivering high-quality, scalable solutions that meet client requirements.';
+        $this->description = 'Full-stack web developer focused on building scalable platforms and complex digital products. I specialize in backend architecture, APIs, and designing systems that handle real-world business logic efficiently.';
         $this->socials = [
             'github' => [
                 'link' => 'https://github.com/KaziSTM',

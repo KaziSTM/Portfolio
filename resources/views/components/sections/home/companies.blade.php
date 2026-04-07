@@ -12,13 +12,13 @@
             <div class="grid gap-2 px-32 py-8 lg:py-10 xl:py-16 grid-cols-5">
                 @foreach ($companies as $index => $company)
                     <a href="{{ $company->website }}" target="blank" x-data="{ zoom: false }"
-                        class="border hover:cursor-pointer px-6 py-4 rounded-xl flex justify-center items-center">
+                       class="border hover:cursor-pointer px-6 py-4 rounded-xl flex justify-center items-center">
                         <img :class="{ 'scale-110': zoom }" @mouseenter="zoom = true" @mouseleave="zoom = false"
-                            src="{{ asset($company->getFirstMediaUrl('logo')) }}" class="h-8 w-8 sm:h-12 sm:w-12">
+                             src="{{ asset($company->getFirstMediaUrl('logo')) }}" class="h-8 w-8 sm:h-12 sm:w-12">
                         <h1 class="text-xl font-bold text-black">{{ $company->name }}</h1>
                     </a>
                 @endforeach
             </div>
-            </ <div class="container mx-auto text-center lg:text-left space-y-20">
+        </div>
     </section>
 </div>
