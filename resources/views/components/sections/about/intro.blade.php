@@ -1,45 +1,103 @@
-<div>
-    <section class=" bg-slate-100">
-        <div class="container mx-auto text-start lg:text-left">
-            <div class="grid grid-cols-1 lg:grid-cols-3 xl:gap-6">
-                <div class="px-4 xxs:px-4 sm:px-4 md:px-6 lg:pl-32 xl:pl-48 lg:pr-20 xl:pr-32 py-32 col-span-2">
-                    <x-atoms.subtitle class="leading-loose">
-                        Hi,
-                        <div class="relative text-primary-200 inline-flex mb-2 ">
-                            <svg class="absolute  inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249 22" fill="currentColor"
-                                class="dHctYWJzb2x1dGU dHctbGVmdC0w dHctdG9wLTIvMw dHctaC0[0.6em] dHctdy1mdWxs dHctZmlsbC1za3ktMjAwLzc1">
-                                <path
-                                    d="M247.564 18.5807C241.772 13.3568 232.473 12.7526 225.225 11.4427C217.124 9.97395 208.996 8.57031 200.846 7.46093C186.542 5.51302 172.169 4.08854 157.79 3.01562C126.033 0.645827 94.0929 0.0338481 62.3387 2.36979C42.1785 3.85416 22.008 5.90885 2.32917 10.8463C-0.0155171 11.4349 0.207047 14.6719 2.6889 14.7083C22.0261 14.9896 41.3866 12.6406 60.7109 11.8568C79.9471 11.0807 99.2274 10.6719 118.484 10.9557C142.604 11.3125 166.719 12.8333 190.722 15.5156C199.956 16.5469 209.195 17.6016 218.411 18.8255C227.864 20.0807 237.259 22 246.767 20.7422C247.709 20.6198 248.426 19.3568 247.564 18.5807Z">
-                                </path>
-                            </svg>
-                            <h1 class="relative z-20 text-secondary-900 flex space-x-2">
-                                <span>I'm Youcef</span>
-                            </h1>
-                        </div>
-                        and i'm a full-stack web developer
-                    </x-atoms.subtitle>
-                    <p class="mt-6 text-lg lg:text-xl text-gray-700">based in the vibrant city of Oran, Algeria. My
-                        journey into the world of web development started 5 years ago, and since then, I've been on an
-                        exhilarating path of continuous learning and growth.</p>
-                    <p class="mt-6 text-lg lg:text-xl text-gray-700">My journey into web development began with a simple
-                        line of code, sparking a deep love for building intuitive and responsive web solutions. Over the
-                        years, I've worked on diverse projects, from e-commerce platforms to custom SASS solutions,
-                        always striving for excellence and innovation.</p>
-                    <p class="mt-6 text-lg lg:text-xl text-gray-700">I pride myself on writing clean, maintainable code
-                        and staying updated with the latest industry trends. I enjoy collaborating with clients and
-                        teams to bring ideas to life, ensuring every project exceeds expectations.</p>
-                    <h5 class="text-3xl mt-12">Youcef Nezrek</h5>
-                </div>
-                <div class="w-full relative flex lg:justify-end mb-12 lg:mb-0">
-                    <div>
-                        <img sizes="(min-width: 1024px) 33vw, 100vw" src="{{ asset('assets/images/portrait-2.jpg') }}"
-                            alt="About Image" class="">
-                    </div>
-                    <img class="absolute hidden lg:block lg:bottom-32 lg:-translate-x-1/2  lg:w-[700px]"
-                        src="{{ asset('assets/svg/about.svg') }}" />
-                </div>
+<section class="bg-slate-100 overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-[65fr_35fr] min-h-[880px]">
+
+        {{-- Content --}}
+        <div
+            class="relative flex flex-col justify-center
+                   px-6 sm:px-8 md:px-12 lg:pl-24 lg:pr-12 xl:pl-32 xl:pr-16
+                   max-w-5xl py-16 lg:py-0 z-10 overflow-hidden">
+
+            {{-- Circles background --}}
+            <svg
+                class="absolute
+       bottom-12 sm:bottom-20 md:bottom-24 lg:bottom-24
+       -left-10 sm:-left-12 md:-left-16 lg:-left-24
+       w-[220px] sm:w-[280px] md:w-[340px] lg:w-[460px]
+       opacity-[0.08] sm:opacity-[0.09] md:opacity-[0.1] lg:opacity-[0.04]
+       blur-[0.5px] pointer-events-none z-0"
+                viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+                <g stroke="currentColor" class="text-primary-500">
+                    <circle cx="190" cy="190" r="20" stroke-width="1.5"/>
+                    <circle cx="190" cy="190" r="38" stroke-width="1.4"/>
+                    <circle cx="190" cy="190" r="58" stroke-width="1.3"/>
+                    <circle cx="190" cy="190" r="80" stroke-width="1.3"/>
+                    <circle cx="190" cy="190" r="103" stroke-width="1.2"/>
+                    <circle cx="190" cy="190" r="128" stroke-width="1.2"/>
+                    <circle cx="190" cy="190" r="155" stroke-width="1.1"/>
+                    <circle cx="190" cy="190" r="184" stroke-width="1.1"/>
+                    <circle cx="190" cy="190" r="215" stroke-width="1.0"/>
+                    <circle cx="190" cy="190" r="248" stroke-width="1.0"/>
+                    <circle cx="190" cy="190" r="283" stroke-width="0.9"/>
+                    <circle cx="190" cy="190" r="320" stroke-width="0.9"/>
+                    <circle cx="190" cy="190" r="360" stroke-width="0.8"/>
+                </g>
+            </svg>
+
+
+            {{-- Text --}}
+            <div class="relative z-10">
+                <x-atoms.subtitle class="leading-loose">
+                    {{ $title }}
+                    <x-atoms.underlined-text :text="$highlight"/>
+                    {{ $subtitle }}
+                </x-atoms.subtitle>
+
+                @foreach ($paragraphs as $paragraph)
+                    <p class="text-base sm:text-lg md:text-xl leading-[1.9] text-gray-600 mt-6">
+                        {{ $paragraph }}
+                    </p>
+                @endforeach
+
+                <h5 class="text-3xl mt-12">
+                    {{ $signature }}
+                </h5>
             </div>
         </div>
-    </section>
-</div>
+
+        {{-- Desktop Image --}}
+        <div class="relative hidden lg:block">
+            <img
+                src="{{ $image }}"
+                alt="Portrait"
+                class="absolute inset-0 w-full h-full object-cover object-top"
+                style="filter: grayscale(15%) contrast(1.05);"
+            />
+
+            {{-- Decorative lines --}}
+            <img
+                src="{{ asset('assets/svg/about.svg') }}"
+                alt=""
+                class="absolute bottom-4 left-0 -translate-x-1/3
+                       w-[360px] lg:w-[460px] xl:w-[520px]
+                       opacity-80 pointer-events-none select-none"
+            />
+        </div>
+
+    </div>
+
+    {{-- Mobile Image --}}
+    <div class="block lg:hidden w-full relative overflow-hidden">
+
+        <div class="relative h-[320px] sm:h-[380px] md:h-[420px]">
+
+            <img
+                src="{{ $image }}"
+                alt="Portrait"
+                class="absolute inset-0 w-full h-full object-cover object-top"
+                style="filter: grayscale(15%) contrast(1.05);"
+            />
+
+            {{-- Decorative lines (mobile too) --}}
+            <img
+                src="{{ asset('assets/svg/about.svg') }}"
+                alt=""
+                class="absolute bottom-0 left-0 -translate-x-1/3
+                   w-[260px] sm:w-[320px] md:w-[380px]
+                   opacity-70 pointer-events-none"
+            />
+
+        </div>
+
+    </div>
+</section>
