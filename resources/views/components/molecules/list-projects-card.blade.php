@@ -6,8 +6,8 @@
 <div @class([
     "bg-slate-100 p-8 md:py-10 md:px-16 h-full",
     "rounded-2xl", // Base radius for all corners
-    "mt-36 rounded-br-[3rem]" => $reverse, // Extra radius on bottom-left if reversed
-    "rounded-tl-[3rem]" => !$reverse,      // Extra radius on top-right if NOT reversed
+   "md:mt-24 lg:mt-32 rounded-br-[3rem]" => $reverse,
+    "rounded-tl-[3rem]" => !$reverse,
 ])>
 
     <div class="grid gap-10">

@@ -1,53 +1,25 @@
-<div class="bg-white">
-    {{-- HERO --}}
-    <section class="max-w-5xl mx-auto px-6 pt-28 pb-10 text-center">
-        <h1 class="text-4xl md:text-6xl font-semibold tracking-tight text-gray-900">
-            My Work
-        </h1>
-        <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            A selection of projects focused on building scalable systems, APIs, and modern digital platforms.
-        </p>
+<section class="relative max-w-6xl mx-auto px-4 sm:px-6 pb-24 sm:pb-28 lg:pb-32 pt-8 sm:pt-10">
 
-        {{-- FILTERS --}}
-        <div class="mt-10 flex flex-wrap justify-center gap-3">
-            <button wire:click="setRole(null)"
-                @class([
-                    "px-5 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                    "bg-gray-900 text-white shadow-lg" => !$role,
-                    "bg-gray-100 text-gray-600 hover:bg-gray-200" => $role
-                ])>
-                All
-            </button>
+    <div
+        class="grid grid-cols-1 md:grid-cols-2
+               items-start
+               gap-y-10 sm:gap-y-12 md:gap-y-16 lg:gap-y-20
+               gap-x-6 md:gap-x-10 lg:gap-x-14">
 
-            @foreach ($this->roles as $roleItem)
-                <button wire:click="setRole('{{ $roleItem->value }}')"
-                    @class([
-                        "px-5 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                        "bg-gray-900 text-white shadow-lg" => $role === $roleItem->value,
-                        "bg-gray-100 text-gray-600 hover:bg-gray-200" => $role !== $roleItem->value
-                    ])>
-                    {{ $roleItem->label() }}
-                </button>
-            @endforeach
-        </div>
-    </section>
+        @foreach ($this->projects as $index => $project)
+            <div class="relative h-full overflow-hidden">
+                <x-molecules.list-projects-card
+                    :project="$project"
+                    :reverse="$index % 2 !== 0"
+                />
+            </div>
+        @endforeach
 
-    {{-- PROJECTS GRID --}}
-    <section class="max-w-6xl mx-auto px-6 pb-32 pt-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32">
-            @foreach ($this->projects as $index => $project)
-                <div class="flex justify-center">
-                    <x-molecules.list-projects-card
-                        :project="$project"
-                        :reverse="$index % 2 !== 0"
-                    />
-                </div>
-            @endforeach
-        </div>
+    </div>
 
-        {{-- CUSTOM PAGINATION --}}
-        <div class="mt-48">
-            {{ $this->projects->links('components.atoms.pagination') }}
-        </div>
-    </section>
-</div>
+    {{-- PAGINATION --}}
+    <div class="relative z-20 mt-16 sm:mt-20">
+        {{ $this->projects->links('components.atoms.pagination') }}
+    </div>
+
+</section>
