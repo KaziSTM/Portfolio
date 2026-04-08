@@ -5,10 +5,8 @@
             {{-- Header --}}
             <div
                 class="grid grid-cols-1 xl:grid-cols-2 gap-10 md:gap-16 xl:gap-24 items-center px-4 sm:px-8 md:px-12 lg:px-16">
-                <x-atoms.subtitle class="leading-loose">
-                    How I build
-                    <x-atoms.underlined-text text="reliable"/>
-                    systems
+                <x-atoms.subtitle class="">
+                    How I build reliable systems
                 </x-atoms.subtitle>
 
                 <p class="mt-6 text-lg lg:text-xl text-start text-gray-700">

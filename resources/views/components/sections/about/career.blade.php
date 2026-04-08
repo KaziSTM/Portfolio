@@ -2,10 +2,8 @@
     <div class="grid grid-cols-1 lg:grid-cols-5 xl:gap-12">
         <div class="col-span-2 lg:pl-32 xl:pl-48 py-4 lg:py-32">
 
-            <x-atoms.subtitle class="leading-loose">
-                My career
-                <x-atoms.underlined-text text="journey"/>
-                so far
+            <x-atoms.subtitle>
+                My career journey so far
             </x-atoms.subtitle>
             <p class="mt-6 text-sm lg:text-base text-gray-700">{{$paragraph}}</p>
 

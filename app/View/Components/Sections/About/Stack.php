@@ -12,8 +12,6 @@ class Stack extends Component
 
     public string $title;
 
-    public string $highlight;
-
     public string $paragraph;
 
     /**
@@ -22,8 +20,7 @@ class Stack extends Component
     public function __construct()
     {
 
-        $this->title = 'A stack built for';
-        $this->highlight = 'reliability and scale';
+        $this->title = 'A stack built for reliability and scale';
 
         $this->paragraph = "I focus on a carefully chosen set of technologies that allow me to build fast, maintainable, and scalable systems. Instead of chasing trends, I prioritize tools that integrate well together and support clean architecture, efficient workflows, and long-term stability. This stack enables me to deliver robust applications, from complex backends to responsive user interfaces.";
 

@@ -8,9 +8,8 @@
             </div>
         </div>
         <div class="order-1 lg:order-2">
-            <x-atoms.subtitle class="leading-loose">
+            <x-atoms.subtitle>
                 {{$title}}
-                <x-atoms.underlined-text :text="$highlight"/>
             </x-atoms.subtitle>
 
             <p class="mt-6 text-lg lg:text-xl text-gray-700">{{$paragraph}}</p>

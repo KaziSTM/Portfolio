@@ -37,7 +37,7 @@
 
             {{-- Text --}}
             <div class="relative z-10">
-                <x-atoms.subtitle class="leading-loose">
+                <x-atoms.subtitle class="">
                     {{ $title }}
                     <x-atoms.underlined-text :text="$highlight"/>
                     {{ $subtitle }}
