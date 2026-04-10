@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Sections\About;
 
+use App\Support\Cms;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -19,10 +20,13 @@ class Stack extends Component
      */
     public function __construct()
     {
+        $content = Cms::section('about', 'stack', [
+            'title' => 'A stack built for reliability and scale',
+            'description' => 'I focus on a carefully chosen set of technologies that allow me to build fast, maintainable, and scalable systems. Instead of chasing trends, I prioritize tools that integrate well together and support clean architecture, efficient workflows, and long-term stability. This stack enables me to deliver robust applications, from complex backends to responsive user interfaces.',
+        ]);
 
-        $this->title = 'A stack built for reliability and scale';
-
-        $this->paragraph = "I focus on a carefully chosen set of technologies that allow me to build fast, maintainable, and scalable systems. Instead of chasing trends, I prioritize tools that integrate well together and support clean architecture, efficient workflows, and long-term stability. This stack enables me to deliver robust applications, from complex backends to responsive user interfaces.";
+        $this->title = $content['title'];
+        $this->paragraph = $content['description'];
 
         $this->tools = [
             [

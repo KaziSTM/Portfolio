@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Sections\About;
 
+use App\Support\Cms;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -17,19 +18,19 @@ class Intro extends Component
 
     public function __construct()
     {
-        $this->title = "Hi,";
+        $content = Cms::section('about', 'intro', [
+            'title' => 'Hi,',
+            'highlight' => " I'm Youcef",
+            'subtitle' => " and i'm a software engineer",
+            'paragraphs' => [],
+            'signature' => 'Youcef Nezrek',
+        ]);
 
-        $this->highlight = " I'm Youcef";
-
-        $this->subtitle = " and i'm a software engineer";
-
-        $this->paragraphs = [
-            "Based in Oran, Algeria, I focus on building scalable web platforms with a strong emphasis on backend architecture and real-world business logic. I work on complex systems such as e-commerce platforms, ERP solutions, and multi-tenant applications, designing APIs and infrastructures that are reliable, maintainable, and built to handle growth.",
-
-            "My approach is centered around clean architecture, performance, and long-term maintainability. I prioritize building systems that are not only functional, but structured to evolve with business needs, ensuring clarity in code, efficiency in execution, and stability in production environments."
-        ];
-
-        $this->signature = "Youcef Nezrek";
+        $this->title = $content['title'];
+        $this->highlight = $content['highlight'];
+        $this->subtitle = $content['subtitle'];
+        $this->paragraphs = $content['paragraphs'];
+        $this->signature = $content['signature'];
 
         $this->image = asset('assets/images/portrait-2.jpg');
     }

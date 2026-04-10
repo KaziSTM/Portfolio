@@ -15,9 +15,9 @@ return new class extends Migration {
             $table->string('name')->unique();
             $table->string('slug')->unique();
 
-            $table->string('header');
-            $table->longText('description');
-            $table->longText('details')->nullable();
+            $table->json('header');
+            $table->json('description');
+            $table->json('details')->nullable();
 
             $table->string('link')->nullable();
 
@@ -37,6 +37,7 @@ return new class extends Migration {
             */
 
             $table->boolean('is_featured')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->boolean('is_in_progress')->default(false);
 
             /*

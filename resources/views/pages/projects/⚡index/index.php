@@ -4,13 +4,10 @@ use App\Enums\ProjectRole;
 use App\Models\Project;
 use Illuminate\Support\Collection;
 use Livewire\Attributes\Computed;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-
-new #[Title('My work')]
-class extends Component {
+new class extends Component {
 
     use WithPagination;
 
@@ -28,6 +25,7 @@ class extends Component {
             ->when($this->role, function ($query) {
                 $query->withAnyTags([$this->role], 'main');
             })
+            ->active()
             ->latest()
             ->paginate(6);
     }
@@ -42,6 +40,7 @@ class extends Component {
     public function render()
     {
         return $this->view()
+            ->title(__('ui.pages.work'))
             ->layout('layouts::app');
     }
 };

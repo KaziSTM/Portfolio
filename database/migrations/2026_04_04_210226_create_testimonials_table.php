@@ -16,9 +16,9 @@ return new class extends Migration {
                 ->cascadeOnDelete();
 
             $table->string('author_name');
-            $table->string('author_role')->nullable();
+            $table->json('author_role')->nullable();
 
-            $table->text('content');
+            $table->json('content');
 
             $table->unsignedTinyInteger('rating')->default(5);
 

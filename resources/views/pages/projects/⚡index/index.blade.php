@@ -5,18 +5,18 @@
         <button wire:click="setRole(null)"
             @class([
                 "px-5 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                "bg-gray-900 text-white shadow-lg" => !$role,
-                "bg-gray-100 text-gray-600 hover:bg-gray-200" => $role
+                "bg-primary-500 text-white shadow-lg" => !$role,
+                "bg-secondary-100 text-secondary-600 hover:bg-secondary-200" => $role
             ])>
-            All
+            {{ __('ui.projects.all') }}
         </button>
 
         @foreach ($this->roles as $roleItem)
             <button wire:click="setRole('{{ $roleItem->value }}')"
                 @class([
                     "px-5 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                    "bg-gray-900 text-white shadow-lg" => $role === $roleItem->value,
-                    "bg-gray-100 text-gray-600 hover:bg-gray-200" => $role !== $roleItem->value
+                    "bg-primary-500 text-white shadow-lg" => $role === $roleItem->value,
+                    "bg-secondary-100 text-secondary-600 hover:bg-secondary-200" => $role !== $roleItem->value
                 ])>
                 {{ $roleItem->label() }}
             </button>

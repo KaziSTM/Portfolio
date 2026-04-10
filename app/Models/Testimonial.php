@@ -2,21 +2,30 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Spatie\Translatable\HasTranslations;
 
-#[Fillable([
-    'project_id',
-    'author_name',
-    'author_role',
-    'content',
-    'rating',
-    'avatar',
-])]
 class Testimonial extends Model
 {
-   
+    use HasFactory;
+    use HasTranslations;
+
+    protected $fillable = [
+        'project_id',
+        'author_name',
+        'author_role',
+        'content',
+        'rating',
+        'avatar',
+    ];
+
+    public array $translatable = [
+        'author_role',
+        'content',
+    ];
+
 
     /*
     |--------------------------------------------------------------------------

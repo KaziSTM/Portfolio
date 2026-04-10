@@ -1,13 +1,13 @@
 <?php
 
 use App\Mail\ContactFormMail;
+use App\Support\Cms;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\RateLimiter;
-use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 new
-#[Title('Home')]
 class extends Component {
 
     #[Validate('required|min:3')]
@@ -27,30 +27,35 @@ class extends Component {
 
     public bool $isSubmitting = false;
 
+    public array $hero = [];
+    public array $formContent = [];
+
 
     public function mount(): void
     {
-        $this->services = [
-            'Web development' => false,
-            'Web design' => false,
-            'Consulting' => false,
-            'Other' => false,
-        ];
+        $this->hero = Cms::section('contact', 'hero', [
+            'title' => 'How can I help you?',
+            'subtitle' => "Let's get in touch",
+            'reach_label' => 'You can reach me at the following',
+        ]);
 
-        $this->contacts = [
-            [
-                'title' => 'Call me',
-                'description' => 'Available weekdays 9AM–5PM',
-                'value' => '+213 (658) 760-391',
-                'icon' => 'heroicon-o-phone'
-            ],
-            [
-                'title' => 'Email me',
-                'description' => "I'll usually reply within an hour",
-                'value' => 'ynezrek@gmail.com',
-                'icon' => 'heroicon-o-at-symbol'
-            ],
-        ];
+        $this->formContent = Cms::section('contact', 'form', [
+            'title' => 'Fill out the form below to get started',
+            'description' => 'Tell me a little about your project.',
+            'services' => ['Web development', 'Web design', 'Consulting', 'Other'],
+            'submit_label' => __('ui.actions.get_started'),
+            'submitting_label' => __('ui.actions.sending'),
+            'success_message' => __('ui.contact.success'),
+            'rate_limit_message' => __('ui.contact.rate_limit'),
+        ]);
+
+        $this->services = collect($this->formContent['services'])
+            ->mapWithKeys(fn ($service) => [$service => false])
+            ->all();
+
+        $this->contacts = Cms::section('contact', 'contacts', [
+            'items' => [],
+        ])['items'];
     }
 
 
@@ -61,7 +66,7 @@ class extends Component {
         $key = 'contact-form:' . request()->ip();
 
         if (RateLimiter::tooManyAttempts($key, 3)) {
-            session()->flash('error', 'Too many attempts. Try again later.');
+            session()->flash('error', $this->formContent['rate_limit_message']);
             return;
         }
 
@@ -97,7 +102,7 @@ class extends Component {
         $this->reset(['name', 'email', 'phone', 'message']);
         $this->services = array_map(fn() => false, $this->services);
 
-        session()->flash('success', 'Message sent successfully!');
+        session()->flash('success', $this->formContent['success_message']);
 
         $this->isSubmitting = false;
     }
@@ -105,6 +110,7 @@ class extends Component {
     public function render()
     {
         return $this->view()
+            ->title(__('ui.pages.contact'))
             ->layout('layouts::app');
     }
 };

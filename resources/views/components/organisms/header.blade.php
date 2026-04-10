@@ -1,14 +1,31 @@
+@php
+    $headerContent = \App\Support\Cms::section('global', 'header', [
+        'cta_label' => __('ui.actions.book_call'),
+    ]);
+@endphp
+
 <header class="relative py-4 md:py-6 border-b border-secondary-200 z-[99]">
     <div class="flex items-center justify-between w-full mx-auto max-w-8xl px-6 md:px-32">
+
         <div class="shrink-0">
             <x-atoms.logo class="w-12 h-10"/>
         </div>
+
         <x-organisms.menu/>
-        <div class="hidden md:flex">
-            <button wire:navigate href="{{route('contact')}}"
+
+        <div class="hidden md:flex items-center gap-4">
+            <x-organisms.locale-switcher/>
+            <button wire:navigate href="{{ route('contact') }}"
                     class="bg-slate-100 py-2 px-6 border border-secondary-200 rounded-2xl focus:outline-hidden">
-                <span class="font-semibold text-secondary-900 "> Book a call</span>
+                <span class="font-semibold text-secondary-900">
+                    {{ $headerContent['cta_label'] }}
+                </span>
             </button>
         </div>
+
+        <div class="md:hidden flex items-center gap-3">
+            <x-organisms.locale-switcher/>
+        </div>
+
     </div>
 </header>

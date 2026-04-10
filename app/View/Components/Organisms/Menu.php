@@ -17,15 +17,15 @@ class Menu extends Component
     {
         $this->navigation = [
             [
-                'label' => 'Home',
+                'label' => 'ui.navigation.home',
                 'route' => 'home',
             ],
             [
-                'label' => 'About',
+                'label' => 'ui.navigation.about',
                 'route' => 'about',
             ],
             [
-                'label' => 'Work',
+                'label' => 'ui.navigation.work',
                 'route' => 'work',
             ],
         ];

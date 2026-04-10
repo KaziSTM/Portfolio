@@ -3,6 +3,7 @@
 namespace App\View\Components\Sections\Home;
 
 use App\Models\Project;
+use App\Support\Cms;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
@@ -16,8 +17,13 @@ class Work extends Component
 
     public function __construct()
     {
-        $this->title = 'Check out my latest work';
-        $this->description = 'Discover how I craft scalable and impactful digital systems.';
+        $content = Cms::section('home', 'work', [
+            'title' => 'Check out my latest work',
+            'description' => 'Discover how I craft scalable and impactful digital systems.',
+        ]);
+
+        $this->title = $content['title'];
+        $this->description = $content['description'];
 
         $this->projects = Project::query()
             ->featured()

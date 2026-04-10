@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="soft-scrollbar">
+<html
+    lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+    dir="{{ app()->isLocale('ar') ? 'rtl' : 'ltr' }}"
+    class="soft-scrollbar"
+>
 
 <head>
     <meta charset="utf-8">
@@ -13,8 +17,8 @@
         <title>{{ config('app.name') }}</title>
     @endif
 
-    <meta name="description" content="Laravel Jetstream">
-    <link rel="shortcut icon" href="{{ asset('images/logo/favicon.ico') }}">
+    <meta name="description" content="{{ config('app.description') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.ico') }}">
     <tallstackui:script/>
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])

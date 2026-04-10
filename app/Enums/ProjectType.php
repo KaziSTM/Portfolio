@@ -9,9 +9,6 @@ enum ProjectType: string
 
     public function label(): string
     {
-        return match ($this) {
-            self::PROJECT => 'Project',
-            self::PACKAGE => 'Package',
-        };
+        return __('ui.project_types.' . $this->value);
     }
 }

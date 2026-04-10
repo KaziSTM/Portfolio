@@ -1,11 +1,9 @@
 <?php
 
 use App\Models\Project;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('View project')]
-class extends Component {
+new class extends Component {
 
     public Project $project;
 
@@ -21,6 +19,7 @@ class extends Component {
     public function render()
     {
         return $this->view()
+            ->title(__('ui.pages.project'))
             ->layout('layouts::app');
     }
 };

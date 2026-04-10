@@ -10,11 +10,7 @@ enum ProjectRole: string
 
     public function label(): string
     {
-        return match ($this) {
-            self::BACKEND => 'Backend',
-            self::FULLSTACK => 'Full-Stack',
-            self::FRONTEND => 'Frontend',
-        };
+        return __('ui.project_roles.' . $this->value);
     }
 
     public function color(): string

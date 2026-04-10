@@ -3,34 +3,44 @@
 namespace App\Models;
 
 use App\Enums\ProjectType;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Tags\HasTags;
+use Spatie\Translatable\HasTranslations;
 
-#[Fillable([
-    'name',
-    'slug',
-    'header',
-    'description',
-    'company_id',
-    'link',
-    'details',
-    'start',
-    'end',
-    'is_featured',
-    'type',
-    'is_in_progress',
-])]
 class Project extends Model implements HasMedia
 {
+    use HasFactory;
     use InteractsWithMedia;
     use HasTags;
+    use HasTranslations;
+
+    public array $translatable = [
+        'header',
+        'description',
+        'details',
+    ];
+    protected $fillable = [
+        'name',
+        'slug',
+        'header',
+        'description',
+        'company_id',
+        'link',
+        'details',
+        'start',
+        'end',
+        'is_featured',
+        'type',
+        'is_in_progress',
+        'is_active',
+    ];
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +66,7 @@ class Project extends Model implements HasMedia
             ->filter();
     }
 
-    public function testimonials(): Project|HasMany
+    public function testimonials(): HasMany
     {
         return $this->hasMany(Testimonial::class);
     }
@@ -93,22 +103,28 @@ class Project extends Model implements HasMedia
         return $this->type === ProjectType::PROJECT;
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Scopes
+    |--------------------------------------------------------------------------
+    */
     #[Scope]
     public function withRelations($query)
     {
         return $query->with(['company', 'tags']);
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Scopes
-    |--------------------------------------------------------------------------
-    */
 
     #[Scope]
     public function featured($query)
     {
         return $query->where('is_featured', true);
+    }
+
+    #[Scope]
+    public function active($query)
+    {
+        return $query->where('is_active', true);
     }
 
     #[Scope]
@@ -127,6 +143,7 @@ class Project extends Model implements HasMedia
     {
         return [
             'is_featured' => 'boolean',
+            'is_active' => 'boolean',
             'is_in_progress' => 'boolean',
             'start' => 'date',
             'end' => 'date',

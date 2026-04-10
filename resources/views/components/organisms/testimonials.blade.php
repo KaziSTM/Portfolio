@@ -5,10 +5,7 @@
 
             {{-- Title --}}
             <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-20">
-                Hear it straight from
-                <span class="text-blue-600">
-                {{ $project->company?->name ?? 'clients' }}
-            </span>
+                {{ __('ui.projects.testimonials_title', ['company' => $project->company?->name ?? __('ui.projects.personal_project')]) }}
             </h2>
 
             {{-- Carousel --}}
@@ -108,12 +105,12 @@
 
                     <button @click="prev"
                             class="hover:text-gray-900 transition">
-                        ← Prev
+                        ← {{ __('ui.actions.prev') }}
                     </button>
 
                     <button @click="next"
                             class="hover:text-gray-900 transition">
-                        Next →
+                        {{ __('ui.actions.next') }} →
                     </button>
 
                 </div>

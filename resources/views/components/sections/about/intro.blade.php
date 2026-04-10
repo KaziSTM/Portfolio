@@ -4,17 +4,17 @@
         {{-- Content --}}
         <div
             class="relative flex flex-col justify-center
-                   px-6 sm:px-8 md:px-12 lg:pl-24 lg:pr-12 xl:pl-32 xl:pr-16
+                   px-6 sm:px-8 md:px-12 lg:ps-24 lg:pe-12 xl:ps-32 xl:pe-16
                    max-w-5xl py-16 lg:py-0 z-10 overflow-hidden">
 
             {{-- Circles background --}}
             <svg
                 class="absolute
-       bottom-12 sm:bottom-20 md:bottom-24 lg:bottom-24
-       -left-10 sm:-left-12 md:-left-16 lg:-left-24
-       w-[220px] sm:w-[280px] md:w-[340px] lg:w-[460px]
-       opacity-[0.08] sm:opacity-[0.09] md:opacity-[0.1] lg:opacity-[0.04]
-       blur-[0.5px] pointer-events-none z-0"
+                       bottom-12 sm:bottom-20 md:bottom-24 lg:bottom-24
+                       -start-10 sm:-start-12 md:-start-16 lg:-start-24
+                       w-[220px] sm:w-[280px] md:w-[340px] lg:w-[460px]
+                       opacity-[0.08] sm:opacity-[0.09] md:opacity-[0.1] lg:opacity-[0.04]
+                       blur-[0.5px] pointer-events-none z-0"
                 viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg"
             >
                 <g stroke="currentColor" class="text-primary-500">
@@ -34,22 +34,21 @@
                 </g>
             </svg>
 
-
             {{-- Text --}}
             <div class="relative z-10">
-                <x-atoms.subtitle class="">
+                <x-atoms.subtitle>
                     {{ $title }}
-                    <x-atoms.underlined-text :text="$highlight"/>
+                    <span class="text-primary-500">{{ $highlight }}</span>
                     {{ $subtitle }}
                 </x-atoms.subtitle>
 
                 @foreach ($paragraphs as $paragraph)
-                    <p class="text-base sm:text-lg md:text-xl leading-[1.9] text-gray-600 mt-6">
+                    <p class="text-base sm:text-lg md:text-xl leading-[1.9] text-gray-600 mt-6 text-start">
                         {{ $paragraph }}
                     </p>
                 @endforeach
 
-                <h5 class="text-3xl mt-12">
+                <h5 class="text-3xl mt-12 text-start">
                     {{ $signature }}
                 </h5>
             </div>
@@ -68,9 +67,10 @@
             <img
                 src="{{ asset('assets/svg/about.svg') }}"
                 alt=""
-                class="absolute bottom-4 left-0 -translate-x-1/3
+                class="absolute bottom-4 start-0 -translate-x-1/3 rtl:translate-x-1/3
                        w-[360px] lg:w-[460px] xl:w-[520px]
-                       opacity-80 pointer-events-none select-none"
+                       opacity-80 pointer-events-none select-none
+                       rtl:scale-x-[-1]"
             />
         </div>
 
@@ -78,7 +78,6 @@
 
     {{-- Mobile Image --}}
     <div class="block lg:hidden w-full relative overflow-hidden">
-
         <div class="relative h-[320px] sm:h-[380px] md:h-[420px]">
 
             <img
@@ -88,16 +87,15 @@
                 style="filter: grayscale(15%) contrast(1.05);"
             />
 
-            {{-- Decorative lines (mobile too) --}}
+            {{-- Decorative lines (mobile) --}}
             <img
                 src="{{ asset('assets/svg/about.svg') }}"
                 alt=""
-                class="absolute bottom-0 left-0 -translate-x-1/3
-                   w-[260px] sm:w-[320px] md:w-[380px]
-                   opacity-70 pointer-events-none"
+                class="absolute bottom-0 start-0 -translate-x-1/3 rtl:translate-x-1/3
+                       w-[260px] sm:w-[320px] md:w-[380px]
+                       opacity-70 pointer-events-none
+                       rtl:scale-x-[-1]"
             />
-
         </div>
-
     </div>
 </section>

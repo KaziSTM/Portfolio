@@ -55,14 +55,14 @@
 
             {{-- Company --}}
             <div>
-                <p class="font-medium text-gray-900 mb-1">Client</p>
-                <p>{{ $project->company?->name ?? 'Personal Project' }}</p>
+                <p class="font-medium text-gray-900 mb-1">{{ __('ui.projects.client') }}</p>
+                <p>{{ $project->company?->name ?? __('ui.projects.personal_project') }}</p>
             </div>
 
             {{-- Industry --}}
             @if ($project->company?->industry)
                 <div>
-                    <p class="font-medium text-gray-900 mb-1">Industry</p>
+                    <p class="font-medium text-gray-900 mb-1">{{ __('ui.projects.industry') }}</p>
                     <p>{{ $project->company->industry }}</p>
                 </div>
             @endif
@@ -70,7 +70,7 @@
             {{-- Company Size --}}
             @if ($project->company?->size)
                 <div>
-                    <p class="font-medium text-gray-900 mb-1">Company Size</p>
+                    <p class="font-medium text-gray-900 mb-1">{{ __('ui.projects.company_size') }}</p>
                     <p>{{ $project->company->size }}</p>
                 </div>
             @endif
@@ -78,7 +78,7 @@
             {{-- Headquarters --}}
             @if ($project->company?->headquarter)
                 <div>
-                    <p class="font-medium text-gray-900 mb-1">Headquarters</p>
+                    <p class="font-medium text-gray-900 mb-1">{{ __('ui.projects.headquarters') }}</p>
                     <p>{{ $project->company->headquarter }}</p>
                 </div>
             @endif
@@ -87,16 +87,16 @@
 
             {{-- Duration --}}
             <div>
-                <p class="font-medium text-gray-900 mb-1">Project Duration</p>
+                <p class="font-medium text-gray-900 mb-1">{{ __('ui.projects.duration') }}</p>
                 <p>
                     @if ($project->start)
-                        {{ $project->start->format('M Y') }}
+                        {{ $project->start->translatedFormat('M Y') }}
                     @endif
 
                     @if ($project->end)
-                        - {{ $project->end->format('M Y') }}
+                        - {{ $project->end->translatedFormat('M Y') }}
                     @elseif ($project->is_in_progress)
-                        - Present
+                        - {{ __('ui.projects.present') }}
                     @endif
                 </p>
             </div>
@@ -104,7 +104,7 @@
             {{-- Website --}}
             @if ($project->company?->website)
                 <div>
-                    <p class="font-medium text-gray-900 mb-1">Website</p>
+                    <p class="font-medium text-gray-900 mb-1">{{ __('ui.projects.website') }}</p>
                     <a href="{{ $project->company->website }}"
                        target="_blank"
                        class="text-gray-700 hover:underline">
@@ -119,7 +119,7 @@
                     <a href="{{ $project->link }}"
                        target="_blank"
                        class="inline-flex items-center px-5 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">
-                        Visit Project's Website
+                        {{ __('ui.actions.visit_project') }}
                         <x-icon name="arrow-up-right" class="w-4 h-4 ml-2"/>
                     </a>
                 </div>

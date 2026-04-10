@@ -1,15 +1,14 @@
 <?php
 
-use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('About me')]
-class extends Component {
+new class extends Component {
 
 
     public function render()
     {
         return $this->view()
+            ->title(__('ui.pages.about'))
             ->layout('layouts::app');
     }
 };
