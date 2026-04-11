@@ -3,12 +3,12 @@
 
     {{-- Image --}}
     <div x-data="{ zoom: false }"
-         class="hover:cursor-pointer relative overflow-hidden order-1 xl:order-2 rounded-tl-xl rounded-br-xl rtl:rounded-tl-none rtl:rounded-br-none rtl:rounded-tr-xl rtl:rounded-bl-xl">
+         class="hover:cursor-pointer relative overflow-hidden order-1 xl:order-2 rounded-tl-xl rounded-br-xl rtl:rounded-tl-none rtl:rounded-br-none rtl:rounded-tr-xl rtl:rounded-bl-xl ">
         <img :class="{ 'scale-110': zoom }"
              @mouseenter="zoom = true"
              @mouseleave="zoom = false"
              src="{{ $project->getFirstMediaUrl('logo') }}"
-             class="transition-transform duration-500 ease-in-out w-full h-full"/>
+             class="transition-transform duration-500 ease-in-out h-full "/>
     </div>
 
     <img loading="lazy" width="1528" height="794" src="{{ asset('assets/svg/home-hero-gradient.svg') }}"

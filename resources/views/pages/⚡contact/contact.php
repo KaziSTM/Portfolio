@@ -50,7 +50,7 @@ class extends Component {
         ]);
 
         $this->services = collect($this->formContent['services'])
-            ->mapWithKeys(fn ($service) => [$service => false])
+            ->mapWithKeys(fn($service) => [$service => false])
             ->all();
 
         $this->contacts = Cms::section('contact', 'contacts', [
@@ -80,15 +80,13 @@ class extends Component {
         $this->isSubmitting = true;
 
 
-        // Filter selected services
         $selectedServices = collect($this->services)
             ->filter(fn($checked) => $checked)
             ->keys()
             ->values()
             ->toArray();
 
-        // Send email
-        Mail::to('your@email.com')->send(
+        Mail::to('contact@itsyoucef.com')->send(
             new ContactFormMail(
                 name: $this->name,
                 email: $this->email,
