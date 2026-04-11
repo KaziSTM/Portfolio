@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid gap-10 mt-20 px-20 sm:px-16  justify-center">
+        <div class="grid gap-10 mt-20 px-10 sm:px-16  justify-center">
             @foreach ($projects as $index => $project)
                 <x-molecules.project-card :project="$project"/>
             @endforeach
