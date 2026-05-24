@@ -4,19 +4,36 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "run-s lint:*",
+        "lint:oxlint": "oxlint . --fix",
+        "lint:eslint": "eslint . --fix --cache",
+        "format": "prettier --write --experimental-cli src/"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.2.2",
-        "axios": "^1.14.0",
-        "laravel-vite-plugin": "^3.0.1",
-        "tailwindcss": "^4.2.2",
-        "vite": "^8.0.3"
+        "@eslint/js": "^10.0.1",
+        "@tailwindcss/vite": "^4.0.0",
+        "concurrently": "^9.0.1",
+        "eslint": "^10.2.1",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-oxlint": "~1.60.0",
+        "eslint-plugin-vue": "~10.8.0",
+        "laravel-vite-plugin": "^3.1",
+        "oxlint": "~1.60.0",
+        "prettier": "3.8.3",
+        "vite": "^8.0.8",
+        "vite-plugin-vue-devtools": "^8.1.1"
     },
     "dependencies": {
+        "@inertiajs/vite": "^3.2.0",
+        "@inertiajs/vue3": "^3.2.0",
         "@tailwindcss/forms": "^0.5.11",
         "@tailwindcss/typography": "^0.5.19",
+        "@vitejs/plugin-vue": "^6.0.7",
         "flowbite": "^4.0.1",
-        "tailwind-scrollbar": "^4.0.2"
+        "tailwind-scrollbar": "^4.0.2",
+        "tailwindcss": "^4.0.0",
+        "vue": "^3.5.34"
     }
 }

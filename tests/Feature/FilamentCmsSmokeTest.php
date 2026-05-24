@@ -10,7 +10,7 @@ it('loads the localized homepage', function () {
         ->assertOk();
 });
 
-it('loads the filament admin create and cms pages for an authenticated user', function (string $routeName) {
+it('loads the filament admin create and cms Pages for an authenticated user', function (string $routeName) {
     $user = User::factory()->create();
 
     $this->actingAs($user)
@@ -20,5 +20,5 @@ it('loads the filament admin create and cms pages for an authenticated user', fu
     'companies create page' => 'filament.admin.resources.companies.create',
     'careers create page' => 'filament.admin.resources.careers.create',
     'projects create page' => 'filament.admin.resources.projects.create',
-    'cms page' => 'filament.admin.pages.manage-site-content',
+    'cms page' => 'filament.admin.Pages.manage-site-content',
 ]);
