@@ -22,13 +22,14 @@
         "laravel-vite-plugin": "^3.1",
         "oxlint": "~1.60.0",
         "prettier": "3.8.3",
-        "vite": "^8.0.8",
-        "vite-plugin-vue-devtools": "^8.1.1"
+        "vite": "^8.0.8"
     },
     "dependencies": {
         "@fontsource-variable/cairo": "^5.2.7",
         "@fontsource-variable/inter": "^5.2.8",
         "@fontsource-variable/lexend": "^5.2.11",
+        "@fontsource/gochi-hand": "^5.2.8",
+        "@fontsource/mr-dafoe": "^5.2.8",
         "@inertiajs/vite": "^3.2.0",
         "@inertiajs/vue3": "^3.2.0",
         "@tailwindcss/forms": "^0.5.11",

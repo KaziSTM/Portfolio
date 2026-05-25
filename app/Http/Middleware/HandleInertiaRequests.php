@@ -35,6 +35,22 @@ class HandleInertiaRequests extends Middleware
                     'description' => 'Full-stack web developer focused on building scalable platforms and complex digital products. I specialize in backend architecture, APIs, and designing systems that handle real-world business logic efficiently.',
                     'cta_label' => __('ui.actions.book_call'),
                 ]),
+                'features_section' => [
+
+                    'features' => Cms::section('home', 'features', [
+                        'title' => 'How I build reliable systems',
+                        'description' => 'I focus on delivering reliable, scalable solutions with a strong emphasis on backend architecture, performance, and clean implementation of complex business logic.',
+                        'items' => [],
+                    ]),
+                    'translations' => [
+
+                        'caption' => __('ui.home.features_caption'),
+                        'download_label' => __('ui.actions.download_cv'),
+                        'view_experience_label' => __('ui.actions.view_experience'),
+                    ]
+
+                ],
+
 
                 'footer' => Cms::section('global', 'footer', [
                     'title' => 'Lets make something great together',

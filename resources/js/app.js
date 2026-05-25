@@ -1,12 +1,14 @@
 import '../css/app.css'
 
-import { createApp, h } from 'vue'
-import { createInertiaApp, router } from '@inertiajs/vue3'
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
+import {createApp, h} from 'vue'
+import {createInertiaApp, router} from '@inertiajs/vue3'
+import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers'
 
 import '@fontsource-variable/inter'
 import '@fontsource-variable/lexend'
 import '@fontsource-variable/cairo'
+import '@fontsource/gochi-hand'
+import '@fontsource/mr-dafoe'
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel'
 
@@ -30,7 +32,7 @@ createInertiaApp({
             import.meta.glob('./Pages/**/*.vue'),
         ),
 
-    setup({ el, App, props, plugin }) {
+    setup({el, App, props, plugin}) {
         return createApp({
             render: () => h(App, props),
         })

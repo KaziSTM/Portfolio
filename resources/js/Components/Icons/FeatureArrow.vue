@@ -1,5 +1,5 @@
 <template>
-    <svg class="dHctcmVsYXRpdmU dHctdy0yMA dHctaC1hdXRv LXR3LXRvcC0y dHctdGV4dC1zbGF0ZS02MDA" fill="none" height="83" viewBox="0 0 81 83"
+    <svg class="rtl:-translate-x-16 rtl-skew-6" fill="none" height="83" viewBox="0 0 81 83"
          width="81"
          xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_112_68)">

@@ -1,6 +1,9 @@
+<script setup>
+</script>
 <template>
-    <svg id="master-artboard" class="-rotate-60 -translate-x-6 w-50"
-         style="enable-background:new 0 0 1400 980;" version="1.1" viewBox="0 0 1400 980" x="0px"
+    <svg id="master-artboard"
+         style="enable-background:new 0 0 1400 980;" version="1.1" viewBox="0 0 1400 980"
+         x="0px"
          xmlns="http://www.w3.org/2000/svg"
          y="0px">
         <path d="M 260.79998779296875 86.19999694824219"

@@ -4,8 +4,8 @@ import {computed} from "vue";
 import Section from "@/Components/Atoms/Section.vue";
 import Title from "@/Components/Atoms/Title.vue";
 import BaseButton from "@/Components/Atoms/BaseButton.vue";
-import HeroArrow from "@/Components/Icons/HeroArrow.vue";
 import Underline from "@/Components/Icons/Underline.vue";
+import HeroArrow from "../../Icons/HeroArrow.vue";
 
 const page = usePage()
 
@@ -25,6 +25,7 @@ const socials = computed(() => page.props.cms.socials)
             fetchpriority="high"
             height="894"
             loading="eager"
+
             width="1728"
         >
 
@@ -72,13 +73,14 @@ const socials = computed(() => page.props.cms.socials)
 
                     <div class="relative flex justify-center mb-12 lg:mb-0">
                         <div
-                            class="hidden lg:block absolute -top-12 end-auto -translate-x-6 rtl:translate-x-6 -inset-s-2">
-                            <p class="text-3xl -rotate-10" v-text="heroContent.intro"></p>
-                            <HeroArrow class="rtl:skew-4"/>
+                            class="hidden lg:block absolute -top-12 start-auto end-auto -translate-x-6 rtl:translate-x-10">
+                            <h3 class="text-3xl -rotate-10 " v-text="heroContent.intro"></h3>
+                            <HeroArrow/>
                         </div>
 
                         <img
-                            :src="'/assets/images/portrait-2.webp'"
+                            is="image"
+                            :src="'/assets/images/portrait.webp'"
                             alt="Hero Image"
                             class="h-auto w-full max-w-105 rounded-xl object-cover shadow-xl md:max-w-120 lg:max-w-lg"
                             decoding="async"
