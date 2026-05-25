@@ -1,9 +1,14 @@
 <script setup>
 
+import AppLayout from "../Components/Layouts/AppLayout.vue";
+import {Head} from "@inertiajs/vue3";
 </script>
 
 <template>
-    some random test
+    <Head title="Home"/>
+    <AppLayout>
+        Hello
+    </AppLayout>
 </template>
 
 <style scoped>

@@ -1,35 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lexend:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lexend:wght@100..900&family=Mr+Dafoe&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
-@import '../../vendor/tallstackui/tallstackui/css/v4.css';
+@import "./transitions.css";
 
-
-@plugin '@tailwindcss/forms';
-@source '../../vendor/tallstackui/tallstackui/**/*.php';
-
-@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
-@source "../../storage/framework/views/*.php";
-@source "../**/*.blade.php";
-@source "../**/*.js";
-@source "../../vendor/tallstackui/tallstackui/src/**/*.php";
-@source "../../vendor/tallstackui/tallstackui/src/**/*.js";
-
+@plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 @plugin "flowbite/plugin";
 @plugin "tailwind-scrollbar";
 
+@source "../**/*.js";
+@source "../**/*.vue";
+
 @theme {
+    /* Fonts */
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
     --font-display: "Lexend", ui-sans-serif, system-ui, sans-serif;
-
-    /* NEW */
     --font-arabic: "Cairo", ui-sans-serif, system-ui, sans-serif;
+
+    /* Breakpoints */
     --breakpoint-xxs: 370px;
     --breakpoint-xs: 475px;
+
+    /* Animations */
     --animate-spin-slow: spin 5s linear infinite;
 
+    /* Primary */
     --color-primary-50: #effefa;
     --color-primary-100: #c9fef0;
     --color-primary-200: #92fde4;
@@ -42,7 +34,7 @@
     --color-primary-900: #0f524b;
     --color-primary-950: #01322f;
 
-
+    /* Secondary */
     --color-secondary-50: var(--color-gray-50);
     --color-secondary-100: var(--color-gray-100);
     --color-secondary-200: var(--color-gray-200);
@@ -54,126 +46,70 @@
     --color-secondary-800: var(--color-gray-800);
     --color-secondary-900: var(--color-gray-900);
     --color-secondary-950: var(--color-gray-950);
-
-    --color-positive-50: var(--color-lime-50);
-    --color-positive-100: var(--color-lime-100);
-    --color-positive-200: var(--color-lime-200);
-    --color-positive-300: var(--color-lime-300);
-    --color-positive-400: var(--color-lime-400);
-    --color-positive-500: var(--color-lime-500);
-    --color-positive-600: var(--color-lime-600);
-    --color-positive-700: var(--color-lime-700);
-    --color-positive-800: var(--color-lime-800);
-    --color-positive-900: var(--color-lime-900);
-    --color-positive-950: var(--color-lime-950);
-
-    --color-negative-50: var(--color-red-50);
-    --color-negative-100: var(--color-red-100);
-    --color-negative-200: var(--color-red-200);
-    --color-negative-300: var(--color-red-300);
-    --color-negative-400: var(--color-red-400);
-    --color-negative-500: var(--color-red-500);
-    --color-negative-600: var(--color-red-600);
-    --color-negative-700: var(--color-red-700);
-    --color-negative-800: var(--color-red-800);
-    --color-negative-900: var(--color-red-900);
-    --color-negative-950: var(--color-red-950);
-
-    --color-warning-50: var(--color-amber-50);
-    --color-warning-100: var(--color-amber-100);
-    --color-warning-200: var(--color-amber-200);
-    --color-warning-300: var(--color-amber-300);
-    --color-warning-400: var(--color-amber-400);
-    --color-warning-500: var(--color-amber-500);
-    --color-warning-600: var(--color-amber-600);
-    --color-warning-700: var(--color-amber-700);
-    --color-warning-800: var(--color-amber-800);
-    --color-warning-900: var(--color-amber-900);
-    --color-warning-950: var(--color-amber-950);
-
-    --color-info-50: var(--color-cyan-50);
-    --color-info-100: var(--color-cyan-100);
-    --color-info-200: var(--color-cyan-200);
-    --color-info-300: var(--color-cyan-300);
-    --color-info-400: var(--color-cyan-400);
-    --color-info-500: var(--color-cyan-500);
-    --color-info-600: var(--color-cyan-600);
-    --color-info-700: var(--color-cyan-700);
-    --color-info-800: var(--color-cyan-800);
-    --color-info-900: var(--color-cyan-900);
-    --color-info-950: var(--color-cyan-950);
 }
 
 @layer base {
     *,
-    ::after,
     ::before,
+    ::after,
     ::backdrop,
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
+
+    html {
+        font-family: var(--font-sans);
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply text-secondary-800 bg-white antialiased;
+    }
+
+    html[dir="rtl"] {
+        font-family: var(--font-arabic);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-display);
+    }
 }
 
-[x-cloak] {
-    display: none !important;
-}
+@layer utilities {
+    [x-cloak] {
+        display: none !important;
+    }
 
-.overflow-y-scroll {
-    @apply overflow-x-auto scrollbar-thin scrollbar-thumb-secondary-300 scrollbar-track-gray-100;
-}
+    .scrollbar-default {
+        @apply scrollbar-thin scrollbar-thumb-secondary-300 scrollbar-track-gray-100;
+    }
 
-.overflow-x-scroll {
-    @apply overflow-x-auto scrollbar-thin scrollbar-thumb-secondary-300 scrollbar-track-gray-100;
-}
+    .underline-half {
+        position: relative;
+    }
 
-.underline-half::after {
-    content: "";
-    position: absolute;
-    bottom: -1px; /* Adjust based on your design */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    height: 2px; /* Adjust height as needed */
-    background-color: currentColor;
-    opacity: 0;
-    transition: width 0.3s ease, opacity 0.3s ease;
-}
+    .underline-half::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        width: 50%;
+        height: 2px;
+        opacity: 0;
+        transform: translateX(-50%);
+        background-color: currentColor;
+        transition: width 0.3s ease,
+        opacity 0.3s ease;
+    }
 
-.underline-half:hover::after,
-.active::after {
-    width: 30%;
-    opacity: 1;
-}
-
-html {
-    font-family: "Inter", sans-serif;
-    scroll-behavior: smooth;
-}
-
-html[dir="rtl"] {
-    font-family: var(--font-arabic);
-}
-
-html[dir="rtl"] h1,
-html[dir="rtl"] h2,
-html[dir="rtl"] h3,
-html[dir="rtl"] h4,
-html[dir="rtl"] h5 {
-    font-family: var(--font-arabic);
-}
-
-h1,
-h2,
-h4 {
-    font-family: "Lexend", sans-serif;
-}
-
-h3 {
-    font-family: "Gochi Hand", cursive;
-}
-
-h5 {
-    font-family: "Mr Dafoe", cursive;
-    font-weight: 400;
-    font-style: normal;
+    .underline-half:hover::after,
+    .active::after {
+        width: 30%;
+        opacity: 1;
+    }
 }

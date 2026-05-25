@@ -1,0 +1,14 @@
+{
+  "\u0000plugin-vue:export-helper": [
+    "/build/assets/HomeView-CdrgVmxw.js"
+  ],
+  "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
+  "resources/css/app.css": [],
+  "resources/js/Components/Atoms/Title.vue": [
+    "/build/assets/HomeView-CdrgVmxw.js"
+  ],
+  "resources/js/Pages/HomeView.vue": [
+    "/build/assets/HomeView-CdrgVmxw.js"
+  ],
+  "resources/js/ssr.js": []
+}

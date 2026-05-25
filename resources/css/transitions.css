@@ -1,0 +1,51 @@
+.ease-in-out-transition-leave-active, .ease-in-out-transition-enter-active {
+    transition-duration: 300ms;
+}
+
+.ease-in-out-transition-enter-active {
+    transition-timing-function: var(--ease-out, cubic-bezier(0, 0, 0.2, 1));
+}
+
+.ease-in-out-transition-leave-active {
+    transition-timing-function: var(--ease-in, cubic-bezier(0.4, 0, 1, 1));
+}
+
+.ease-in-out-transition-enter-from, .ease-in-out-transition-leave-to {
+    opacity: 0;
+}
+
+.ease-in-out-transition-enter-to, .ease-in-out-transition-leave-from {
+    opacity: 1;
+}
+
+.modal-transition-enter-active {
+    transition-duration: 300ms;
+    transition-timing-function: var(--ease-out, cubic-bezier(0, 0, 0.2, 1));
+}
+
+.modal-transition-leave-active {
+    transition-duration: 200ms;
+    transition-timing-function: var(--ease-in, cubic-bezier(0.4, 0, 1, 1));
+}
+
+.modal-transition-enter-from, .modal-transition-leave-to {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.modal-transition-enter-to, .modal-transition-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 40rem) {
+    .modal-transition-enter-from,
+    .modal-transition-leave-to {
+        transform: translateY(0) scale(0.95);
+    }
+
+    .modal-transition-enter-to,
+    .modal-transition-leave-from {
+        transform: translateY(0) scale(1);
+    }
+}
