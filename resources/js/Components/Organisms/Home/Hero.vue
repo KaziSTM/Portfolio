@@ -11,6 +11,8 @@ const page = usePage()
 
 const heroContent = computed(() => page.props.cms.hero)
 const socials = computed(() => page.props.cms.socials)
+
+const ctaLabel = computed(() => page.props.translations.hero_cta_label)
 </script>
 
 <template>
@@ -54,7 +56,7 @@ const socials = computed(() => page.props.cms.socials)
                             <button
                                 class="bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50">
                                 <span class="capitalize font-semibold text-secondary-100"
-                                      v-text="heroContent.cta_label"></span>
+                                      v-text="ctaLabel"></span>
                             </button>
 
                             <div class="flex justify-center items-center gap-4">

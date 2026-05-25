@@ -12,7 +12,7 @@ import CodeBracket from "@/Components/Icons/CodeBracket.vue";
 const page = usePage()
 
 const featuresContent = computed(() => page.props.cms.features_section.features)
-const translations = computed(() => page.props.cms.features_section.translations)
+const translations = computed(() => page.props.translations.features)
 
 const iconMap = {
     'heroicon-o-check-circle': CheckCircle,
@@ -20,7 +20,6 @@ const iconMap = {
     'heroicon-o-code-bracket': CodeBracket,
 }
 
-console.log(featuresContent)
 
 </script>
 
@@ -80,9 +79,16 @@ console.log(featuresContent)
                     <div class="relative w-full flex justify-center">
 
                         <div class="relative inline-block">
-                            <img :src="'/assets/images/feature_section.webp'"
+                            <img is="image"
+                                 :src="'/assets/images/feature_section.webp'"
                                  alt="Feature Image"
-                                 class="w-full max-w-125 md:max-w-150 h-80 md:h-130 object-cover rounded-xl shadow-xl">
+                                 class="w-full max-w-125 md:max-w-150 h-80 md:h-130 object-cover rounded-xl shadow-xl"
+                                 decoding="async"
+                                 fetchpriority="high"
+                                 height="1280"
+                                 loading="eager"
+                                 sizes="(min-width: 1024px) 512px, (min-width: 768px) 480px, calc(100vw - 2rem)"
+                                 width="853">
 
                             <!--                            Decorative Star-->
                             <img

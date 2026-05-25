@@ -2,7 +2,17 @@
 
 namespace App\Http\Middleware;
 
-use App\Support\Cms;
+use App\Actions\Cms\GetCompaniesSection;
+use App\Actions\Cms\GetFeaturesSection;
+use App\Actions\Cms\GetFooterSection;
+use App\Actions\Cms\GetHeaderSection;
+use App\Actions\Cms\GetHeroSection;
+use App\Actions\Cms\GetSocialLinks;
+use App\Actions\Cms\GetWorkSection;
+use App\Actions\Navigation\GetFooterNavigation;
+use App\Actions\Navigation\GetLocales;
+use App\Actions\Navigation\GetMainNavigation;
+use App\Actions\Translations\GetFrontendTranslations;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -21,133 +31,36 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
 
             'locale' => app()->getLocale(),
+
             'languageTag' => str_replace('_', '-', app()->getLocale()),
-            'direction' => app()->isLocale('ar') ? 'rtl' : 'ltr',
-            'locales' => $this->getLocales($request),
+
+            'direction' => app()->isLocale('ar')
+                ? 'rtl'
+                : 'ltr',
+
+            'locales' => app(GetLocales::class)(),
 
             'cms' => [
-                'header' => Cms::section('global', 'header', [
-                    'cta_label' => __('ui.actions.book_call'),
-                ]),
-                'hero' => Cms::section('home', 'hero', [
-                    'kicker' => 'Helping businesses',
-                    'title' => 'build scalable digital products',
-                    'description' => 'Full-stack web developer focused on building scalable platforms and complex digital products. I specialize in backend architecture, APIs, and designing systems that handle real-world business logic efficiently.',
-                    'cta_label' => __('ui.actions.book_call'),
-                ]),
-                'features_section' => [
+                'header' => app(GetHeaderSection::class)(),
 
-                    'features' => Cms::section('home', 'features', [
-                        'title' => 'How I build reliable systems',
-                        'description' => 'I focus on delivering reliable, scalable solutions with a strong emphasis on backend architecture, performance, and clean implementation of complex business logic.',
-                        'items' => [],
-                    ]),
-                    'translations' => [
+                'hero' => app(GetHeroSection::class)(),
 
-                        'caption' => __('ui.home.features_caption'),
-                        'download_label' => __('ui.actions.download_cv'),
-                        'view_experience_label' => __('ui.actions.view_experience'),
-                    ]
+                'features_section' => app(GetFeaturesSection::class)(),
 
-                ],
+                'companies_section' => app(GetCompaniesSection::class)(),
 
+                'work_section' => app(GetWorkSection::class)(),
 
-                'footer' => Cms::section('global', 'footer', [
-                    'title' => 'Lets make something great together',
-                    'description' => 'I’m always excited to collaborate on innovative projects or discuss potential opportunities. Feel free to reach out!',
-                    'button_label' => __('ui.actions.book_call'),
-                    'copyright' => '© 2024, All Rights Reserved',
-                ]),
+                'footer' => app(GetFooterSection::class)(),
 
-                'socials' => Cms::section('global', 'socials', [
-                    'items' => [
-                        [
-                            'name' => 'Github',
-                            'link' => 'https://github.com/KaziSTM',
-                            'icon' => 'github-logo',
-                        ],
-                        [
-                            'name' => 'Linkedin',
-                            'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6',
-                            'icon' => 'linkedin-logo',
-                        ],
-                        [
-                            'name' => 'Instagram',
-                            'link' => 'https://www.instagram.com/that_mofo_kaz/',
-                            'icon' => 'instagram-logo',
-                        ],
-                    ],
-                ])['items'],
+                'socials' => app(GetSocialLinks::class)(),
             ],
 
-            'navigation' => $this->getNavigation(),
+            'translations' => app(GetFrontendTranslations::class)(),
 
-            'footerNavigation' => $this->getFooterNavigation(),
-        ];
-    }
+            'navigation' => app(GetMainNavigation::class)(),
 
-    protected function getLocales(Request $request): array
-    {
-        $route = $request->route();
-        $routeName = $route?->getName();
-        $parameters = $route?->parameters() ?? [];
-
-        unset($parameters['locale']);
-
-        return collect(config('app.supported_locales', ['en']))
-            ->map(fn(string $locale) => [
-                'key' => $locale,
-                'label' => strtoupper($locale),
-
-                'url' => $routeName
-                    ? route($routeName, [
-                        'locale' => $locale,
-                        ...$parameters,
-                    ])
-                    : url($locale),
-
-            ])
-            ->values()
-            ->all();
-    }
-
-    protected function getNavigation(): array
-    {
-        return [
-            [
-                'label' => __('ui.navigation.home'),
-                'route' => route('home', [
-                    'locale' => app()->getLocale(),
-                ]),
-            ],
-
-            [
-                'label' => __('ui.navigation.about'),
-                'route' => route('about', [
-                    'locale' => app()->getLocale(),
-                ]),
-            ],
-
-            [
-                'label' => __('ui.navigation.work'),
-                'route' => route('work', [
-                    'locale' => app()->getLocale(),
-                ]),
-            ],
-        ];
-    }
-
-    protected function getFooterNavigation(): array
-    {
-        return [
-            ...$this->getNavigation(),
-
-            [
-                'label' => __('ui.navigation.contact'),
-                'route' => route('contact', [
-                    'locale' => app()->getLocale(),
-                ]),
-            ],
+            'footerNavigation' => app(GetFooterNavigation::class)(),
         ];
     }
 }

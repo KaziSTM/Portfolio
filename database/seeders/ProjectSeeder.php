@@ -1281,8 +1281,8 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
     {
         $slug = $project->slug;
 
-        $logoPath = public_path("assets/images/projects/{$slug}-logo.png");
-        $main = public_path("assets/images/projects/{$slug}-main.png");
+        $logoPath = public_path("assets/images/projects/{$slug}-logo.webp");
+        $main = public_path("assets/images/projects/{$slug}-main.webp");
 
 
         if (is_file($logoPath) && $project->getFirstMedia('logo')?->file_name !== basename($logoPath)) {
@@ -1296,7 +1296,7 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
         }
 
         $imagePaths = collect(range(1, 9))
-            ->map(fn(int $index) => public_path("assets/images/projects/{$slug}-{$index}.jpg"))
+            ->map(fn(int $index) => public_path("assets/images/projects/{$slug}-{$index}.webp"))
             ->filter(fn($path) => is_file($path))
             ->values();
 

@@ -9,6 +9,8 @@ import LangSwitch from '@/Components/Molecules/LangSwitch.vue'
 const page = usePage()
 
 const headerContent = computed(() => page.props.cms.header)
+
+const ctaLabel = computed(() => page.props.translations.header_cta_label)
 </script>
 
 <template>
@@ -30,7 +32,7 @@ const headerContent = computed(() => page.props.cms.header)
                     href="/contact"
                 >
                     <span class="font-semibold text-secondary-900">
-                        {{ headerContent.cta_label }}
+                        {{ ctaLabel }}
                     </span>
                 </Link>
             </div>
