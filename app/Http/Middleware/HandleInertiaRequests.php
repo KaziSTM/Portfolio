@@ -29,6 +29,12 @@ class HandleInertiaRequests extends Middleware
                 'header' => Cms::section('global', 'header', [
                     'cta_label' => __('ui.actions.book_call'),
                 ]),
+                'hero' => Cms::section('home', 'hero', [
+                    'kicker' => 'Helping businesses',
+                    'title' => 'build scalable digital products',
+                    'description' => 'Full-stack web developer focused on building scalable platforms and complex digital products. I specialize in backend architecture, APIs, and designing systems that handle real-world business logic efficiently.',
+                    'cta_label' => __('ui.actions.book_call'),
+                ]),
 
                 'footer' => Cms::section('global', 'footer', [
                     'title' => 'Lets make something great together',
@@ -73,7 +79,7 @@ class HandleInertiaRequests extends Middleware
         unset($parameters['locale']);
 
         return collect(config('app.supported_locales', ['en']))
-            ->map(fn (string $locale) => [
+            ->map(fn(string $locale) => [
                 'key' => $locale,
                 'label' => strtoupper($locale),
 

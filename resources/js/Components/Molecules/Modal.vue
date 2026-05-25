@@ -1,7 +1,7 @@
 <script setup>
 import {computed} from 'vue'
 
-import {useModal} from '@/composables/useModal'
+import {useModal} from '@/Composables/useModal.js'
 
 const props = defineProps({
     modalOpen: Boolean,

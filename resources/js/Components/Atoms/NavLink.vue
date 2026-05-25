@@ -16,8 +16,20 @@ const props = defineProps({
 
 const page = usePage()
 
+const normalizePath = (value) => {
+    if (! value) {
+        return '/'
+    }
+
+    const url = value.startsWith('http')
+        ? new URL(value)
+        : new URL(value, window.location.origin)
+
+    return url.pathname.replace(/\/+$/, '') || '/'
+}
+
 const isActive = computed(() => {
-    return page.url === props.href
+    return normalizePath(page.url) === normalizePath(props.href)
 })
 </script>
 

@@ -1,6 +1,6 @@
 <script setup>
-import Navbar from "./Navbar.vue";
-import MobileMenu from "./MobileMenu.vue";
+import Navbar from "@/Components/Organisms/Navbar.vue";
+import MobileMenu from "@/Components/Organisms/MobileMenu.vue";
 import {usePage} from "@inertiajs/vue3";
 import {computed} from "vue";
 

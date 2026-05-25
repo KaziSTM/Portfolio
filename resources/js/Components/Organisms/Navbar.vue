@@ -1,5 +1,5 @@
 <script setup>
-import NavLink from "../Atoms/NavLink.vue";
+import NavLink from "@/Components/Atoms/NavLink.vue";
 
 defineProps({
     navigation: {
@@ -10,13 +10,16 @@ defineProps({
 </script>
 
 <template>
-    <div>
-        <NavLink v-for="link in navigation" :key="link.name"
-                 :href="link.route"
-                 :label="link.label"
-        >
-        </NavLink>
-    </div>
+    <nav aria-label="Primary">
+        <ul class="flex items-center gap-6">
+            <NavLink
+                v-for="link in navigation"
+                :key="link.route"
+                :href="link.route"
+                :label="link.label"
+            />
+        </ul>
+    </nav>
 </template>
 
 <style scoped>

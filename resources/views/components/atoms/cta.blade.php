@@ -4,6 +4,6 @@
        target="_blank">
         <span>{{ $isPackage ? __('ui.actions.view_package') : __('ui.actions.view_case_study') }}</span>
         <x-heroicon-o-arrow-up-right
-            class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-y-[-2px]"/>
+            class="h-4 w-4 transform transition-transform duration-300 group-hover:-translate-y-0.5"/>
     </a>
 </div>

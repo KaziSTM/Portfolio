@@ -2,8 +2,9 @@
 import {computed} from 'vue'
 import {Link, usePage} from '@inertiajs/vue3'
 
-import BaseButton from '../Atoms/BaseButton.vue'
-import Subtitle from '../Atoms/Subtitle.vue'
+import BaseButton from '@/Components/Atoms/BaseButton.vue'
+import Subtitle from '@/Components/Atoms/Subtitle.vue'
+import FooterContactArrow from "@/Components/Icons/FooterContactArrow.vue";
 
 const page = usePage()
 
@@ -35,19 +36,7 @@ const navigation = computed(() => page.props.cms.footerNavigation)
                                 {{ footer.button_label }}
                             </span>
 
-                            <svg
-                                class="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:rotate-180"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    d="M7 17L17 7M17 7H8M17 7V16"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                />
-                            </svg>
+                            <FooterContactArrow/>
                         </Link>
                     </div>
                 </div>
@@ -63,8 +52,11 @@ const navigation = computed(() => page.props.cms.footerNavigation)
                             v-for="social in socials"
                             :key="social.name"
                             :href="social.link"
-                            class="border border-white/10 bg-transparent text-secondary-50 backdrop-blur-md hover:bg-secondary-700"
+                            :icon="social.icon"
+                            :label="social.name"
+                            class="bg-transparent backdrop-blur-md border border-white/10 text-secondary-50 hover:bg-secondary-700"
                             external
+                            position="right"
                             rounded
                         >
                             {{ social.name }}
@@ -73,7 +65,7 @@ const navigation = computed(() => page.props.cms.footerNavigation)
                 </div>
             </div>
 
-            <hr class="mb-10 mt-16 border-gray-200/10">
+            <hr class="mb-10 mt-16 border-secondary-200/10">
 
             <!-- Bottom -->
             <div class="flex flex-col gap-4 md:flex-row md:justify-between">
@@ -88,7 +80,7 @@ const navigation = computed(() => page.props.cms.footerNavigation)
                     </Link>
                 </div>
 
-                <p class="block w-full text-end text-sm text-gray-500">
+                <p class="block w-full text-end text-sm text-secondary-300">
                     {{ footer.copyright }}
                 </p>
             </div>

@@ -1,13 +1,14 @@
 <script setup>
 
-import AppLayout from "../Components/Layouts/AppLayout.vue";
+import AppLayout from "@/Components/Layouts/AppLayout.vue";
 import {Head} from "@inertiajs/vue3";
+import Hero from "@/Components/Organisms/Home/Hero.vue";
 </script>
 
 <template>
     <Head title="Home"/>
     <AppLayout>
-        Hello
+        <Hero></Hero>
     </AppLayout>
 </template>
 

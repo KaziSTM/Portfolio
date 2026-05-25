@@ -2,9 +2,9 @@
 import {computed} from 'vue'
 import {Link, usePage} from '@inertiajs/vue3'
 
-import Logo from '../Atoms/Logo.vue'
-import TheMenu from './TheMenu.vue'
-import LangSwitch from '../Molecules/LangSwitch.vue'
+import Logo from '@/Components/Atoms/Logo.vue'
+import TheMenu from '@/Components/Organisms/TheMenu.vue'
+import LangSwitch from '@/Components/Molecules/LangSwitch.vue'
 
 const page = usePage()
 

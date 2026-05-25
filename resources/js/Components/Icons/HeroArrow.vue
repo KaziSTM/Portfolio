@@ -1,5 +1,5 @@
 <template>
-    <svg id="master-artboard" class="hero-arrow"
+    <svg id="master-artboard" class="-rotate-60 -translate-x-6 w-50"
          style="enable-background:new 0 0 1400 980;" version="1.1" viewBox="0 0 1400 980" x="0px"
          xmlns="http://www.w3.org/2000/svg"
          y="0px">
@@ -19,17 +19,4 @@
     </svg>
 </template>
 
-<style scoped>
-
-@reference '../../../css/app.css'
-
-.hero-arrow {
-    @apply
-    -rotate-60
-    -translate-x-6
-    w-50
-}
-
-
-</style>
 

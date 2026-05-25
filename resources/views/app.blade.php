@@ -19,6 +19,20 @@
         href="{{ asset('assets/images/logo/favicon.ico') }}"
     >
 
+    @if (request()->routeIs('home'))
+        <link
+            rel="preload"
+            as="image"
+            href="{{ asset('assets/images/portrait-2.webp') }}"
+            imagesizes="(min-width: 1024px) 512px, (min-width: 768px) 480px, calc(100vw - 2rem)"
+        >
+        <link
+            rel="preload"
+            as="image"
+            href="{{ asset('assets/svg/home-hero-gradient.svg') }}"
+        >
+    @endif
+
     @routes
 
     @vite('resources/js/app.js')
