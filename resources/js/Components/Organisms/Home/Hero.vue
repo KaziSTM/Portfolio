@@ -20,14 +20,13 @@ const ctaLabel = computed(() => page.props.translations.hero_cta_label)
     <div class="relative" dir="auto">
         <img
             :src="'/assets/svg/home-hero-gradient.svg'"
-            alt=""
+            alt="hero gradient"
             aria-hidden="true"
             class="absolute top-0 inset-s-0 w-full h-auto rtl:right-0 rtl:-rotate-180"
             decoding="async"
             fetchpriority="high"
             height="894"
             loading="eager"
-
             width="1728"
         >
 
