@@ -100,9 +100,9 @@ const formattedDates = computed(() => {
             </div>
 
             <!-- Title -->
-            <h4 class="text-start text-xl font-semibold leading-snug lg:text-2xl">
+            <h3 class="text-start text-xl font-semibold leading-snug lg:text-2xl font-display">
                 {{ project.header }}
-            </h4>
+            </h3>
 
             <!-- Description -->
             <p
