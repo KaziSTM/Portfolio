@@ -16,21 +16,16 @@ const props = defineProps({
         type: String,
         required: true,
     },
+    url: {
+        type: String,
+        required: true,
+    },
 })
 
 const page = usePage()
 
-const locale = computed(() => page.props.locale)
-
 const translations = computed(() => {
     return page.props.translations.actions
-})
-
-const href = computed(() => {
-    return route('projects.show', {
-        locale: locale.value,
-        projectId: props.projectId,
-    })
 })
 
 const label = computed(() => {
@@ -42,7 +37,7 @@ const label = computed(() => {
     <div class="z-50">
         <Link
             :aria-label="`${label}: ${projectTitle}`"
-            :href="href"
+            :href="url"
             class="group flex items-center space-x-2 text-sm font-medium text-primary-700"
             target="_blank"
         >

@@ -18,17 +18,33 @@ class GetFrontendTranslations
             ],
 
             'projects' => [
-                'title' => __('ui.pages.work'),
                 'all' => __('ui.projects.all'),
                 'prev' => __('ui.pagination.previous'),
                 'next' => __('ui.pagination.next'),
-                'present' => __('ui.projects.present'),
                 'in_progress' => __('ui.projects.in_progress'),
+                'present' => __('ui.projects.present'),
+                'client' => __('ui.projects.client'),
+                'industry' => __('ui.projects.industry'),
+                'company_size' => __('ui.projects.company_size'),
+                'headquarters' => __('ui.projects.headquarters'),
+                'duration' => __('ui.projects.duration'),
+                'website' => __('ui.projects.website'),
+                'personal_project' => __('ui.projects.personal_project'),
+                'testimonials_title' => __('ui.projects.testimonials_title'),
+                'visit_project' => __('ui.projects.visit_project'),
             ],
 
             'actions' => [
                 'view_package' => __('ui.actions.view_package'),
                 'view_case_study' => __('ui.actions.view_case_study'),
+                'visit_project' => __('ui.actions.visit_project'),
+            ],
+            'pages' => [
+                'home' => __('ui.pages.home'),
+                'about' => __('ui.pages.about'),
+                'contact' => __('ui.pages.contact'),
+                'work' => __('ui.pages.work'),
+                'project' => __('ui.pages.project'),
             ],
 
             'tools_section_caption' => __('ui.home.tools_caption'),

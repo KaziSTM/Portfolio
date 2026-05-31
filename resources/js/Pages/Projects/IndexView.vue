@@ -5,6 +5,7 @@ import { Head, router, usePage } from '@inertiajs/vue3'
 import AppLayout from '@/Components/Layouts/AppLayout.vue'
 import Pagination from '@/Components/Atoms/Pagination.vue'
 import ListProjectCard from '@/Components/Molecules/ListProjectCard.vue'
+import useGetTitle from '@/Composables/useGetTitle.js'
 
 const page = usePage()
 
@@ -13,6 +14,8 @@ const roles = computed(() => page.props.roles)
 const selectedRole = computed(() => page.props.selectedRole)
 
 const translations = computed(() => page.props.translations.projects)
+
+const title = useGetTitle('work')
 
 function setRole(role = null) {
     router.get(
@@ -30,7 +33,7 @@ function setRole(role = null) {
 </script>
 
 <template>
-    <Head :title="translations.title" />
+    <Head :title="title" />
 
     <AppLayout>
         <section

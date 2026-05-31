@@ -122,6 +122,7 @@ const formattedDates = computed(() => {
                     :is-package="project.is_package"
                     :project-id="project.id"
                     :project-title="project.header"
+                    :url="project.project_url"
                 />
             </div>
         </div>

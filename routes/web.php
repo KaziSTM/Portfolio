@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectShowController;
 use App\Http\Controllers\ProjectsListController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,10 +22,9 @@ Route::prefix('{locale}')
     ->group(function (): void {
         Route::get('/', HomeController::class)->name('home');
         Route::get('/projects', ProjectsListController::class)->name('work');
+        Route::get('/projects/{project}', ProjectShowController::class)
+            ->name('projects.show');
 
-//        Route::livewire('/', 'Pages::home')->name('home');
         Route::livewire('/about', 'Pages::about')->name('about');
-//        Route::livewire('/projects', 'Pages::projects.index')->name('work');
-        Route::livewire('/projects/{projectId}', 'Pages::projects.show')->name('projects.show');
         Route::livewire('/contact', 'Pages::contact')->name('contact');
     });

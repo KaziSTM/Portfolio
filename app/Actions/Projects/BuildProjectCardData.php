@@ -30,16 +30,17 @@ class BuildProjectCardData
 
             'is_in_progress' => (bool) $project->is_in_progress,
 
-            'start_year' => $project->start?->format('Y'),
+            'start' => $project->start?->translatedFormat('M Y'),
 
-            'end_year' => $project->end?->format('Y'),
+            'end' => $project->end?->translatedFormat('M Y'),
 
             'is_package' => $project->isPackage(),
 
             'project_url' => route('projects.show', [
                 'locale' => $locale,
-                'projectId' => $project->id,
+                'project' => $project,
             ]),
+            'tech_tags' => $project->techTags()->take(4)
         ];
     }
 }
