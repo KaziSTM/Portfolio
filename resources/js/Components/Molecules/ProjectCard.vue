@@ -1,5 +1,5 @@
 <script setup>
-import {computed, ref} from 'vue'
+import { computed, ref } from 'vue'
 
 import Cta from '@/Components/Atoms/Cta.vue'
 
@@ -44,7 +44,7 @@ const formattedDates = computed(() => {
             height="794"
             loading="lazy"
             width="1528"
-        >
+        />
 
         <!-- Image -->
         <div
@@ -64,40 +64,27 @@ const formattedDates = computed(() => {
                 decoding="async"
                 fetchpriority="high"
                 loading="eager"
-            >
+            />
         </div>
 
         <!-- Content -->
-        <div
-            class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1"
-        >
+        <div class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1">
             <!-- Meta -->
-            <div
-                class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"
-            >
+            <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest">
                 <!-- Type -->
                 <span
                     class="rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600"
-                >
-                    {{ project.type_label }}
-                </span>
+                    v-text="project.type_label"
+                ></span>
 
                 <!-- Roles -->
-                <div
-                    class="flex items-center gap-2 text-gray-400"
-                >
-                    <template
-                        v-for="(role, index) in project.role_labels"
-                        :key="role"
-                    >
+                <div class="flex items-center gap-2 text-gray-400">
+                    <template v-for="(role, index) in project.role_labels" :key="role">
                         <span>
                             {{ role }}
                         </span>
 
-                        <span
-                            v-if="index !== project.role_labels.length - 1"
-                            class="opacity-30"
-                        >
+                        <span v-if="index !== project.role_labels.length - 1" class="opacity-30">
                             •
                         </span>
                     </template>
@@ -113,9 +100,7 @@ const formattedDates = computed(() => {
             </div>
 
             <!-- Title -->
-            <h4
-                class="text-start text-xl font-semibold leading-snug lg:text-2xl"
-            >
+            <h4 class="text-start text-xl font-semibold leading-snug lg:text-2xl">
                 {{ project.header }}
             </h4>
 
@@ -126,14 +111,9 @@ const formattedDates = computed(() => {
             />
 
             <!-- Footer -->
-            <div
-                class="mt-2 flex flex-col items-start gap-4"
-            >
+            <div class="mt-2 flex flex-col items-start gap-4">
                 <!-- Dates -->
-                <div
-                    v-if="formattedDates"
-                    class="flex items-center gap-1 text-xs text-gray-400"
-                >
+                <div v-if="formattedDates" class="flex items-center gap-1 text-xs text-gray-400">
                     {{ formattedDates }}
                 </div>
 
@@ -141,6 +121,7 @@ const formattedDates = computed(() => {
                 <Cta
                     :is-package="project.is_package"
                     :project-id="project.id"
+                    :project-title="project.header"
                 />
             </div>
         </div>

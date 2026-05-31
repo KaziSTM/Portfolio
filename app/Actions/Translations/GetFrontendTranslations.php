@@ -17,6 +17,15 @@ class GetFrontendTranslations
                 'view_experience_label' => __('ui.actions.view_experience'),
             ],
 
+            'projects' => [
+                'title' => __('ui.pages.work'),
+                'all' => __('ui.projects.all'),
+                'prev' => __('ui.pagination.previous'),
+                'next' => __('ui.pagination.next'),
+                'present' => __('ui.projects.present'),
+                'in_progress' => __('ui.projects.in_progress'),
+            ],
+
             'actions' => [
                 'view_package' => __('ui.actions.view_package'),
                 'view_case_study' => __('ui.actions.view_case_study'),

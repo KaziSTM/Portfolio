@@ -1,6 +1,6 @@
 <script setup>
-import {computed} from 'vue'
-import {Link, usePage} from '@inertiajs/vue3'
+import { computed } from 'vue'
+import { Link, usePage } from '@inertiajs/vue3'
 
 const props = defineProps({
     projectId: {
@@ -11,6 +11,10 @@ const props = defineProps({
     isPackage: {
         type: Boolean,
         default: false,
+    },
+    projectTitle: {
+        type: String,
+        required: true,
     },
 })
 
@@ -30,17 +34,16 @@ const href = computed(() => {
 })
 
 const label = computed(() => {
-    return props.isPackage
-        ? translations.value.view_package
-        : translations.value.view_case_study
+    return props.isPackage ? translations.value.view_package : translations.value.view_case_study
 })
 </script>
 
 <template>
     <div class="z-50">
         <Link
+            :aria-label="`${label}: ${projectTitle}`"
             :href="href"
-            class="group flex items-center space-x-2 text-sm font-medium text-primary-500"
+            class="group flex items-center space-x-2 text-sm font-medium text-primary-700"
             target="_blank"
         >
             <span v-text="label"></span>

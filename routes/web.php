@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectsListController;
 use Illuminate\Support\Facades\Route;
 
 $supportedLocales = implode('|', config('app.supported_locales', ['en']));
@@ -19,9 +20,11 @@ Route::get('/contact', fn() => redirect()->route('contact', ['locale' => app()->
 Route::prefix('{locale}')
     ->group(function (): void {
         Route::get('/', HomeController::class)->name('home');
+        Route::get('/projects', ProjectsListController::class)->name('work');
+
 //        Route::livewire('/', 'Pages::home')->name('home');
         Route::livewire('/about', 'Pages::about')->name('about');
-        Route::livewire('/projects', 'Pages::projects.index')->name('work');
+//        Route::livewire('/projects', 'Pages::projects.index')->name('work');
         Route::livewire('/projects/{projectId}', 'Pages::projects.show')->name('projects.show');
         Route::livewire('/contact', 'Pages::contact')->name('contact');
     });
