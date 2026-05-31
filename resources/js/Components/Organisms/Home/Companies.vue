@@ -4,13 +4,8 @@ import { usePage } from '@inertiajs/vue3'
 
 const page = usePage()
 
-const content = computed(() => {
-    return page.props.cms.companies_section.content
-})
-
-const companies = computed(() => {
-    return page.props.cms.companies_section.companies
-})
+const content = computed(() => page.props.cms.companies_section.content)
+const companies = computed(() => page.props.cms.companies_section.companies)
 
 const hoveredCompany = ref(null)
 </script>
@@ -53,7 +48,7 @@ const hoveredCompany = ref(null)
                     v-for="company in companies"
                     :key="company.id"
                     :href="company.website"
-                    class="flex flex-col items-center justify-center gap-2 rounded-xl border px-3 py-3 transition-colors duration-200 hover:cursor-pointer hover:bg-white sm:flex-row sm:px-4 sm:py-4 lg:px-6"
+                    class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/60 px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md sm:flex-row sm:px-4 sm:py-4 lg:px-6"
                     rel="noopener noreferrer"
                     target="_blank"
                     @mouseenter="hoveredCompany = company.id"
@@ -63,13 +58,14 @@ const hoveredCompany = ref(null)
                         :alt="company.name"
                         :class="{
                             'scale-110': hoveredCompany === company.id,
+                            'group-hover:scale-110': hoveredCompany !== company.id,
                         }"
                         :src="company.logo_url"
-                        class="h-7 w-7 object-contain transition-transform duration-200 sm:h-9 sm:w-9 lg:h-10 lg:w-10"
+                        class="h-7 w-7 object-contain transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] sm:h-9 sm:w-9 lg:h-10 lg:w-10"
                     />
 
                     <h2
-                        class="text-center text-xs font-semibold leading-tight text-black sm:text-sm lg:text-base"
+                        class="text-center text-xs font-semibold leading-tight text-slate-900 sm:text-sm lg:text-base"
                     >
                         {{ company.name }}
                     </h2>
