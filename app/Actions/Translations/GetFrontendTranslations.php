@@ -32,6 +32,23 @@ class GetFrontendTranslations
                 'visit_project' => __('ui.projects.visit_project'),
             ],
 
+            'contact' => [
+                'fields' => [
+                    'name' => __('ui.contact.fields.name'),
+                    'email' => __('ui.contact.fields.email'),
+                    'phone' => __('ui.contact.fields.phone'),
+                    'message' => __('ui.contact.fields.message'),
+                    'services' => __('ui.contact.fields.services'),
+                ],
+
+                'placeholders' => [
+                    'name' => __('ui.contact.placeholders.name'),
+                    'email' => __('ui.contact.placeholders.email'),
+                    'phone' => __('ui.contact.placeholders.phone'),
+                    'message' => __('ui.contact.placeholders.message'),
+                ],
+            ],
+
             'actions' => [
                 'view_package' => __('ui.actions.view_package'),
                 'view_case_study' => __('ui.actions.view_case_study'),
@@ -46,6 +63,7 @@ class GetFrontendTranslations
                 'work' => __('ui.pages.work'),
                 'project' => __('ui.pages.project'),
             ],
+
 
             'tools_section_caption' => __('ui.home.tools_caption'),
         ];

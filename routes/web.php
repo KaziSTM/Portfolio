@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Pages\AboutController;
+use App\Http\Controllers\Pages\ContactController;
 use App\Http\Controllers\Pages\HomeController;
 use App\Http\Controllers\Pages\Projects\ProjectShowController;
 use App\Http\Controllers\Pages\Projects\ProjectsListController;
@@ -27,5 +28,8 @@ Route::prefix('{locale}')
             ->name('projects.show');
 
         Route::get('/about', AboutController::class)->name('about');
-        Route::livewire('/contact', 'Pages::contact')->name('contact');
+        Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+
+        Route::post('/contact', [ContactController::class, 'store'])
+            ->name('contact.store');
     });

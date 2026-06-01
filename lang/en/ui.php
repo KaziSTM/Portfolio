@@ -39,19 +39,21 @@ return [
     'contact' => [
         'fields' => [
             'name' => 'Name',
-            'email' => 'Email',
-            'phone' => 'Phone',
+            'email' => 'Email Address',
+            'phone' => 'Phone Number',
             'message' => 'Message',
-            'services' => 'Expected services',
+            'services' => 'Services Required',
         ],
+
         'placeholders' => [
             'name' => 'John Doe',
             'email' => 'john@email.com',
-            'phone' => '+213 XXX XXX XXX',
-            'message' => 'Tell me a little bit about your project...',
+            'phone' => '+213 555 12 34 56',
+            'message' => 'Tell me a little about your project...',
         ],
-        'success' => 'Message sent successfully!',
-        'rate_limit' => 'Too many attempts. Try again later.',
+
+        'success' => 'Your message has been sent successfully!',
+        'rate_limit' => 'Too many attempts. Please try again later.',
     ],
     'project_types' => [
         'project' => 'Project',

@@ -17,6 +17,7 @@
         "lara-zeus/spatie-translatable": "^2.0",
         "laravel/framework": "^13.3",
         "laravel/tinker": "^3.0",
+        "propaganistas/laravel-phone": "^6.0",
         "spatie/laravel-medialibrary": "^11.21",
         "spatie/laravel-tags": "^4.11",
         "spatie/laravel-translatable": "^6.13",
