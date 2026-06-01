@@ -69,4 +69,8 @@ return [
         'work' => 'Mes projets',
         'project' => 'Voir le projet',
     ],
+    'testimonials' => [
+        'title' => 'Témoignages',
+        'description' => 'Retours de personnes avec lesquelles j’ai travaillé',
+    ],
 ];

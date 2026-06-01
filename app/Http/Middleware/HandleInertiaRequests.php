@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Actions\Cms\About\GetCareerSection;
 use App\Actions\Cms\About\GetIntroSection;
 use App\Actions\Cms\About\GetStackSection;
+use App\Actions\Cms\About\GetTestimonialsSection;
 use App\Actions\Cms\GetFooterSection;
 use App\Actions\Cms\GetHeaderSection;
 use App\Actions\Cms\GetSocialLinks;
@@ -59,6 +60,8 @@ class HandleInertiaRequests extends Middleware
                 'careers' => app(GetCareerSection::class)(),
 
                 'stack' => app(GetStackSection::class)(),
+
+                'testimonials' => app(GetTestimonialsSection::class)(),
 
                 'footer' => app(GetFooterSection::class)(),
 

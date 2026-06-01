@@ -15,5 +15,6 @@ const title = useGetTitle('about')
         <Intro />
         <Careers />
         <Stack />
+        <!--        <Testimonials />-->
     </AppLayout>
 </template>

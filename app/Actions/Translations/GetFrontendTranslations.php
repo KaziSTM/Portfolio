@@ -19,8 +19,6 @@ class GetFrontendTranslations
 
             'projects' => [
                 'all' => __('ui.projects.all'),
-                'prev' => __('ui.pagination.previous'),
-                'next' => __('ui.pagination.next'),
                 'in_progress' => __('ui.projects.in_progress'),
                 'present' => __('ui.projects.present'),
                 'client' => __('ui.projects.client'),
@@ -38,6 +36,8 @@ class GetFrontendTranslations
                 'view_package' => __('ui.actions.view_package'),
                 'view_case_study' => __('ui.actions.view_case_study'),
                 'visit_project' => __('ui.actions.visit_project'),
+                'prev' => __('ui.actions.prev'),
+                'next' => __('ui.actions.next'),
             ],
             'pages' => [
                 'home' => __('ui.pages.home'),

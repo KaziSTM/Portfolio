@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             CareerSeeder::class,
             ProjectSeeder::class,
             CmsPageSeeder::class,
+            TestimonialSeeder::class,
         ]);
     }
 }

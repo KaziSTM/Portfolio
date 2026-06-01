@@ -83,23 +83,53 @@ class CmsPageSeeder extends Seeder
                         'data' => [
                             'en' => [
                                 'items' => [
-                                    ['name' => 'Github', 'link' => 'https://github.com/KaziSTM', 'icon' => 'github-logo'],
-                                    ['name' => 'Linkedin', 'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6', 'icon' => 'linkedin-logo'],
-                                    ['name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/', 'icon' => 'instagram-logo'],
+                                    [
+                                        'name' => 'Github', 'link' => 'https://github.com/KaziSTM',
+                                        'icon' => 'github-logo'
+                                    ],
+                                    [
+                                        'name' => 'Linkedin',
+                                        'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6',
+                                        'icon' => 'linkedin-logo'
+                                    ],
+                                    [
+                                        'name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/',
+                                        'icon' => 'instagram-logo'
+                                    ],
                                 ],
                             ],
                             'fr' => [
                                 'items' => [
-                                    ['name' => 'Github', 'link' => 'https://github.com/KaziSTM', 'icon' => 'github-logo'],
-                                    ['name' => 'Linkedin', 'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6', 'icon' => 'linkedin-logo'],
-                                    ['name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/', 'icon' => 'instagram-logo'],
+                                    [
+                                        'name' => 'Github', 'link' => 'https://github.com/KaziSTM',
+                                        'icon' => 'github-logo'
+                                    ],
+                                    [
+                                        'name' => 'Linkedin',
+                                        'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6',
+                                        'icon' => 'linkedin-logo'
+                                    ],
+                                    [
+                                        'name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/',
+                                        'icon' => 'instagram-logo'
+                                    ],
                                 ],
                             ],
                             'ar' => [
                                 'items' => [
-                                    ['name' => 'Github', 'link' => 'https://github.com/KaziSTM', 'icon' => 'github-logo'],
-                                    ['name' => 'Linkedin', 'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6', 'icon' => 'linkedin-logo'],
-                                    ['name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/', 'icon' => 'instagram-logo'],
+                                    [
+                                        'name' => 'Github', 'link' => 'https://github.com/KaziSTM',
+                                        'icon' => 'github-logo'
+                                    ],
+                                    [
+                                        'name' => 'Linkedin',
+                                        'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6',
+                                        'icon' => 'linkedin-logo'
+                                    ],
+                                    [
+                                        'name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/',
+                                        'icon' => 'instagram-logo'
+                                    ],
                                 ],
                             ],
                         ],
@@ -394,6 +424,34 @@ class CmsPageSeeder extends Seeder
                             'ar' => [
                                 'title' => 'تقنيات مبنية للموثوقية والتوسع',
                                 'description' => 'أعتمد على مجموعة مختارة بعناية من التقنيات التي تمكنني من بناء أنظمة سريعة وقابلة للصيانة والتوسع. بدلًا من اتباع الاتجاهات، أركز على أدوات تتكامل بشكل جيد وتدعم بنية نظيفة وسير عمل فعال واستقرار طويل المدى.',
+                            ],
+                        ],
+                    ],
+                    [
+                        'key' => 'testimonials',
+                        'label' => [
+                            'en' => 'Testimonials',
+                            'fr' => 'Témoignages',
+                            'ar' => 'آراء العملاء',
+                        ],
+                        'data' => [
+                            'en' => [
+                                'title' => 'Testimonials',
+                                'paragraphs' => [
+                                    'A few words from founders, clients, and teams I have had the opportunity to work with.',
+                                ],
+                            ],
+                            'fr' => [
+                                'title' => 'Témoignages',
+                                'paragraphs' => [
+                                    'Quelques mots de fondateurs, clients et équipes avec lesquels j’ai eu l’occasion de collaborer.',
+                                ],
+                            ],
+                            'ar' => [
+                                'title' => 'الشهادات',
+                                'paragraphs' => [
+                                    'بعض الكلمات من مؤسسين وعملاء وفرق عمل سنحت لي فرصة التعاون معهم.',
+                                ],
                             ],
                         ],
                     ],

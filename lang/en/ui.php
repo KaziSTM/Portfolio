@@ -69,4 +69,8 @@ return [
         'work' => 'My work',
         'project' => 'View project',
     ],
+    'testimonials' => [
+        'title' => 'Testimonials',
+        'description' => 'Feedback from people I have worked with',
+    ],
 ];

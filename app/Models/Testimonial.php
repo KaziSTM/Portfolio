@@ -2,16 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\Translatable\HasTranslations;
 
 class Testimonial extends Model
 {
-    use HasFactory;
     use HasTranslations;
 
+    public array $translatable = [
+        'author_role',
+        'content',
+    ];
     protected $fillable = [
         'project_id',
         'author_name',
@@ -19,11 +21,6 @@ class Testimonial extends Model
         'content',
         'rating',
         'avatar',
-    ];
-
-    public array $translatable = [
-        'author_role',
-        'content',
     ];
 
 

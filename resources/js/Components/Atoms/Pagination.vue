@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { Link } from '@inertiajs/vue3'
+import { Link, usePage } from '@inertiajs/vue3'
 
 const props = defineProps({
     links: {
@@ -8,6 +8,9 @@ const props = defineProps({
         required: true,
     },
 })
+const page = usePage()
+
+const actionsTranslation = computed(() => page.props.translations.actions)
 
 const previous = computed(() => props.links[0])
 const next = computed(() => props.links[props.links.length - 1])
@@ -25,9 +28,8 @@ const pages = computed(() => props.links.slice(1, -1))
         <span
             v-if="!previous.url"
             class="cursor-not-allowed rounded-full border border-slate-300 bg-slate-100 px-6 py-3 text-sm font-medium text-gray-700"
-        >
-            Prev
-        </span>
+            v-text="actionsTranslation.prev"
+        ></span>
 
         <Link
             v-else
@@ -35,7 +37,7 @@ const pages = computed(() => props.links.slice(1, -1))
             class="rounded-full border border-slate-100 bg-slate-50 px-6 py-3 text-sm font-medium text-slate-500 transition-colors hover:bg-slate-100"
             preserve-scroll
         >
-            Prev
+            {{ actionsTranslation.prev }}
         </Link>
 
         <!-- Pages -->
@@ -67,9 +69,8 @@ const pages = computed(() => props.links.slice(1, -1))
         <span
             v-if="!next.url"
             class="cursor-not-allowed rounded-full border border-slate-300 bg-slate-100 px-6 py-3 text-sm font-medium text-gray-700"
-        >
-            Next
-        </span>
+            v-text="actionsTranslation.next"
+        ></span>
 
         <Link
             v-else
@@ -77,7 +78,7 @@ const pages = computed(() => props.links.slice(1, -1))
             class="rounded-full border border-slate-100 bg-slate-50 px-6 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100"
             preserve-scroll
         >
-            Next
+            {{ actionsTranslation.next }}
         </Link>
     </nav>
 </template>
