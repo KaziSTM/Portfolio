@@ -19,24 +19,47 @@ class CareerSeeder extends Seeder
         DB::transaction(function (): void {
             $careers = [
                 [
-                    'company' => 'Zimou Group',
+                    'company' => 'Freelance',
                     'duration' => [
-                        'en' => 'March 2025 – Present',
-                        'fr' => 'Mars 2025 – Présent',
-                        'ar' => 'مارس 2025 – الآن',
+                        'en' => 'June 2021 – Present',
+                        'fr' => 'Juin 2021 – Présent',
+                        'ar' => 'يونيو 2021 – حتى الآن',
                     ],
                     'description' => [
-                        'en' => 'Senior Backend / Full-Stack Developer working on MyEcom, a multi-tenant e-commerce ERP covering orders, inventory, logistics, and billing.
+                        'en' => 'Independent Full-Stack Developer and Software Consultant delivering custom web platforms, SaaS products, ERP solutions, and business automation systems for clients across multiple industries.
 
-Focused on backend architecture, scalable API design, and system performance. Core contributor to MyEcom Cockpit, developing automated provisioning and deployment workflows for tenant onboarding and infrastructure management.',
+Specialized in backend architecture, scalable API development, multi-tenant applications, AI integrations, and complex business workflows. Responsible for the full project lifecycle, from technical planning and system design to implementation, deployment, and long-term maintenance.',
 
-                        'fr' => 'Développeur Backend / Full-Stack Senior travaillant sur MyEcom, un ERP e-commerce multi-tenant couvrant les commandes, le stock, la logistique et la facturation.
+                        'fr' => 'Développeur Full-Stack indépendant et consultant logiciel, réalisant des plateformes web sur mesure, des solutions SaaS, des ERP et des systèmes d’automatisation pour des clients issus de différents secteurs.
 
-Responsable de l’architecture backend, de la conception d’API scalables et des performances système. Contribution clé au MyEcom Cockpit, avec développement des systèmes de provisioning et de déploiement automatisés.',
+Spécialisé en architecture backend, conception d’API scalables, applications multi-tenant, intégrations IA et logique métier complexe. Responsable de l’ensemble du cycle de vie des projets, de la conception technique au déploiement et à la maintenance.',
 
-                        'ar' => 'مطور Backend وFull-Stack أول يعمل على MyEcom، وهو نظام ERP للتجارة الإلكترونية متعدد المستأجرين يشمل الطلبات والمخزون واللوجستيك والفوترة.
 
-التركيز على تصميم البنية الخلفية وواجهات API القابلة للتوسع وتحسين الأداء. مساهم رئيسي في نظام MyEcom Cockpit مع تطوير عمليات التهيئة والنشر التلقائي.',
+                        'ar' => 'مطور Full-Stack مستقل ومستشار برمجيات، أقوم بتطوير منصات ويب مخصصة وحلول SaaS وأنظمة ERP وأدوات أتمتة الأعمال لعملاء من مختلف القطاعات.
+
+متخصص في تصميم البنية الخلفية، وتطوير واجهات API القابلة للتوسع، والتطبيقات متعددة المستأجرين، وتكاملات الذكاء الاصطناعي، والمنطق التجاري المعقد. أتولى دورة حياة المشروع بالكامل بدءاً من التخطيط والتصميم التقني وصولاً إلى التطوير والنشر والصيانة طويلة المدى.',
+
+                    ],
+                ],
+                [
+                    'company' => 'Zimou Group',
+                    'duration' => [
+                        'en' => 'March 2025 – April 2026',
+                        'fr' => 'Mars 2025 – Avril 2026',
+                        'ar' => 'مارس 2025 – أبريل 2026',
+                    ],
+                    'description' => [
+                        'en' => 'Senior Backend / Full-Stack Developer working on MyEcom, a multi-tenant commerce platform and ERP ecosystem covering orders, inventory, logistics, billing, and business operations.
+
+Focused on backend architecture, scalable APIs, automation, and platform reliability. Core contributor to MyEcom Cockpit, designing provisioning, deployment, and infrastructure management workflows that streamline tenant onboarding and operational processes.',
+
+                        'fr' => 'Développeur Backend / Full-Stack Senior travaillant sur MyEcom, une plateforme e-commerce multi-tenant et un écosystème ERP couvrant les commandes, le stock, la logistique, la facturation et les opérations métier.
+
+Responsable de l’architecture backend, des API scalables, de l’automatisation et de la fiabilité de la plateforme. Contributeur clé à MyEcom Cockpit avec la conception de workflows de provisioning, de déploiement et de gestion d’infrastructure.',
+
+                        'ar' => 'مطور Backend وFull-Stack أول يعمل على MyEcom، وهي منصة تجارة إلكترونية متعددة المستأجرين ونظام ERP متكامل يغطي الطلبات والمخزون واللوجستيك والفوترة والعمليات التشغيلية.
+
+التركيز على تصميم البنية الخلفية، وتطوير واجهات API القابلة للتوسع، والأتمتة، وموثوقية المنصة. مساهم رئيسي في MyEcom Cockpit من خلال تصميم عمليات التهيئة والنشر وإدارة البنية التحتية لتسهيل انضمام العملاء وإدارة المنصة.',
                     ],
                 ],
 
@@ -62,27 +85,6 @@ Spécialisé en architecture backend, conception d’API et logique métier comp
                     ],
                 ],
 
-                [
-                    'company' => 'Freelance',
-                    'duration' => [
-                        'en' => 'June 2021 – December 2022',
-                        'fr' => 'Juin 2021 – Décembre 2022',
-                        'ar' => 'يونيو 2021 – ديسمبر 2022',
-                    ],
-                    'description' => [
-                        'en' => 'Full-Stack Developer building applications from scratch, covering backend systems, frontend interfaces, and database design.
-
-Delivered customized and scalable solutions for various clients, while building strong foundations in system architecture, API development, and real-world problem solving.',
-
-                        'fr' => 'Développeur Full-Stack réalisant des applications from scratch, incluant backend, frontend et conception de base de données.
-
-Développement de solutions sur mesure et scalables pour différents clients, avec une forte montée en compétence en architecture et conception d’API.',
-
-                        'ar' => 'مطور Full-Stack قام ببناء تطبيقات من الصفر تشمل الواجهة والخلفية وتصميم قواعد البيانات.
-
-تقديم حلول مخصصة وقابلة للتوسع للعملاء مع بناء أساس قوي في تصميم الأنظمة وواجهات API.',
-                    ],
-                ],
             ];
 
             foreach ($careers as $index => $career) {

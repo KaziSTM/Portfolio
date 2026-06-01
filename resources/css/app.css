@@ -104,7 +104,7 @@
     }
 
     .scrollbar-default {
-        @apply scrollbar-thin scrollbar-thumb-secondary-300 scrollbar-track-gray-100;
+        @apply scrollbar-thin scrollbar-thumb-secondary-300 scrollbar-track-gray-100 scroll-smooth;
     }
 
     .underline-half {

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pages\Projects;
 
 use App\Actions\Projects\BuildProjectShowData;
+use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Inertia\Inertia;
 

@@ -2,13 +2,16 @@
 
 namespace App\Http\Middleware;
 
-use App\Actions\Cms\GetCompaniesSection;
-use App\Actions\Cms\GetFeaturesSection;
+use App\Actions\Cms\About\GetCareerSection;
+use App\Actions\Cms\About\GetIntroSection;
+use App\Actions\Cms\About\GetStackSection;
 use App\Actions\Cms\GetFooterSection;
 use App\Actions\Cms\GetHeaderSection;
-use App\Actions\Cms\GetHeroSection;
 use App\Actions\Cms\GetSocialLinks;
-use App\Actions\Cms\GetWorkSection;
+use App\Actions\Cms\Home\GetCompaniesSection;
+use App\Actions\Cms\Home\GetFeaturesSection;
+use App\Actions\Cms\Home\GetHeroSection;
+use App\Actions\Cms\Home\GetWorkSection;
 use App\Actions\Navigation\GetFooterNavigation;
 use App\Actions\Navigation\GetLocales;
 use App\Actions\Navigation\GetMainNavigation;
@@ -50,6 +53,12 @@ class HandleInertiaRequests extends Middleware
                 'companies_section' => app(GetCompaniesSection::class)(),
 
                 'work_section' => app(GetWorkSection::class)(),
+
+                'intro' => app(GetIntroSection::class)(),
+
+                'careers' => app(GetCareerSection::class)(),
+
+                'stack' => app(GetStackSection::class)(),
 
                 'footer' => app(GetFooterSection::class)(),
 

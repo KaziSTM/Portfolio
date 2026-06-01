@@ -2,7 +2,7 @@
 <html
     lang="{{ str_replace('_', '-', app()->getLocale()) }}"
     dir="{{ app()->isLocale('ar') ? 'rtl' : 'ltr' }}"
-    class="soft-scrollbar"
+    class="scrollbar-default"
 >
 <head>
     <meta charset="utf-8" />

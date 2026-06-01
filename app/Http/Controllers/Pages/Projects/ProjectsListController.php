@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pages\Projects;
 
 use App\Actions\Projects\BuildProjectCardData;
 use App\Enums\ProjectRole;
+use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Inertia\Inertia;

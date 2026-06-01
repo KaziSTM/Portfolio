@@ -107,7 +107,13 @@ class CompanySeeder extends Seeder
                     ],
                 );
 
-                $logoPath = public_path('assets/images/companies/'.Str::slug($model->name).'-logo.webp');
+                if ($name === 'Freelance') {
+                    $logoPath = public_path('assets/images/logo/logo.svg');
+                } else {
+
+                    $logoPath = public_path('assets/images/companies/'.Str::slug($model->name).'-logo.webp');
+                }
+
 
                 if (!is_file($logoPath)) {
                     continue;

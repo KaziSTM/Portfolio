@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Cms;
+namespace App\Actions\Cms\Home;
 
 use App\Models\Company;
 use App\Support\Cms;
