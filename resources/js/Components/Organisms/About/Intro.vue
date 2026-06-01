@@ -23,7 +23,7 @@ const content = computed(() => page.props.cms.intro)
                 <div class="relative z-10">
                     <Subtitle>
                         {{ content.title }}
-                        <span class="text-primary-500" v-text="content.highlight"></span>
+                        <span class="text-primary-700" v-text="content.highlight"></span>
                         {{ content.subtitle }}
                     </Subtitle>
 

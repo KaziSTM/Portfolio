@@ -52,7 +52,7 @@ const downloadCvActionLabel = computed(() => page.props.translations.features.do
                                 />
                             </div>
                             <span
-                                class="font-semibold text-sm leading-5 text-primary-500"
+                                class="font-semibold text-sm leading-5 text-primary-700"
                                 v-text="job.duration"
                             ></span>
                             <span

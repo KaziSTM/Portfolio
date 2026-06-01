@@ -21,11 +21,11 @@ function getContactIcon(iconName) {
 
 <template>
     <div
-        class="relative w-full overflow-visible rounded-3xl bg-gray-100 px-6 py-12 sm:px-8 sm:py-14 lg:w-2/5 lg:pe-10 lg:ps-16 xl:pe-16 xl:ps-24"
+        class="relative w-full overflow-visible rounded-3xl bg-secondary-100 px-6 py-12 sm:px-8 sm:py-14 lg:w-2/5 lg:pe-10 lg:ps-16 xl:pe-16 xl:ps-24"
     >
         <div class="relative flex flex-col justify-between gap-10">
             <h2
-                class="text-start text-3xl font-semibold leading-[1.2] text-gray-900 sm:text-4xl lg:text-[44px] xl:text-5xl"
+                class="text-start text-3xl font-semibold leading-[1.2] text-secondary-900 sm:text-4xl lg:text-[44px] xl:text-5xl"
             >
                 {{ hero.title }}<br />
                 {{ hero.subtitle }} 👋
@@ -42,12 +42,12 @@ function getContactIcon(iconName) {
             <div class="space-y-5">
                 <div class="mt-6 flex items-start gap-1 rtl:flex-row-reverse md:gap-3 sm:mt-10">
                     <h3
-                        class="max-w-40 -rotate-3 text-start text-lg font-medium leading-snug text-gray-700 rtl:rotate-3 sm:max-w-45 sm:text-xl"
+                        class="max-w-40 -rotate-3 text-start text-lg font-medium leading-snug text-secondary-700 rtl:rotate-3 sm:max-w-45 sm:text-xl"
                     >
                         {{ hero.reach_label }}
                     </h3>
 
-                    <ContactArrow class="-mt-1 w-17.5 -rotate-90 text-gray-700 md:mt-2" />
+                    <ContactArrow class="-mt-1 w-17.5 -rotate-90 text-secondary-700 md:mt-2" />
                 </div>
 
                 <div class="mt-6 grid grid-cols-1 gap-5 pt-2 sm:grid-cols-2 sm:gap-6">
@@ -58,19 +58,19 @@ function getContactIcon(iconName) {
                     >
                         <component
                             :is="getContactIcon(contact.icon)"
-                            class="mt-1 h-5 w-5 shrink-0 text-primary-500"
+                            class="mt-1 h-5 w-5 shrink-0 text-primary-700"
                         />
 
                         <div class="text-start">
-                            <p class="text-sm font-semibold text-gray-900 sm:text-base">
+                            <p class="text-sm font-semibold text-secondary-900 sm:text-base">
                                 {{ contact.title }}
                             </p>
 
-                            <p class="mt-0.5 text-xs text-gray-500 sm:text-sm">
+                            <p class="mt-0.5 text-xs text-secondary-700 sm:text-sm">
                                 {{ contact.description }}
                             </p>
 
-                            <p class="mt-1 text-sm text-primary-500 sm:text-base">
+                            <p class="mt-1 text-sm text-primary-700 sm:text-base">
                                 <span class="inline-block" dir="ltr">
                                     {{ contact.value }}
                                 </span>
