@@ -89,9 +89,8 @@ const ctaLabel = computed(() => page.props.translations.hero_cta_label)
                         </div>
 
                         <img
-                            is="image"
                             :src="'/assets/images/portrait.webp'"
-                            alt="Hero Image"
+                            alt="Youcef Nezrek"
                             class="h-auto w-full max-w-105 rounded-xl object-cover shadow-xl md:max-w-120 lg:max-w-lg"
                             decoding="async"
                             fetchpriority="high"

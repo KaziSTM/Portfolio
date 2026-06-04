@@ -1,14 +1,338 @@
 {
   "\u0000plugin-vue:export-helper": [
-    "/build/assets/HomeView-CdrgVmxw.js"
+    "/build/assets/useGetTitle-BRp-LxPk.js"
   ],
-  "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
-  "resources/css/app.css": [],
+  "node_modules/@fontsource-variable/cairo/index.css": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ],
+  "node_modules/@fontsource-variable/inter/index.css": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ],
+  "node_modules/@fontsource-variable/lexend/index.css": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ],
+  "node_modules/@fontsource/gochi-hand/index.css": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ],
+  "node_modules/@fontsource/mr-dafoe/index.css": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ],
+  "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ],
+  "resources/css/app.css": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ],
+  "resources/js/Components/Atoms/BaseButton.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Atoms/Cta.vue": [
+    "/build/assets/FadeContent-BIRVTgEr.js"
+  ],
+  "resources/js/Components/Atoms/Logo.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Atoms/NavLink.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Atoms/Pagination.vue": [
+    "/build/assets/IndexView-uJWKlVBk.js"
+  ],
+  "resources/js/Components/Atoms/Section.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Atoms/Subtitle.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
   "resources/js/Components/Atoms/Title.vue": [
-    "/build/assets/HomeView-CdrgVmxw.js"
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Icons/AtSymbol.vue": [
+    "/build/assets/ContactView-Dk004VRk.js"
+  ],
+  "resources/js/Components/Icons/CheckCircle.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Icons/CirclesBackground.vue": [
+    "/build/assets/AboutView-DPArw0Cv.js"
+  ],
+  "resources/js/Components/Icons/CodeBracket.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Icons/ContactArrow.vue": [
+    "/build/assets/ContactView-Dk004VRk.js"
+  ],
+  "resources/js/Components/Icons/DownloadSimple.vue": [
+    "/build/assets/DownloadSimple-D2kSO18w.js"
+  ],
+  "resources/js/Components/Icons/FeatureArrow.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Icons/FooterContactArrow.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Icons/GithubLogo.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Icons/HeroArrow.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Icons/InstagramLogo.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Icons/LinkedinLogo.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Icons/Phone.vue": [
+    "/build/assets/ContactView-Dk004VRk.js"
+  ],
+  "resources/js/Components/Icons/RectangleStack.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Icons/Underline.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Layouts/AppLayout.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Molecules/FadeContent.vue": [
+    "/build/assets/FadeContent-BIRVTgEr.js"
+  ],
+  "resources/js/Components/Molecules/FadeContent.vue?vue&type=script&setup=true&lang.ts": [
+    "/build/assets/FadeContent-BIRVTgEr.js"
+  ],
+  "resources/js/Components/Molecules/LangSwitch.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Molecules/ListProjectCard.vue": [
+    "/build/assets/IndexView-uJWKlVBk.js"
+  ],
+  "resources/js/Components/Molecules/Modal.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Molecules/ProjectCard.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Organisms/About/Careers.vue": [
+    "/build/assets/AboutView-DPArw0Cv.js"
+  ],
+  "resources/js/Components/Organisms/About/Intro.vue": [
+    "/build/assets/AboutView-DPArw0Cv.js"
+  ],
+  "resources/js/Components/Organisms/About/Stack.vue": [
+    "/build/assets/AboutView-DPArw0Cv.js"
+  ],
+  "resources/js/Components/Organisms/Contact/ContactContent.vue": [
+    "/build/assets/ContactView-Dk004VRk.js"
+  ],
+  "resources/js/Components/Organisms/Contact/ContactForm.vue": [
+    "/build/assets/ContactView-Dk004VRk.js"
+  ],
+  "resources/js/Components/Organisms/Footer.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Organisms/Header.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Organisms/Home/Companies.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Organisms/Home/Features.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Organisms/Home/Hero.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Organisms/Home/LatestWork.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Organisms/Home/Tools.vue": [
+    "/build/assets/HomeView-CCG_QWuY.js"
+  ],
+  "resources/js/Components/Organisms/MobileMenu.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Organisms/Navbar.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Components/Organisms/Projects/ProjectContent.vue": [
+    "/build/assets/ShowView-BDC3FDAw.js"
+  ],
+  "resources/js/Components/Organisms/Projects/ProjectHero.vue": [
+    "/build/assets/ShowView-BDC3FDAw.js"
+  ],
+  "resources/js/Components/Organisms/Projects/Testimonials.vue": [
+    "/build/assets/ShowView-BDC3FDAw.js"
+  ],
+  "resources/js/Components/Organisms/TheMenu.vue": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Composables/useGetTitle.js": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Composables/useModal.js": [
+    "/build/assets/useGetTitle-BRp-LxPk.js"
+  ],
+  "resources/js/Pages/AboutView.vue": [
+    "/build/assets/AboutView-DPArw0Cv.js"
+  ],
+  "resources/js/Pages/ContactView.vue": [
+    "/build/assets/ContactView-Dk004VRk.js"
   ],
   "resources/js/Pages/HomeView.vue": [
-    "/build/assets/HomeView-CdrgVmxw.js"
+    "/build/assets/HomeView-CCG_QWuY.js"
   ],
-  "resources/js/ssr.js": []
+  "resources/js/Pages/Projects/IndexView.vue": [
+    "/build/assets/IndexView-uJWKlVBk.js"
+  ],
+  "resources/js/Pages/Projects/ShowView.vue": [
+    "/build/assets/ShowView-BDC3FDAw.js"
+  ],
+  "resources/js/app.js": [
+    "/build/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2",
+    "/build/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2",
+    "/build/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2",
+    "/build/assets/inter-greek-wght-normal-CkhJZR-_.woff2",
+    "/build/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2",
+    "/build/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2",
+    "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+    "/build/assets/lexend-vietnamese-wght-normal-RvljkFvg.woff2",
+    "/build/assets/lexend-latin-ext-wght-normal-B6JQhE1e.woff2",
+    "/build/assets/lexend-latin-wght-normal-ci0D1wrL.woff2",
+    "/build/assets/cairo-arabic-wght-normal-CJWMIGCx.woff2",
+    "/build/assets/cairo-latin-ext-wght-normal-at8nfxId.woff2",
+    "/build/assets/cairo-latin-wght-normal-PfPtmrPZ.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-D3Iu69dp.woff2",
+    "/build/assets/gochi-hand-latin-400-normal-DC0_N7qt.woff",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CU745SUt.woff2",
+    "/build/assets/mr-dafoe-latin-ext-400-normal-CqIvTCDW.woff",
+    "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2",
+    "/build/assets/mr-dafoe-latin-400-normal-D0MUsVTf.woff"
+  ]
 }

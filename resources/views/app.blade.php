@@ -5,11 +5,76 @@
     class="scrollbar-default"
 >
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
 
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="description"
+        content="Youcef Nezrek is a Full-Stack Software Engineer specializing in Laravel, Vue.js, Inertia.js, Filament, and scalable web applications."
+    >
+
+    <meta
+        name="author"
+        content="Youcef Nezrek"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Youcef Nezrek — Full-Stack Software Engineer"
+    >
+
+    <meta
+        property="og:description"
+        content="Building modern web applications with Laravel, Vue.js, Inertia.js, and Filament."
+    >
+
+    <meta
+        property="og:image"
+        content="{{ asset('assets/images/og-image.jpg') }}"
+    >
+
+    <meta
+        property="og:url"
+        content="{{ url()->current() }}"
+    >
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Youcef Nezrek — Full-Stack Software Engineer"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Building modern web applications with Laravel, Vue.js, Inertia.js, and Filament."
+    >
+
+    <meta
+        name="twitter:image"
+        content="{{ asset('assets/images/og-image.jpg') }}"
+    >
+
+    <link
+        rel="canonical"
+        href="{{ url()->current() }}"
     >
 
     <title>{{ config('app.name') }}</title>
