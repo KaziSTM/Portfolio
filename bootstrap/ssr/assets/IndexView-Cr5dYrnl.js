@@ -1,5 +1,5 @@
-import { n as _sfc_main$3, t as useGetTitle } from "./useGetTitle-BRp-LxPk.js";
-import { n as _sfc_main$4, t as FadeContent_default } from "./FadeContent-BIRVTgEr.js";
+import { n as _sfc_main$3, t as FadeContent_default } from "./FadeContent-BIRVTgEr.js";
+import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle--vwnvYF8.js";
 import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, Link, router, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
@@ -117,7 +117,7 @@ var _sfc_main$1 = {
 							_push(`<!--]-->`);
 						});
 						_push(`<!--]--></div></div><span class="text-2xl font-semibold text-gray-900 leading-tight max-w-xs"${_scopeId}>${ssrInterpolate(__props.project.header)}</span></div>`);
-						_push(ssrRenderComponent(_sfc_main$4, {
+						_push(ssrRenderComponent(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
 							"project-title": __props.project.header,
@@ -150,7 +150,7 @@ var _sfc_main$1 = {
 							class: "text-2xl font-semibold text-gray-900 leading-tight max-w-xs",
 							textContent: toDisplayString(__props.project.header)
 						}, null, 8, ["textContent"])]),
-						createVNode(_sfc_main$4, {
+						createVNode(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
 							"project-title": __props.project.header,
@@ -204,7 +204,7 @@ var _sfc_main = {
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<!--[-->`);
 			_push(ssrRenderComponent(unref(Head), { title: unref(title) }, null, _parent));
-			_push(ssrRenderComponent(_sfc_main$3, null, {
+			_push(ssrRenderComponent(_sfc_main$4, null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(`<section class="relative mx-auto max-w-6xl space-y-8 px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10 md:space-y-16 lg:pb-32"${_scopeId}><div class="mt-10 flex flex-wrap justify-center gap-3"${_scopeId}><button class="${ssrRenderClass([{
@@ -273,4 +273,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-uJWKlVBk.js.map
+//# sourceMappingURL=IndexView-Cr5dYrnl.js.map

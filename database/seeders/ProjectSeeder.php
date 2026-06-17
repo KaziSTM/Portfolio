@@ -1131,7 +1131,6 @@ Designed to support complex billing logic while remaining extensible and develop
                 'link' => null,
                 'main_tags' => [
                     ProjectRole::BACKEND,
-                    ProjectRole::FULLSTACK,
                 ],
                 'tags' => [
                     'SDK',

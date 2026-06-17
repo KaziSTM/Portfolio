@@ -82,14 +82,14 @@ const ctaLabel = computed(() => page.props.translations.hero_cta_label)
 
                     <div class="relative flex justify-center mb-12 lg:mb-0">
                         <div
-                            class="hidden lg:block absolute -top-12 start-auto end-auto -translate-x-6 rtl:translate-x-10"
+                            class="hidden lg:block absolute -top-12 inset-s-auto inset-e-auto -translate-x-6 rtl:translate-x-10"
                         >
                             <p class="text-3xl -rotate-10 font-hand" v-text="heroContent.intro"></p>
                             <HeroArrow />
                         </div>
 
                         <img
-                            :src="'/assets/images/portrait.webp'"
+                            :src="'/assets/images/portrait-2.webp'"
                             alt="Youcef Nezrek"
                             class="h-auto w-full max-w-105 rounded-xl object-cover shadow-xl md:max-w-120 lg:max-w-lg"
                             decoding="async"

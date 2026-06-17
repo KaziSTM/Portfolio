@@ -1,0 +1,187 @@
+import { t as Subtitle_default } from "./Subtitle-C1PpTYqM.js";
+import { t as Section_default } from "./Section-BLdA3RkH.js";
+import { n as _sfc_main$2, t as FadeContent_default } from "./FadeContent-BIRVTgEr.js";
+import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, ref, renderList, toDisplayString, useSSRContext, withCtx } from "vue";
+import { usePage } from "@inertiajs/vue3";
+import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
+//#region resources/js/Components/Molecules/ProjectCard.vue
+var _sfc_main$1 = {
+	__name: "ProjectCard",
+	__ssrInlineRender: true,
+	props: { project: {
+		type: Object,
+		required: true
+	} },
+	setup(__props) {
+		const props = __props;
+		const zoom = ref(false);
+		const formattedDates = computed(() => {
+			const start = props.project.start_year;
+			const end = props.project.end_year;
+			if (!start) return null;
+			if (end) return `${start} — ${end}`;
+			if (props.project.is_in_progress) return `${start} — Present`;
+			return start;
+		});
+		return (_ctx, _push, _parent, _attrs) => {
+			_push(ssrRenderComponent(FadeContent_default, mergeProps({
+				blur: true,
+				delay: 200,
+				duration: 1e3,
+				"initial-opacity": 0,
+				threshold: .1,
+				"class-name": "my-fade-content",
+				easing: "ease-out"
+			}, _attrs), {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) {
+						_push(`<article class="relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16"${_scopeId}><img${ssrRenderAttr("src", "/assets/svg/home-hero-gradient.svg")} alt="Background Gradient" class="absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block" height="794" loading="lazy" width="1528"${_scopeId}><div class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2"${_scopeId}> &lt;<img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1"${_scopeId}><div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
+						ssrRenderList(__props.project.role_labels, (role, index) => {
+							_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
+							if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
+							else _push(`<!---->`);
+							_push(`<!--]-->`);
+						});
+						_push(`<!--]--></div>`);
+						if (__props.project.is_in_progress) _push(`<span class="rounded-md bg-amber-100 px-2 py-1 normal-case tracking-normal text-amber-600"${_scopeId}> In Progress </span>`);
+						else _push(`<!---->`);
+						_push(`</div><h3 class="text-start text-xl font-semibold leading-snug lg:text-2xl font-display"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3><p class="line-clamp-3 text-start leading-relaxed text-gray-600"${_scopeId}>${__props.project.description ?? ""}</p><div class="mt-2 flex flex-col items-start gap-4"${_scopeId}>`);
+						if (formattedDates.value) _push(`<div class="flex items-center gap-1 text-xs text-gray-400"${_scopeId}>${ssrInterpolate(formattedDates.value)}</div>`);
+						else _push(`<!---->`);
+						_push(ssrRenderComponent(_sfc_main$2, {
+							"is-package": __props.project.is_package,
+							"project-id": __props.project.id,
+							"project-title": __props.project.header,
+							url: __props.project.project_url
+						}, null, _parent, _scopeId));
+						_push(`</div></div></article>`);
+					} else return [createVNode("article", { class: "relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16" }, [
+						createVNode("img", {
+							src: "/assets/svg/home-hero-gradient.svg",
+							alt: "Background Gradient",
+							class: "absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block",
+							height: "794",
+							loading: "lazy",
+							width: "1528"
+						}),
+						createVNode("div", {
+							class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2",
+							onMouseenter: ($event) => zoom.value = true,
+							onMouseleave: ($event) => zoom.value = false
+						}, [createTextVNode(" <"), createVNode("img", {
+							alt: __props.project.header,
+							class: [{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"],
+							src: __props.project.logo_url,
+							"aria-hidden": "true",
+							decoding: "async",
+							height: "1000",
+							loading: "lazy",
+							width: "1088"
+						}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"]),
+						createVNode("div", { class: "order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1" }, [
+							createVNode("div", { class: "flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
+								createVNode("span", {
+									class: "rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600",
+									textContent: toDisplayString(__props.project.type_label)
+								}, null, 8, ["textContent"]),
+								createVNode("div", { class: "flex items-center gap-2 text-gray-400" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
+									return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
+										key: 0,
+										class: "opacity-30"
+									}, " • ")) : createCommentVNode("", true)], 64);
+								}), 128))]),
+								__props.project.is_in_progress ? (openBlock(), createBlock("span", {
+									key: 0,
+									class: "rounded-md bg-amber-100 px-2 py-1 normal-case tracking-normal text-amber-600"
+								}, " In Progress ")) : createCommentVNode("", true)
+							]),
+							createVNode("h3", { class: "text-start text-xl font-semibold leading-snug lg:text-2xl font-display" }, toDisplayString(__props.project.header), 1),
+							createVNode("p", {
+								class: "line-clamp-3 text-start leading-relaxed text-gray-600",
+								innerHTML: __props.project.description
+							}, null, 8, ["innerHTML"]),
+							createVNode("div", { class: "mt-2 flex flex-col items-start gap-4" }, [formattedDates.value ? (openBlock(), createBlock("div", {
+								key: 0,
+								class: "flex items-center gap-1 text-xs text-gray-400"
+							}, toDisplayString(formattedDates.value), 1)) : createCommentVNode("", true), createVNode(_sfc_main$2, {
+								"is-package": __props.project.is_package,
+								"project-id": __props.project.id,
+								"project-title": __props.project.header,
+								url: __props.project.project_url
+							}, null, 8, [
+								"is-package",
+								"project-id",
+								"project-title",
+								"url"
+							])])
+						])
+					])];
+				}),
+				_: 1
+			}, _parent));
+		};
+	}
+};
+var _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
+	const ssrContext = useSSRContext();
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Molecules/ProjectCard.vue");
+	return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+};
+//#endregion
+//#region resources/js/Components/Organisms/Home/LatestWork.vue
+var _sfc_main = {
+	__name: "LatestWork",
+	__ssrInlineRender: true,
+	setup(__props) {
+		const page = usePage();
+		const content = computed(() => {
+			return page.props.cms.work_section.content;
+		});
+		const projects = computed(() => {
+			return page.props.cms.work_section.latest_projects;
+		});
+		return (_ctx, _push, _parent, _attrs) => {
+			_push(`<div${ssrRenderAttrs(_attrs)}>`);
+			_push(ssrRenderComponent(Section_default, { class: "mt-16" }, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) {
+						_push(`<div class="container mx-auto space-y-20 text-center lg:text-left"${_scopeId}><div class="flex flex-col items-center"${_scopeId}>`);
+						_push(ssrRenderComponent(Subtitle_default, { class: "leading-loose" }, null, _parent, _scopeId));
+						_push(`<div class="wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96"${_scopeId}><p class="mt-6 text-lg text-gray-700 lg:text-xl"${_scopeId}>${content.value.description ?? ""}</p></div></div><div class="mt-20 grid justify-center gap-10 px-10 sm:px-16"${_scopeId}><!--[-->`);
+						ssrRenderList(projects.value, (project) => {
+							_push(ssrRenderComponent(_sfc_main$1, {
+								key: project.id,
+								project
+							}, null, _parent, _scopeId));
+						});
+						_push(`<!--]--></div></div>`);
+					} else return [createVNode("div", { class: "container mx-auto space-y-20 text-center lg:text-left" }, [createVNode("div", { class: "flex flex-col items-center" }, [createVNode(Subtitle_default, {
+						class: "leading-loose",
+						innerHTML: content.value.title
+					}, null, 8, ["innerHTML"]), createVNode("div", { class: "wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96" }, [createVNode("p", {
+						class: "mt-6 text-lg text-gray-700 lg:text-xl",
+						innerHTML: content.value.description
+					}, null, 8, ["innerHTML"])])]), createVNode("div", { class: "mt-20 grid justify-center gap-10 px-10 sm:px-16" }, [(openBlock(true), createBlock(Fragment, null, renderList(projects.value, (project) => {
+						return openBlock(), createBlock(_sfc_main$1, {
+							key: project.id,
+							project
+						}, null, 8, ["project"]);
+					}), 128))])])];
+				}),
+				_: 1
+			}, _parent));
+			_push(`</div>`);
+		};
+	}
+};
+var _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+	const ssrContext = useSSRContext();
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Organisms/Home/LatestWork.vue");
+	return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+//#endregion
+export { _sfc_main as default };
+
+//# sourceMappingURL=LatestWork-B98y__Zu.js.map

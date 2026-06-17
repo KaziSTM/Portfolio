@@ -1,0 +1,1 @@
+{"version":3,"file":"Section-BLdA3RkH.js","names":[],"sources":["../../../resources/js/Components/Atoms/Section.vue"],"sourcesContent":["<template>\n    <section class='relative py-20 px-4 md:py-28 lg:py-32 lg:px-8'>\n        <slot></slot>\n    </section>\n</template>\n\n"],"mappings":";;;;;;8CACa,OAAM,gDAA+C,GAAA,MAAA,CAAA,EAAA,EAAA"}

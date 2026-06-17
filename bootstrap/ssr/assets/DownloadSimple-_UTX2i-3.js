@@ -1,4 +1,4 @@
-import { a as _plugin_vue_export_helper_default } from "./useGetTitle-BRp-LxPk.js";
+import { n as _plugin_vue_export_helper_default } from "./Subtitle-C1PpTYqM.js";
 import { mergeProps, useSSRContext } from "vue";
 import { ssrRenderAttrs } from "vue/server-renderer";
 //#region resources/js/Components/Icons/DownloadSimple.vue
@@ -20,4 +20,4 @@ var DownloadSimple_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_
 //#endregion
 export { DownloadSimple_default as t };
 
-//# sourceMappingURL=DownloadSimple-D2kSO18w.js.map
+//# sourceMappingURL=DownloadSimple-_UTX2i-3.js.map

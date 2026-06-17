@@ -1,4 +1,5 @@
-import { a as _plugin_vue_export_helper_default, n as _sfc_main$6, t as useGetTitle } from "./useGetTitle-BRp-LxPk.js";
+import { n as _plugin_vue_export_helper_default } from "./Subtitle-C1PpTYqM.js";
+import { n as _sfc_main$6, t as useGetTitle } from "./useGetTitle--vwnvYF8.js";
 import { computed, createVNode, mergeProps, resolveDynamicComponent, unref, useSSRContext, withCtx } from "vue";
 import { Head, useForm, usePage } from "@inertiajs/vue3";
 import { ssrIncludeBooleanAttr, ssrInterpolate, ssrLooseContain, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderDynamicModel, ssrRenderList, ssrRenderVNode } from "vue/server-renderer";
@@ -205,4 +206,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ContactView-Dk004VRk.js.map
+//# sourceMappingURL=ContactView-BBBywtzP.js.map

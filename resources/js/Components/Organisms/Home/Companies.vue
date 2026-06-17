@@ -61,7 +61,11 @@ const hoveredCompany = ref(null)
                             'group-hover:scale-110': hoveredCompany !== company.id,
                         }"
                         :src="company.logo_url"
-                        class="h-7 w-7 object-contain transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] sm:h-9 sm:w-9 lg:h-10 lg:w-10"
+                        class="h-7 w-7 object-contain transition-transform duration-300 ease-in-out sm:h-9 sm:w-9 lg:h-10 lg:w-10"
+                        decoding="async"
+                        height="50"
+                        loading="lazy"
+                        width="50"
                     />
 
                     <h2

@@ -1,32 +1,26 @@
-import { computed, createBlock, createCommentVNode, createTextVNode, createVNode, isRef, mergeProps, onBeforeUnmount, openBlock, ref, renderSlot, resolveDynamicComponent, toDisplayString, unref, useSSRContext, watch, watchEffect, withCtx } from "vue";
+import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-C1PpTYqM.js";
+import { computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, onBeforeUnmount, openBlock, ref, renderSlot, resolveDynamicComponent, toDisplayString, unref, useSSRContext, watch, watchEffect, withCtx } from "vue";
 import { Link, usePage } from "@inertiajs/vue3";
-import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderTeleport, ssrRenderVNode } from "vue/server-renderer";
-//#region \0plugin-vue:export-helper
-var _plugin_vue_export_helper_default = (sfc, props) => {
-	const target = sfc.__vccOpts || sfc;
-	for (const [key, val] of props) target[key] = val;
-	return target;
-};
-//#endregion
+import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderStyle, ssrRenderVNode } from "vue/server-renderer";
 //#region resources/js/Components/Atoms/Logo.vue
-var _sfc_main$15 = {};
-function _sfc_ssrRender$5(_ctx, _push, _parent, _attrs) {
+var _sfc_main$13 = {};
+function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
 	_push(`<img${ssrRenderAttrs(mergeProps({
 		alt: "Logo",
 		class: "h-10 w-auto",
 		src: "/assets/images/logo/logo.svg"
 	}, _attrs))}>`);
 }
-var _sfc_setup$15 = _sfc_main$15.setup;
-_sfc_main$15.setup = (props, ctx) => {
+var _sfc_setup$13 = _sfc_main$13.setup;
+_sfc_main$13.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/Logo.vue");
-	return _sfc_setup$15 ? _sfc_setup$15(props, ctx) : void 0;
+	return _sfc_setup$13 ? _sfc_setup$13(props, ctx) : void 0;
 };
-var Logo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$15, [["ssrRender", _sfc_ssrRender$5]]);
+var Logo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$13, [["ssrRender", _sfc_ssrRender$4]]);
 //#endregion
 //#region resources/js/Components/Atoms/NavLink.vue
-var _sfc_main$14 = {
+var _sfc_main$12 = {
 	__name: "NavLink",
 	__ssrInlineRender: true,
 	props: {
@@ -67,15 +61,15 @@ var _sfc_main$14 = {
 		};
 	}
 };
-var _sfc_setup$14 = _sfc_main$14.setup;
-_sfc_main$14.setup = (props, ctx) => {
+var _sfc_setup$12 = _sfc_main$12.setup;
+_sfc_main$12.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/NavLink.vue");
-	return _sfc_setup$14 ? _sfc_setup$14(props, ctx) : void 0;
+	return _sfc_setup$12 ? _sfc_setup$12(props, ctx) : void 0;
 };
 //#endregion
 //#region resources/js/Components/Organisms/Navbar.vue
-var _sfc_main$13 = {
+var _sfc_main$11 = {
 	__name: "Navbar",
 	__ssrInlineRender: true,
 	props: { navigation: {
@@ -86,7 +80,7 @@ var _sfc_main$13 = {
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<nav${ssrRenderAttrs(mergeProps({ "aria-label": "Primary" }, _attrs))}><ul class="flex items-center gap-6"><!--[-->`);
 			ssrRenderList(__props.navigation, (link) => {
-				_push(ssrRenderComponent(_sfc_main$14, {
+				_push(ssrRenderComponent(_sfc_main$12, {
 					key: link.route,
 					href: link.route,
 					label: link.label
@@ -96,67 +90,15 @@ var _sfc_main$13 = {
 		};
 	}
 };
-var _sfc_setup$13 = _sfc_main$13.setup;
-_sfc_main$13.setup = (props, ctx) => {
+var _sfc_setup$11 = _sfc_main$11.setup;
+_sfc_main$11.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Organisms/Navbar.vue");
-	return _sfc_setup$13 ? _sfc_setup$13(props, ctx) : void 0;
-};
-//#endregion
-//#region resources/js/Composables/useModal.js
-function useModal(open, onClose) {
-	const handleKeydown = (event) => {
-		if (event.key === "Escape" && open.value) onClose();
-	};
-	watch(open, (isOpen) => {
-		if (typeof window === "undefined") return;
-		document.body.classList.toggle("overflow-hidden", isOpen);
-		if (isOpen) {
-			window.addEventListener("keydown", handleKeydown);
-			return;
-		}
-		window.removeEventListener("keydown", handleKeydown);
-	}, { immediate: true });
-	onBeforeUnmount(() => {
-		if (typeof window === "undefined") return;
-		window.removeEventListener("keydown", handleKeydown);
-		document.body.classList.remove("overflow-hidden");
-	});
-}
-//#endregion
-//#region resources/js/Components/Molecules/Modal.vue
-var _sfc_main$12 = {
-	__name: "Modal",
-	__ssrInlineRender: true,
-	props: { modalOpen: Boolean },
-	emits: ["close"],
-	setup(__props, { emit: __emit }) {
-		const props = __props;
-		const emit = __emit;
-		const close = () => {
-			emit("close");
-		};
-		useModal(computed(() => props.modalOpen), close);
-		return (_ctx, _push, _parent, _attrs) => {
-			ssrRenderTeleport(_push, (_push) => {
-				if (__props.modalOpen) {
-					_push(`<div class="fixed inset-0 z-50 flex items-start justify-center"><div class="absolute inset-0 bg-black/40"></div><div class="relative z-10 mt-20 w-10/12 rounded-xl bg-white px-7 py-6 shadow-md shadow-primary-50">`);
-					ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-					_push(`</div></div>`);
-				} else _push(`<!---->`);
-			}, "body", false, _parent);
-		};
-	}
-};
-var _sfc_setup$12 = _sfc_main$12.setup;
-_sfc_main$12.setup = (props, ctx) => {
-	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Molecules/Modal.vue");
-	return _sfc_setup$12 ? _sfc_setup$12(props, ctx) : void 0;
+	return _sfc_setup$11 ? _sfc_setup$11(props, ctx) : void 0;
 };
 //#endregion
 //#region resources/js/Components/Organisms/MobileMenu.vue
-var _sfc_main$11 = {
+var _sfc_main$10 = {
 	__name: "MobileMenu",
 	__ssrInlineRender: true,
 	props: { navigation: {
@@ -164,38 +106,52 @@ var _sfc_main$11 = {
 		required: true
 	} },
 	setup(__props) {
-		let modalOpen = ref(false);
+		const modalOpen = ref(false);
+		const closeMenu = () => {
+			modalOpen.value = false;
+		};
+		watch(modalOpen, (open) => {
+			if (typeof document === "undefined") return;
+			document.body.style.overflow = open ? "hidden" : "";
+		});
+		onBeforeUnmount(() => {
+			if (typeof document !== "undefined") document.body.style.overflow = "";
+		});
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "relative z-50 flex h-auto w-auto xl:hidden" }, _attrs))}><div class="absolute z-99 -top-6 inset-e-1"><button${ssrRenderAttr("aria-expanded", unref(modalOpen))} aria-label="Toggle mobile menu" class="relative flex size-12 items-center justify-center rounded-full text-secondary-900 transition-colors duration-300 focus:outline-hidden focus:ring-0" type="button"><span class="${ssrRenderClass([unref(modalOpen) ? "rotate-45" : "-translate-y-1.5", "absolute h-0.5 w-5 rounded-full bg-current transition-all duration-300"])}"></span><span class="${ssrRenderClass([unref(modalOpen) ? "opacity-0" : "opacity-100", "absolute h-0.5 w-5 rounded-full bg-current transition-all duration-300"])}"></span><span class="${ssrRenderClass([unref(modalOpen) ? "-rotate-45" : "translate-y-1.5", "absolute h-0.5 w-5 rounded-full bg-current transition-all duration-300"])}"></span></button></div>`);
-			_push(ssrRenderComponent(_sfc_main$12, {
-				modalOpen: unref(modalOpen),
-				onClose: ($event) => isRef(modalOpen) ? modalOpen.value = false : modalOpen = false
-			}, {
-				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) _push(ssrRenderComponent(_sfc_main$13, {
-						navigation: __props.navigation,
-						class: "flex flex-col pb-2"
-					}, null, _parent, _scopeId));
-					else return [createVNode(_sfc_main$13, {
-						navigation: __props.navigation,
-						class: "flex flex-col pb-2"
-					}, null, 8, ["navigation"])];
-				}),
-				_: 1
-			}, _parent));
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "relative z-50 flex h-auto w-auto xl:hidden" }, _attrs))} data-v-6ef2af54><div class="${ssrRenderClass(["z-10000 -top-6 transition-all duration-300", modalOpen.value ? "fixed top-6 inset-e-6" : "absolute inset-e-1"])}" data-v-6ef2af54><button${ssrRenderAttr("aria-expanded", modalOpen.value)} aria-label="Toggle mobile menu" class="relative flex size-12 items-center justify-center rounded-full text-secondary-900 transition-colors duration-300 focus:outline-hidden focus:ring-0" type="button" data-v-6ef2af54><span class="${ssrRenderClass([modalOpen.value ? "rotate-45" : "-translate-y-1.5", "absolute h-0.5 w-5 rounded-full bg-current transition-all duration-300"])}" data-v-6ef2af54></span><span class="${ssrRenderClass([modalOpen.value ? "opacity-0" : "opacity-100", "absolute h-0.5 w-5 rounded-full bg-current transition-all duration-300"])}" data-v-6ef2af54></span><span class="${ssrRenderClass([modalOpen.value ? "-rotate-45" : "translate-y-1.5", "absolute h-0.5 w-5 rounded-full bg-current transition-all duration-300"])}" data-v-6ef2af54></span></button></div>`);
+			if (modalOpen.value) {
+				_push(`<div class="fixed inset-x-0 top-0 bottom-0 z-9999" data-v-6ef2af54><div class="mobile-menu-overlay absolute inset-0 bg-black/50" data-v-6ef2af54></div><div class="mobile-menu-panel mobile-menu-layer-white absolute inset-y-0 right-0 w-full max-w-110 bg-secondary-50" data-v-6ef2af54></div><div class="mobile-menu-panel mobile-menu-layer-red absolute inset-y-0 right-0 w-full max-w-110 bg-primary-500" data-v-6ef2af54></div><aside class="mobile-menu-panel mobile-menu-drawer absolute inset-y-0 right-0 w-full max-w-110 overflow-hidden bg-secondary-50 text-secondary-950 shadow-2xl backdrop-blur-xl pt-20" data-v-6ef2af54><div class="flex h-full flex-col overflow-y-auto px-6 py-8" data-v-6ef2af54><ul class="group space-y-4" data-v-6ef2af54><!--[-->`);
+				ssrRenderList(__props.navigation, (item, index) => {
+					_push(`<li class="mobile-menu-item flex items-start justify-between gap-4 border-b border-secondary-950/10 pb-4 transition-opacity duration-300 group-hover:opacity-35 hover:opacity-100!" style="${ssrRenderStyle({ "--item-index": index })}" data-v-6ef2af54><div class="min-w-0" data-v-6ef2af54><div class="mb-2 text-xs font-medium uppercase text-primary-500" data-v-6ef2af54>${ssrInterpolate(String(index + 1).padStart(2, "0"))}</div>`);
+					_push(ssrRenderComponent(unref(Link), {
+						href: item.route || item.href || "#",
+						class: "block font-display text-xl font-semibold uppercase leading-none tracking-[-0.08em] text-secondary-950 transition-colors duration-300 hover:text-[#D4AF37]",
+						onClick: closeMenu
+					}, {
+						default: withCtx((_, _push, _parent, _scopeId) => {
+							if (_push) _push(`${ssrInterpolate(item.label || item.name)}`);
+							else return [createTextVNode(toDisplayString(item.label || item.name), 1)];
+						}),
+						_: 2
+					}, _parent));
+					_push(`</div></li>`);
+				});
+				_push(`<!--]--></ul></div></aside></div>`);
+			} else _push(`<!---->`);
 			_push(`</div>`);
 		};
 	}
 };
-var _sfc_setup$11 = _sfc_main$11.setup;
-_sfc_main$11.setup = (props, ctx) => {
+var _sfc_setup$10 = _sfc_main$10.setup;
+_sfc_main$10.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Organisms/MobileMenu.vue");
-	return _sfc_setup$11 ? _sfc_setup$11(props, ctx) : void 0;
+	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
 };
+var MobileMenu_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$10, [["__scopeId", "data-v-6ef2af54"]]);
 //#endregion
 //#region resources/js/Components/Organisms/TheMenu.vue
-var _sfc_main$10 = {
+var _sfc_main$9 = {
 	__name: "TheMenu",
 	__ssrInlineRender: true,
 	setup(__props) {
@@ -203,25 +159,25 @@ var _sfc_main$10 = {
 		const navigation = computed(() => page.props.navigation);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<!--[--><div class="hidden md:flex">`);
-			_push(ssrRenderComponent(_sfc_main$13, {
+			_push(ssrRenderComponent(_sfc_main$11, {
 				navigation: navigation.value,
 				class: "w-full flex items-center justify-center gap-6"
 			}, null, _parent));
 			_push(`</div><div class="relative flex md:hidden">`);
-			_push(ssrRenderComponent(_sfc_main$11, { navigation: navigation.value }, null, _parent));
+			_push(ssrRenderComponent(MobileMenu_default, { navigation: navigation.value }, null, _parent));
 			_push(`</div><!--]-->`);
 		};
 	}
 };
-var _sfc_setup$10 = _sfc_main$10.setup;
-_sfc_main$10.setup = (props, ctx) => {
+var _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Organisms/TheMenu.vue");
-	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
+	return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
 //#endregion
 //#region resources/js/Components/Molecules/LangSwitch.vue
-var _sfc_main$9 = {
+var _sfc_main$8 = {
 	__name: "LangSwitch",
 	__ssrInlineRender: true,
 	setup(__props) {
@@ -247,15 +203,15 @@ var _sfc_main$9 = {
 		};
 	}
 };
-var _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+var _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Molecules/LangSwitch.vue");
-	return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+	return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
 //#endregion
 //#region resources/js/Components/Organisms/Header.vue
-var _sfc_main$8 = {
+var _sfc_main$7 = {
 	__name: "Header",
 	__ssrInlineRender: true,
 	setup(__props) {
@@ -266,9 +222,9 @@ var _sfc_main$8 = {
 			_push(`<header${ssrRenderAttrs(mergeProps({ class: "relative z-99 border-b border-secondary-200 py-4 md:py-6" }, _attrs))}><div class="mx-auto flex w-full max-w-8xl items-center justify-between px-6 md:px-32"><div class="shrink-0">`);
 			_push(ssrRenderComponent(Logo_default, { class: "h-10 w-12" }, null, _parent));
 			_push(`</div>`);
-			_push(ssrRenderComponent(_sfc_main$10, null, null, _parent));
-			_push(`<div class="hidden items-center gap-4 md:flex">`);
 			_push(ssrRenderComponent(_sfc_main$9, null, null, _parent));
+			_push(`<div class="hidden items-center gap-4 md:flex">`);
+			_push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
 			_push(ssrRenderComponent(unref(Link), {
 				class: "rounded-2xl border border-secondary-200 bg-slate-100 px-6 py-2 focus:outline-hidden",
 				href: "/contact"
@@ -280,71 +236,71 @@ var _sfc_main$8 = {
 				_: 1
 			}, _parent));
 			_push(`</div><div class="flex items-center gap-3 md:hidden">`);
-			_push(ssrRenderComponent(_sfc_main$9, null, null, _parent));
+			_push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
 			_push(`</div></div></header>`);
 		};
 	}
 };
-var _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
-	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Organisms/Header.vue");
-	return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
-};
-//#endregion
-//#region resources/js/Components/Icons/GithubLogo.vue
-var _sfc_main$7 = {};
-function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
-	_push(`<svg${ssrRenderAttrs(mergeProps({
-		fill: "currentColor",
-		viewBox: "0 0 256 256",
-		xmlns: "http://www.w3.org/2000/svg"
-	}, _attrs))}><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg>`);
-}
 var _sfc_setup$7 = _sfc_main$7.setup;
 _sfc_main$7.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/GithubLogo.vue");
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Organisms/Header.vue");
 	return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-var GithubLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$7, [["ssrRender", _sfc_ssrRender$4]]);
 //#endregion
-//#region resources/js/Components/Icons/InstagramLogo.vue
+//#region resources/js/Components/Icons/GithubLogo.vue
 var _sfc_main$6 = {};
 function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
 	_push(`<svg${ssrRenderAttrs(mergeProps({
 		fill: "currentColor",
 		viewBox: "0 0 256 256",
 		xmlns: "http://www.w3.org/2000/svg"
-	}, _attrs))}><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>`);
+	}, _attrs))}><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg>`);
 }
 var _sfc_setup$6 = _sfc_main$6.setup;
 _sfc_main$6.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/InstagramLogo.vue");
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/GithubLogo.vue");
 	return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-var InstagramLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$6, [["ssrRender", _sfc_ssrRender$3]]);
+var GithubLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$6, [["ssrRender", _sfc_ssrRender$3]]);
 //#endregion
-//#region resources/js/Components/Icons/LinkedinLogo.vue
+//#region resources/js/Components/Icons/InstagramLogo.vue
 var _sfc_main$5 = {};
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
 	_push(`<svg${ssrRenderAttrs(mergeProps({
 		fill: "currentColor",
 		viewBox: "0 0 256 256",
 		xmlns: "http://www.w3.org/2000/svg"
-	}, _attrs))}><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>`);
+	}, _attrs))}><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>`);
 }
 var _sfc_setup$5 = _sfc_main$5.setup;
 _sfc_main$5.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/LinkedinLogo.vue");
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/InstagramLogo.vue");
 	return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-var LinkedinLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]);
+var InstagramLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]);
+//#endregion
+//#region resources/js/Components/Icons/LinkedinLogo.vue
+var _sfc_main$4 = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+	_push(`<svg${ssrRenderAttrs(mergeProps({
+		fill: "currentColor",
+		viewBox: "0 0 256 256",
+		xmlns: "http://www.w3.org/2000/svg"
+	}, _attrs))}><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>`);
+}
+var _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+	const ssrContext = useSSRContext();
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/LinkedinLogo.vue");
+	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
+var LinkedinLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]);
 //#endregion
 //#region resources/js/Components/Atoms/BaseButton.vue
-var _sfc_main$4 = {
+var _sfc_main$3 = {
 	__name: "BaseButton",
 	__ssrInlineRender: true,
 	props: {
@@ -474,27 +430,12 @@ var _sfc_main$4 = {
 		};
 	}
 };
-var _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
-	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/BaseButton.vue");
-	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
-};
-//#endregion
-//#region resources/js/Components/Atoms/Subtitle.vue
-var _sfc_main$3 = {};
-function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
-	_push(`<h2${ssrRenderAttrs(mergeProps({ class: "text-xl sm:text-2xl font-bold text-black md:text-3xl lg:text-4xl xl:text-5xl font-display" }, _attrs))}>`);
-	ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-	_push(`</h2>`);
-}
 var _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
 	const ssrContext = useSSRContext();
-	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/Subtitle.vue");
+	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/BaseButton.vue");
 	return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-var Subtitle_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1]]);
 //#endregion
 //#region resources/js/Components/Icons/FooterContactArrow.vue
 var _sfc_main$2 = {};
@@ -552,7 +493,7 @@ var _sfc_main$1 = {
 			}, _parent));
 			_push(`</div></div><div class="flex flex-col space-y-10"><p class="mt-4 inline-flex pe-32 text-start text-secondary-100">${ssrInterpolate(footer.value.description)}</p><div class="flex flex-wrap gap-4"><!--[-->`);
 			ssrRenderList(socials.value, (social) => {
-				_push(ssrRenderComponent(_sfc_main$4, {
+				_push(ssrRenderComponent(_sfc_main$3, {
 					key: social.name,
 					href: social.link,
 					icon: social.icon,
@@ -609,7 +550,7 @@ var _sfc_main = {
 		});
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<!--[--><div class="flex flex-col w-full min-h-screen overflow-hidden bg-slate-50 text-secondary-900">`);
-			_push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
+			_push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
 			_push(`<main class="grow">`);
 			ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
 			_push(`</main></div>`);
@@ -630,6 +571,6 @@ function useGetTitle(page) {
 	return usePage().props.translations.pages[page];
 }
 //#endregion
-export { _plugin_vue_export_helper_default as a, _sfc_main$4 as i, _sfc_main as n, Subtitle_default as r, useGetTitle as t };
+export { _sfc_main as n, _sfc_main$3 as r, useGetTitle as t };
 
-//# sourceMappingURL=useGetTitle-BRp-LxPk.js.map
+//# sourceMappingURL=useGetTitle--vwnvYF8.js.map

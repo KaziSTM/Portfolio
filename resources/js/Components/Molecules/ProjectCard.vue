@@ -62,18 +62,18 @@ const formattedDates = computed(() => {
                 @mouseenter="zoom = true"
                 @mouseleave="zoom = false"
             >
-                <img
-                    is="image"
+                <<img
                     :alt="project.header"
                     :class="{
                         'scale-110': zoom,
                     }"
                     :src="project.logo_url"
                     aria-hidden="true"
-                    class="h-full transition-transform duration-500 ease-in-out"
+                    class="h-full transition-transform duration-500 ease-in-out object-cover"
                     decoding="async"
-                    fetchpriority="high"
-                    loading="eager"
+                    height="1000"
+                    loading="lazy"
+                    width="1088"
                 />
             </div>
 

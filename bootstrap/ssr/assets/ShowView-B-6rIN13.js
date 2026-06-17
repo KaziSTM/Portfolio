@@ -1,4 +1,4 @@
-import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-BRp-LxPk.js";
+import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle--vwnvYF8.js";
 import { Fragment, computed, createBlock, createCommentVNode, createVNode, mergeProps, openBlock, renderList, unref, useSSRContext, withCtx } from "vue";
 import { Head, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
@@ -184,4 +184,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ShowView-BDC3FDAw.js.map
+//# sourceMappingURL=ShowView-B-6rIN13.js.map

@@ -89,14 +89,12 @@ const iconMap = {
                     <div class="relative w-full flex justify-center">
                         <div class="relative inline-block">
                             <img
-                                is="image"
                                 :src="'/assets/images/feature_section.webp'"
                                 alt="Feature Image"
                                 class="w-full max-w-125 md:max-w-150 h-80 md:h-130 object-cover rounded-xl shadow-xl"
                                 decoding="async"
-                                fetchpriority="high"
                                 height="1280"
-                                loading="eager"
+                                loading="lazy"
                                 sizes="(min-width: 1024px) 512px, (min-width: 768px) 480px, calc(100vw - 2rem)"
                                 width="853"
                             />

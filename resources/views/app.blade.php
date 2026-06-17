@@ -83,7 +83,8 @@
         rel="shortcut icon"
         href="{{ asset('assets/images/logo/favicon.ico') }}"
     >
-
+    <link rel="preload" as="image" href="/assets/images/portrait-2.webp" media="(min-width: 768px)"
+          fetchpriority="high">
     @if (request()->routeIs('home'))
         <link
             rel="preload"
@@ -100,7 +101,7 @@
 
     @routes
 
-    @vite('resources/js/app.js')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @inertiaHead
 </head>
