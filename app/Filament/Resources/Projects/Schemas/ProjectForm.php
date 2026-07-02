@@ -4,7 +4,6 @@ namespace App\Filament\Resources\Projects\Schemas;
 
 use App\Enums\ProjectRole;
 use App\Enums\ProjectType;
-use App\Models\Company;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\MarkdownEditor;
@@ -26,13 +25,8 @@ class ProjectForm
                 Section::make('Project')
                     ->schema([
                         Select::make('company_id')
+                            ->relationship('company', 'name')
                             ->label('Company')
-                            ->options(fn(): array => Company::query()
-                                ->get()
-                                ->mapWithKeys(fn(Company $company): array => [
-                                    $company->id => $company->getTranslation('name', app()->getLocale(), true),
-                                ])
-                                ->all())
                             ->searchable(),
                         TextInput::make('slug')
                             ->required()
