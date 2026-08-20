@@ -1,11 +1,12 @@
 <script setup>
-import { computed, ref } from 'vue'
-import { usePage } from '@inertiajs/vue3'
+import { ref } from 'vue'
 
-const page = usePage()
-
-const content = computed(() => page.props.cms.companies_section.content)
-const companies = computed(() => page.props.cms.companies_section.companies)
+defineProps({
+    companiesSection: {
+        type: Object,
+        required: true,
+    },
+})
 
 const hoveredCompany = ref(null)
 </script>
@@ -18,13 +19,13 @@ const hoveredCompany = ref(null)
                 <h3
                     class="max-w-xs text-2xl font-semibold leading-snug sm:max-w-sm sm:text-3xl lg:max-w-md lg:text-4xl"
                 >
-                    {{ content.title }}
+                    {{ companiesSection.content.title }}
 
                     <span class="text-primary-700">
-                        {{ content.highlight }}
+                        {{ companiesSection.content.highlight }}
                     </span>
 
-                    {{ content.suffix }}
+                    {{ companiesSection.content.suffix }}
                 </h3>
 
                 <img
@@ -45,7 +46,7 @@ const hoveredCompany = ref(null)
                 class="grid grid-cols-2 gap-2 px-0 py-6 sm:grid-cols-3 sm:gap-3 sm:px-4 sm:py-8 md:grid-cols-4 lg:grid-cols-5 lg:px-8 lg:py-10 xl:py-14"
             >
                 <a
-                    v-for="company in companies"
+                    v-for="company in companiesSection.companies.data"
                     :key="company.id"
                     :href="company.website"
                     class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/60 px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md sm:flex-row sm:px-4 sm:py-4 lg:px-6"
@@ -60,7 +61,7 @@ const hoveredCompany = ref(null)
                             'scale-110': hoveredCompany === company.id,
                             'group-hover:scale-110': hoveredCompany !== company.id,
                         }"
-                        :src="company.logo_url"
+                        :src="company.logo"
                         class="h-7 w-7 object-contain transition-transform duration-300 ease-in-out sm:h-9 sm:w-9 lg:h-10 lg:w-10"
                         decoding="async"
                         height="50"

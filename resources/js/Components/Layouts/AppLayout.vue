@@ -1,8 +1,8 @@
 <script setup>
 import { computed, watchEffect } from 'vue'
 import { usePage } from '@inertiajs/vue3'
-import Header from "../Organisms/Header.vue";
-import Footer from "../Organisms/Footer.vue";
+import Header from '../Organisms/Header.vue'
+import Footer from '../Organisms/Footer.vue'
 
 const page = usePage()
 
@@ -21,10 +21,10 @@ watchEffect(() => {
 
 <template>
     <div class="flex flex-col w-full min-h-screen overflow-hidden bg-slate-50 text-secondary-900">
-        <Header/>
+        <Header />
         <main class="grow">
             <slot></slot>
         </main>
     </div>
-    <Footer/>
+    <Footer />
 </template>

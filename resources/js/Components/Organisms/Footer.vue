@@ -1,16 +1,16 @@
 <script setup>
-import {computed} from 'vue'
-import {Link, usePage} from '@inertiajs/vue3'
+import { computed } from 'vue'
+import { Link, usePage } from '@inertiajs/vue3'
 
 import BaseButton from '@/Components/Atoms/BaseButton.vue'
 import Subtitle from '@/Components/Atoms/Subtitle.vue'
-import FooterContactArrow from "@/Components/Icons/FooterContactArrow.vue";
+import FooterContactArrow from '@/Components/Icons/FooterContactArrow.vue'
 
 const page = usePage()
 
-const footer = computed(() => page.props.cms.footer)
-const socials = computed(() => page.props.cms.socials)
-const navigation = computed(() => page.props.cms.footerNavigation)
+const footer = computed(() => page.props.footer)
+const socials = computed(() => page.props.socials)
+const navigation = computed(() => page.props.footerNavigation)
 </script>
 
 <template>
@@ -36,7 +36,7 @@ const navigation = computed(() => page.props.cms.footerNavigation)
                                 {{ footer.button_label }}
                             </span>
 
-                            <FooterContactArrow/>
+                            <FooterContactArrow />
                         </Link>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const navigation = computed(() => page.props.cms.footerNavigation)
                 </div>
             </div>
 
-            <hr class="mb-10 mt-16 border-secondary-200/10">
+            <hr class="mb-10 mt-16 border-secondary-200/10" />
 
             <!-- Bottom -->
             <div class="flex flex-col gap-4 md:flex-row md:justify-between">

@@ -13,15 +13,38 @@ const LatestWork = defineAsyncComponent(() => import('@/Components/Organisms/Hom
 const Companies = defineAsyncComponent(() => import('@/Components/Organisms/Home/Companies.vue'))
 
 const title = useGetTitle('home')
+
+defineProps({
+    heroSection: {
+        type: Object,
+        required: true,
+    },
+    featuresSection: {
+        type: Object,
+        required: true,
+    },
+    toolsSectionCaption: {
+        type: String,
+        required: true,
+    },
+    latestWorkSection: {
+        type: Object,
+        required: true,
+    },
+    companiesSection: {
+        type: Object,
+        required: true,
+    },
+})
 </script>
 
 <template>
     <Head :title="title" />
     <AppLayout>
-        <Hero />
-        <Features />
-        <Tools />
-        <LatestWork />
-        <Companies />
+        <Hero :heroSection="heroSection" />
+        <Features :featuresSection="featuresSection" />
+        <Tools :toolsSectionCaption="toolsSectionCaption" />
+        <LatestWork :latestWorkSection="latestWorkSection" />
+        <Companies :companiesSection="companiesSection" />
     </AppLayout>
 </template>

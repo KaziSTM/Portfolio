@@ -1,11 +1,12 @@
 <script setup>
-import { usePage } from '@inertiajs/vue3'
-import { computed } from 'vue'
 import Subtitle from '@/Components/Atoms/Subtitle.vue'
 
-const page = usePage()
-const content = computed(() => page.props.cms.stack.content)
-const tools = computed(() => page.props.cms.stack.tools)
+defineProps({
+    stack: {
+        type: Object,
+        required: true,
+    },
+})
 const portrait_url = '/assets/images/portrait-3.webp'
 </script>
 <template>
@@ -24,10 +25,17 @@ const portrait_url = '/assets/images/portrait-3.webp'
             </div>
             <!-- Content -->
             <div class="order-1 lg:order-2 rtl:lg:order-1">
-                <Subtitle v-text="content.title"></Subtitle>
-                <p class="mt-6 text-lg lg:text-xl text-gray-700" v-text="content.description"></p>
+                <Subtitle v-text="stack.content.title"></Subtitle>
+                <p
+                    class="mt-6 text-lg lg:text-xl text-gray-700"
+                    v-text="stack.content.description"
+                ></p>
                 <div class="mt-6 grid grid-cols-2 gap-4">
-                    <template v-for="(tool, index) in tools" v-if="tools.length > 0" :key="index">
+                    <template
+                        v-for="(tool, index) in stack.tools"
+                        v-if="stack.tools.length > 0"
+                        :key="index"
+                    >
                         <div class="flex gap-4 items-center p-4 border rounded-lg bg-slate-100">
                             <img
                                 :alt="tool.alt"

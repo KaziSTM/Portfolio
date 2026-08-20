@@ -9,6 +9,10 @@ const props = defineProps({
         type: Object,
         required: true,
     },
+    translations: {
+        type: Object,
+        required: true,
+    },
 })
 
 const zoom = ref(false)
@@ -62,7 +66,7 @@ const formattedDates = computed(() => {
                 @mouseenter="zoom = true"
                 @mouseleave="zoom = false"
             >
-                <<img
+                <img
                     :alt="project.header"
                     :class="{
                         'scale-110': zoom,
@@ -138,6 +142,7 @@ const formattedDates = computed(() => {
                         :is-package="project.is_package"
                         :project-id="project.id"
                         :project-title="project.header"
+                        :translations="translations"
                         :url="project.project_url"
                     />
                 </div>

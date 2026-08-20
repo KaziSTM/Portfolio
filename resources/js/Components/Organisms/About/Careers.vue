@@ -1,14 +1,13 @@
 <script setup>
-import { usePage } from '@inertiajs/vue3'
-import { computed } from 'vue'
 import Subtitle from '@/Components/Atoms/Subtitle.vue'
 import DownloadSimple from '@/Components/Icons/DownloadSimple.vue'
 
-const page = usePage()
-
-const jobs = computed(() => page.props.cms.careers.jobs)
-const content = computed(() => page.props.cms.careers.cms)
-const downloadCvActionLabel = computed(() => page.props.translations.features.download_label)
+defineProps({
+    careers: {
+        type: Object,
+        required: true,
+    },
+})
 </script>
 
 <template>
@@ -16,9 +15,12 @@ const downloadCvActionLabel = computed(() => page.props.translations.features.do
         <div class="grid grid-cols-1 lg:grid-cols-5 xl:gap-12">
             <!--            Left / Start column -->
             <div class="col-span-2 lg:ps-32 xl:ps-48 py-4 lg:py-32">
-                <Subtitle v-text="content.title" />
+                <Subtitle v-text="careers.content.title" />
 
-                <p class="mt-6 text-sm lg:text-base text-gray-700" v-text="content.description"></p>
+                <p
+                    class="mt-6 text-sm lg:text-base text-gray-700"
+                    v-text="careers.content.description"
+                ></p>
 
                 <a
                     :href="'assets/docs/Youcef_Nezrek_CV.pdf'"
@@ -26,7 +28,7 @@ const downloadCvActionLabel = computed(() => page.props.translations.features.do
                 >
                     <span
                         class="capitalize font-semibold text-secondary-900"
-                        v-text="downloadCvActionLabel"
+                        v-text="careers.download_label"
                     ></span>
                     <DownloadSimple
                         class="h-5 w-5 transform transition-transform duration-300 group-hover:-translate-y-0.5"
@@ -39,15 +41,19 @@ const downloadCvActionLabel = computed(() => page.props.translations.features.do
             <ol
                 class="col-span-3 py-4 lg:py-32 lg:pe-28 xl:pe-36 grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-                <template v-for="(job, index) in jobs" v-if="jobs.length > 0" :key="job.id">
+                <template
+                    v-for="(job, index) in careers.jobs.data"
+                    v-if="careers.jobs.data.length > 0"
+                    :key="job.id"
+                >
                     <div class="relative p-4 rounded-lg">
                         <div class="flex flex-col mb-2 space-y-6">
                             <div
                                 class="p-2 rounded-lg border border-slate-200 bg-slate-100 max-w-fit"
                             >
                                 <img
-                                    :alt="job.company_name + '-logo'"
-                                    :src="job.company_logo"
+                                    :alt="job.company.name + '-logo'"
+                                    :src="job.company.logo"
                                     class="w-6 h-6"
                                 />
                             </div>
@@ -61,7 +67,7 @@ const downloadCvActionLabel = computed(() => page.props.translations.features.do
                                 {{ String(index + 1).padStart(2, '0') }}
                             </span>
                         </div>
-                        <h2 class="text-xl font-bold capitalize" v-text="job.company_name"></h2>
+                        <h2 class="text-xl font-bold capitalize" v-text="job.company.name"></h2>
                         <p
                             class="mt-6 text-sm lg:text-base text-gray-700"
                             v-html="job.description"

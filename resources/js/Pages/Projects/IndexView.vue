@@ -1,19 +1,29 @@
 <script setup>
-import { computed } from 'vue'
-import { Head, router, usePage } from '@inertiajs/vue3'
+import { Head, router } from '@inertiajs/vue3'
 
 import AppLayout from '@/Components/Layouts/AppLayout.vue'
 import Pagination from '@/Components/Atoms/Pagination.vue'
 import ListProjectCard from '@/Components/Molecules/ListProjectCard.vue'
 import useGetTitle from '@/Composables/useGetTitle.js'
 
-const page = usePage()
-
-const projects = computed(() => page.props.projects)
-const roles = computed(() => page.props.roles)
-const selectedRole = computed(() => page.props.selectedRole)
-
-const translations = computed(() => page.props.translations.projects)
+defineProps({
+    projects: {
+        type: Object,
+        required: true,
+    },
+    roles: {
+        type: Object,
+        required: true,
+    },
+    selectedRole: {
+        type: String,
+        required: true,
+    },
+    translations: {
+        type: Object,
+        required: true,
+    },
+})
 
 const title = useGetTitle('work')
 
@@ -50,7 +60,7 @@ function setRole(role = null) {
                     class="rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"
                     @click="setRole()"
                 >
-                    {{ translations.all }}
+                    {{ translations.projects.all }}
                 </button>
 
                 <button
@@ -78,12 +88,16 @@ function setRole(role = null) {
                     :key="project.id"
                     class="relative h-full overflow-hidden"
                 >
-                    <ListProjectCard :project="project" :reverse="index % 2 !== 0" />
+                    <ListProjectCard
+                        :project="project"
+                        :reverse="index % 2 !== 0"
+                        :translations="translations"
+                    />
                 </div>
             </div>
 
             <!-- Pagination -->
-            <Pagination :links="projects.links" />
+            <Pagination :links="projects.meta.links" :translations="translations.actions" />
         </section>
     </AppLayout>
 </template>

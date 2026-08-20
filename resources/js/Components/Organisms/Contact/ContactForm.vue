@@ -4,23 +4,33 @@ import { useForm, usePage } from '@inertiajs/vue3'
 
 const page = usePage()
 
-const formContent = computed(() => page.props.cms.contact.form_content ?? {})
-const availableServices = computed(() => page.props.cms.contact.services ?? {})
-const flash = computed(() => page.props.flash ?? {})
-const translations = computed(() => page.props.translations ?? {})
+const props = defineProps({
+    formContent: {
+        type: Object,
+        required: true,
+    },
+    services: {
+        type: Object,
+        required: true,
+    },
+    translations: {
+        type: Object,
+        required: true,
+    },
+})
 
-const contactTranslations = computed(() => translations.value.contact ?? {})
+const flash = computed(() => page.props.flash ?? {})
+
+const contactTranslations = computed(() => props.translations.contact ?? {})
 const fieldTranslations = computed(() => contactTranslations.value.fields ?? {})
 const placeholderTranslations = computed(() => contactTranslations.value.placeholders ?? {})
-
-console.log(fieldTranslations.value)
 
 const form = useForm({
     name: '',
     email: '',
     phone: '',
     message: '',
-    services: { ...availableServices.value },
+    services: { ...props.services },
 })
 
 const inputFields = computed(() => [
@@ -140,6 +150,7 @@ function submit() {
                                 class="h-4 w-4 rounded border-gray-300 text-primary-500 focus:ring-primary-400"
                                 type="checkbox"
                             />
+
                             <span>{{ service }}</span>
                         </label>
                     </div>
@@ -157,6 +168,7 @@ function submit() {
                     <span v-if="!form.processing">
                         {{ formContent.submit_label }}
                     </span>
+
                     <span v-else>
                         {{ formContent.submitting_label }}
                     </span>

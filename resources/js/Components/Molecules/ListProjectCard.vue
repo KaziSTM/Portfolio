@@ -8,6 +8,10 @@ defineProps({
         type: Boolean,
         default: false,
     },
+    translations: {
+        type: Object,
+        required: true,
+    },
 })
 </script>
 
@@ -81,6 +85,7 @@ defineProps({
                     :is-package="project.is_package"
                     :project-id="project.id"
                     :project-title="project.header"
+                    :translations="translations"
                     :url="project.project_url"
                 />
 

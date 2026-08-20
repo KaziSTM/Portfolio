@@ -1,6 +1,5 @@
 <script setup>
 import { usePage } from '@inertiajs/vue3'
-import { computed } from 'vue'
 import DownloadSimple from '@/Components/Icons/DownloadSimple.vue'
 import Section from '@/Components/Atoms/Section.vue'
 import Subtitle from '@/Components/Atoms/Subtitle.vue'
@@ -11,8 +10,12 @@ import CodeBracket from '@/Components/Icons/CodeBracket.vue'
 
 const page = usePage()
 
-const featuresContent = computed(() => page.props.cms.features_section.features)
-const translations = computed(() => page.props.translations.features)
+defineProps({
+    featuresSection: {
+        type: Object,
+        required: true,
+    },
+})
 
 const iconMap = {
     'heroicon-o-check-circle': CheckCircle,
@@ -30,12 +33,12 @@ const iconMap = {
                     class="grid grid-cols-1 xl:grid-cols-2 gap-10 md:gap-16 xl:gap-24 items-center px-4 sm:px-8 md:px-12 lg:px-16"
                 >
                     <Subtitle>
-                        {{ featuresContent.title }}
+                        {{ featuresSection.features.title }}
                     </Subtitle>
 
                     <p
                         class="mt-6 text-lg lg:text-xl text-start text-gray-700"
-                        v-html="featuresContent.description"
+                        v-html="featuresSection.features.description"
                     ></p>
                 </div>
 
@@ -46,7 +49,7 @@ const iconMap = {
                     <!--                    Features-->
                     <div class="relative grid gap-10 md:gap-14 lg:gap-20 grid-cols-1">
                         <div
-                            v-for="(feature, index) in featuresContent.items"
+                            v-for="(feature, index) in featuresSection.features.items"
                             class="flex items-start gap-6"
                         >
                             <div
@@ -58,7 +61,7 @@ const iconMap = {
                                     class="text-secondary-100 w-6 h-6"
                                 />
                                 <div
-                                    v-if="index !== featuresContent.items.length - 1"
+                                    v-if="index !== featuresSection.features.items.length - 1"
                                     class="absolute top-20 w-px border-s-2 border-dotted border-secondary-300 h-full"
                                 ></div>
                             </div>
@@ -79,7 +82,7 @@ const iconMap = {
                         <div class="hidden lg:block absolute -bottom-32 left-12">
                             <h4
                                 class="text-xl w-[60%] translate-y-16 translate-x-20 -rotate-10 rtl:translate-y-20 rtl:translate-x-20"
-                                v-text="translations.caption"
+                                v-text="featuresSection.caption"
                             ></h4>
                             <FeatureArrow />
                         </div>
@@ -127,11 +130,11 @@ const iconMap = {
                                 <div class="text-start">
                                     <p
                                         class="text-sm font-semibold text-slate-900"
-                                        v-text="translations.download_label"
+                                        v-text="featuresSection.download_label"
                                     ></p>
                                     <p
                                         class="text-xs text-gray-500"
-                                        v-text="translations.view_experience_label"
+                                        v-text="featuresSection.view_experience_label"
                                     ></p>
                                 </div>
                             </a>

@@ -9,10 +9,14 @@ import HeroArrow from '../../Icons/HeroArrow.vue'
 
 const page = usePage()
 
-const heroContent = computed(() => page.props.cms.hero)
-const socials = computed(() => page.props.cms.socials)
+defineProps({
+    heroSection: {
+        type: Object,
+        required: true,
+    },
+})
 
-const ctaLabel = computed(() => page.props.translations.hero_cta_label)
+const socials = computed(() => page.props.socials)
 </script>
 
 <template>
@@ -41,15 +45,15 @@ const ctaLabel = computed(() => page.props.translations.hero_cta_label)
                                     class="absolute w-2/5 inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10"
                                 />
                                 <span class="relative z-20 flex gap-2 text-black">
-                                    <span v-text="heroContent.kicker"></span>
+                                    <span v-text="heroSection.content.kicker"></span>
                                 </span>
                             </div>
-                            {{ heroContent.title }}
+                            {{ heroSection.content.title }}
                         </Title>
 
                         <p
                             class="mt-6 text-lg lg:text-xl text-gray-700"
-                            v-html="heroContent.description"
+                            v-html="heroSection.content.description"
                         ></p>
 
                         <div
@@ -60,7 +64,7 @@ const ctaLabel = computed(() => page.props.translations.hero_cta_label)
                             >
                                 <span
                                     class="capitalize font-semibold text-secondary-100"
-                                    v-text="ctaLabel"
+                                    v-text="heroSection.hero_cta_label"
                                 ></span>
                             </button>
 
@@ -84,7 +88,10 @@ const ctaLabel = computed(() => page.props.translations.hero_cta_label)
                         <div
                             class="hidden lg:block absolute -top-12 inset-s-auto inset-e-auto -translate-x-6 rtl:translate-x-10"
                         >
-                            <p class="text-3xl -rotate-10 font-hand" v-text="heroContent.intro"></p>
+                            <p
+                                class="text-3xl -rotate-10 font-hand"
+                                v-text="heroSection.content.intro"
+                            ></p>
                             <HeroArrow />
                         </div>
 

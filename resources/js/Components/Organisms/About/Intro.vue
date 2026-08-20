@@ -1,12 +1,13 @@
 <script setup>
 import CirclesBackground from '@/Components/Icons/CirclesBackground.vue'
-import { usePage } from '@inertiajs/vue3'
-import { computed } from 'vue'
 import Subtitle from '@/Components/Atoms/Subtitle.vue'
 
-const page = usePage()
-
-const content = computed(() => page.props.cms.intro)
+defineProps({
+    intro: {
+        type: Object,
+        required: true,
+    },
+})
 </script>
 
 <template>
@@ -22,14 +23,14 @@ const content = computed(() => page.props.cms.intro)
                 <!--                Text-->
                 <div class="relative z-10">
                     <Subtitle>
-                        {{ content.title }}
-                        <span class="text-primary-700" v-text="content.highlight"></span>
-                        {{ content.subtitle }}
+                        {{ intro.title }}
+                        <span class="text-primary-700" v-text="intro.highlight"></span>
+                        {{ intro.subtitle }}
                     </Subtitle>
 
                     <template
-                        v-for="(paragraph, index) in content.paragraphs"
-                        v-if="content.paragraphs.length > 0"
+                        v-for="(paragraph, index) in intro.paragraphs"
+                        v-if="intro.paragraphs.length > 0"
                     >
                         <p
                             class="text-base sm:text-lg md:text-xl leading-[1.9] text-gray-600 mt-6 text-start"
@@ -37,10 +38,7 @@ const content = computed(() => page.props.cms.intro)
                         ></p>
                     </template>
 
-                    <h3
-                        class="text-3xl mt-12 text-start font-script"
-                        v-text="content.signature"
-                    ></h3>
+                    <h3 class="text-3xl mt-12 text-start font-script" v-text="intro.signature"></h3>
                 </div>
             </div>
 

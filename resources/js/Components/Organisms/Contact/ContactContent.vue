@@ -2,12 +2,17 @@
 import ContactArrow from '@/Components/Icons/ContactArrow.vue'
 import AtSymbol from '@/Components/Icons/AtSymbol.vue'
 import Phone from '@/Components/Icons/Phone.vue'
-import { computed } from 'vue'
-import { usePage } from '@inertiajs/vue3'
 
-const page = usePage()
-const hero = computed(() => page.props.cms.contact.hero ?? {})
-const contacts = computed(() => page.props.cms.contact.contacts ?? [])
+defineProps({
+    heroSection: {
+        type: Object,
+        required: true,
+    },
+    contacts: {
+        type: Object,
+        required: true,
+    },
+})
 
 function getContactIcon(iconName) {
     const icons = {
@@ -27,8 +32,8 @@ function getContactIcon(iconName) {
             <h2
                 class="text-start text-3xl font-semibold leading-[1.2] text-secondary-900 sm:text-4xl lg:text-[44px] xl:text-5xl"
             >
-                {{ hero.title }}<br />
-                {{ hero.subtitle }} 👋
+                {{ heroSection.title }}<br />
+                {{ heroSection.subtitle }} 👋
             </h2>
 
             <div class="relative flex justify-center lg:block">
@@ -44,7 +49,7 @@ function getContactIcon(iconName) {
                     <h3
                         class="max-w-40 -rotate-3 text-start text-lg font-medium leading-snug text-secondary-700 rtl:rotate-3 sm:max-w-45 sm:text-xl"
                     >
-                        {{ hero.reach_label }}
+                        {{ heroSection.reach_label }}
                     </h3>
 
                     <ContactArrow class="-mt-1 w-17.5 -rotate-90 text-secondary-700 md:mt-2" />

@@ -1,6 +1,5 @@
 <script setup>
-import { computed } from 'vue'
-import { Head, usePage } from '@inertiajs/vue3'
+import { Head } from '@inertiajs/vue3'
 
 import AppLayout from '@/Components/Layouts/AppLayout.vue'
 import useGetTitle from '@/Composables/useGetTitle'
@@ -8,9 +7,12 @@ import Testimonials from '@/Components/Organisms/Projects/Testimonials.vue'
 import ProjectHero from '@/Components/Organisms/Projects/ProjectHero.vue'
 import ProjectContent from '@/Components/Organisms/Projects/ProjectContent.vue'
 
-const page = usePage()
-
-const project = computed(() => page.props.project)
+defineProps({
+    project: {
+        type: Object,
+        required: true,
+    },
+})
 
 const title = useGetTitle('project')
 </script>
@@ -20,35 +22,38 @@ const title = useGetTitle('project')
 
     <AppLayout>
         <!-- HERO -->
-        <ProjectHero :project="project" />
+        <ProjectHero :project="project.data" />
 
         <!-- HERO IMAGE -->
-        <section v-if="project.logo_url" class="mx-auto max-w-7xl">
+        <section v-if="project.data.logo_url" class="mx-auto max-w-7xl">
             <img
-                :alt="project.header"
-                :src="project.logo_url"
+                :alt="project.data.header"
+                :src="project.data.logo_url"
                 class="w-full rounded-xl object-cover"
             />
         </section>
 
         <!-- CONTENT -->
-        <ProjectContent :project="project" />
+        <ProjectContent :project="project.data" />
 
         <!-- GALLERY -->
         <section
-            v-if="project.gallery?.length"
+            v-if="project.data.gallery?.length"
             class="mx-auto grid max-w-7xl gap-8 px-6 pb-24 md:grid-cols-2"
         >
             <img
-                v-for="image in project.gallery"
+                v-for="image in project.data.gallery"
                 :key="image.url"
-                :alt="project.header"
+                :alt="project.data.header"
                 :src="image.url"
                 class="w-full rounded-lg"
             />
         </section>
 
         <!-- TESTIMONIALS -->
-        <Testimonials v-if="project.testimonials?.length" :testimonials="project.testimonials" />
+        <Testimonials
+            v-if="project.data.testimonials?.length"
+            :testimonials="project.data.testimonials"
+        />
     </AppLayout>
 </template>

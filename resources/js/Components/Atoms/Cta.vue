@@ -20,16 +20,16 @@ const props = defineProps({
         type: String,
         required: true,
     },
+    translations: {
+        type: Object,
+        required: true,
+    },
 })
 
 const page = usePage()
 
-const translations = computed(() => {
-    return page.props.translations.actions
-})
-
 const label = computed(() => {
-    return props.isPackage ? translations.value.view_package : translations.value.view_case_study
+    return props.isPackage ? props.translations.view_package : props.translations.view_case_study
 })
 </script>
 
