@@ -1,8 +1,8 @@
-import { n as _plugin_vue_export_helper_default } from "./Subtitle-C1PpTYqM.js";
-import { t as Section_default } from "./Section-BLdA3RkH.js";
-import { n as _sfc_main$6, r as _sfc_main$5, t as useGetTitle } from "./useGetTitle--vwnvYF8.js";
+import { n as _plugin_vue_export_helper_default } from "./Subtitle-DtkDPELn.js";
+import { t as Section_default } from "./Section-CcmBDABV.js";
+import { n as _sfc_main$6, r as _sfc_main$5, t as useGetTitle } from "./useGetTitle-CyfCBCJx.js";
 import { Fragment, computed, createBlock, createTextVNode, createVNode, defineAsyncComponent, mergeProps, openBlock, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
-import { Head, usePage } from "@inertiajs/vue3";
+import { Head, Link, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderStyle } from "vue/server-renderer";
 //#region resources/js/Components/Atoms/Title.vue
 var _sfc_main$4 = {};
@@ -17,7 +17,7 @@ _sfc_main$4.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/Title.vue");
 	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-var Title_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]);
+var Title_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]);
 //#endregion
 //#region resources/js/Components/Icons/Underline.vue
 var _sfc_main$3 = {};
@@ -34,7 +34,7 @@ _sfc_main$3.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/Underline.vue");
 	return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-var Underline_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1]]);
+var Underline_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1]]);
 //#endregion
 //#region resources/js/Components/Icons/HeroArrow.vue
 var _sfc_main$2 = {};
@@ -66,17 +66,19 @@ _sfc_main$2.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/HeroArrow.vue");
 	return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-var HeroArrow_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]);
+var HeroArrow_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]);
 //#endregion
 //#region resources/js/Components/Organisms/Home/Hero.vue
 var _sfc_main$1 = {
 	__name: "Hero",
 	__ssrInlineRender: true,
+	props: { heroSection: {
+		type: Object,
+		required: true
+	} },
 	setup(__props) {
 		const page = usePage();
-		const heroContent = computed(() => page.props.cms.hero);
-		const socials = computed(() => page.props.cms.socials);
-		const ctaLabel = computed(() => page.props.translations.hero_cta_label);
+		const socials = computed(() => page.props.socials);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<div${ssrRenderAttrs(mergeProps({
 				class: "relative",
@@ -91,12 +93,26 @@ var _sfc_main$1 = {
 								if (_push) {
 									_push(`<div class="relative text-primary-400 inline-flex mb-2"${_scopeId}>`);
 									_push(ssrRenderComponent(Underline_default, { class: "absolute w-2/5 inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10" }, null, _parent, _scopeId));
-									_push(`<span class="relative z-20 flex gap-2 text-black"${_scopeId}><span${_scopeId}>${ssrInterpolate(heroContent.value.kicker)}</span></span></div> ${ssrInterpolate(heroContent.value.title)}`);
-								} else return [createVNode("div", { class: "relative text-primary-400 inline-flex mb-2" }, [createVNode(Underline_default, { class: "absolute w-2/5 inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10" }), createVNode("span", { class: "relative z-20 flex gap-2 text-black" }, [createVNode("span", { textContent: toDisplayString(heroContent.value.kicker) }, null, 8, ["textContent"])])]), createTextVNode(" " + toDisplayString(heroContent.value.title), 1)];
+									_push(`<span class="relative z-20 flex gap-2 text-black"${_scopeId}><span${_scopeId}>${ssrInterpolate(__props.heroSection.content.kicker)}</span></span></div> ${ssrInterpolate(__props.heroSection.content.title)}`);
+								} else return [createVNode("div", { class: "relative text-primary-400 inline-flex mb-2" }, [createVNode(Underline_default, { class: "absolute w-2/5 inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10" }), createVNode("span", { class: "relative z-20 flex gap-2 text-black" }, [createVNode("span", { textContent: toDisplayString(__props.heroSection.content.kicker) }, null, 8, ["textContent"])])]), createTextVNode(" " + toDisplayString(__props.heroSection.content.title), 1)];
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`<p class="mt-6 text-lg lg:text-xl text-gray-700"${_scopeId}>${heroContent.value.description ?? ""}</p><div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start sm:justify-center lg:justify-start gap-4"${_scopeId}><button class="bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50"${_scopeId}><span class="capitalize font-semibold text-secondary-100"${_scopeId}>${ssrInterpolate(ctaLabel.value)}</span></button><div class="flex justify-center items-center gap-4"${_scopeId}><!--[-->`);
+						_push(`<p class="mt-6 text-lg lg:text-xl text-gray-700"${_scopeId}>${__props.heroSection.content.description ?? ""}</p><div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start sm:justify-center lg:justify-start gap-4"${_scopeId}>`);
+						_push(ssrRenderComponent(unref(Link), {
+							class: "bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50",
+							href: "/contact"
+						}, {
+							default: withCtx((_, _push, _parent, _scopeId) => {
+								if (_push) _push(`<span class="capitalize font-semibold text-secondary-100"${_scopeId}>${ssrInterpolate(__props.heroSection.hero_cta_label)}</span>`);
+								else return [createVNode("span", {
+									class: "capitalize font-semibold text-secondary-100",
+									textContent: toDisplayString(__props.heroSection.hero_cta_label)
+								}, null, 8, ["textContent"])];
+							}),
+							_: 1
+						}, _parent, _scopeId));
+						_push(`<div class="flex justify-center items-center gap-4"${_scopeId}><!--[-->`);
 						ssrRenderList(socials.value, (social) => {
 							_push(ssrRenderComponent(_sfc_main$5, {
 								key: social.name,
@@ -109,22 +125,28 @@ var _sfc_main$1 = {
 								outline: ""
 							}, null, _parent, _scopeId));
 						});
-						_push(`<!--]--></div></div></div><div class="relative flex justify-center mb-12 lg:mb-0"${_scopeId}><div class="hidden lg:block absolute -top-12 inset-s-auto inset-e-auto -translate-x-6 rtl:translate-x-10"${_scopeId}><p class="text-3xl -rotate-10 font-hand"${_scopeId}>${ssrInterpolate(heroContent.value.intro)}</p>`);
+						_push(`<!--]--></div></div></div><div class="relative flex justify-center mb-12 lg:mb-0"${_scopeId}><div class="hidden lg:block absolute -top-12 inset-s-auto inset-e-auto -translate-x-6 rtl:translate-x-10"${_scopeId}><p class="text-3xl -rotate-10 font-hand"${_scopeId}>${ssrInterpolate(__props.heroSection.content.intro)}</p>`);
 						_push(ssrRenderComponent(HeroArrow_default, null, null, _parent, _scopeId));
 						_push(`</div><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Youcef Nezrek" class="h-auto w-full max-w-105 rounded-xl object-cover shadow-xl md:max-w-120 lg:max-w-lg" decoding="async" fetchpriority="high" height="1280" loading="eager" sizes="(min-width: 1024px) 512px, (min-width: 768px) 480px, calc(100vw - 2rem)" width="853"${_scopeId}></div></div></div>`);
 					} else return [createVNode("div", { class: "container mx-auto text-center lg:text-start" }, [createVNode("div", { class: "grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 xl:gap-24 items-center px-4 sm:px-8 md:px-12 lg:px-16" }, [createVNode("div", { class: "" }, [
 						createVNode(Title_default, null, {
-							default: withCtx(() => [createVNode("div", { class: "relative text-primary-400 inline-flex mb-2" }, [createVNode(Underline_default, { class: "absolute w-2/5 inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10" }), createVNode("span", { class: "relative z-20 flex gap-2 text-black" }, [createVNode("span", { textContent: toDisplayString(heroContent.value.kicker) }, null, 8, ["textContent"])])]), createTextVNode(" " + toDisplayString(heroContent.value.title), 1)]),
+							default: withCtx(() => [createVNode("div", { class: "relative text-primary-400 inline-flex mb-2" }, [createVNode(Underline_default, { class: "absolute w-2/5 inset-x-0 bottom-0 translate-y-2 md:translate-y-3 lg:translate-y-3 z-10" }), createVNode("span", { class: "relative z-20 flex gap-2 text-black" }, [createVNode("span", { textContent: toDisplayString(__props.heroSection.content.kicker) }, null, 8, ["textContent"])])]), createTextVNode(" " + toDisplayString(__props.heroSection.content.title), 1)]),
 							_: 1
 						}),
 						createVNode("p", {
 							class: "mt-6 text-lg lg:text-xl text-gray-700",
-							innerHTML: heroContent.value.description
+							innerHTML: __props.heroSection.content.description
 						}, null, 8, ["innerHTML"]),
-						createVNode("div", { class: "mt-8 flex flex-col sm:flex-row items-center sm:items-start sm:justify-center lg:justify-start gap-4" }, [createVNode("button", { class: "bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50" }, [createVNode("span", {
-							class: "capitalize font-semibold text-secondary-100",
-							textContent: toDisplayString(ctaLabel.value)
-						}, null, 8, ["textContent"])]), createVNode("div", { class: "flex justify-center items-center gap-4" }, [(openBlock(true), createBlock(Fragment, null, renderList(socials.value, (social) => {
+						createVNode("div", { class: "mt-8 flex flex-col sm:flex-row items-center sm:items-start sm:justify-center lg:justify-start gap-4" }, [createVNode(unref(Link), {
+							class: "bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50",
+							href: "/contact"
+						}, {
+							default: withCtx(() => [createVNode("span", {
+								class: "capitalize font-semibold text-secondary-100",
+								textContent: toDisplayString(__props.heroSection.hero_cta_label)
+							}, null, 8, ["textContent"])]),
+							_: 1
+						}), createVNode("div", { class: "flex justify-center items-center gap-4" }, [(openBlock(true), createBlock(Fragment, null, renderList(socials.value, (social) => {
 							return openBlock(), createBlock(_sfc_main$5, {
 								key: social.name,
 								href: social.link,
@@ -142,7 +164,7 @@ var _sfc_main$1 = {
 						}), 128))])])
 					]), createVNode("div", { class: "relative flex justify-center mb-12 lg:mb-0" }, [createVNode("div", { class: "hidden lg:block absolute -top-12 inset-s-auto inset-e-auto -translate-x-6 rtl:translate-x-10" }, [createVNode("p", {
 						class: "text-3xl -rotate-10 font-hand",
-						textContent: toDisplayString(heroContent.value.intro)
+						textContent: toDisplayString(__props.heroSection.content.intro)
 					}, null, 8, ["textContent"]), createVNode(HeroArrow_default)]), createVNode("img", {
 						src: "/assets/images/portrait-2.webp",
 						alt: "Youcef Nezrek",
@@ -172,11 +194,33 @@ _sfc_main$1.setup = (props, ctx) => {
 var _sfc_main = {
 	__name: "HomeView",
 	__ssrInlineRender: true,
+	props: {
+		heroSection: {
+			type: Object,
+			required: true
+		},
+		featuresSection: {
+			type: Object,
+			required: true
+		},
+		toolsSectionCaption: {
+			type: String,
+			required: true
+		},
+		latestWorkSection: {
+			type: Object,
+			required: true
+		},
+		companiesSection: {
+			type: Object,
+			required: true
+		}
+	},
 	setup(__props) {
-		const Features = defineAsyncComponent(() => import("./Features-B1qc6Avo.js"));
-		const Tools = defineAsyncComponent(() => import("./Tools-B9AA61i1.js"));
-		const LatestWork = defineAsyncComponent(() => import("./LatestWork-B98y__Zu.js"));
-		const Companies = defineAsyncComponent(() => import("./Companies-Bc8qHM3k.js"));
+		const Features = defineAsyncComponent(() => import("./Features-Cst2Sivr.js"));
+		const Tools = defineAsyncComponent(() => import("./Tools-CMrSFF5Y.js"));
+		const LatestWork = defineAsyncComponent(() => import("./LatestWork-BSrtX1Yy.js"));
+		const Companies = defineAsyncComponent(() => import("./Companies-okQubWFv.js"));
 		const title = useGetTitle("home");
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<!--[-->`);
@@ -184,17 +228,17 @@ var _sfc_main = {
 			_push(ssrRenderComponent(_sfc_main$6, null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(ssrRenderComponent(_sfc_main$1, null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(unref(Features), null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(unref(Tools), null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(unref(LatestWork), null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(unref(Companies), null, null, _parent, _scopeId));
+						_push(ssrRenderComponent(_sfc_main$1, { heroSection: __props.heroSection }, null, _parent, _scopeId));
+						_push(ssrRenderComponent(unref(Features), { featuresSection: __props.featuresSection }, null, _parent, _scopeId));
+						_push(ssrRenderComponent(unref(Tools), { toolsSectionCaption: __props.toolsSectionCaption }, null, _parent, _scopeId));
+						_push(ssrRenderComponent(unref(LatestWork), { latestWorkSection: __props.latestWorkSection }, null, _parent, _scopeId));
+						_push(ssrRenderComponent(unref(Companies), { companiesSection: __props.companiesSection }, null, _parent, _scopeId));
 					} else return [
-						createVNode(_sfc_main$1),
-						createVNode(unref(Features)),
-						createVNode(unref(Tools)),
-						createVNode(unref(LatestWork)),
-						createVNode(unref(Companies))
+						createVNode(_sfc_main$1, { heroSection: __props.heroSection }, null, 8, ["heroSection"]),
+						createVNode(unref(Features), { featuresSection: __props.featuresSection }, null, 8, ["featuresSection"]),
+						createVNode(unref(Tools), { toolsSectionCaption: __props.toolsSectionCaption }, null, 8, ["toolsSectionCaption"]),
+						createVNode(unref(LatestWork), { latestWorkSection: __props.latestWorkSection }, null, 8, ["latestWorkSection"]),
+						createVNode(unref(Companies), { companiesSection: __props.companiesSection }, null, 8, ["companiesSection"])
 					];
 				}),
 				_: 1
@@ -212,4 +256,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=HomeView-DsT9qOBH.js.map
+//# sourceMappingURL=HomeView-CPqaX0Ym.js.map

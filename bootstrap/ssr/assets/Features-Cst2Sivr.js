@@ -1,7 +1,7 @@
-import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-C1PpTYqM.js";
-import { t as DownloadSimple_default } from "./DownloadSimple-_UTX2i-3.js";
-import { t as Section_default } from "./Section-BLdA3RkH.js";
-import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, renderList, resolveDynamicComponent, toDisplayString, useSSRContext, withCtx } from "vue";
+import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
+import { t as DownloadSimple_default } from "./DownloadSimple-HqfXmc8B.js";
+import { t as Section_default } from "./Section-CcmBDABV.js";
+import { Fragment, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, renderList, resolveDynamicComponent, toDisplayString, useSSRContext, withCtx } from "vue";
 import { usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderVNode } from "vue/server-renderer";
 //#region resources/js/Components/Icons/FeatureArrow.vue
@@ -22,7 +22,7 @@ _sfc_main$4.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/FeatureArrow.vue");
 	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-var FeatureArrow_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$3]]);
+var FeatureArrow_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$3]]);
 //#endregion
 //#region resources/js/Components/Icons/CheckCircle.vue
 var _sfc_main$3 = {};
@@ -42,7 +42,7 @@ _sfc_main$3.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/CheckCircle.vue");
 	return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-var CheckCircle_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender$2]]);
+var CheckCircle_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender$2]]);
 //#endregion
 //#region resources/js/Components/Icons/RectangleStack.vue
 var _sfc_main$2 = {};
@@ -62,7 +62,7 @@ _sfc_main$2.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/RectangleStack.vue");
 	return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-var RectangleStack_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$2, [["ssrRender", _sfc_ssrRender$1]]);
+var RectangleStack_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$2, [["ssrRender", _sfc_ssrRender$1]]);
 //#endregion
 //#region resources/js/Components/Icons/CodeBracket.vue
 var _sfc_main$1 = {};
@@ -82,16 +82,18 @@ _sfc_main$1.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/CodeBracket.vue");
 	return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-var CodeBracket_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$1, [["ssrRender", _sfc_ssrRender]]);
+var CodeBracket_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$1, [["ssrRender", _sfc_ssrRender]]);
 //#endregion
 //#region resources/js/Components/Organisms/Home/Features.vue
 var _sfc_main = {
 	__name: "Features",
 	__ssrInlineRender: true,
+	props: { featuresSection: {
+		type: Object,
+		required: true
+	} },
 	setup(__props) {
-		const page = usePage();
-		const featuresContent = computed(() => page.props.cms.features_section.features);
-		const translations = computed(() => page.props.translations.features);
+		usePage();
 		const iconMap = {
 			"heroicon-o-check-circle": CheckCircle_default,
 			"heroicon-o-rectangle-stack": RectangleStack_default,
@@ -105,36 +107,36 @@ var _sfc_main = {
 						_push(`<div class="container mx-auto text-center lg:text-start space-y-20"${_scopeId}><div class="grid grid-cols-1 xl:grid-cols-2 gap-10 md:gap-16 xl:gap-24 items-center px-4 sm:px-8 md:px-12 lg:px-16"${_scopeId}>`);
 						_push(ssrRenderComponent(Subtitle_default, null, {
 							default: withCtx((_, _push, _parent, _scopeId) => {
-								if (_push) _push(`${ssrInterpolate(featuresContent.value.title)}`);
-								else return [createTextVNode(toDisplayString(featuresContent.value.title), 1)];
+								if (_push) _push(`${ssrInterpolate(__props.featuresSection.features.title)}`);
+								else return [createTextVNode(toDisplayString(__props.featuresSection.features.title), 1)];
 							}),
 							_: 1
 						}, _parent, _scopeId));
-						_push(`<p class="mt-6 text-lg lg:text-xl text-start text-gray-700"${_scopeId}>${featuresContent.value.description ?? ""}</p></div><div class="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-20 items-center px-4 sm:px-8 md:px-12 lg:px-16"${_scopeId}><div class="relative grid gap-10 md:gap-14 lg:gap-20 grid-cols-1"${_scopeId}><!--[-->`);
-						ssrRenderList(featuresContent.value.items, (feature, index) => {
+						_push(`<p class="mt-6 text-lg lg:text-xl text-start text-gray-700"${_scopeId}>${__props.featuresSection.features.description ?? ""}</p></div><div class="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-20 items-center px-4 sm:px-8 md:px-12 lg:px-16"${_scopeId}><div class="relative grid gap-10 md:gap-14 lg:gap-20 grid-cols-1"${_scopeId}><!--[-->`);
+						ssrRenderList(__props.featuresSection.features.items, (feature, index) => {
 							_push(`<div class="flex items-start gap-6"${_scopeId}><div class="relative min-w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center"${_scopeId}>`);
 							if (iconMap[feature.icon]) ssrRenderVNode(_push, createVNode(resolveDynamicComponent(iconMap[feature.icon]), { class: "text-secondary-100 w-6 h-6" }, null), _parent, _scopeId);
 							else _push(`<!---->`);
-							if (index !== featuresContent.value.items.length - 1) _push(`<div class="absolute top-20 w-px border-s-2 border-dotted border-secondary-300 h-full"${_scopeId}></div>`);
+							if (index !== __props.featuresSection.features.items.length - 1) _push(`<div class="absolute top-20 w-px border-s-2 border-dotted border-secondary-300 h-full"${_scopeId}></div>`);
 							else _push(`<!---->`);
 							_push(`</div><div class="w-full md:w-3/4"${_scopeId}><h3 class="text-lg md:text-xl font-semibold text-start font-display"${_scopeId}>${ssrInterpolate(feature.title)}</h3><p class="mt-2 text-sm md:text-base text-gray-700 text-start"${_scopeId}>${ssrInterpolate(feature.description)}</p></div></div>`);
 						});
-						_push(`<!--]--><div class="hidden lg:block absolute -bottom-32 left-12"${_scopeId}><h4 class="text-xl w-[60%] translate-y-16 translate-x-20 -rotate-10 rtl:translate-y-20 rtl:translate-x-20"${_scopeId}>${ssrInterpolate(translations.value.caption)}</h4>`);
+						_push(`<!--]--><div class="hidden lg:block absolute -bottom-32 left-12"${_scopeId}><h4 class="text-xl w-[60%] translate-y-16 translate-x-20 -rotate-10 rtl:translate-y-20 rtl:translate-x-20"${_scopeId}>${ssrInterpolate(__props.featuresSection.caption)}</h4>`);
 						_push(ssrRenderComponent(FeatureArrow_default, null, null, _parent, _scopeId));
 						_push(`</div></div><div class="relative w-full flex justify-center"${_scopeId}><div class="relative inline-block"${_scopeId}><img${ssrRenderAttr("src", "/assets/images/feature_section.webp")} alt="Feature Image" class="w-full max-w-125 md:max-w-150 h-80 md:h-130 object-cover rounded-xl shadow-xl" decoding="async" height="1280" loading="lazy" sizes="(min-width: 1024px) 512px, (min-width: 768px) 480px, calc(100vw - 2rem)" width="853"${_scopeId}><img${ssrRenderAttr("src", "/assets/svg/star.svg")} alt="decorative star" class="absolute -top-5 -inset-e-6 w-8 md:w-12 lg:w-14 pointer-events-none select-none"${_scopeId}></div><div class="absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0"${_scopeId}><a${ssrRenderAttr("href", "assets/docs/Youcef_Nezrek_CV.pdf")} class="group flex items-center gap-3 bg-white/90 backdrop-blur px-3 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200" target="_blank"${_scopeId}><div class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white"${_scopeId}>`);
 						_push(ssrRenderComponent(DownloadSimple_default, { class: "w-5 h-5 group-hover:translate-y-0.5 transition" }, null, _parent, _scopeId));
-						_push(`</div><div class="text-start"${_scopeId}><p class="text-sm font-semibold text-slate-900"${_scopeId}>${ssrInterpolate(translations.value.download_label)}</p><p class="text-xs text-gray-500"${_scopeId}>${ssrInterpolate(translations.value.view_experience_label)}</p></div></a></div></div></div></div>`);
+						_push(`</div><div class="text-start"${_scopeId}><p class="text-sm font-semibold text-slate-900"${_scopeId}>${ssrInterpolate(__props.featuresSection.download_label)}</p><p class="text-xs text-gray-500"${_scopeId}>${ssrInterpolate(__props.featuresSection.view_experience_label)}</p></div></a></div></div></div></div>`);
 					} else return [createVNode("div", { class: "container mx-auto text-center lg:text-start space-y-20" }, [createVNode("div", { class: "grid grid-cols-1 xl:grid-cols-2 gap-10 md:gap-16 xl:gap-24 items-center px-4 sm:px-8 md:px-12 lg:px-16" }, [createVNode(Subtitle_default, null, {
-						default: withCtx(() => [createTextVNode(toDisplayString(featuresContent.value.title), 1)]),
+						default: withCtx(() => [createTextVNode(toDisplayString(__props.featuresSection.features.title), 1)]),
 						_: 1
 					}), createVNode("p", {
 						class: "mt-6 text-lg lg:text-xl text-start text-gray-700",
-						innerHTML: featuresContent.value.description
-					}, null, 8, ["innerHTML"])]), createVNode("div", { class: "flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-20 items-center px-4 sm:px-8 md:px-12 lg:px-16" }, [createVNode("div", { class: "relative grid gap-10 md:gap-14 lg:gap-20 grid-cols-1" }, [(openBlock(true), createBlock(Fragment, null, renderList(featuresContent.value.items, (feature, index) => {
+						innerHTML: __props.featuresSection.features.description
+					}, null, 8, ["innerHTML"])]), createVNode("div", { class: "flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-20 items-center px-4 sm:px-8 md:px-12 lg:px-16" }, [createVNode("div", { class: "relative grid gap-10 md:gap-14 lg:gap-20 grid-cols-1" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.featuresSection.features.items, (feature, index) => {
 						return openBlock(), createBlock("div", { class: "flex items-start gap-6" }, [createVNode("div", { class: "relative min-w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center" }, [iconMap[feature.icon] ? (openBlock(), createBlock(resolveDynamicComponent(iconMap[feature.icon]), {
 							key: 0,
 							class: "text-secondary-100 w-6 h-6"
-						})) : createCommentVNode("", true), index !== featuresContent.value.items.length - 1 ? (openBlock(), createBlock("div", {
+						})) : createCommentVNode("", true), index !== __props.featuresSection.features.items.length - 1 ? (openBlock(), createBlock("div", {
 							key: 1,
 							class: "absolute top-20 w-px border-s-2 border-dotted border-secondary-300 h-full"
 						})) : createCommentVNode("", true)]), createVNode("div", { class: "w-full md:w-3/4" }, [createVNode("h3", {
@@ -146,7 +148,7 @@ var _sfc_main = {
 						}, null, 8, ["textContent"])])]);
 					}), 256)), createVNode("div", { class: "hidden lg:block absolute -bottom-32 left-12" }, [createVNode("h4", {
 						class: "text-xl w-[60%] translate-y-16 translate-x-20 -rotate-10 rtl:translate-y-20 rtl:translate-x-20",
-						textContent: toDisplayString(translations.value.caption)
+						textContent: toDisplayString(__props.featuresSection.caption)
 					}, null, 8, ["textContent"]), createVNode(FeatureArrow_default)])]), createVNode("div", { class: "relative w-full flex justify-center" }, [createVNode("div", { class: "relative inline-block" }, [createVNode("img", {
 						src: "/assets/images/feature_section.webp",
 						alt: "Feature Image",
@@ -166,10 +168,10 @@ var _sfc_main = {
 						target: "_blank"
 					}, [createVNode("div", { class: "w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white" }, [createVNode(DownloadSimple_default, { class: "w-5 h-5 group-hover:translate-y-0.5 transition" })]), createVNode("div", { class: "text-start" }, [createVNode("p", {
 						class: "text-sm font-semibold text-slate-900",
-						textContent: toDisplayString(translations.value.download_label)
+						textContent: toDisplayString(__props.featuresSection.download_label)
 					}, null, 8, ["textContent"]), createVNode("p", {
 						class: "text-xs text-gray-500",
-						textContent: toDisplayString(translations.value.view_experience_label)
+						textContent: toDisplayString(__props.featuresSection.view_experience_label)
 					}, null, 8, ["textContent"])])])])])])])];
 				}),
 				_: 1
@@ -187,4 +189,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=Features-B1qc6Avo.js.map
+//# sourceMappingURL=Features-Cst2Sivr.js.map

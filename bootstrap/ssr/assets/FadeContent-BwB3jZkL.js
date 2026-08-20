@@ -21,16 +21,17 @@ var _sfc_main = {
 		url: {
 			type: String,
 			required: true
+		},
+		translations: {
+			type: Object,
+			required: true
 		}
 	},
 	setup(__props) {
 		const props = __props;
-		const page = usePage();
-		const translations = computed(() => {
-			return page.props.translations.actions;
-		});
+		usePage();
 		const label = computed(() => {
-			return props.isPackage ? translations.value.view_package : translations.value.view_case_study;
+			return props.isPackage ? props.translations.view_package : props.translations.view_case_study;
 		});
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<div${ssrRenderAttrs(mergeProps({ class: "z-50" }, _attrs))}>`);
@@ -68,7 +69,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 //#endregion
 //#region resources/js/Components/Molecules/FadeContent.vue?vue&type=script&setup=true&lang.ts
-var FadeContent_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
+var FadeContent_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
 	__name: "FadeContent",
 	__ssrInlineRender: true,
 	props: {
@@ -132,4 +133,4 @@ var FadeContent_default = FadeContent_vue_vue_type_script_setup_true_lang_defaul
 //#endregion
 export { _sfc_main as n, FadeContent_default as t };
 
-//# sourceMappingURL=FadeContent-BIRVTgEr.js.map
+//# sourceMappingURL=FadeContent-BwB3jZkL.js.map

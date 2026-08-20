@@ -1,4 +1,4 @@
-import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-C1PpTYqM.js";
+import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, onBeforeUnmount, openBlock, ref, renderSlot, resolveDynamicComponent, toDisplayString, unref, useSSRContext, watch, watchEffect, withCtx } from "vue";
 import { Link, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderStyle, ssrRenderVNode } from "vue/server-renderer";
@@ -17,7 +17,7 @@ _sfc_main$13.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/Logo.vue");
 	return _sfc_setup$13 ? _sfc_setup$13(props, ctx) : void 0;
 };
-var Logo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$13, [["ssrRender", _sfc_ssrRender$4]]);
+var Logo_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$13, [["ssrRender", _sfc_ssrRender$4]]);
 //#endregion
 //#region resources/js/Components/Atoms/NavLink.vue
 var _sfc_main$12 = {
@@ -148,7 +148,7 @@ _sfc_main$10.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Organisms/MobileMenu.vue");
 	return _sfc_setup$10 ? _sfc_setup$10(props, ctx) : void 0;
 };
-var MobileMenu_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$10, [["__scopeId", "data-v-6ef2af54"]]);
+var MobileMenu_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$10, [["__scopeId", "data-v-6ef2af54"]]);
 //#endregion
 //#region resources/js/Components/Organisms/TheMenu.vue
 var _sfc_main$9 = {
@@ -216,8 +216,8 @@ var _sfc_main$7 = {
 	__ssrInlineRender: true,
 	setup(__props) {
 		const page = usePage();
-		computed(() => page.props.cms.header);
-		const ctaLabel = computed(() => page.props.translations.header_cta_label);
+		computed(() => page.props.header.content);
+		const ctaLabel = computed(() => page.props.header.header_cta_label);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<header${ssrRenderAttrs(mergeProps({ class: "relative z-99 border-b border-secondary-200 py-4 md:py-6" }, _attrs))}><div class="mx-auto flex w-full max-w-8xl items-center justify-between px-6 md:px-32"><div class="shrink-0">`);
 			_push(ssrRenderComponent(Logo_default, { class: "h-10 w-12" }, null, _parent));
@@ -263,7 +263,7 @@ _sfc_main$6.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/GithubLogo.vue");
 	return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-var GithubLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$6, [["ssrRender", _sfc_ssrRender$3]]);
+var GithubLogo_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$6, [["ssrRender", _sfc_ssrRender$3]]);
 //#endregion
 //#region resources/js/Components/Icons/InstagramLogo.vue
 var _sfc_main$5 = {};
@@ -280,7 +280,7 @@ _sfc_main$5.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/InstagramLogo.vue");
 	return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-var InstagramLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]);
+var InstagramLogo_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]);
 //#endregion
 //#region resources/js/Components/Icons/LinkedinLogo.vue
 var _sfc_main$4 = {};
@@ -297,7 +297,7 @@ _sfc_main$4.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/LinkedinLogo.vue");
 	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-var LinkedinLogo_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]);
+var LinkedinLogo_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]);
 //#endregion
 //#region resources/js/Components/Atoms/BaseButton.vue
 var _sfc_main$3 = {
@@ -454,7 +454,7 @@ _sfc_main$2.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/FooterContactArrow.vue");
 	return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-var FooterContactArrow_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]);
+var FooterContactArrow_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]);
 //#endregion
 //#region resources/js/Components/Organisms/Footer.vue
 var _sfc_main$1 = {
@@ -462,9 +462,9 @@ var _sfc_main$1 = {
 	__ssrInlineRender: true,
 	setup(__props) {
 		const page = usePage();
-		const footer = computed(() => page.props.cms.footer);
-		const socials = computed(() => page.props.cms.socials);
-		const navigation = computed(() => page.props.cms.footerNavigation);
+		const footer = computed(() => page.props.footer);
+		const socials = computed(() => page.props.socials);
+		const navigation = computed(() => page.props.footerNavigation);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-slate-900 py-10 sm:pt-16 lg:pt-24" }, _attrs))}><div class="mx-auto max-w-7xl px-4 sm:px-12 lg:px-8"><div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-32"><div class="space-y-16">`);
 			_push(ssrRenderComponent(Subtitle_default, { class: "text-start text-white" }, {
@@ -568,9 +568,9 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 //#region resources/js/Composables/useGetTitle.js
 function useGetTitle(page) {
-	return usePage().props.translations.pages[page];
+	return usePage().props.pages[page];
 }
 //#endregion
 export { _sfc_main as n, _sfc_main$3 as r, useGetTitle as t };
 
-//# sourceMappingURL=useGetTitle--vwnvYF8.js.map
+//# sourceMappingURL=useGetTitle-CyfCBCJx.js.map

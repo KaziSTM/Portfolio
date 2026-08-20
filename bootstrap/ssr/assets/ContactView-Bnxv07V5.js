@@ -1,5 +1,5 @@
-import { n as _plugin_vue_export_helper_default } from "./Subtitle-C1PpTYqM.js";
-import { n as _sfc_main$6, t as useGetTitle } from "./useGetTitle--vwnvYF8.js";
+import { n as _plugin_vue_export_helper_default } from "./Subtitle-DtkDPELn.js";
+import { n as _sfc_main$6, t as useGetTitle } from "./useGetTitle-CyfCBCJx.js";
 import { computed, createVNode, mergeProps, resolveDynamicComponent, unref, useSSRContext, withCtx } from "vue";
 import { Head, useForm, usePage } from "@inertiajs/vue3";
 import { ssrIncludeBooleanAttr, ssrInterpolate, ssrLooseContain, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderDynamicModel, ssrRenderList, ssrRenderVNode } from "vue/server-renderer";
@@ -19,7 +19,7 @@ _sfc_main$5.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/ContactArrow.vue");
 	return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-var ContactArrow_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]);
+var ContactArrow_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$5, [["ssrRender", _sfc_ssrRender$2]]);
 //#endregion
 //#region resources/js/Components/Icons/AtSymbol.vue
 var _sfc_main$4 = {};
@@ -39,7 +39,7 @@ _sfc_main$4.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/AtSymbol.vue");
 	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-var AtSymbol_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]);
+var AtSymbol_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender$1]]);
 //#endregion
 //#region resources/js/Components/Icons/Phone.vue
 var _sfc_main$3 = {};
@@ -59,16 +59,23 @@ _sfc_main$3.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/Phone.vue");
 	return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-var Phone_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender]]);
+var Phone_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$3, [["ssrRender", _sfc_ssrRender]]);
 //#endregion
 //#region resources/js/Components/Organisms/Contact/ContactContent.vue
 var _sfc_main$2 = {
 	__name: "ContactContent",
 	__ssrInlineRender: true,
+	props: {
+		heroSection: {
+			type: Object,
+			required: true
+		},
+		contacts: {
+			type: Object,
+			required: true
+		}
+	},
 	setup(__props) {
-		const page = usePage();
-		const hero = computed(() => page.props.cms.contact.hero ?? {});
-		const contacts = computed(() => page.props.cms.contact.contacts ?? []);
 		function getContactIcon(iconName) {
 			return {
 				"heroicon-o-phone": Phone_default,
@@ -76,10 +83,10 @@ var _sfc_main$2 = {
 			}[iconName] ?? Phone_default;
 		}
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "relative w-full overflow-visible rounded-3xl bg-secondary-100 px-6 py-12 sm:px-8 sm:py-14 lg:w-2/5 lg:pe-10 lg:ps-16 xl:pe-16 xl:ps-24" }, _attrs))}><div class="relative flex flex-col justify-between gap-10"><h2 class="text-start text-3xl font-semibold leading-[1.2] text-secondary-900 sm:text-4xl lg:text-[44px] xl:text-5xl">${ssrInterpolate(hero.value.title)}<br> ${ssrInterpolate(hero.value.subtitle)} 👋 </h2><div class="relative flex justify-center lg:block"><img${ssrRenderAttr("src", "/assets/images/feature_section.webp")} alt="Contact" class="mx-auto h-56 w-full max-w-65 rounded-2xl object-cover shadow-lg sm:h-64 sm:max-w-75 md:h-72 md:max-w-85 lg:h-64 lg:max-w-none xl:h-72 md:translate-x-14 lg:translate-x-16 xl:translate-x-24 rtl:md:-translate-x-14 rtl:lg:-translate-x-16 rtl:xl:-translate-x-24"></div><div class="space-y-5"><div class="mt-6 flex items-start gap-1 rtl:flex-row-reverse md:gap-3 sm:mt-10"><h3 class="max-w-40 -rotate-3 text-start text-lg font-medium leading-snug text-secondary-700 rtl:rotate-3 sm:max-w-45 sm:text-xl">${ssrInterpolate(hero.value.reach_label)}</h3>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "relative w-full overflow-visible rounded-3xl bg-secondary-100 px-6 py-12 sm:px-8 sm:py-14 lg:w-2/5 lg:pe-10 lg:ps-16 xl:pe-16 xl:ps-24" }, _attrs))}><div class="relative flex flex-col justify-between gap-10"><h2 class="text-start text-3xl font-semibold leading-[1.2] text-secondary-900 sm:text-4xl lg:text-[44px] xl:text-5xl">${ssrInterpolate(__props.heroSection.title)}<br> ${ssrInterpolate(__props.heroSection.subtitle)} 👋 </h2><div class="relative flex justify-center lg:block"><img${ssrRenderAttr("src", "/assets/images/feature_section.webp")} alt="Contact" class="mx-auto h-56 w-full max-w-65 rounded-2xl object-cover shadow-lg sm:h-64 sm:max-w-75 md:h-72 md:max-w-85 lg:h-64 lg:max-w-none xl:h-72 md:translate-x-14 lg:translate-x-16 xl:translate-x-24 rtl:md:-translate-x-14 rtl:lg:-translate-x-16 rtl:xl:-translate-x-24"></div><div class="space-y-5"><div class="mt-6 flex items-start gap-1 rtl:flex-row-reverse md:gap-3 sm:mt-10"><h3 class="max-w-40 -rotate-3 text-start text-lg font-medium leading-snug text-secondary-700 rtl:rotate-3 sm:max-w-45 sm:text-xl">${ssrInterpolate(__props.heroSection.reach_label)}</h3>`);
 			_push(ssrRenderComponent(ContactArrow_default, { class: "-mt-1 w-17.5 -rotate-90 text-secondary-700 md:mt-2" }, null, _parent));
 			_push(`</div><div class="mt-6 grid grid-cols-1 gap-5 pt-2 sm:grid-cols-2 sm:gap-6"><!--[-->`);
-			ssrRenderList(contacts.value, (contact) => {
+			ssrRenderList(__props.contacts, (contact) => {
 				_push(`<div class="flex items-start gap-3">`);
 				ssrRenderVNode(_push, createVNode(resolveDynamicComponent(getContactIcon(contact.icon)), { class: "mt-1 h-5 w-5 shrink-0 text-primary-700" }, null), _parent);
 				_push(`<div class="text-start"><p class="text-sm font-semibold text-secondary-900 sm:text-base">${ssrInterpolate(contact.title)}</p><p class="mt-0.5 text-xs text-secondary-700 sm:text-sm">${ssrInterpolate(contact.description)}</p><p class="mt-1 text-sm text-primary-700 sm:text-base"><span class="inline-block" dir="ltr">${ssrInterpolate(contact.value)}</span></p></div></div>`);
@@ -99,22 +106,33 @@ _sfc_main$2.setup = (props, ctx) => {
 var _sfc_main$1 = {
 	__name: "ContactForm",
 	__ssrInlineRender: true,
+	props: {
+		formContent: {
+			type: Object,
+			required: true
+		},
+		services: {
+			type: Object,
+			required: true
+		},
+		translations: {
+			type: Object,
+			required: true
+		}
+	},
 	setup(__props) {
 		const page = usePage();
-		const formContent = computed(() => page.props.cms.contact.form_content ?? {});
-		const availableServices = computed(() => page.props.cms.contact.services ?? {});
+		const props = __props;
 		const flash = computed(() => page.props.flash ?? {});
-		const translations = computed(() => page.props.translations ?? {});
-		const contactTranslations = computed(() => translations.value.contact ?? {});
+		const contactTranslations = computed(() => props.translations.contact ?? {});
 		const fieldTranslations = computed(() => contactTranslations.value.fields ?? {});
 		const placeholderTranslations = computed(() => contactTranslations.value.placeholders ?? {});
-		console.log(fieldTranslations.value);
 		const form = useForm({
 			name: "",
 			email: "",
 			phone: "",
 			message: "",
-			services: { ...availableServices.value }
+			services: { ...props.services }
 		});
 		const inputFields = computed(() => [
 			{
@@ -137,7 +155,7 @@ var _sfc_main$1 = {
 			}
 		]);
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "w-full rounded-3xl px-6 py-12 sm:px-8 sm:py-14 lg:w-3/5 lg:pe-12 lg:ps-20 xl:pe-16 xl:ps-28" }, _attrs))}><div class="max-w-xl"><h2 class="text-start text-xl font-semibold text-gray-900 sm:text-2xl lg:text-[26px]">${ssrInterpolate(formContent.value.title)}</h2><p class="mt-2 text-start text-sm text-gray-500">${ssrInterpolate(formContent.value.description)}</p>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "w-full rounded-3xl px-6 py-12 sm:px-8 sm:py-14 lg:w-3/5 lg:pe-12 lg:ps-20 xl:pe-16 xl:ps-28" }, _attrs))}><div class="max-w-xl"><h2 class="text-start text-xl font-semibold text-gray-900 sm:text-2xl lg:text-[26px]">${ssrInterpolate(__props.formContent.title)}</h2><p class="mt-2 text-start text-sm text-gray-500">${ssrInterpolate(__props.formContent.description)}</p>`);
 			if (flash.value.success) _push(`<div class="mt-4 rounded-xl bg-green-50 px-4 py-3 text-sm text-green-700">${ssrInterpolate(flash.value.success)}</div>`);
 			else _push(`<!---->`);
 			if (flash.value.error) _push(`<div class="mt-4 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">${ssrInterpolate(flash.value.error)}</div>`);
@@ -160,8 +178,8 @@ var _sfc_main$1 = {
 			if (unref(form).errors.services) _push(`<p class="mt-1 text-sm text-red-600">${ssrInterpolate(unref(form).errors.services)}</p>`);
 			else _push(`<!---->`);
 			_push(`</div><button${ssrIncludeBooleanAttr(unref(form).processing) ? " disabled" : ""} class="mt-4 w-full rounded-full bg-gray-900 py-3.5 text-sm font-medium text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50" type="submit">`);
-			if (!unref(form).processing) _push(`<span>${ssrInterpolate(formContent.value.submit_label)}</span>`);
-			else _push(`<span>${ssrInterpolate(formContent.value.submitting_label)}</span>`);
+			if (!unref(form).processing) _push(`<span>${ssrInterpolate(__props.formContent.submit_label)}</span>`);
+			else _push(`<span>${ssrInterpolate(__props.formContent.submitting_label)}</span>`);
 			_push(`</button></form></div></div>`);
 		};
 	}
@@ -177,6 +195,28 @@ _sfc_main$1.setup = (props, ctx) => {
 var _sfc_main = {
 	__name: "ContactView",
 	__ssrInlineRender: true,
+	props: {
+		heroSection: {
+			type: Object,
+			required: true
+		},
+		formContent: {
+			type: Object,
+			required: true
+		},
+		contacts: {
+			type: Object,
+			required: true
+		},
+		services: {
+			type: Object,
+			required: true
+		},
+		translations: {
+			type: Object,
+			required: true
+		}
+	},
 	setup(__props) {
 		const title = useGetTitle("contact");
 		return (_ctx, _push, _parent, _attrs) => {
@@ -186,10 +226,28 @@ var _sfc_main = {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(`<section class="w-full px-4 py-12 sm:px-6 md:px-10 md:py-16"${_scopeId}><div class="flex flex-col gap-10 lg:flex-row lg:gap-0"${_scopeId}>`);
-						_push(ssrRenderComponent(_sfc_main$2, null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(_sfc_main$1, null, null, _parent, _scopeId));
+						_push(ssrRenderComponent(_sfc_main$2, {
+							contacts: __props.contacts,
+							heroSection: __props.heroSection
+						}, null, _parent, _scopeId));
+						_push(ssrRenderComponent(_sfc_main$1, {
+							formContent: __props.formContent,
+							services: __props.services,
+							translations: __props.translations
+						}, null, _parent, _scopeId));
 						_push(`</div></section>`);
-					} else return [createVNode("section", { class: "w-full px-4 py-12 sm:px-6 md:px-10 md:py-16" }, [createVNode("div", { class: "flex flex-col gap-10 lg:flex-row lg:gap-0" }, [createVNode(_sfc_main$2), createVNode(_sfc_main$1)])])];
+					} else return [createVNode("section", { class: "w-full px-4 py-12 sm:px-6 md:px-10 md:py-16" }, [createVNode("div", { class: "flex flex-col gap-10 lg:flex-row lg:gap-0" }, [createVNode(_sfc_main$2, {
+						contacts: __props.contacts,
+						heroSection: __props.heroSection
+					}, null, 8, ["contacts", "heroSection"]), createVNode(_sfc_main$1, {
+						formContent: __props.formContent,
+						services: __props.services,
+						translations: __props.translations
+					}, null, 8, [
+						"formContent",
+						"services",
+						"translations"
+					])])])];
 				}),
 				_: 1
 			}, _parent));
@@ -206,4 +264,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ContactView-BBBywtzP.js.map
+//# sourceMappingURL=ContactView-Bnxv07V5.js.map

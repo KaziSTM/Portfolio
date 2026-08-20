@@ -1,4 +1,4 @@
-import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle--vwnvYF8.js";
+import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-CyfCBCJx.js";
 import { Fragment, computed, createBlock, createCommentVNode, createVNode, mergeProps, openBlock, renderList, unref, useSSRContext, withCtx } from "vue";
 import { Head, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
@@ -118,9 +118,11 @@ _sfc_main$1.setup = (props, ctx) => {
 var _sfc_main = {
 	__name: "ShowView",
 	__ssrInlineRender: true,
+	props: { project: {
+		type: Object,
+		required: true
+	} },
 	setup(__props) {
-		const page = usePage();
-		const project = computed(() => page.props.project);
 		const title = useGetTitle("project");
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<!--[-->`);
@@ -128,44 +130,44 @@ var _sfc_main = {
 			_push(ssrRenderComponent(_sfc_main$4, null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(ssrRenderComponent(_sfc_main$2, { project: project.value }, null, _parent, _scopeId));
-						if (project.value.logo_url) _push(`<section class="mx-auto max-w-7xl"${_scopeId}><img${ssrRenderAttr("alt", project.value.header)}${ssrRenderAttr("src", project.value.logo_url)} class="w-full rounded-xl object-cover"${_scopeId}></section>`);
+						_push(ssrRenderComponent(_sfc_main$2, { project: __props.project.data }, null, _parent, _scopeId));
+						if (__props.project.data.logo_url) _push(`<section class="mx-auto max-w-7xl"${_scopeId}><img${ssrRenderAttr("alt", __props.project.data.header)}${ssrRenderAttr("src", __props.project.data.logo_url)} class="w-full rounded-xl object-cover"${_scopeId}></section>`);
 						else _push(`<!---->`);
-						_push(ssrRenderComponent(_sfc_main$1, { project: project.value }, null, _parent, _scopeId));
-						if (project.value.gallery?.length) {
+						_push(ssrRenderComponent(_sfc_main$1, { project: __props.project.data }, null, _parent, _scopeId));
+						if (__props.project.data.gallery?.length) {
 							_push(`<section class="mx-auto grid max-w-7xl gap-8 px-6 pb-24 md:grid-cols-2"${_scopeId}><!--[-->`);
-							ssrRenderList(project.value.gallery, (image) => {
-								_push(`<img${ssrRenderAttr("alt", project.value.header)}${ssrRenderAttr("src", image.url)} class="w-full rounded-lg"${_scopeId}>`);
+							ssrRenderList(__props.project.data.gallery, (image) => {
+								_push(`<img${ssrRenderAttr("alt", __props.project.data.header)}${ssrRenderAttr("src", image.url)} class="w-full rounded-lg"${_scopeId}>`);
 							});
 							_push(`<!--]--></section>`);
 						} else _push(`<!---->`);
-						if (project.value.testimonials?.length) _push(ssrRenderComponent(_sfc_main$3, { testimonials: project.value.testimonials }, null, _parent, _scopeId));
+						if (__props.project.data.testimonials?.length) _push(ssrRenderComponent(_sfc_main$3, { testimonials: __props.project.data.testimonials }, null, _parent, _scopeId));
 						else _push(`<!---->`);
 					} else return [
-						createVNode(_sfc_main$2, { project: project.value }, null, 8, ["project"]),
-						project.value.logo_url ? (openBlock(), createBlock("section", {
+						createVNode(_sfc_main$2, { project: __props.project.data }, null, 8, ["project"]),
+						__props.project.data.logo_url ? (openBlock(), createBlock("section", {
 							key: 0,
 							class: "mx-auto max-w-7xl"
 						}, [createVNode("img", {
-							alt: project.value.header,
-							src: project.value.logo_url,
+							alt: __props.project.data.header,
+							src: __props.project.data.logo_url,
 							class: "w-full rounded-xl object-cover"
 						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true),
-						createVNode(_sfc_main$1, { project: project.value }, null, 8, ["project"]),
-						project.value.gallery?.length ? (openBlock(), createBlock("section", {
+						createVNode(_sfc_main$1, { project: __props.project.data }, null, 8, ["project"]),
+						__props.project.data.gallery?.length ? (openBlock(), createBlock("section", {
 							key: 1,
 							class: "mx-auto grid max-w-7xl gap-8 px-6 pb-24 md:grid-cols-2"
-						}, [(openBlock(true), createBlock(Fragment, null, renderList(project.value.gallery, (image) => {
+						}, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.data.gallery, (image) => {
 							return openBlock(), createBlock("img", {
 								key: image.url,
-								alt: project.value.header,
+								alt: __props.project.data.header,
 								src: image.url,
 								class: "w-full rounded-lg"
 							}, null, 8, ["alt", "src"]);
 						}), 128))])) : createCommentVNode("", true),
-						project.value.testimonials?.length ? (openBlock(), createBlock(_sfc_main$3, {
+						__props.project.data.testimonials?.length ? (openBlock(), createBlock(_sfc_main$3, {
 							key: 2,
-							testimonials: project.value.testimonials
+							testimonials: __props.project.data.testimonials
 						}, null, 8, ["testimonials"])) : createCommentVNode("", true)
 					];
 				}),
@@ -184,4 +186,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ShowView-B-6rIN13.js.map
+//# sourceMappingURL=ShowView-DTp3QcWA.js.map

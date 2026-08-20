@@ -1,17 +1,22 @@
-import { t as Subtitle_default } from "./Subtitle-C1PpTYqM.js";
-import { t as Section_default } from "./Section-BLdA3RkH.js";
-import { n as _sfc_main$2, t as FadeContent_default } from "./FadeContent-BIRVTgEr.js";
-import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, ref, renderList, toDisplayString, useSSRContext, withCtx } from "vue";
-import { usePage } from "@inertiajs/vue3";
+import { t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
+import { t as Section_default } from "./Section-CcmBDABV.js";
+import { n as _sfc_main$2, t as FadeContent_default } from "./FadeContent-BwB3jZkL.js";
+import { Fragment, computed, createBlock, createCommentVNode, createVNode, mergeProps, openBlock, ref, renderList, toDisplayString, useSSRContext, withCtx } from "vue";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Components/Molecules/ProjectCard.vue
 var _sfc_main$1 = {
 	__name: "ProjectCard",
 	__ssrInlineRender: true,
-	props: { project: {
-		type: Object,
-		required: true
-	} },
+	props: {
+		project: {
+			type: Object,
+			required: true
+		},
+		translations: {
+			type: Object,
+			required: true
+		}
+	},
 	setup(__props) {
 		const props = __props;
 		const zoom = ref(false);
@@ -35,7 +40,7 @@ var _sfc_main$1 = {
 			}, _attrs), {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<article class="relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16"${_scopeId}><img${ssrRenderAttr("src", "/assets/svg/home-hero-gradient.svg")} alt="Background Gradient" class="absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block" height="794" loading="lazy" width="1528"${_scopeId}><div class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2"${_scopeId}> &lt;<img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1"${_scopeId}><div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
+						_push(`<article class="relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16"${_scopeId}><img${ssrRenderAttr("src", "/assets/svg/home-hero-gradient.svg")} alt="Background Gradient" class="absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block" height="794" loading="lazy" width="1528"${_scopeId}><div class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1"${_scopeId}><div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.project.role_labels, (role, index) => {
 							_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 							if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
@@ -52,6 +57,7 @@ var _sfc_main$1 = {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
 							"project-title": __props.project.header,
+							translations: __props.translations,
 							url: __props.project.project_url
 						}, null, _parent, _scopeId));
 						_push(`</div></div></article>`);
@@ -68,7 +74,7 @@ var _sfc_main$1 = {
 							class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2",
 							onMouseenter: ($event) => zoom.value = true,
 							onMouseleave: ($event) => zoom.value = false
-						}, [createTextVNode(" <"), createVNode("img", {
+						}, [createVNode("img", {
 							alt: __props.project.header,
 							class: [{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"],
 							src: __props.project.logo_url,
@@ -107,11 +113,13 @@ var _sfc_main$1 = {
 								"is-package": __props.project.is_package,
 								"project-id": __props.project.id,
 								"project-title": __props.project.header,
+								translations: __props.translations,
 								url: __props.project.project_url
 							}, null, 8, [
 								"is-package",
 								"project-id",
 								"project-title",
+								"translations",
 								"url"
 							])])
 						])
@@ -133,14 +141,11 @@ _sfc_main$1.setup = (props, ctx) => {
 var _sfc_main = {
 	__name: "LatestWork",
 	__ssrInlineRender: true,
+	props: { latestWorkSection: {
+		type: Object,
+		required: true
+	} },
 	setup(__props) {
-		const page = usePage();
-		const content = computed(() => {
-			return page.props.cms.work_section.content;
-		});
-		const projects = computed(() => {
-			return page.props.cms.work_section.latest_projects;
-		});
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<div${ssrRenderAttrs(_attrs)}>`);
 			_push(ssrRenderComponent(Section_default, { class: "mt-16" }, {
@@ -148,25 +153,27 @@ var _sfc_main = {
 					if (_push) {
 						_push(`<div class="container mx-auto space-y-20 text-center lg:text-left"${_scopeId}><div class="flex flex-col items-center"${_scopeId}>`);
 						_push(ssrRenderComponent(Subtitle_default, { class: "leading-loose" }, null, _parent, _scopeId));
-						_push(`<div class="wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96"${_scopeId}><p class="mt-6 text-lg text-gray-700 lg:text-xl"${_scopeId}>${content.value.description ?? ""}</p></div></div><div class="mt-20 grid justify-center gap-10 px-10 sm:px-16"${_scopeId}><!--[-->`);
-						ssrRenderList(projects.value, (project) => {
+						_push(`<div class="wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96"${_scopeId}><p class="mt-6 text-lg text-gray-700 lg:text-xl"${_scopeId}>${__props.latestWorkSection.content.description ?? ""}</p></div></div><div class="mt-20 grid justify-center gap-10 px-10 sm:px-16"${_scopeId}><!--[-->`);
+						ssrRenderList(__props.latestWorkSection.latest_projects.data, (project) => {
 							_push(ssrRenderComponent(_sfc_main$1, {
 								key: project.id,
-								project
+								project,
+								translations: __props.latestWorkSection.translations
 							}, null, _parent, _scopeId));
 						});
 						_push(`<!--]--></div></div>`);
 					} else return [createVNode("div", { class: "container mx-auto space-y-20 text-center lg:text-left" }, [createVNode("div", { class: "flex flex-col items-center" }, [createVNode(Subtitle_default, {
 						class: "leading-loose",
-						innerHTML: content.value.title
+						innerHTML: __props.latestWorkSection.content.title
 					}, null, 8, ["innerHTML"]), createVNode("div", { class: "wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96" }, [createVNode("p", {
 						class: "mt-6 text-lg text-gray-700 lg:text-xl",
-						innerHTML: content.value.description
-					}, null, 8, ["innerHTML"])])]), createVNode("div", { class: "mt-20 grid justify-center gap-10 px-10 sm:px-16" }, [(openBlock(true), createBlock(Fragment, null, renderList(projects.value, (project) => {
+						innerHTML: __props.latestWorkSection.content.description
+					}, null, 8, ["innerHTML"])])]), createVNode("div", { class: "mt-20 grid justify-center gap-10 px-10 sm:px-16" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.latestWorkSection.latest_projects.data, (project) => {
 						return openBlock(), createBlock(_sfc_main$1, {
 							key: project.id,
-							project
-						}, null, 8, ["project"]);
+							project,
+							translations: __props.latestWorkSection.translations
+						}, null, 8, ["project", "translations"]);
 					}), 128))])])];
 				}),
 				_: 1
@@ -184,4 +191,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=LatestWork-B98y__Zu.js.map
+//# sourceMappingURL=LatestWork-BSrtX1Yy.js.map

@@ -1,8 +1,8 @@
-import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-C1PpTYqM.js";
-import { t as DownloadSimple_default } from "./DownloadSimple-_UTX2i-3.js";
-import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle--vwnvYF8.js";
-import { computed, createTextVNode, createVNode, mergeProps, toDisplayString, unref, useSSRContext, withCtx } from "vue";
-import { Head, usePage } from "@inertiajs/vue3";
+import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
+import { t as DownloadSimple_default } from "./DownloadSimple-HqfXmc8B.js";
+import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle-CyfCBCJx.js";
+import { createTextVNode, createVNode, mergeProps, toDisplayString, unref, useSSRContext, withCtx } from "vue";
+import { Head } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderStyle } from "vue/server-renderer";
 //#region resources/js/Components/Icons/CirclesBackground.vue
 var _sfc_main$4 = {};
@@ -20,41 +20,43 @@ _sfc_main$4.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Icons/CirclesBackground.vue");
 	return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-var CirclesBackground_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender]]);
+var CirclesBackground_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main$4, [["ssrRender", _sfc_ssrRender]]);
 //#endregion
 //#region resources/js/Components/Organisms/About/Intro.vue
 var _sfc_main$3 = {
 	__name: "Intro",
 	__ssrInlineRender: true,
+	props: { intro: {
+		type: Object,
+		required: true
+	} },
 	setup(__props) {
-		const page = usePage();
-		const content = computed(() => page.props.cms.intro);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<section${ssrRenderAttrs(mergeProps({ class: "bg-slate-100 overflow-hidden" }, _attrs))}><div class="grid grid-cols-1 lg:grid-cols-[65fr_35fr] min-h-220"><div class="relative flex flex-col justify-center px-6 sm:px-8 md:px-12 lg:ps-24 lg:pe-12 xl:ps-32 xl:pe-16 max-w-5xl py-16 lg:py-0 z-10 overflow-hidden">`);
 			_push(ssrRenderComponent(CirclesBackground_default, null, null, _parent));
 			_push(`<div class="relative z-10">`);
 			_push(ssrRenderComponent(Subtitle_default, null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) _push(`${ssrInterpolate(content.value.title)} <span class="text-primary-700"${_scopeId}>${ssrInterpolate(content.value.highlight)}</span> ${ssrInterpolate(content.value.subtitle)}`);
+					if (_push) _push(`${ssrInterpolate(__props.intro.title)} <span class="text-primary-700"${_scopeId}>${ssrInterpolate(__props.intro.highlight)}</span> ${ssrInterpolate(__props.intro.subtitle)}`);
 					else return [
-						createTextVNode(toDisplayString(content.value.title) + " ", 1),
+						createTextVNode(toDisplayString(__props.intro.title) + " ", 1),
 						createVNode("span", {
 							class: "text-primary-700",
-							textContent: toDisplayString(content.value.highlight)
+							textContent: toDisplayString(__props.intro.highlight)
 						}, null, 8, ["textContent"]),
-						createTextVNode(" " + toDisplayString(content.value.subtitle), 1)
+						createTextVNode(" " + toDisplayString(__props.intro.subtitle), 1)
 					];
 				}),
 				_: 1
 			}, _parent));
-			if (content.value.paragraphs.length > 0) {
+			if (__props.intro.paragraphs.length > 0) {
 				_push(`<!--[-->`);
-				ssrRenderList(content.value.paragraphs, (paragraph, index) => {
+				ssrRenderList(__props.intro.paragraphs, (paragraph, index) => {
 					_push(`<p class="text-base sm:text-lg md:text-xl leading-[1.9] text-gray-600 mt-6 text-start">${ssrInterpolate(paragraph)}</p>`);
 				});
 				_push(`<!--]-->`);
 			} else _push(`<!---->`);
-			_push(`<h3 class="text-3xl mt-12 text-start font-script">${ssrInterpolate(content.value.signature)}</h3></div></div><div class="relative hidden lg:block"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-4 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-90 lg:w-115 xl:w-130 opacity-80 pointer-events-none select-none rtl:scale-x-[-1]"></div></div><div class="block lg:hidden w-full relative overflow-hidden"><div class="relative h-80 sm:h-95 md:h-105"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-0 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-65 sm:w-[320px] md:w-95 opacity-70 pointer-events-none rtl:scale-x-[-1]"></div></div></section>`);
+			_push(`<h3 class="text-3xl mt-12 text-start font-script">${ssrInterpolate(__props.intro.signature)}</h3></div></div><div class="relative hidden lg:block"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-4 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-90 lg:w-115 xl:w-130 opacity-80 pointer-events-none select-none rtl:scale-x-[-1]"></div></div><div class="block lg:hidden w-full relative overflow-hidden"><div class="relative h-80 sm:h-95 md:h-105"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-0 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-65 sm:w-[320px] md:w-95 opacity-70 pointer-events-none rtl:scale-x-[-1]"></div></div></section>`);
 		};
 	}
 };
@@ -69,24 +71,24 @@ _sfc_main$3.setup = (props, ctx) => {
 var _sfc_main$2 = {
 	__name: "Careers",
 	__ssrInlineRender: true,
+	props: { careers: {
+		type: Object,
+		required: true
+	} },
 	setup(__props) {
-		const page = usePage();
-		const jobs = computed(() => page.props.cms.careers.jobs);
-		const content = computed(() => page.props.cms.careers.cms);
-		const downloadCvActionLabel = computed(() => page.props.translations.features.download_label);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<section${ssrRenderAttrs(mergeProps({ class: "container mx-auto text-start mt-16 md:mt-0" }, _attrs))}><div class="grid grid-cols-1 lg:grid-cols-5 xl:gap-12"><div class="col-span-2 lg:ps-32 xl:ps-48 py-4 lg:py-32">`);
 			_push(ssrRenderComponent(Subtitle_default, null, null, _parent));
-			_push(`<p class="mt-6 text-sm lg:text-base text-gray-700">${ssrInterpolate(content.value.description)}</p><a${ssrRenderAttr("href", "assets/docs/Youcef_Nezrek_CV.pdf")} class="flex gap-2 items-center w-1/2 bg-slate-100 mt-6 py-2 px-6 border rounded-2xl focus:outline-none"><span class="capitalize font-semibold text-secondary-900">${ssrInterpolate(downloadCvActionLabel.value)}</span>`);
+			_push(`<p class="mt-6 text-sm lg:text-base text-gray-700">${ssrInterpolate(__props.careers.content.description)}</p><a${ssrRenderAttr("href", "assets/docs/Youcef_Nezrek_CV.pdf")} class="flex gap-2 items-center w-1/2 bg-slate-100 mt-6 py-2 px-6 border rounded-2xl focus:outline-none"><span class="capitalize font-semibold text-secondary-900">${ssrInterpolate(__props.careers.download_label)}</span>`);
 			_push(ssrRenderComponent(DownloadSimple_default, {
 				class: "h-5 w-5 transform transition-transform duration-300 group-hover:-translate-y-0.5",
 				name: "download-simple"
 			}, null, _parent));
 			_push(`</a></div><ol class="col-span-3 py-4 lg:py-32 lg:pe-28 xl:pe-36 grid grid-cols-1 md:grid-cols-2 gap-6">`);
-			if (jobs.value.length > 0) {
+			if (__props.careers.jobs.data.length > 0) {
 				_push(`<!--[-->`);
-				ssrRenderList(jobs.value, (job, index) => {
-					_push(`<div class="relative p-4 rounded-lg"><div class="flex flex-col mb-2 space-y-6"><div class="p-2 rounded-lg border border-slate-200 bg-slate-100 max-w-fit"><img${ssrRenderAttr("alt", job.company_name + "-logo")}${ssrRenderAttr("src", job.company_logo)} class="w-6 h-6"></div><span class="font-semibold text-sm leading-5 text-primary-700">${ssrInterpolate(job.duration)}</span><span class="absolute text-[6rem] font-bold font-mono text-slate-100 inset-e-1 -top-8">${ssrInterpolate(String(index + 1).padStart(2, "0"))}</span></div><h2 class="text-xl font-bold capitalize">${ssrInterpolate(job.company_name)}</h2><p class="mt-6 text-sm lg:text-base text-gray-700">${job.description ?? ""}</p></div>`);
+				ssrRenderList(__props.careers.jobs.data, (job, index) => {
+					_push(`<div class="relative p-4 rounded-lg"><div class="flex flex-col mb-2 space-y-6"><div class="p-2 rounded-lg border border-slate-200 bg-slate-100 max-w-fit"><img${ssrRenderAttr("alt", job.company.name + "-logo")}${ssrRenderAttr("src", job.company.logo)} class="w-6 h-6"></div><span class="font-semibold text-sm leading-5 text-primary-700">${ssrInterpolate(job.duration)}</span><span class="absolute text-[6rem] font-bold font-mono text-slate-100 inset-e-1 -top-8">${ssrInterpolate(String(index + 1).padStart(2, "0"))}</span></div><h2 class="text-xl font-bold capitalize">${ssrInterpolate(job.company.name)}</h2><p class="mt-6 text-sm lg:text-base text-gray-700">${job.description ?? ""}</p></div>`);
 				});
 				_push(`<!--]-->`);
 			} else _push(`<!---->`);
@@ -106,17 +108,18 @@ var portrait_url = "/assets/images/portrait-3.webp";
 var _sfc_main$1 = {
 	__name: "Stack",
 	__ssrInlineRender: true,
+	props: { stack: {
+		type: Object,
+		required: true
+	} },
 	setup(__props) {
-		const page = usePage();
-		const content = computed(() => page.props.cms.stack.content);
-		const tools = computed(() => page.props.cms.stack.tools);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<section${ssrRenderAttrs(mergeProps({ class: "container mx-auto text-start pb-6 mt-16 md:mt-0" }, _attrs))}><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-32 px-4 md:px-16 lg:px-32 xl:px-48 md:py-12 lg:py-24 xl:py-32"><div class="order-2 lg:order-1 rtl:lg:order-2"><img${ssrRenderAttr("src", portrait_url)} alt="About Image" class="rounded-2xl" sizes="(min-width: 1024px) 33vw, 100vw"></div><div class="order-1 lg:order-2 rtl:lg:order-1">`);
 			_push(ssrRenderComponent(Subtitle_default, null, null, _parent));
-			_push(`<p class="mt-6 text-lg lg:text-xl text-gray-700">${ssrInterpolate(content.value.description)}</p><div class="mt-6 grid grid-cols-2 gap-4">`);
-			if (tools.value.length > 0) {
+			_push(`<p class="mt-6 text-lg lg:text-xl text-gray-700">${ssrInterpolate(__props.stack.content.description)}</p><div class="mt-6 grid grid-cols-2 gap-4">`);
+			if (__props.stack.tools.length > 0) {
 				_push(`<!--[-->`);
-				ssrRenderList(tools.value, (tool, index) => {
+				ssrRenderList(__props.stack.tools, (tool, index) => {
 					_push(`<div class="flex gap-4 items-center p-4 border rounded-lg bg-slate-100"><img${ssrRenderAttr("alt", tool.alt)}${ssrRenderAttr("src", tool.src)} aria-hidden="true" class="h-8 w-8 sm:h-12 sm:w-12"><h3 class="text-lg font-semibold">${ssrInterpolate(tool.alt)}</h3></div>`);
 				});
 				_push(`<!--]-->`);
@@ -136,6 +139,20 @@ _sfc_main$1.setup = (props, ctx) => {
 var _sfc_main = {
 	__name: "AboutView",
 	__ssrInlineRender: true,
+	props: {
+		intro: {
+			type: Object,
+			required: true
+		},
+		careers: {
+			type: Object,
+			required: true
+		},
+		stack: {
+			type: Object,
+			required: true
+		}
+	},
 	setup(__props) {
 		const title = useGetTitle("about");
 		return (_ctx, _push, _parent, _attrs) => {
@@ -144,13 +161,13 @@ var _sfc_main = {
 			_push(ssrRenderComponent(_sfc_main$5, null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(ssrRenderComponent(_sfc_main$3, null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(_sfc_main$2, null, null, _parent, _scopeId));
-						_push(ssrRenderComponent(_sfc_main$1, null, null, _parent, _scopeId));
+						_push(ssrRenderComponent(_sfc_main$3, { intro: __props.intro }, null, _parent, _scopeId));
+						_push(ssrRenderComponent(_sfc_main$2, { careers: __props.careers }, null, _parent, _scopeId));
+						_push(ssrRenderComponent(_sfc_main$1, { stack: __props.stack }, null, _parent, _scopeId));
 					} else return [
-						createVNode(_sfc_main$3),
-						createVNode(_sfc_main$2),
-						createVNode(_sfc_main$1)
+						createVNode(_sfc_main$3, { intro: __props.intro }, null, 8, ["intro"]),
+						createVNode(_sfc_main$2, { careers: __props.careers }, null, 8, ["careers"]),
+						createVNode(_sfc_main$1, { stack: __props.stack }, null, 8, ["stack"])
 					];
 				}),
 				_: 1
@@ -168,4 +185,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=AboutView-DBKVLgO1.js.map
+//# sourceMappingURL=AboutView-BnRrjV9K.js.map

@@ -20,8 +20,8 @@ _sfc_main.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/Subtitle.vue");
 	return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-var Subtitle_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+var Subtitle_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 //#endregion
 export { _plugin_vue_export_helper_default as n, Subtitle_default as t };
 
-//# sourceMappingURL=Subtitle-C1PpTYqM.js.map
+//# sourceMappingURL=Subtitle-DtkDPELn.js.map

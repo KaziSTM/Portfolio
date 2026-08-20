@@ -1,4 +1,4 @@
-import { n as _plugin_vue_export_helper_default } from "./Subtitle-C1PpTYqM.js";
+import { n as _plugin_vue_export_helper_default } from "./Subtitle-DtkDPELn.js";
 import { mergeProps, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderSlot } from "vue/server-renderer";
 //#region resources/js/Components/Atoms/Section.vue
@@ -14,8 +14,8 @@ _sfc_main.setup = (props, ctx) => {
 	(ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Atoms/Section.vue");
 	return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-var Section_default = /* @__PURE__ */ _plugin_vue_export_helper_default(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
+var Section_default = /*#__PURE__*/ _plugin_vue_export_helper_default(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 //#endregion
 export { Section_default as t };
 
-//# sourceMappingURL=Section-BLdA3RkH.js.map
+//# sourceMappingURL=Section-CcmBDABV.js.map

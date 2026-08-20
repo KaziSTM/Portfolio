@@ -12,12 +12,12 @@ router.on("navigate", (event) => {
 });
 var render = await createInertiaApp({
 	title: (title) => `${title} - ${appName}`,
-	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* @__PURE__ */ Object.assign({
-		"./Pages/AboutView.vue": () => import("./assets/AboutView-DBKVLgO1.js"),
-		"./Pages/ContactView.vue": () => import("./assets/ContactView-BBBywtzP.js"),
-		"./Pages/HomeView.vue": () => import("./assets/HomeView-DsT9qOBH.js"),
-		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-Cr5dYrnl.js"),
-		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-B-6rIN13.js")
+	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* #__PURE__ */ Object.assign({
+		"./Pages/AboutView.vue": () => import("./assets/AboutView-BnRrjV9K.js"),
+		"./Pages/ContactView.vue": () => import("./assets/ContactView-Bnxv07V5.js"),
+		"./Pages/HomeView.vue": () => import("./assets/HomeView-CPqaX0Ym.js"),
+		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-byVx8EdY.js"),
+		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-DTp3QcWA.js")
 	})),
 	setup({ el, App, props, plugin }) {
 		return createApp({ render: () => h(App, props) }).use(plugin).mount(el);
