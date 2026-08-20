@@ -1,5 +1,5 @@
 <script setup>
-import { usePage } from '@inertiajs/vue3'
+import { Link, usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import Section from '@/Components/Atoms/Section.vue'
 import Title from '@/Components/Atoms/Title.vue'
@@ -59,14 +59,16 @@ const socials = computed(() => page.props.socials)
                         <div
                             class="mt-8 flex flex-col sm:flex-row items-center sm:items-start sm:justify-center lg:justify-start gap-4"
                         >
-                            <button
+                            <Link
                                 class="bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50"
+                                href="/contact"
                             >
                                 <span
                                     class="capitalize font-semibold text-secondary-100"
                                     v-text="heroSection.hero_cta_label"
-                                ></span>
-                            </button>
+                                >
+                                </span>
+                            </Link>
 
                             <div class="flex justify-center items-center gap-4">
                                 <BaseButton
