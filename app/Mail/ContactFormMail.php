@@ -7,14 +7,12 @@ use Illuminate\Mail\Mailable;
 class ContactFormMail extends Mailable
 {
     public function __construct(
-        public string  $name,
-        public string  $email,
+        public string $name,
+        public string $email,
         public ?string $phone,
-        public string  $content,
-        public array   $services
-    )
-    {
-    }
+        public string $content,
+        public array $services
+    ) {}
 
     public function build()
     {

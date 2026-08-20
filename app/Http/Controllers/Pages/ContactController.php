@@ -12,20 +12,15 @@ use Inertia\Inertia;
 
 class ContactController extends Controller
 {
-
-    public function __construct(protected GetContactPage $getContactPage, protected SendContactMail $sendContactMail)
-    {
-    }
-
-    public function index()
+    public function index(GetContactPage $getContactPage)
     {
         return Inertia::render(
             'ContactView',
-            ($this->getContactPage)()
+            $getContactPage()
         );
     }
 
-    public function store(ContactRequest $request)
+    public function store(ContactRequest $request, SendContactMail $sendContactMail)
     {
         $key = 'contact-form:'.$request->ip();
 
@@ -38,7 +33,7 @@ class ContactController extends Controller
 
         RateLimiter::hit($key, 60);
 
-        ($this->sendContactMail)(
+        $sendContactMail(
             ContactDto::fromRequest($request)
         );
 
@@ -47,6 +42,4 @@ class ContactController extends Controller
             __('ui.contact.success')
         );
     }
-
-
 }

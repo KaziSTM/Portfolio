@@ -2,22 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use App\Actions\Cms\About\GetCareerSection;
-use App\Actions\Cms\About\GetIntroSection;
-use App\Actions\Cms\About\GetStackSection;
-use App\Actions\Cms\About\GetTestimonialsSection;
-use App\Actions\Cms\GetContactPage;
 use App\Actions\Cms\GetFooterSection;
 use App\Actions\Cms\GetHeaderSection;
 use App\Actions\Cms\GetSocialLinks;
-use App\Actions\Cms\Home\GetCompaniesSection;
-use App\Actions\Cms\Home\GetFeaturesSection;
-use App\Actions\Cms\Home\GetHeroSection;
-use App\Actions\Cms\Home\GetWorkSection;
 use App\Actions\Navigation\GetFooterNavigation;
 use App\Actions\Navigation\GetLocales;
 use App\Actions\Navigation\GetMainNavigation;
-use App\Actions\Translations\GetFrontendTranslations;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -45,41 +35,27 @@ class HandleInertiaRequests extends Middleware
 
             'locales' => app(GetLocales::class)(),
 
-            'cms' => [
-                'header' => app(GetHeaderSection::class)(),
+            'header' => app(GetHeaderSection::class)(),
 
-                'hero' => app(GetHeroSection::class)(),
+            'footer' => app(GetFooterSection::class)(),
 
-                'features_section' => app(GetFeaturesSection::class)(),
-
-                'companies_section' => app(GetCompaniesSection::class)(),
-
-                'work_section' => app(GetWorkSection::class)(),
-
-                'intro' => app(GetIntroSection::class)(),
-
-                'careers' => app(GetCareerSection::class)(),
-
-                'stack' => app(GetStackSection::class)(),
-
-                'testimonials' => app(GetTestimonialsSection::class)(),
-
-                'footer' => app(GetFooterSection::class)(),
-
-                'socials' => app(GetSocialLinks::class)(),
-                
-                'contact' => app(GetContactPage::class)()
-            ],
-
-            'translations' => app(GetFrontendTranslations::class)(),
-
-            'navigation' => app(GetMainNavigation::class)(),
+            'socials' => app(GetSocialLinks::class)(),
 
             'footerNavigation' => app(GetFooterNavigation::class)(),
 
+            'navigation' => app(GetMainNavigation::class)(),
+
+            'pages' => [
+                'home' => __('ui.pages.home'),
+                'about' => __('ui.pages.about'),
+                'contact' => __('ui.pages.contact'),
+                'work' => __('ui.pages.work'),
+                'project' => __('ui.pages.project'),
+            ],
+
             'flash' => [
-                'success' => fn() => $request->session()->get('success'),
-                'error' => fn() => $request->session()->get('error'),
+                'success' => fn () => $request->session()->get('success'),
+                'error' => fn () => $request->session()->get('error'),
             ],
         ];
     }

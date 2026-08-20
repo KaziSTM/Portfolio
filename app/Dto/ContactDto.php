@@ -12,8 +12,7 @@ final readonly class ContactDto
         public string $message,
         public ?string $phone = null,
         public array $services = [],
-    ) {
-    }
+    ) {}
 
     public static function fromRequest(ContactRequest $request): self
     {
