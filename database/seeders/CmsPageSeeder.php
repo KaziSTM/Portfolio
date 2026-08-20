@@ -85,16 +85,16 @@ class CmsPageSeeder extends Seeder
                                 'items' => [
                                     [
                                         'name' => 'Github', 'link' => 'https://github.com/KaziSTM',
-                                        'icon' => 'github-logo'
+                                        'icon' => 'github-logo',
                                     ],
                                     [
                                         'name' => 'Linkedin',
                                         'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6',
-                                        'icon' => 'linkedin-logo'
+                                        'icon' => 'linkedin-logo',
                                     ],
                                     [
                                         'name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/',
-                                        'icon' => 'instagram-logo'
+                                        'icon' => 'instagram-logo',
                                     ],
                                 ],
                             ],
@@ -102,16 +102,16 @@ class CmsPageSeeder extends Seeder
                                 'items' => [
                                     [
                                         'name' => 'Github', 'link' => 'https://github.com/KaziSTM',
-                                        'icon' => 'github-logo'
+                                        'icon' => 'github-logo',
                                     ],
                                     [
                                         'name' => 'Linkedin',
                                         'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6',
-                                        'icon' => 'linkedin-logo'
+                                        'icon' => 'linkedin-logo',
                                     ],
                                     [
                                         'name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/',
-                                        'icon' => 'instagram-logo'
+                                        'icon' => 'instagram-logo',
                                     ],
                                 ],
                             ],
@@ -119,16 +119,16 @@ class CmsPageSeeder extends Seeder
                                 'items' => [
                                     [
                                         'name' => 'Github', 'link' => 'https://github.com/KaziSTM',
-                                        'icon' => 'github-logo'
+                                        'icon' => 'github-logo',
                                     ],
                                     [
                                         'name' => 'Linkedin',
                                         'link' => 'https://linkedin.com/in/youcef-nezrek-7685a61a6',
-                                        'icon' => 'linkedin-logo'
+                                        'icon' => 'linkedin-logo',
                                     ],
                                     [
                                         'name' => 'Instagram', 'link' => 'https://www.instagram.com/that_mofo_kaz/',
-                                        'icon' => 'instagram-logo'
+                                        'icon' => 'instagram-logo',
                                     ],
                                 ],
                             ],
@@ -189,7 +189,7 @@ class CmsPageSeeder extends Seeder
                                 'cta_label' => 'Book a call with me',
                             ],
                             'fr' => [
-                                'intro' => "Bonjour, je suis Youcef !",
+                                'intro' => 'Bonjour, je suis Youcef !',
                                 'kicker' => 'Aider les ',
                                 'title' => 'entreprises à créer des produits numériques évolutifs',
                                 'description' => 'Développeur full-stack spécialisé dans la création de plateformes scalables et de produits digitaux complexes. Je me concentre sur l’architecture backend, les APIs et la conception de systèmes capables de gérer efficacement des logiques métier réelles.',
@@ -221,17 +221,17 @@ class CmsPageSeeder extends Seeder
                                     [
                                         'title' => 'Scalable Architecture',
                                         'description' => 'Systems designed to handle growth, complexity, and real-world usage without breaking down.',
-                                        'icon' => 'heroicon-o-rectangle-stack'
+                                        'icon' => 'heroicon-o-rectangle-stack',
                                     ],
                                     [
                                         'title' => 'Clean & Maintainable Code',
                                         'description' => 'Well-structured, readable codebases that are easy to extend, debug, and maintain over time.',
-                                        'icon' => 'heroicon-o-code-bracket'
+                                        'icon' => 'heroicon-o-code-bracket',
                                     ],
                                     [
                                         'title' => 'Reliable Delivery',
                                         'description' => 'Consistent execution with attention to performance, edge cases, and production readiness.',
-                                        'icon' => 'heroicon-o-check-circle'
+                                        'icon' => 'heroicon-o-check-circle',
                                     ],
                                 ],
                             ],
@@ -242,17 +242,17 @@ class CmsPageSeeder extends Seeder
                                     [
                                         'title' => 'Architecture scalable',
                                         'description' => 'Des systèmes conçus pour gérer la croissance, la complexité et des cas d’usage réels sans se dégrader.',
-                                        'icon' => 'heroicon-o-rectangle-stack'
+                                        'icon' => 'heroicon-o-rectangle-stack',
                                     ],
                                     [
                                         'title' => 'Code propre et maintenable',
                                         'description' => 'Des bases de code bien structurées, lisibles et faciles à faire évoluer et maintenir.',
-                                        'icon' => 'heroicon-o-code-bracket'
+                                        'icon' => 'heroicon-o-code-bracket',
                                     ],
                                     [
                                         'title' => 'Livraison fiable',
                                         'description' => 'Une exécution constante avec attention à la performance, aux cas limites et à la production.',
-                                        'icon' => 'heroicon-o-check-circle'
+                                        'icon' => 'heroicon-o-check-circle',
                                     ],
                                 ],
                             ],
@@ -263,17 +263,17 @@ class CmsPageSeeder extends Seeder
                                     [
                                         'title' => 'بنية قابلة للتوسع',
                                         'description' => 'أنظمة مصممة للتعامل مع النمو والتعقيد والاستخدام الواقعي دون مشاكل.',
-                                        'icon' => 'heroicon-o-rectangle-stack'
+                                        'icon' => 'heroicon-o-rectangle-stack',
                                     ],
                                     [
                                         'title' => 'كود نظيف وقابل للصيانة',
                                         'description' => 'كود منظم وسهل القراءة والتطوير والصيانة على المدى الطويل.',
-                                        'icon' => 'heroicon-o-code-bracket'
+                                        'icon' => 'heroicon-o-code-bracket',
                                     ],
                                     [
                                         'title' => 'تنفيذ موثوق',
                                         'description' => 'تنفيذ مستقر مع اهتمام بالأداء والحالات الخاصة وجاهزية الإنتاج.',
-                                        'icon' => 'heroicon-o-check-circle'
+                                        'icon' => 'heroicon-o-check-circle',
                                     ],
                                 ],
                             ],
@@ -358,8 +358,8 @@ class CmsPageSeeder extends Seeder
                             ],
                             'fr' => [
                                 'title' => 'Bonjour,',
-                                'highlight' => " je suis Youcef",
-                                'subtitle' => " et je suis ingénieur logiciel",
+                                'highlight' => ' je suis Youcef',
+                                'subtitle' => ' et je suis ingénieur logiciel',
                                 'paragraphs' => [
                                     'Basé à Oran, en Algérie, je me spécialise dans la création de plateformes web évolutives avec un fort accent sur l’architecture backend et la logique métier réelle. Je travaille sur des systèmes complexes tels que des plateformes e-commerce, des solutions ERP et des applications multi-tenant, en concevant des APIs et des infrastructures fiables, maintenables et capables de supporter la croissance.',
                                     'Mon approche repose sur une architecture propre, la performance et la maintenabilité à long terme. Je privilégie la conception de systèmes non seulement fonctionnels, mais également structurés pour évoluer avec les besoins métier, garantissant clarté du code, efficacité d’exécution et stabilité en production.',
@@ -505,13 +505,13 @@ class CmsPageSeeder extends Seeder
                                         'title' => 'Call me',
                                         'description' => 'Available weekdays 9AM–5PM',
                                         'value' => '+213 (658) 760-391',
-                                        'icon' => 'heroicon-o-phone'
+                                        'icon' => 'heroicon-o-phone',
                                     ],
                                     [
                                         'title' => 'Email me',
                                         'description' => "I'll usually reply within an hour",
                                         'value' => 'ynezrek@gmail.com',
-                                        'icon' => 'heroicon-o-at-symbol'
+                                        'icon' => 'heroicon-o-at-symbol',
                                     ],
                                 ],
                             ],
@@ -521,13 +521,13 @@ class CmsPageSeeder extends Seeder
                                         'title' => 'Appelez-moi',
                                         'description' => 'Disponible en semaine de 9h à 17h',
                                         'value' => '+213 (658) 760-391',
-                                        'icon' => 'heroicon-o-phone'
+                                        'icon' => 'heroicon-o-phone',
                                     ],
                                     [
                                         'title' => 'Envoyez-moi un email',
                                         'description' => "Je réponds généralement en moins d'une heure",
                                         'value' => 'ynezrek@gmail.com',
-                                        'icon' => 'heroicon-o-at-symbol'
+                                        'icon' => 'heroicon-o-at-symbol',
                                     ],
                                 ],
                             ],
@@ -537,13 +537,13 @@ class CmsPageSeeder extends Seeder
                                         'title' => 'اتصل بي',
                                         'description' => 'متوفر خلال أيام الأسبوع من 9 صباحًا إلى 5 مساءً',
                                         'value' => '+213 (658) 760-391',
-                                        'icon' => 'heroicon-o-phone'
+                                        'icon' => 'heroicon-o-phone',
                                     ],
                                     [
                                         'title' => 'أرسل لي بريدًا إلكترونيًا',
                                         'description' => 'عادةً أرد خلال ساعة واحدة',
                                         'value' => 'ynezrek@gmail.com',
-                                        'icon' => 'heroicon-o-at-symbol'
+                                        'icon' => 'heroicon-o-at-symbol',
                                     ],
                                 ],
                             ],

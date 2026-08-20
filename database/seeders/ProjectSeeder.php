@@ -43,7 +43,7 @@ class ProjectSeeder extends Seeder
 
                 $project->syncTagsWithType(
                     collect($mainTags)
-                        ->map(fn($tag) => $tag->value)
+                        ->map(fn ($tag) => $tag->value)
                         ->toArray(),
                     'main'
                 );
@@ -82,7 +82,7 @@ class ProjectSeeder extends Seeder
                 'start' => '2023-08-01',
                 'end' => '2024-10-01',
                 'details' => [
-                    'en' => "# Kheops AI — Engineering an Enterprise AI Automation Platform
+                    'en' => '# Kheops AI — Engineering an Enterprise AI Automation Platform
 
 Kheops is an enterprise-grade AI platform built to help organizations **unlock the value of their internal data** through contextual intelligence, automation, and scalable AI workflows.
 
@@ -139,9 +139,9 @@ Kheops delivers a powerful AI layer for businesses, enabling:
 
 Building effective AI systems goes beyond models.
 
-It requires **robust backend architecture, high-quality data pipelines, and strong retrieval mechanisms** to deliver reliable and scalable results.",
+It requires **robust backend architecture, high-quality data pipelines, and strong retrieval mechanisms** to deliver reliable and scalable results.',
 
-                    'fr' => "# Kheops AI — Conception d’une plateforme IA entreprise
+                    'fr' => '# Kheops AI — Conception d’une plateforme IA entreprise
 
 Kheops est une plateforme IA conçue pour permettre aux entreprises de **valoriser leurs données internes** grâce à l’intelligence contextuelle et à l’automatisation.
 
@@ -181,9 +181,9 @@ Une plateforme capable de :
 
 ## Conclusion
 
-Un système IA performant repose avant tout sur **l’architecture et la gestion des données**.",
+Un système IA performant repose avant tout sur **l’architecture et la gestion des données**.',
 
-                    'ar' => "# Kheops AI — بناء منصة ذكاء اصطناعي للمؤسسات
+                    'ar' => '# Kheops AI — بناء منصة ذكاء اصطناعي للمؤسسات
 
 Kheops هي منصة ذكاء اصطناعي موجهة للمؤسسات، تهدف إلى **استخراج القيمة من البيانات الداخلية** عبر الأتمتة والفهم السياقي.
 
@@ -223,7 +223,7 @@ Kheops هي منصة ذكاء اصطناعي موجهة للمؤسسات، ته�
 
 ## الخلاصة
 
-نجاح أنظمة الذكاء الاصطناعي يعتمد على **جودة البنية والبيانات** وليس فقط على النماذج.",
+نجاح أنظمة الذكاء الاصطناعي يعتمد على **جودة البنية والبيانات** وليس فقط على النماذج.',
                 ],
             ],
             [
@@ -250,7 +250,7 @@ Kheops هي منصة ذكاء اصطناعي موجهة للمؤسسات، ته�
                 'start' => '2023-03-01',
                 'end' => '2023-10-01',
                 'details' => [
-                    'en' => "# GCCO Reservation Platform — Engineering a Capacity-Driven Booking System
+                    'en' => '# GCCO Reservation Platform — Engineering a Capacity-Driven Booking System
 
 The GCCO platform is a reservation system built to support **shared space booking with dynamic capacity management**, enabling multiple users to reserve the same resource simultaneously under controlled constraints.
 
@@ -309,9 +309,9 @@ The platform delivers a robust and flexible reservation system that:
 
 Reservation systems become complex when moving beyond simple models.
 
-This project reinforced the importance of **concurrency control, transactional design, and precise business rule modeling** in building reliable, real-world systems.",
+This project reinforced the importance of **concurrency control, transactional design, and precise business rule modeling** in building reliable, real-world systems.',
 
-                    'fr' => "# Plateforme GCCO — Conception d’un système de réservation basé sur la capacité
+                    'fr' => '# Plateforme GCCO — Conception d’un système de réservation basé sur la capacité
 
 La plateforme GCCO est un système de réservation conçu pour gérer des espaces partagés avec une **logique de capacité dynamique**.
 
@@ -351,9 +351,9 @@ Une plateforme capable de :
 
 ## Conclusion
 
-Ce projet met en évidence l’importance de la **gestion de la concurrence et des transactions** dans les systèmes de réservation.",
+Ce projet met en évidence l’importance de la **gestion de la concurrence et des transactions** dans les systèmes de réservation.',
 
-                    'ar' => "# منصة GCCO — نظام حجز يعتمد على السعة
+                    'ar' => '# منصة GCCO — نظام حجز يعتمد على السعة
 
 منصة GCCO هي نظام حجز تم تصميمه لإدارة المساحات المشتركة باستخدام **منطق السعة الديناميكية**.
 
@@ -393,7 +393,7 @@ Ce projet met en évidence l’importance de la **gestion de la concurrence et d
 
 ## الخلاصة
 
-هذا المشروع يوضح أن أنظمة الحجز تتطلب **تحكم دقيق في التزامن والمعاملات** لضمان الموثوقية.",
+هذا المشروع يوضح أن أنظمة الحجز تتطلب **تحكم دقيق في التزامن والمعاملات** لضمان الموثوقية.',
                 ],
             ],
             [
@@ -419,7 +419,7 @@ Ce projet met en évidence l’importance de la **gestion de la concurrence et d
                 'start' => '2023-01-01',
                 'end' => '2024-01-01',
                 'details' => [
-                    'en' => "# PASSMEMO — Structuring Human Narratives Through Data and AI
+                    'en' => '# PASSMEMO — Structuring Human Narratives Through Data and AI
 
 PASSMEMO is an AI-driven platform built for elderly care institutions, designed to **capture, process, and transform personal life stories into structured digital narratives**.
 
@@ -482,9 +482,9 @@ The platform enables institutions to:
 
 Working with human-centered data introduces unique complexity.
 
-This project reinforced that **flexible data modeling, pipeline design, and separation of concerns** are critical when transforming unstructured inputs into scalable, structured systems.",
+This project reinforced that **flexible data modeling, pipeline design, and separation of concerns** are critical when transforming unstructured inputs into scalable, structured systems.',
 
-                    'fr' => "# PASSMEMO — Structuration des récits de vie avec l’IA
+                    'fr' => '# PASSMEMO — Structuration des récits de vie avec l’IA
 
 PASSMEMO est une plateforme IA conçue pour aider les établissements de soins à **collecter et structurer les histoires de vie** en contenus numériques exploitables.
 
@@ -524,9 +524,9 @@ Une plateforme permettant de :
 
 ## Conclusion
 
-Ce projet montre l’importance de la **modélisation flexible des données** et des pipelines dans les systèmes orientés données.",
+Ce projet montre l’importance de la **modélisation flexible des données** et des pipelines dans les systèmes orientés données.',
 
-                    'ar' => "# PASSMEMO — تنظيم قصص الحياة باستخدام الذكاء الاصطناعي
+                    'ar' => '# PASSMEMO — تنظيم قصص الحياة باستخدام الذكاء الاصطناعي
 
 PASSMEMO هي منصة ذكاء اصطناعي موجهة لمؤسسات الرعاية، تهدف إلى **جمع وتحويل قصص الحياة إلى محتوى رقمي منظم**.
 
@@ -566,7 +566,7 @@ PASSMEMO هي منصة ذكاء اصطناعي موجهة لمؤسسات الر�
 
 ## الخلاصة
 
-هذا المشروع يبرز أهمية **المرونة في تصميم البيانات** عند التعامل مع معلومات بشرية غير منظمة.",
+هذا المشروع يبرز أهمية **المرونة في تصميم البيانات** عند التعامل مع معلومات بشرية غير منظمة.',
                 ],
             ],
             [
@@ -603,7 +603,7 @@ PASSMEMO هي منصة ذكاء اصطناعي موجهة لمؤسسات الر�
                 'end' => now(),
                 'is_featured' => true,
                 'details' => [
-                    'en' => "# MyEcom — Engineering a Scalable E-commerce ERP with Automated Provisioning
+                    'en' => '# MyEcom — Engineering a Scalable E-commerce ERP with Automated Provisioning
 
 MyEcom is a full-scale SaaS platform designed to **centralize, automate, and scale e-commerce operations**, combining a modular ERP with an automated onboarding and provisioning system.
 
@@ -669,9 +669,9 @@ The combination of ERP + automated provisioning significantly reduces onboarding
 
 Building scalable SaaS platforms requires more than feature development.
 
-This project reinforced the importance of **multi-tenant architecture, system automation, and separation of concerns** in delivering reliable, scalable, and easy-to-use enterprise systems.",
+This project reinforced the importance of **multi-tenant architecture, system automation, and separation of concerns** in delivering reliable, scalable, and easy-to-use enterprise systems.',
 
-                    'fr' => "# MyEcom — Conception d’un ERP e-commerce scalable avec provisioning automatisé
+                    'fr' => '# MyEcom — Conception d’un ERP e-commerce scalable avec provisioning automatisé
 
 MyEcom est une plateforme SaaS complète permettant de **centraliser et automatiser les opérations e-commerce**, combinée à un système d’onboarding automatisé.
 
@@ -707,9 +707,9 @@ Une plateforme permettant de :
 
 ## Conclusion
 
-Ce projet démontre l’importance de **l’automatisation et de l’architecture multi-tenant** dans les plateformes SaaS.",
+Ce projet démontre l’importance de **l’automatisation et de l’architecture multi-tenant** dans les plateformes SaaS.',
 
-                    'ar' => "# MyEcom — بناء نظام ERP للتجارة الإلكترونية مع تهيئة تلقائية
+                    'ar' => '# MyEcom — بناء نظام ERP للتجارة الإلكترونية مع تهيئة تلقائية
 
 MyEcom هي منصة SaaS متكاملة تهدف إلى **توحيد وأتمتة عمليات التجارة الإلكترونية** مع نظام إنشاء وتشغيل تلقائي.
 
@@ -745,7 +745,7 @@ MyEcom هي منصة SaaS متكاملة تهدف إلى **توحيد وأتمت
 
 ## الخلاصة
 
-يوضح هذا المشروع أهمية **الأتمتة وبنية Multi-tenant** في بناء منصات SaaS قابلة للتوسع.",
+يوضح هذا المشروع أهمية **الأتمتة وبنية Multi-tenant** في بناء منصات SaaS قابلة للتوسع.',
                 ],
             ],
             [
@@ -777,7 +777,7 @@ MyEcom هي منصة SaaS متكاملة تهدف إلى **توحيد وأتمت
                 'start' => '2022-06-01',
                 'end' => '2022-07-01',
                 'details' => [
-                    'en' => "# Halal Audit — Engineering a High-Conversion Corporate Landing Page
+                    'en' => '# Halal Audit — Engineering a High-Conversion Corporate Landing Page
 
 Halal Audit is a corporate website designed to **present certification and audit services with clarity, credibility, and conversion in mind**, targeting businesses operating under international halal standards.
 
@@ -833,9 +833,9 @@ The result is a professional and effective landing page that:
 
 This project demonstrates that simplicity requires precision.
 
-High-performing landing pages rely on **clear messaging, structured content, and optimized performance** — not just visual design.",
+High-performing landing pages rely on **clear messaging, structured content, and optimized performance** — not just visual design.',
 
-                    'fr' => "# Halal Audit — Conception d’une landing page corporate à forte conversion
+                    'fr' => '# Halal Audit — Conception d’une landing page corporate à forte conversion
 
 Halal Audit est un site conçu pour **présenter des services d’audit et de certification halal** de manière claire et professionnelle.
 
@@ -870,9 +870,9 @@ Une plateforme qui :
 
 ## Conclusion
 
-Ce projet montre que **la clarté et la structure** sont essentielles pour des produits simples mais efficaces.",
+Ce projet montre que **la clarté et la structure** sont essentielles pour des produits simples mais efficaces.',
 
-                    'ar' => "# Halal Audit — تصميم صفحة هبوط عالية التحويل
+                    'ar' => '# Halal Audit — تصميم صفحة هبوط عالية التحويل
 
 Halal Audit هو موقع تعريفي تم تطويره لعرض **خدمات التدقيق والشهادات الحلال** بطريقة واضحة واحترافية.
 
@@ -907,7 +907,7 @@ Halal Audit هو موقع تعريفي تم تطويره لعرض **خدمات �
 
 ## الخلاصة
 
-هذا المشروع يوضح أن **الوضوح والتنظيم** هما الأساس في نجاح صفحات الهبوط.",
+هذا المشروع يوضح أن **الوضوح والتنظيم** هما الأساس في نجاح صفحات الهبوط.',
                 ],
             ],
             /*
@@ -942,7 +942,7 @@ Halal Audit هو موقع تعريفي تم تطويره لعرض **خدمات �
                     'API',
                 ],
                 'details' => [
-                    'en' => "# Algeria Geo — Standardizing Location Data in Laravel
+                    'en' => '# Algeria Geo — Standardizing Location Data in Laravel
 
 Algeria Geo is a Laravel package designed to provide a **reliable, normalized, and developer-friendly geographic dataset** for Algeria, covering wilayas and communes.
 
@@ -994,7 +994,7 @@ The result is a lightweight and reliable package that:
 
 This project highlights the importance of **data consistency as a core architectural concern**.
 
-Even simple datasets can introduce complexity if not standardized properly. By treating data as a first-class citizen, you significantly improve system robustness and scalability.",
+Even simple datasets can introduce complexity if not standardized properly. By treating data as a first-class citizen, you significantly improve system robustness and scalability.',
 
                     'fr' => "# Algeria Geo — Standardisation des données géographiques en Laravel
 
@@ -1037,7 +1037,7 @@ Un package léger qui :
 
 Ce projet démontre que la **qualité des données est essentielle** pour construire des applications fiables et scalables.",
 
-                    'ar' => "# Algeria Geo — توحيد البيانات الجغرافية في لارافيل
+                    'ar' => '# Algeria Geo — توحيد البيانات الجغرافية في لارافيل
 
 Algeria Geo هي حزمة Laravel تهدف إلى توفير **بيانات جغرافية جزائرية موحدة، دقيقة وسهلة الاستخدام** تشمل الولايات والبلديات.
 
@@ -1076,7 +1076,7 @@ Algeria Geo هي حزمة Laravel تهدف إلى توفير **بيانات جغ
 
 ## الخلاصة
 
-هذا المشروع يبرز أهمية **توحيد البيانات** كعنصر أساسي في بناء تطبيقات قوية وقابلة للتوسع.",
+هذا المشروع يبرز أهمية **توحيد البيانات** كعنصر أساسي في بناء تطبيقات قوية وقابلة للتوسع.',
                 ],
                 'is_featured' => false,
             ],
@@ -1099,11 +1099,11 @@ Algeria Geo هي حزمة Laravel تهدف إلى توفير **بيانات جغ
                     'Billing',
                     'Architecture',
                 ],
-                'details' => "# Laravel Subscriptions — Modular SaaS Billing Engine
+                'details' => '# Laravel Subscriptions — Modular SaaS Billing Engine
 
 A flexible subscription system built for SaaS applications, focusing on feature-based limitations and scalable architecture.
 
-Designed to support complex billing logic while remaining extensible and developer-friendly.",
+Designed to support complex billing logic while remaining extensible and developer-friendly.',
                 'is_featured' => true,
             ],
 
@@ -1141,7 +1141,7 @@ Designed to support complex billing logic while remaining extensible and develop
                 ],
                 'is_in_progress' => true,
                 'details' => [
-                    'en' => "# Vargo — Engineering a Unified Delivery Integration Layer
+                    'en' => '# Vargo — Engineering a Unified Delivery Integration Layer
 
 Vargo is a platform designed to **standardize and simplify integrations with Algerian delivery providers**, offering a unified API and SDK ecosystem for developers.
 
@@ -1203,9 +1203,9 @@ Vargo enables developers to:
 
 This project emphasizes the importance of **abstraction and API design**.
 
-A well-designed integration layer can hide complexity while providing flexibility, scalability, and a significantly better developer experience.",
+A well-designed integration layer can hide complexity while providing flexibility, scalability, and a significantly better developer experience.',
 
-                    'fr' => "# Vargo — Plateforme d’intégration unifiée des services de livraison
+                    'fr' => '# Vargo — Plateforme d’intégration unifiée des services de livraison
 
 Vargo est une plateforme permettant de **standardiser les intégrations avec les transporteurs** via une API unique.
 
@@ -1236,9 +1236,9 @@ Vargo est une plateforme permettant de **standardiser les intégrations avec les
 
 ## Conclusion
 
-Ce projet met en avant l’importance de **l’abstraction et du design d’API**.",
+Ce projet met en avant l’importance de **l’abstraction et du design d’API**.',
 
-                    'ar' => "# Vargo — منصة موحدة لدمج خدمات التوصيل
+                    'ar' => '# Vargo — منصة موحدة لدمج خدمات التوصيل
 
 Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات التوصيل** عبر API موحدة.
 
@@ -1269,7 +1269,7 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
 
 ## الخلاصة
 
-هذا المشروع يبرز أهمية **تصميم APIs والطبقات الوسيطة**.",
+هذا المشروع يبرز أهمية **تصميم APIs والطبقات الوسيطة**.',
                 ],
             ],
 
@@ -1283,7 +1283,6 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
         $logoPath = public_path("assets/images/projects/{$slug}-logo.webp");
         $main = public_path("assets/images/projects/{$slug}-main.webp");
 
-
         if (is_file($logoPath) && $project->getFirstMedia('logo')?->file_name !== basename($logoPath)) {
             $project->clearMediaCollection('logo');
             $project->addMedia($logoPath)->preservingOriginal()->toMediaCollection('logo');
@@ -1295,8 +1294,8 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
         }
 
         $imagePaths = collect(range(1, 9))
-            ->map(fn(int $index) => public_path("assets/images/projects/{$slug}-{$index}.webp"))
-            ->filter(fn($path) => is_file($path))
+            ->map(fn (int $index) => public_path("assets/images/projects/{$slug}-{$index}.webp"))
+            ->filter(fn ($path) => is_file($path))
             ->values();
 
         if ($imagePaths->isEmpty()) {
@@ -1304,7 +1303,7 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
         }
 
         $currentImages = $project->getMedia('images')->pluck('file_name');
-        $expectedImages = $imagePaths->map(fn($path) => basename($path));
+        $expectedImages = $imagePaths->map(fn ($path) => basename($path));
 
         if ($currentImages->values()->all() === $expectedImages->all()) {
             return;

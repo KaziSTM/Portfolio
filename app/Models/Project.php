@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
+use App\Enums\ProjectRole;
 use App\Enums\ProjectType;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Scope;
+use Illuminate\Database\Eloquent\Attributes\Table;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,38 +16,33 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Tags\HasTags;
 use Spatie\Translatable\HasTranslations;
 
+#[Fillable(
+    'name',
+    'slug',
+    'header',
+    'description',
+    'company_id',
+    'link',
+    'details',
+    'start',
+    'end',
+    'is_featured',
+    'type',
+    'is_in_progress',
+    'is_active',
+)]
+#[Table('projects')]
 class Project extends Model implements HasMedia
 {
-    use InteractsWithMedia;
     use HasTags;
     use HasTranslations;
+    use InteractsWithMedia;
 
     public array $translatable = [
         'header',
         'description',
         'details',
     ];
-    protected $fillable = [
-        'name',
-        'slug',
-        'header',
-        'description',
-        'company_id',
-        'link',
-        'details',
-        'start',
-        'end',
-        'is_featured',
-        'type',
-        'is_in_progress',
-        'is_active',
-    ];
-
-    /*
-    |--------------------------------------------------------------------------
-    | Casts
-    |--------------------------------------------------------------------------
-    */
 
     public function company(): BelongsTo
     {
@@ -60,7 +58,7 @@ class Project extends Model implements HasMedia
     public function roles(): \Illuminate\Support\Collection
     {
         return collect($this->tagsWithType('main'))
-            ->map(fn($tag) => \App\Enums\ProjectRole::tryFrom($tag->name))
+            ->map(fn ($tag) => ProjectRole::tryFrom($tag->name))
             ->filter();
     }
 
@@ -112,7 +110,6 @@ class Project extends Model implements HasMedia
         return $query->with(['company', 'tags']);
     }
 
-
     #[Scope]
     public function featured($query)
     {
@@ -137,6 +134,11 @@ class Project extends Model implements HasMedia
         return $query->where('type', ProjectType::PACKAGE);
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Casts
+    |--------------------------------------------------------------------------
+    */
     protected function casts(): array
     {
         return [

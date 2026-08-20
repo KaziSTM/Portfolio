@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 
 class CompanySeeder extends Seeder
 {
-
     /**
      * Run the database seeds.
      */
@@ -22,7 +21,7 @@ class CompanySeeder extends Seeder
                     'headquarter' => [
                         'en' => "Local n° 980, Centre commercial et d'affaires, Mohammadia 16000, Algeria",
                         'fr' => "Local n° 980, Centre commercial et d'affaires, Mohammadia 16000, Algérie",
-                        'ar' => "المحل رقم 980، المركز التجاري ومركز الأعمال، المحمدية 16000، الجزائر",
+                        'ar' => 'المحل رقم 980، المركز التجاري ومركز الأعمال، المحمدية 16000، الجزائر',
                     ],
                     'industry' => [
                         'en' => 'Information Technology',
@@ -114,8 +113,7 @@ class CompanySeeder extends Seeder
                     $logoPath = public_path('assets/images/companies/'.Str::slug($model->name).'-logo.webp');
                 }
 
-
-                if (!is_file($logoPath)) {
+                if (! is_file($logoPath)) {
                     continue;
                 }
 

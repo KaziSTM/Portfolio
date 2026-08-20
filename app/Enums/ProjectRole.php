@@ -10,7 +10,7 @@ enum ProjectRole: string
 
     public function label(): string
     {
-        return __('ui.project_roles.' . $this->value);
+        return __('ui.project_roles.'.$this->value);
     }
 
     public function color(): string

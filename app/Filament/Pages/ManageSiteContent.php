@@ -29,7 +29,9 @@ class ManageSiteContent extends Page implements HasForms
     protected static string|\UnitEnum|null $navigationGroup = 'Content';
 
     protected static ?string $title = 'Site Content';
+
     public ?array $data = [];
+
     protected string $view = 'filament.pages.manage-site-content';
 
     public function mount(): void
@@ -112,12 +114,12 @@ class ManageSiteContent extends Page implements HasForms
                     ->tabs([
                         Tab::make('Global')->schema([
                             Section::make('Header CTA')->schema([
-                                $this->localeTabs('global.header', fn(string $locale): array => [
+                                $this->localeTabs('global.header', fn (string $locale): array => [
                                     TextInput::make("global.header.{$locale}.cta_label")->required(),
                                 ]),
                             ]),
                             Section::make('Footer')->schema([
-                                $this->localeTabs('global.footer', fn(string $locale): array => [
+                                $this->localeTabs('global.footer', fn (string $locale): array => [
                                     TextInput::make("global.footer.{$locale}.title")->required(),
                                     Textarea::make("global.footer.{$locale}.description")->rows(4)->required(),
                                     TextInput::make("global.footer.{$locale}.button_label")->required(),
@@ -125,7 +127,7 @@ class ManageSiteContent extends Page implements HasForms
                                 ]),
                             ]),
                             Section::make('Social Links')->schema([
-                                $this->localeTabs('global.socials', fn(string $locale): array => [
+                                $this->localeTabs('global.socials', fn (string $locale): array => [
                                     Repeater::make("global.socials.{$locale}.items")
                                         ->schema([
                                             TextInput::make('name')->required(),
@@ -139,7 +141,7 @@ class ManageSiteContent extends Page implements HasForms
                         ]),
                         Tab::make('Home')->schema([
                             Section::make('Hero')->schema([
-                                $this->localeTabs('home.hero', fn(string $locale): array => [
+                                $this->localeTabs('home.hero', fn (string $locale): array => [
                                     TextInput::make("home.hero.{$locale}.intro")->required(),
                                     TextInput::make("home.hero.{$locale}.kicker")->required(),
                                     TextInput::make("home.hero.{$locale}.title")->required(),
@@ -148,7 +150,7 @@ class ManageSiteContent extends Page implements HasForms
                                 ]),
                             ]),
                             Section::make('Features')->schema([
-                                $this->localeTabs('home.features', fn(string $locale): array => [
+                                $this->localeTabs('home.features', fn (string $locale): array => [
                                     TextInput::make("home.features.{$locale}.title")->required(),
                                     Textarea::make("home.features.{$locale}.description")->rows(4)->required(),
                                     Repeater::make("home.features.{$locale}.items")
@@ -162,13 +164,13 @@ class ManageSiteContent extends Page implements HasForms
                                 ]),
                             ]),
                             Section::make('Featured Work')->schema([
-                                $this->localeTabs('home.work', fn(string $locale): array => [
+                                $this->localeTabs('home.work', fn (string $locale): array => [
                                     TextInput::make("home.work.{$locale}.title")->required(),
                                     Textarea::make("home.work.{$locale}.description")->rows(3)->required(),
                                 ]),
                             ]),
                             Section::make('Companies')->schema([
-                                $this->localeTabs('home.companies', fn(string $locale): array => [
+                                $this->localeTabs('home.companies', fn (string $locale): array => [
                                     TextInput::make("home.companies.{$locale}.title")->required(),
                                     TextInput::make("home.companies.{$locale}.highlight")->required(),
                                     TextInput::make("home.companies.{$locale}.suffix")->required(),
@@ -177,7 +179,7 @@ class ManageSiteContent extends Page implements HasForms
                         ]),
                         Tab::make('About')->schema([
                             Section::make('Intro')->schema([
-                                $this->localeTabs('about.intro', fn(string $locale): array => [
+                                $this->localeTabs('about.intro', fn (string $locale): array => [
                                     TextInput::make("about.intro.{$locale}.title")->required(),
                                     TextInput::make("about.intro.{$locale}.highlight")->required(),
                                     TextInput::make("about.intro.{$locale}.subtitle")->required(),
@@ -186,14 +188,14 @@ class ManageSiteContent extends Page implements HasForms
                                 ]),
                             ]),
                             Section::make('Career')->schema([
-                                $this->localeTabs('about.career', fn(string $locale): array => [
+                                $this->localeTabs('about.career', fn (string $locale): array => [
                                     TextInput::make("about.career.{$locale}.title")->required(),
                                     Textarea::make("about.career.{$locale}.description")->rows(6)->required(),
                                     TextInput::make("about.career.{$locale}.cv_label")->required(),
                                 ]),
                             ]),
                             Section::make('Stack')->schema([
-                                $this->localeTabs('about.stack', fn(string $locale): array => [
+                                $this->localeTabs('about.stack', fn (string $locale): array => [
                                     TextInput::make("about.stack.{$locale}.title")->required(),
                                     Textarea::make("about.stack.{$locale}.description")->rows(5)->required(),
                                 ]),
@@ -201,14 +203,14 @@ class ManageSiteContent extends Page implements HasForms
                         ]),
                         Tab::make('Contact')->schema([
                             Section::make('Hero')->schema([
-                                $this->localeTabs('contact.hero', fn(string $locale): array => [
+                                $this->localeTabs('contact.hero', fn (string $locale): array => [
                                     TextInput::make("contact.hero.{$locale}.title")->required(),
                                     TextInput::make("contact.hero.{$locale}.subtitle")->required(),
                                     TextInput::make("contact.hero.{$locale}.reach_label")->required(),
                                 ]),
                             ]),
                             Section::make('Contacts')->schema([
-                                $this->localeTabs('contact.contacts', fn(string $locale): array => [
+                                $this->localeTabs('contact.contacts', fn (string $locale): array => [
                                     Repeater::make("contact.contacts.{$locale}.items")
                                         ->schema([
                                             TextInput::make('title')->required(),
@@ -221,7 +223,7 @@ class ManageSiteContent extends Page implements HasForms
                                 ]),
                             ]),
                             Section::make('Form Content')->schema([
-                                $this->localeTabs('contact.form', fn(string $locale): array => [
+                                $this->localeTabs('contact.form', fn (string $locale): array => [
                                     TextInput::make("contact.form.{$locale}.title")->required(),
                                     Textarea::make("contact.form.{$locale}.description")->rows(3)->required(),
                                     TagsInput::make("contact.form.{$locale}.services"),
@@ -242,7 +244,7 @@ class ManageSiteContent extends Page implements HasForms
         return Tabs::make($key)
             ->tabs(
                 collect($this->locales())
-                    ->map(fn(string $locale): Tab => Tab::make(strtoupper($locale))
+                    ->map(fn (string $locale): Tab => Tab::make(strtoupper($locale))
                         ->schema($schemaFactory($locale)))
                     ->all(),
             )
@@ -294,7 +296,7 @@ class ManageSiteContent extends Page implements HasForms
     protected function blankTranslations(string $value): array
     {
         return collect($this->locales())
-            ->mapWithKeys(fn(string $locale): array => [$locale => $value])
+            ->mapWithKeys(fn (string $locale): array => [$locale => $value])
             ->all();
     }
 
@@ -311,7 +313,7 @@ class ManageSiteContent extends Page implements HasForms
     protected function splitParagraphs(string $text): array
     {
         return collect(preg_split("/\n{2,}/", trim($text)) ?: [])
-            ->map(fn(string $paragraph): string => trim($paragraph))
+            ->map(fn (string $paragraph): string => trim($paragraph))
             ->filter()
             ->values()
             ->all();

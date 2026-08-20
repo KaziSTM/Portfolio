@@ -2,24 +2,27 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Table;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\Translatable\HasTranslations;
 
+#[Fillable(
+    'cms_page_id',
+    'key',
+    'label',
+    'position',
+    'data',
+)]
+#[Table('cms_sections')]
 class CmsSection extends Model
 {
     use HasTranslations;
 
     public array $translatable = [
         'data',
-        'label'
-    ];
-    protected $fillable = [
-        'cms_page_id',
-        'key',
         'label',
-        'position',
-        'data',
     ];
 
     public function page(): BelongsTo
@@ -35,6 +38,8 @@ class CmsSection extends Model
     protected function casts(): array
     {
         return [
+            'data' => 'array',
+            'label' => 'array',
             'position' => 'integer',
         ];
     }

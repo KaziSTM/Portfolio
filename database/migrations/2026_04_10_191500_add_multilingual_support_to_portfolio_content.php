@@ -83,7 +83,7 @@ return new class extends Migration
             DB::table('companies')
                 ->where('id', $company->id)
                 ->update([
-                    'slug' => $company->slug ?: Str::slug($name ?: 'company-' . $company->id),
+                    'slug' => $company->slug ?: Str::slug($name ?: 'company-'.$company->id),
                     'name' => $this->encodeTranslations($name),
                     'headquarter' => $this->encodeTranslations($this->decodeValue($company->headquarter)),
                     'industry' => $this->encodeTranslations($this->decodeValue($company->industry)),

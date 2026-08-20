@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Projects\Schemas;
 
 use App\Enums\ProjectRole;
 use App\Enums\ProjectType;
+use App\Models\Project;
 use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\MarkdownEditor;
@@ -30,14 +31,14 @@ class ProjectForm
                             ->searchable(),
                         TextInput::make('slug')
                             ->required()
-                            ->unique(\App\Models\Project::class, 'slug', ignoreRecord: true)
+                            ->unique(Project::class, 'slug', ignoreRecord: true)
                             ->maxLength(255),
                         TextInput::make('name')
                             ->required()
                             ->maxLength(255),
                         Select::make('type')
                             ->options(collect(ProjectType::cases())
-                                ->mapWithKeys(fn(ProjectType $type): array => [$type->value => $type->label()])
+                                ->mapWithKeys(fn (ProjectType $type): array => [$type->value => $type->label()])
                                 ->all())
                             ->required(),
                         TextInput::make('header')
@@ -59,7 +60,7 @@ class ProjectForm
                         Toggle::make('is_in_progress'),
                         CheckboxList::make('main_tags')
                             ->options(collect(ProjectRole::cases())
-                                ->mapWithKeys(fn(ProjectRole $role): array => [$role->value => $role->label()])
+                                ->mapWithKeys(fn (ProjectRole $role): array => [$role->value => $role->label()])
                                 ->all())
                             ->columns(3)
                             ->columnSpanFull(),

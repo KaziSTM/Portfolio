@@ -4,9 +4,9 @@ namespace App\Filament\Resources\Companies\Pages;
 
 use App\Filament\Resources\Companies\CompanyResource;
 use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
 use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
 use LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
-use Filament\Resources\Pages\ListRecords;
 
 class ListCompanies extends ListRecords
 {

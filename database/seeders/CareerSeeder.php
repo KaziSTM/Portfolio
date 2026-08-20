@@ -10,7 +10,6 @@ use Illuminate\Support\Str;
 
 class CareerSeeder extends Seeder
 {
-
     /**
      * @throws \Throwable
      */
@@ -33,7 +32,6 @@ Specialized in backend architecture, scalable API development, multi-tenant appl
                         'fr' => 'Développeur Full-Stack indépendant et consultant logiciel, réalisant des plateformes web sur mesure, des solutions SaaS, des ERP et des systèmes d’automatisation pour des clients issus de différents secteurs.
 
 Spécialisé en architecture backend, conception d’API scalables, applications multi-tenant, intégrations IA et logique métier complexe. Responsable de l’ensemble du cycle de vie des projets, de la conception technique au déploiement et à la maintenance.',
-
 
                         'ar' => 'مطور Full-Stack مستقل ومستشار برمجيات، أقوم بتطوير منصات ويب مخصصة وحلول SaaS وأنظمة ERP وأدوات أتمتة الأعمال لعملاء من مختلف القطاعات.
 

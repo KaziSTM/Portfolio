@@ -4,9 +4,9 @@ namespace App\Filament\Resources\Projects\Pages;
 
 use App\Filament\Resources\Projects\ProjectResource;
 use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
 use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
 use LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
-use Filament\Resources\Pages\ListRecords;
 
 class ListProjects extends ListRecords
 {

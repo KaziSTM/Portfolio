@@ -9,6 +9,6 @@ enum ProjectType: string
 
     public function label(): string
     {
-        return __('ui.project_types.' . $this->value);
+        return __('ui.project_types.'.$this->value);
     }
 }
