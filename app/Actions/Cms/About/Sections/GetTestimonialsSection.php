@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Cms\About;
+namespace App\Actions\Cms\About\Sections;
 
 use App\Models\Testimonial;
 use App\Support\Cms;
@@ -27,7 +27,7 @@ class GetTestimonialsSection
     private function buildTestimonials(): array
     {
         return $this->getTestimonials()
-            ->map(fn(Testimonial $testimonial) => [
+            ->map(fn (Testimonial $testimonial) => [
                 'id' => $testimonial->id,
                 'author' => $testimonial->author_name,
                 'role' => $testimonial->author_role,

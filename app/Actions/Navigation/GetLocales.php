@@ -13,7 +13,7 @@ class GetLocales
         unset($parameters['locale']);
 
         return collect(config('app.supported_locales', ['en']))
-            ->map(fn(string $locale) => [
+            ->map(fn (string $locale) => [
                 'key' => $locale,
                 'label' => strtoupper($locale),
 

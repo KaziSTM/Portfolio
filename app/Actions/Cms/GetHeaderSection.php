@@ -8,6 +8,9 @@ class GetHeaderSection
 {
     public function __invoke(): array
     {
-        return Cms::section('global', 'header');
+        return [
+            'header_cta_label' => __('ui.actions.book_call'),
+            'content' => Cms::section('global', 'header'),
+        ];
     }
 }

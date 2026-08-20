@@ -6,8 +6,7 @@ class GetFooterNavigation
 {
     public function __construct(
         protected GetMainNavigation $getMainNavigation,
-    ) {
-    }
+    ) {}
 
     public function __invoke(): array
     {

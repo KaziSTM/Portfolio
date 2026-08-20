@@ -2,29 +2,25 @@
 
 namespace App\Actions\Cms;
 
-
+use App\Actions\Translations\GetContactPageTranslations;
 use App\Support\Cms;
 
 class GetContactPage
 {
-
     public function __invoke(): array
     {
-        return [
-            'hero' => $this->getHeroContent(),
-            'form_content' => $this->getFormContent(),
-            'contacts' => $this->getContacts(),
-            'services' => $this->getServices()
-        ];
-    }
+        $formContent = $this->getFormContent();
 
-    private function getHeroContent(): array
-    {
-        return Cms::section('contact', 'hero', [
-            'title' => 'How can I help you?',
-            'subtitle' => "Let's get in touch",
-            'reach_label' => 'You can reach me at the following',
-        ]);
+        return [
+            'heroSection' => $this->getHeroContent(),
+            'formContent' => $formContent,
+            'contacts' => $this->getContacts(),
+            'services' => collect($formContent['services'])
+                ->mapWithKeys(fn ($service) => [$service => false])
+                ->all(),
+            'translations' => app(GetContactPageTranslations::class)(),
+
+        ];
     }
 
     private function getFormContent(): array
@@ -41,18 +37,19 @@ class GetContactPage
         ]);
     }
 
+    private function getHeroContent(): array
+    {
+        return Cms::section('contact', 'hero', [
+            'title' => 'How can I help you?',
+            'subtitle' => "Let's get in touch",
+            'reach_label' => 'You can reach me at the following',
+        ]);
+    }
+
     private function getContacts(): array
     {
         return Cms::section('contact', 'contacts', [
             'items' => [],
         ])['items'];
-    }
-
-    private function getServices(): array
-    {
-
-        return collect($this->getFormContent()['services'])
-            ->mapWithKeys(fn($service) => [$service => false])
-            ->all();
     }
 }
