@@ -27,12 +27,12 @@ const navigation = computed(() => page.props.footerNavigation)
                     <div class="flex justify-start">
                         <a href="/contact">
                             <SpecularButton
-                                size="sm"
+                                size="md"
                                 :radius="999"
-                                tint="#0f172a"
+                                tint="#ffffff"
                                 :tint-opacity="1"
                                 :blur="0"
-                                text-color="#f3f4f6"
+                                text-color="#030712"
                                 line-color="#21e0c0"
                                 base-color="#0c635a"
                                 :intensity="1.5"

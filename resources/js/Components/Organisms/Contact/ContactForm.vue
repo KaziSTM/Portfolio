@@ -164,7 +164,7 @@ function submit() {
                 <div class="mt-4 w-full">
                     <SpecularButton
                         type="submit"
-                        size="sm"
+                        size="md"
                         :radius="999"
                         tint="#030712"
                         :tint-opacity="1"
