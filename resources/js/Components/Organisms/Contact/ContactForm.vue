@@ -163,25 +163,25 @@ function submit() {
 
                 <div class="mt-4 w-full">
                     <SpecularButton
-                        type="submit"
-                        size="md"
-                        :radius="999"
-                        tint="#030712"
-                        :tint-opacity="1"
-                        :blur="0"
-                        text-color="#f3f4f6"
-                        line-color="#21e0c0"
-                        base-color="#0c635a"
-                        :intensity="1.5"
-                        :shine-size="12"
-                        :shine-fade="38"
-                        :thickness="1"
-                        :speed="0.35"
-                        follow-mouse
-                        :proximity="280"
                         :auto-animate="false"
+                        :blur="0"
                         :disabled="form.processing"
+                        :intensity="1.5"
+                        :proximity="280"
+                        :radius="14"
+                        :shine-fade="38"
+                        :shine-size="12"
+                        :speed="0.35"
+                        :thickness="1"
+                        :tint-opacity="1"
+                        base-color="#0c635a"
                         class="w-full"
+                        follow-mouse
+                        line-color="#21e0c0"
+                        size="md"
+                        text-color="#f3f4f6"
+                        tint="#030712"
+                        type="submit"
                     >
                         <span v-if="!form.processing" class="font-medium">
                             {{ formContent.submit_label }}

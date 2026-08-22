@@ -43,7 +43,7 @@ class ProjectSeeder extends Seeder
 
                 $project->syncTagsWithType(
                     collect($mainTags)
-                        ->map(fn ($tag) => $tag->value)
+                        ->map(fn($tag) => $tag->value)
                         ->toArray(),
                     'main'
                 );
@@ -1128,7 +1128,7 @@ Designed to support complex billing logic while remaining extensible and develop
                     'fr' => 'Plateforme et SDK permettant d’intégrer plusieurs services de livraison عبر une API unifiée.',
                     'ar' => 'منصة وSDK لدمج عدة مزودي توصيل عبر واجهة API موحدة.',
                 ],
-                'link' => null,
+                'link' => 'https://github.com/KaziSTM/vargo',
                 'main_tags' => [
                     ProjectRole::BACKEND,
                 ],
@@ -1139,7 +1139,7 @@ Designed to support complex billing logic while remaining extensible and develop
                     'Integration',
                     'Laravel Package',
                 ],
-                'is_in_progress' => true,
+                'is_in_progress' => false,
                 'details' => [
                     'en' => '# Vargo — Engineering a Unified Delivery Integration Layer
 
@@ -1294,8 +1294,8 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
         }
 
         $imagePaths = collect(range(1, 9))
-            ->map(fn (int $index) => public_path("assets/images/projects/{$slug}-{$index}.webp"))
-            ->filter(fn ($path) => is_file($path))
+            ->map(fn(int $index) => public_path("assets/images/projects/{$slug}-{$index}.webp"))
+            ->filter(fn($path) => is_file($path))
             ->values();
 
         if ($imagePaths->isEmpty()) {
@@ -1303,7 +1303,7 @@ Vargo هي منصة تهدف إلى **توحيد و تبسيط دمج خدمات
         }
 
         $currentImages = $project->getMedia('images')->pluck('file_name');
-        $expectedImages = $imagePaths->map(fn ($path) => basename($path));
+        $expectedImages = $imagePaths->map(fn($path) => basename($path));
 
         if ($currentImages->values()->all() === $expectedImages->all()) {
             return;

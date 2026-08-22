@@ -5,7 +5,6 @@ import { Link, usePage } from '@inertiajs/vue3'
 import BaseButton from '@/Components/Atoms/BaseButton.vue'
 import SpecularButton from '@/Components/Atoms/SpecularButton.vue'
 import Subtitle from '@/Components/Atoms/Subtitle.vue'
-import FooterContactArrow from '@/Components/Icons/FooterContactArrow.vue'
 
 const page = usePage()
 
@@ -27,27 +26,26 @@ const navigation = computed(() => page.props.footerNavigation)
                     <div class="flex justify-start">
                         <a href="/contact">
                             <SpecularButton
-                                size="md"
-                                :radius="999"
-                                tint="#ffffff"
-                                :tint-opacity="1"
-                                :blur="0"
-                                text-color="#030712"
-                                line-color="#21e0c0"
-                                base-color="#0c635a"
-                                :intensity="1.5"
-                                :shine-size="12"
-                                :shine-fade="38"
-                                :thickness="1"
-                                :speed="0.35"
-                                follow-mouse
-                                :proximity="280"
                                 :auto-animate="false"
+                                :blur="0"
+                                :intensity="1.5"
+                                :proximity="280"
+                                :radius="14"
+                                :shine-fade="38"
+                                :shine-size="12"
+                                :speed="0.35"
+                                :thickness="1"
+                                :tint-opacity="1"
+                                base-color="#0c635a"
+                                follow-mouse
+                                line-color="#21e0c0"
+                                size="md"
+                                text-color="#030712"
+                                tint="#ffffff"
                             >
                                 <span class="relative font-medium">
                                     {{ footer.button_label }}
                                 </span>
-                                <FooterContactArrow />
                             </SpecularButton>
                         </a>
                     </div>

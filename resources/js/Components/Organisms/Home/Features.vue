@@ -7,6 +7,7 @@ import FeatureArrow from '@/Components/Icons/FeatureArrow.vue'
 import CheckCircle from '@/Components/Icons/CheckCircle.vue'
 import RectangleStack from '@/Components/Icons/RectangleStack.vue'
 import CodeBracket from '@/Components/Icons/CodeBracket.vue'
+import { computed } from 'vue'
 
 const page = usePage()
 
@@ -22,6 +23,10 @@ const iconMap = {
     'heroicon-o-rectangle-stack': RectangleStack,
     'heroicon-o-code-bracket': CodeBracket,
 }
+const local = computed(() => page.props.locale)
+
+const resume =
+    local.value === 'fr' ? 'assets/docs/Youcef_Nezrek_fr.pdf' : 'assets/docs/Youcef_Nezrek_en.pdf'
 </script>
 
 <template>
@@ -92,7 +97,7 @@ const iconMap = {
                     <div class="relative w-full flex justify-center">
                         <div class="relative inline-block">
                             <img
-                                :src="'/assets/images/feature_section.webp'"
+                                :src="'/assets/images/portrait-5.webp'"
                                 alt="Feature Image"
                                 class="w-full max-w-125 md:max-w-150 h-80 md:h-130 object-cover rounded-xl shadow-xl"
                                 decoding="async"
@@ -115,7 +120,7 @@ const iconMap = {
                             class="absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0"
                         >
                             <a
-                                :href="'assets/docs/Youcef_Nezrek_CV.pdf'"
+                                :href="resume"
                                 class="group flex items-center gap-3 bg-white/90 backdrop-blur px-3 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
                                 target="_blank"
                             >
