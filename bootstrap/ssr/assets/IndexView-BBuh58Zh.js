@@ -125,7 +125,10 @@ var _sfc_main$1 = {
 							else _push(`<!---->`);
 							_push(`<!--]-->`);
 						});
-						_push(`<!--]--></div></div><h3 class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3></div></div><div class="mt-8 pt-4"${_scopeId}>`);
+						_push(`<!--]--></div></div><h3 class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3>`);
+						if (__props.project.description) _push(`<p class="line-clamp-3 text-start leading-relaxed text-gray-600 text-sm sm:text-base"${_scopeId}>${__props.project.description ?? ""}</p>`);
+						else _push(`<!---->`);
+						_push(`</div></div><div class="mt-8 pt-4"${_scopeId}>`);
 						_push(ssrRenderComponent(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
@@ -148,18 +151,26 @@ var _sfc_main$1 = {
 							alt: __props.project.header,
 							src: __props.project.logo_url,
 							class: "w-full h-auto object-contain max-h-48"
-						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true), createVNode("div", { class: "space-y-4" }, [createVNode("div", { class: "flex items-center justify-between flex-wrap gap-2 text-xs tracking-widest uppercase" }, [createVNode("span", {
-							class: "inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700",
-							textContent: toDisplayString(__props.project.type_label)
-						}, null, 8, ["textContent"]), createVNode("div", { class: "flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
-							return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
+						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true), createVNode("div", { class: "space-y-4" }, [
+							createVNode("div", { class: "flex items-center justify-between flex-wrap gap-2 text-xs tracking-widest uppercase" }, [createVNode("span", {
+								class: "inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700",
+								textContent: toDisplayString(__props.project.type_label)
+							}, null, 8, ["textContent"]), createVNode("div", { class: "flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
+								return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
+									key: 0,
+									class: "opacity-30"
+								}, " • ")) : createCommentVNode("", true)], 64);
+							}), 128))])]),
+							createVNode("h3", {
+								class: "block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display",
+								textContent: toDisplayString(__props.project.header)
+							}, null, 8, ["textContent"]),
+							__props.project.description ? (openBlock(), createBlock("p", {
 								key: 0,
-								class: "opacity-30"
-							}, " • ")) : createCommentVNode("", true)], 64);
-						}), 128))])]), createVNode("h3", {
-							class: "block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display",
-							textContent: toDisplayString(__props.project.header)
-						}, null, 8, ["textContent"])])]),
+								class: "line-clamp-3 text-start leading-relaxed text-gray-600 text-sm sm:text-base",
+								innerHTML: __props.project.description
+							}, null, 8, ["innerHTML"])) : createCommentVNode("", true)
+						])]),
 						createVNode("div", { class: "mt-8 pt-4" }, [createVNode(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
@@ -310,4 +321,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-DRF0Uo7C.js.map
+//# sourceMappingURL=IndexView-BBuh58Zh.js.map
