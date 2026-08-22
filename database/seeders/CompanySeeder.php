@@ -76,6 +76,70 @@ class CompanySeeder extends Seeder
                     'size' => '11-50',
                     'website' => 'https://www.musicspacedz.com/en',
                 ],
+
+                [
+                    'name' => 'CCO',
+                    'headquarter' => [
+                        'en' => 'Les Genets, Chemin de Wilaya, Route 75, Oran, Algérie',
+                        'fr' => 'Les Genets, Chemin de Wilaya, Route 75, Oran, Algérie',
+                        'ar' => 'شركةلي زينيت، طريق الولاية، الطريق رقم 75، وهران 31000، الجزائر',
+                    ],
+                    'industry' => [
+                        'en' => 'Convention Center & Event Services',
+                        'fr' => 'Centre de conventions et services événementiels',
+                        'ar' => 'مركز المؤتمرات والخدمات الخاصة بالفعاليات',
+                    ],
+                    'size' => '50-200',
+                    'website' => 'https://www.gcco.dz/',
+                ],
+                [
+                    'name' => 'PassMemo',
+                    'headquarter' => [
+                        'en' => '1047 Route des Dolines, Allée Pierre Ziller, Business Pôle 1, 06560 Valbonne, France',
+                        'fr' => '1047 Route des Dolines, Allée Pierre Ziller, Business Pôle 1, 06560 Valbonne, France',
+                        'ar' => '1047 طريق دولين، زقاق بيير زيلر، مركز الأعمال 1، 06560 فالْبون، فرنسا',
+                    ],
+                    'industry' => [
+                        'en' => 'HealthTech & Elderly Care',
+                        'fr' => 'HealthTech et accompagnement des personnes âgées',
+                        'ar' => 'التكنولوجيا الصحية ورعاية كبار السن',
+                    ],
+                    'size' => '1-50',
+                    'website' => 'https://passmemo.fr/',
+                ],
+
+                [
+                    'name' => 'Kheops',
+                    'headquarter' => [
+                        'en' => 'France',
+                        'fr' => 'France',
+                        'ar' => 'فرنسا',
+                    ],
+                    'industry' => [
+                        'en' => 'Artificial Intelligence & Business Automation',
+                        'fr' => 'Intelligence artificielle et automatisation des processus métier',
+                        'ar' => 'الذكاء الاصطناعي وأتمتة العمليات التجارية',
+                    ],
+                    'size' => '1-50',
+                    'website' => 'https://kheops.ai',
+                ],
+
+                [
+                    'name' => 'Klassty',
+                    'headquarter' => [
+                        'en' => 'La Zone d’Activités, Lot 21 au 30, Dar El Beida 16100, Algeria',
+                        'fr' => 'La Zone d’Activités, Lot 21 au 30, Dar El Beida 16100, Algérie',
+                        'ar' => 'منطقة النشاطات، القطعة 21 إلى 30، الدار البيضاء 16100، الجزائر',
+                    ],
+                    'industry' => [
+                        'en' => 'E-Learning & Education',
+                        'fr' => 'E-learning et éducation',
+                        'ar' => 'التعليم الإلكتروني والتعليم',
+                    ],
+                    'size' => '11-50',
+                    'website' => 'https://klassty.com/',
+                ],
+
                 [
                     'name' => 'Freelance',
                     'headquarter' => [
@@ -113,7 +177,7 @@ class CompanySeeder extends Seeder
                     $logoPath = public_path('assets/images/companies/'.Str::slug($model->name).'-logo.webp');
                 }
 
-                if (! is_file($logoPath)) {
+                if (!is_file($logoPath)) {
                     continue;
                 }
 
