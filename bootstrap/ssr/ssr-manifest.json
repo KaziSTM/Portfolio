@@ -34,7 +34,7 @@
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Atoms/Pagination.vue": [
-    "/build/assets/IndexView-COxv65Nf.js"
+    "/build/assets/IndexView-D0fwjdbr.js"
   ],
   "resources/js/Components/Atoms/Section.vue": [
     "/build/assets/Section-CcmBDABV.js"
@@ -51,7 +51,7 @@
     "/build/assets/Subtitle-DtkDPELn.js"
   ],
   "resources/js/Components/Atoms/Title.vue": [
-    "/build/assets/HomeView-OBrh4pBJ.js"
+    "/build/assets/HomeView-DZ8cbgET.js"
   ],
   "resources/js/Components/Icons/AtSymbol.vue": [
     "/build/assets/ContactView-CUCXtIW7.js"
@@ -79,7 +79,7 @@
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Icons/HeroArrow.vue": [
-    "/build/assets/HomeView-OBrh4pBJ.js"
+    "/build/assets/HomeView-DZ8cbgET.js"
   ],
   "resources/js/Components/Icons/InstagramLogo.vue": [
     "/build/assets/useGetTitle-d87yLauo.js",
@@ -96,7 +96,7 @@
     "/build/assets/Features-C-VLKSHU.js"
   ],
   "resources/js/Components/Icons/Underline.vue": [
-    "/build/assets/HomeView-OBrh4pBJ.js"
+    "/build/assets/HomeView-DZ8cbgET.js"
   ],
   "resources/js/Components/Layouts/AppLayout.vue": [
     "/build/assets/useGetTitle-d87yLauo.js",
@@ -113,10 +113,10 @@
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Molecules/ListProjectCard.vue": [
-    "/build/assets/IndexView-COxv65Nf.js"
+    "/build/assets/IndexView-D0fwjdbr.js"
   ],
   "resources/js/Components/Molecules/ProjectCard.vue": [
-    "/build/assets/LatestWork-DnKHrCpy.js"
+    "/build/assets/LatestWork-cKuVIsf1.js"
   ],
   "resources/js/Components/Organisms/About/Careers.vue": [
     "/build/assets/AboutView-D5HaClIE.js"
@@ -148,10 +148,10 @@
     "/build/assets/Features-C-VLKSHU.js"
   ],
   "resources/js/Components/Organisms/Home/Hero.vue": [
-    "/build/assets/HomeView-OBrh4pBJ.js"
+    "/build/assets/HomeView-DZ8cbgET.js"
   ],
   "resources/js/Components/Organisms/Home/LatestWork.vue": [
-    "/build/assets/LatestWork-DnKHrCpy.js"
+    "/build/assets/LatestWork-cKuVIsf1.js"
   ],
   "resources/js/Components/Organisms/Home/Tools.vue": [
     "/build/assets/Tools-CMrSFF5Y.js"
@@ -192,10 +192,10 @@
     "/build/assets/ContactView-CUCXtIW7.js"
   ],
   "resources/js/Pages/HomeView.vue": [
-    "/build/assets/HomeView-OBrh4pBJ.js"
+    "/build/assets/HomeView-DZ8cbgET.js"
   ],
   "resources/js/Pages/Projects/IndexView.vue": [
-    "/build/assets/IndexView-COxv65Nf.js"
+    "/build/assets/IndexView-D0fwjdbr.js"
   ],
   "resources/js/Pages/Projects/ShowView.vue": [
     "/build/assets/ShowView-CEIaV2YU.js"

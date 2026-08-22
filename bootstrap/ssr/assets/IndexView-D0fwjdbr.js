@@ -115,17 +115,17 @@ var _sfc_main$1 = {
 						_push(`<div class="${ssrRenderClass([{
 							"md:mt-24 lg:mt-32 rounded-br-[3rem]": __props.reverse,
 							"rounded-tl-[3rem]": !__props.reverse
-						}, "bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"])}"${_scopeId}><div class="grid gap-10"${_scopeId}>`);
-						if (!__props.reverse) _push(`<div class="mb-2"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain"${_scopeId}></div>`);
+						}, "bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"])}"${_scopeId}><div class="grid gap-6"${_scopeId}>`);
+						if (!__props.reverse) _push(`<div class="mb-1"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain"${_scopeId}></div>`);
 						else _push(`<!---->`);
-						_push(`<div class="space-y-10"${_scopeId}><div class="flex items-center justify-between"${_scopeId}><span class="inline-block rounded border border-gray-400 px-2 py-1 text-[10px] font-medium tracking-widest uppercase text-gray-700"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600"${_scopeId}><!--[-->`);
+						_push(`<div class="space-y-3"${_scopeId}><div class="flex items-center justify-between flex-wrap gap-2"${_scopeId}><span class="inline-block rounded border border-gray-400 px-2 py-0.5 text-[10px] font-medium tracking-widest uppercase text-gray-700"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.project.role_labels, (role, index) => {
 							_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 							if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
 							else _push(`<!---->`);
 							_push(`<!--]-->`);
 						});
-						_push(`<!--]--></div></div><span class="text-2xl font-semibold text-gray-900 leading-tight max-w-xs"${_scopeId}>${ssrInterpolate(__props.project.header)}</span></div>`);
+						_push(`<!--]--></div></div><span class="block text-xl font-semibold text-gray-900 leading-snug"${_scopeId}>${ssrInterpolate(__props.project.header)}</span></div>`);
 						_push(ssrRenderComponent(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
@@ -139,17 +139,17 @@ var _sfc_main$1 = {
 					} else return [createVNode("div", { class: [{
 						"md:mt-24 lg:mt-32 rounded-br-[3rem]": __props.reverse,
 						"rounded-tl-[3rem]": !__props.reverse
-					}, "bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"] }, [createVNode("div", { class: "grid gap-10" }, [
+					}, "bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"] }, [createVNode("div", { class: "grid gap-6" }, [
 						!__props.reverse ? (openBlock(), createBlock("div", {
 							key: 0,
-							class: "mb-2"
+							class: "mb-1"
 						}, [createVNode("img", {
 							alt: __props.project.header,
 							src: __props.project.logo_url,
 							class: "w-full h-auto object-contain"
 						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true),
-						createVNode("div", { class: "space-y-10" }, [createVNode("div", { class: "flex items-center justify-between" }, [createVNode("span", {
-							class: "inline-block rounded border border-gray-400 px-2 py-1 text-[10px] font-medium tracking-widest uppercase text-gray-700",
+						createVNode("div", { class: "space-y-3" }, [createVNode("div", { class: "flex items-center justify-between flex-wrap gap-2" }, [createVNode("span", {
+							class: "inline-block rounded border border-gray-400 px-2 py-0.5 text-[10px] font-medium tracking-widest uppercase text-gray-700",
 							textContent: toDisplayString(__props.project.type_label)
 						}, null, 8, ["textContent"]), createVNode("div", { class: "flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
 							return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
@@ -157,7 +157,7 @@ var _sfc_main$1 = {
 								class: "opacity-30"
 							}, " • ")) : createCommentVNode("", true)], 64);
 						}), 128))])]), createVNode("span", {
-							class: "text-2xl font-semibold text-gray-900 leading-tight max-w-xs",
+							class: "block text-xl font-semibold text-gray-900 leading-snug",
 							textContent: toDisplayString(__props.project.header)
 						}, null, 8, ["textContent"])]),
 						createVNode(_sfc_main$3, {
@@ -310,4 +310,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-COxv65Nf.js.map
+//# sourceMappingURL=IndexView-D0fwjdbr.js.map
