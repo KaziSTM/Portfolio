@@ -1,5 +1,5 @@
 import { n as _sfc_main$3, t as FadeContent_default } from "./FadeContent-BwB3jZkL.js";
-import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-CyfCBCJx.js";
+import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-d87yLauo.js";
 import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, Link, router, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
@@ -310,4 +310,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-byVx8EdY.js.map
+//# sourceMappingURL=IndexView-COxv65Nf.js.map

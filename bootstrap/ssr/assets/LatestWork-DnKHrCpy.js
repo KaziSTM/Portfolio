@@ -40,7 +40,7 @@ var _sfc_main$1 = {
 			}, _attrs), {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<article class="relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16"${_scopeId}><img${ssrRenderAttr("src", "/assets/svg/home-hero-gradient.svg")} alt="Background Gradient" class="absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block" height="794" loading="lazy" width="1528"${_scopeId}><div class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1"${_scopeId}><div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
+						_push(`<article class="relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16"${_scopeId}><div class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1"${_scopeId}><div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.project.role_labels, (role, index) => {
 							_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 							if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
@@ -61,69 +61,58 @@ var _sfc_main$1 = {
 							url: __props.project.project_url
 						}, null, _parent, _scopeId));
 						_push(`</div></div></article>`);
-					} else return [createVNode("article", { class: "relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16" }, [
-						createVNode("img", {
-							src: "/assets/svg/home-hero-gradient.svg",
-							alt: "Background Gradient",
-							class: "absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block",
-							height: "794",
-							loading: "lazy",
-							width: "1528"
-						}),
-						createVNode("div", {
-							class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2",
-							onMouseenter: ($event) => zoom.value = true,
-							onMouseleave: ($event) => zoom.value = false
-						}, [createVNode("img", {
-							alt: __props.project.header,
-							class: [{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"],
-							src: __props.project.logo_url,
-							"aria-hidden": "true",
-							decoding: "async",
-							height: "1000",
-							loading: "lazy",
-							width: "1088"
-						}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"]),
-						createVNode("div", { class: "order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1" }, [
-							createVNode("div", { class: "flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
-								createVNode("span", {
-									class: "rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600",
-									textContent: toDisplayString(__props.project.type_label)
-								}, null, 8, ["textContent"]),
-								createVNode("div", { class: "flex items-center gap-2 text-gray-400" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
-									return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
-										key: 0,
-										class: "opacity-30"
-									}, " • ")) : createCommentVNode("", true)], 64);
-								}), 128))]),
-								__props.project.is_in_progress ? (openBlock(), createBlock("span", {
+					} else return [createVNode("article", { class: "relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16" }, [createVNode("div", {
+						class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2",
+						onMouseenter: ($event) => zoom.value = true,
+						onMouseleave: ($event) => zoom.value = false
+					}, [createVNode("img", {
+						alt: __props.project.header,
+						class: [{ "scale-110": zoom.value }, "h-full transition-transform duration-500 ease-in-out object-cover"],
+						src: __props.project.logo_url,
+						"aria-hidden": "true",
+						decoding: "async",
+						height: "1000",
+						loading: "lazy",
+						width: "1088"
+					}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"]), createVNode("div", { class: "order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1" }, [
+						createVNode("div", { class: "flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
+							createVNode("span", {
+								class: "rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600",
+								textContent: toDisplayString(__props.project.type_label)
+							}, null, 8, ["textContent"]),
+							createVNode("div", { class: "flex items-center gap-2 text-gray-400" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
+								return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
 									key: 0,
-									class: "rounded-md bg-amber-100 px-2 py-1 normal-case tracking-normal text-amber-600"
-								}, " In Progress ")) : createCommentVNode("", true)
-							]),
-							createVNode("h3", { class: "text-start text-xl font-semibold leading-snug lg:text-2xl font-display" }, toDisplayString(__props.project.header), 1),
-							createVNode("p", {
-								class: "line-clamp-3 text-start leading-relaxed text-gray-600",
-								innerHTML: __props.project.description
-							}, null, 8, ["innerHTML"]),
-							createVNode("div", { class: "mt-2 flex flex-col items-start gap-4" }, [formattedDates.value ? (openBlock(), createBlock("div", {
+									class: "opacity-30"
+								}, " • ")) : createCommentVNode("", true)], 64);
+							}), 128))]),
+							__props.project.is_in_progress ? (openBlock(), createBlock("span", {
 								key: 0,
-								class: "flex items-center gap-1 text-xs text-gray-400"
-							}, toDisplayString(formattedDates.value), 1)) : createCommentVNode("", true), createVNode(_sfc_main$2, {
-								"is-package": __props.project.is_package,
-								"project-id": __props.project.id,
-								"project-title": __props.project.header,
-								translations: __props.translations,
-								url: __props.project.project_url
-							}, null, 8, [
-								"is-package",
-								"project-id",
-								"project-title",
-								"translations",
-								"url"
-							])])
-						])
-					])];
+								class: "rounded-md bg-amber-100 px-2 py-1 normal-case tracking-normal text-amber-600"
+							}, " In Progress ")) : createCommentVNode("", true)
+						]),
+						createVNode("h3", { class: "text-start text-xl font-semibold leading-snug lg:text-2xl font-display" }, toDisplayString(__props.project.header), 1),
+						createVNode("p", {
+							class: "line-clamp-3 text-start leading-relaxed text-gray-600",
+							innerHTML: __props.project.description
+						}, null, 8, ["innerHTML"]),
+						createVNode("div", { class: "mt-2 flex flex-col items-start gap-4" }, [formattedDates.value ? (openBlock(), createBlock("div", {
+							key: 0,
+							class: "flex items-center gap-1 text-xs text-gray-400"
+						}, toDisplayString(formattedDates.value), 1)) : createCommentVNode("", true), createVNode(_sfc_main$2, {
+							"is-package": __props.project.is_package,
+							"project-id": __props.project.id,
+							"project-title": __props.project.header,
+							translations: __props.translations,
+							url: __props.project.project_url
+						}, null, 8, [
+							"is-package",
+							"project-id",
+							"project-title",
+							"translations",
+							"url"
+						])])
+					])])];
 				}),
 				_: 1
 			}, _parent));
@@ -191,4 +180,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=LatestWork-BSrtX1Yy.js.map
+//# sourceMappingURL=LatestWork-DnKHrCpy.js.map

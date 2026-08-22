@@ -13,11 +13,11 @@ router.on("navigate", (event) => {
 var render = await createInertiaApp({
 	title: (title) => `${title} - ${appName}`,
 	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* #__PURE__ */ Object.assign({
-		"./Pages/AboutView.vue": () => import("./assets/AboutView-BnRrjV9K.js"),
-		"./Pages/ContactView.vue": () => import("./assets/ContactView-Bnxv07V5.js"),
-		"./Pages/HomeView.vue": () => import("./assets/HomeView-CPqaX0Ym.js"),
-		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-byVx8EdY.js"),
-		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-DTp3QcWA.js")
+		"./Pages/AboutView.vue": () => import("./assets/AboutView-D5HaClIE.js"),
+		"./Pages/ContactView.vue": () => import("./assets/ContactView-CUCXtIW7.js"),
+		"./Pages/HomeView.vue": () => import("./assets/HomeView-OBrh4pBJ.js"),
+		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-COxv65Nf.js"),
+		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-CEIaV2YU.js")
 	})),
 	setup({ el, App, props, plugin }) {
 		return createApp({ render: () => h(App, props) }).use(plugin).mount(el);

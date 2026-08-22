@@ -1,6 +1,6 @@
 import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { t as DownloadSimple_default } from "./DownloadSimple-HqfXmc8B.js";
-import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle-CyfCBCJx.js";
+import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle-d87yLauo.js";
 import { createTextVNode, createVNode, mergeProps, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderStyle } from "vue/server-renderer";
@@ -56,7 +56,7 @@ var _sfc_main$3 = {
 				});
 				_push(`<!--]-->`);
 			} else _push(`<!---->`);
-			_push(`<h3 class="text-3xl mt-12 text-start font-script">${ssrInterpolate(__props.intro.signature)}</h3></div></div><div class="relative hidden lg:block"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-4 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-90 lg:w-115 xl:w-130 opacity-80 pointer-events-none select-none rtl:scale-x-[-1]"></div></div><div class="block lg:hidden w-full relative overflow-hidden"><div class="relative h-80 sm:h-95 md:h-105"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-0 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-65 sm:w-[320px] md:w-95 opacity-70 pointer-events-none rtl:scale-x-[-1]"></div></div></section>`);
+			_push(`<h3 class="text-3xl mt-12 text-start font-script">${ssrInterpolate(__props.intro.signature)}</h3></div></div><div class="relative hidden lg:block"><img${ssrRenderAttr("src", "/assets/images/portrait-3.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-4 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-90 lg:w-115 xl:w-130 opacity-80 pointer-events-none select-none rtl:scale-x-[-1]"></div></div><div class="block lg:hidden w-full relative overflow-hidden"><div class="relative h-80 sm:h-95 md:h-105"><img${ssrRenderAttr("src", "/assets/images/portrait.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-0 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-65 sm:w-[320px] md:w-95 opacity-70 pointer-events-none rtl:scale-x-[-1]"></div></div></section>`);
 		};
 	}
 };
@@ -104,7 +104,7 @@ _sfc_main$2.setup = (props, ctx) => {
 };
 //#endregion
 //#region resources/js/Components/Organisms/About/Stack.vue
-var portrait_url = "/assets/images/portrait-3.webp";
+var portrait_url = "/assets/images/portrait-4.webp";
 var _sfc_main$1 = {
 	__name: "Stack",
 	__ssrInlineRender: true,
@@ -185,4 +185,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=AboutView-BnRrjV9K.js.map
+//# sourceMappingURL=AboutView-D5HaClIE.js.map
