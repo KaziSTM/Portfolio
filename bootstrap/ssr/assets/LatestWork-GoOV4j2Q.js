@@ -1,6 +1,6 @@
 import { t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { t as Section_default } from "./Section-CcmBDABV.js";
-import { n as _sfc_main$2, t as FadeContent_default } from "./FadeContent-BwB3jZkL.js";
+import { n as _sfc_main$2, t as FadeContent_default } from "./FadeContent-De5gdw3Q.js";
 import { Fragment, computed, createBlock, createCommentVNode, createVNode, mergeProps, openBlock, ref, renderList, toDisplayString, useSSRContext, withCtx } from "vue";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Components/Molecules/ProjectCard.vue
@@ -40,7 +40,7 @@ var _sfc_main$1 = {
 			}, _attrs), {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<article class="relative grid max-w-6xl grid-cols-1 rounded-2xl bg-slate-100 overflow-hidden xl:grid-cols-2"${_scopeId}><div class="relative order-1 overflow-hidden hover:cursor-pointer xl:order-2 w-full h-full min-h-[260px] sm:min-h-[320px]"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-105": zoom.value }, "w-full h-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 flex flex-col justify-between p-6 sm:p-10 lg:p-12 xl:p-14 xl:order-1"${_scopeId}><div${_scopeId}><div class="mb-4 lg:mb-5 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
+						_push(`<article class="relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2"${_scopeId}><div class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-8 sm:pt-6 lg:ps-16 xl:order-1 h-full"${_scopeId}><div${_scopeId}><div class="mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.project.role_labels, (role, index) => {
 							_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 							if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
@@ -50,10 +50,11 @@ var _sfc_main$1 = {
 						_push(`<!--]--></div>`);
 						if (__props.project.is_in_progress) _push(`<span class="rounded-md bg-amber-100 px-2.5 py-1 normal-case tracking-normal text-amber-600 font-medium"${_scopeId}> In Progress </span>`);
 						else _push(`<!---->`);
-						_push(`</div><h3 class="mb-3 lg:mb-4 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3><p class="mb-6 lg:mb-8 line-clamp-3 text-start leading-relaxed text-gray-600"${_scopeId}>${__props.project.description ?? ""}</p></div><div class="mt-auto pt-4 flex flex-col items-start gap-3"${_scopeId}>`);
+						_push(`</div><h3 class="mb-3 sm:mb-4 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3><p class="mb-6 sm:mb-8 line-clamp-3 text-start leading-relaxed text-gray-600"${_scopeId}>${__props.project.description ?? ""}</p></div><div class="mt-auto pt-4 pb-2 flex flex-col items-start gap-3"${_scopeId}>`);
 						if (formattedDates.value) _push(`<div class="flex items-center gap-1 text-xs text-gray-400"${_scopeId}>${ssrInterpolate(formattedDates.value)}</div>`);
 						else _push(`<!---->`);
 						_push(ssrRenderComponent(_sfc_main$2, {
+							plain: true,
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
 							"project-title": __props.project.header,
@@ -61,21 +62,21 @@ var _sfc_main$1 = {
 							url: __props.project.project_url
 						}, null, _parent, _scopeId));
 						_push(`</div></div></article>`);
-					} else return [createVNode("article", { class: "relative grid max-w-6xl grid-cols-1 rounded-2xl bg-slate-100 overflow-hidden xl:grid-cols-2" }, [createVNode("div", {
-						class: "relative order-1 overflow-hidden hover:cursor-pointer xl:order-2 w-full h-full min-h-[260px] sm:min-h-[320px]",
+					} else return [createVNode("article", { class: "relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2" }, [createVNode("div", {
+						class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full",
 						onMouseenter: ($event) => zoom.value = true,
 						onMouseleave: ($event) => zoom.value = false
 					}, [createVNode("img", {
 						alt: __props.project.header,
-						class: [{ "scale-105": zoom.value }, "w-full h-full transition-transform duration-500 ease-in-out object-cover"],
+						class: [{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"],
 						src: __props.project.logo_url,
 						"aria-hidden": "true",
 						decoding: "async",
 						height: "1000",
 						loading: "lazy",
 						width: "1088"
-					}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:p-10 lg:p-12 xl:p-14 xl:order-1" }, [createVNode("div", null, [
-						createVNode("div", { class: "mb-4 lg:mb-5 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
+					}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-8 sm:pt-6 lg:ps-16 xl:order-1 h-full" }, [createVNode("div", null, [
+						createVNode("div", { class: "mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
 							createVNode("span", {
 								class: "rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600",
 								textContent: toDisplayString(__props.project.type_label)
@@ -91,15 +92,16 @@ var _sfc_main$1 = {
 								class: "rounded-md bg-amber-100 px-2.5 py-1 normal-case tracking-normal text-amber-600 font-medium"
 							}, " In Progress ")) : createCommentVNode("", true)
 						]),
-						createVNode("h3", { class: "mb-3 lg:mb-4 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900" }, toDisplayString(__props.project.header), 1),
+						createVNode("h3", { class: "mb-3 sm:mb-4 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900" }, toDisplayString(__props.project.header), 1),
 						createVNode("p", {
-							class: "mb-6 lg:mb-8 line-clamp-3 text-start leading-relaxed text-gray-600",
+							class: "mb-6 sm:mb-8 line-clamp-3 text-start leading-relaxed text-gray-600",
 							innerHTML: __props.project.description
 						}, null, 8, ["innerHTML"])
-					]), createVNode("div", { class: "mt-auto pt-4 flex flex-col items-start gap-3" }, [formattedDates.value ? (openBlock(), createBlock("div", {
+					]), createVNode("div", { class: "mt-auto pt-4 pb-2 flex flex-col items-start gap-3" }, [formattedDates.value ? (openBlock(), createBlock("div", {
 						key: 0,
 						class: "flex items-center gap-1 text-xs text-gray-400"
 					}, toDisplayString(formattedDates.value), 1)) : createCommentVNode("", true), createVNode(_sfc_main$2, {
+						plain: true,
 						"is-package": __props.project.is_package,
 						"project-id": __props.project.id,
 						"project-title": __props.project.header,
@@ -179,4 +181,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=LatestWork-nUJGAqDv.js.map
+//# sourceMappingURL=LatestWork-GoOV4j2Q.js.map

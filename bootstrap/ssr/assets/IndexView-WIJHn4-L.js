@@ -1,6 +1,7 @@
-import { n as _sfc_main$3, t as FadeContent_default } from "./FadeContent-BwB3jZkL.js";
+import { t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
+import { n as _sfc_main$3, t as FadeContent_default } from "./FadeContent-De5gdw3Q.js";
 import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-d87yLauo.js";
-import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
+import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, mergeProps, openBlock, ref, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, Link, router, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Components/Atoms/Pagination.vue
@@ -100,6 +101,7 @@ var _sfc_main$1 = {
 		}
 	},
 	setup(__props) {
+		const zoom = ref(false);
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(ssrRenderComponent(FadeContent_default, mergeProps({
 				blur: true,
@@ -115,20 +117,20 @@ var _sfc_main$1 = {
 						_push(`<div class="${ssrRenderClass([{
 							"md:mt-24 lg:mt-32 rounded-br-[3rem]": __props.reverse,
 							"rounded-tl-[3rem]": !__props.reverse
-						}, "bg-slate-100 p-8 sm:p-10 h-full rounded-2xl flex flex-col justify-between"])}"${_scopeId}><div class="space-y-6"${_scopeId}>`);
-						if (!__props.reverse) _push(`<div class="mb-4"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain max-h-48"${_scopeId}></div>`);
+						}, "bg-slate-100 p-8 sm:p-10 h-full rounded-2xl flex flex-col justify-between items-center text-center"])}"${_scopeId}><div class="space-y-6 flex flex-col items-center w-full"${_scopeId}>`);
+						if (!__props.reverse) _push(`<div class="mb-10 sm:mb-12 lg:mb-14 overflow-hidden rounded-2xl w-full cursor-pointer"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "w-full h-56 sm:h-64 lg:h-72 object-cover rounded-2xl transition-transform duration-500 ease-in-out"])}"${ssrRenderAttr("src", __props.project.logo_url)}${_scopeId}></div>`);
 						else _push(`<!---->`);
-						_push(`<div class="space-y-4"${_scopeId}><div class="flex items-center justify-between flex-wrap gap-2 text-xs tracking-widest uppercase"${_scopeId}><span class="inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600"${_scopeId}><!--[-->`);
+						_push(`<div class="space-y-4 flex flex-col items-center w-full"${_scopeId}><div class="flex items-center justify-center flex-wrap gap-2 text-xs tracking-widest uppercase"${_scopeId}><span class="inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex flex-wrap items-center justify-center gap-2 text-xs tracking-widest uppercase text-gray-600"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.project.role_labels, (role, index) => {
 							_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 							if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
 							else _push(`<!---->`);
 							_push(`<!--]-->`);
 						});
-						_push(`<!--]--></div></div><h3 class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3>`);
-						if (__props.project.description) _push(`<p class="line-clamp-3 text-start leading-relaxed text-gray-600 text-sm sm:text-base"${_scopeId}>${__props.project.description ?? ""}</p>`);
+						_push(`<!--]--></div></div><h3 class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3>`);
+						if (__props.project.description) _push(`<p class="line-clamp-3 text-center leading-relaxed text-gray-600 text-sm sm:text-base"${_scopeId}>${__props.project.description ?? ""}</p>`);
 						else _push(`<!---->`);
-						_push(`</div></div><div class="mt-8 pt-4"${_scopeId}>`);
+						_push(`</div></div><div class="mt-8 pt-4 flex justify-center w-full"${_scopeId}>`);
 						_push(ssrRenderComponent(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
@@ -137,41 +139,43 @@ var _sfc_main$1 = {
 							url: __props.project.project_url
 						}, null, _parent, _scopeId));
 						_push(`</div>`);
-						if (__props.reverse) _push(`<div class="mt-6"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain max-h-48"${_scopeId}></div>`);
+						if (__props.reverse) _push(`<div class="mt-10 sm:mt-12 lg:mt-14 overflow-hidden rounded-2xl w-full cursor-pointer"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "w-full h-56 sm:h-64 lg:h-72 object-cover rounded-2xl transition-transform duration-500 ease-in-out"])}"${ssrRenderAttr("src", __props.project.logo_url)}${_scopeId}></div>`);
 						else _push(`<!---->`);
 						_push(`</div>`);
 					} else return [createVNode("div", { class: [{
 						"md:mt-24 lg:mt-32 rounded-br-[3rem]": __props.reverse,
 						"rounded-tl-[3rem]": !__props.reverse
-					}, "bg-slate-100 p-8 sm:p-10 h-full rounded-2xl flex flex-col justify-between"] }, [
-						createVNode("div", { class: "space-y-6" }, [!__props.reverse ? (openBlock(), createBlock("div", {
+					}, "bg-slate-100 p-8 sm:p-10 h-full rounded-2xl flex flex-col justify-between items-center text-center"] }, [
+						createVNode("div", { class: "space-y-6 flex flex-col items-center w-full" }, [!__props.reverse ? (openBlock(), createBlock("div", {
 							key: 0,
-							class: "mb-4"
+							class: "mb-10 sm:mb-12 lg:mb-14 overflow-hidden rounded-2xl w-full cursor-pointer",
+							onMouseenter: ($event) => zoom.value = true,
+							onMouseleave: ($event) => zoom.value = false
 						}, [createVNode("img", {
 							alt: __props.project.header,
-							src: __props.project.logo_url,
-							class: "w-full h-auto object-contain max-h-48"
-						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true), createVNode("div", { class: "space-y-4" }, [
-							createVNode("div", { class: "flex items-center justify-between flex-wrap gap-2 text-xs tracking-widest uppercase" }, [createVNode("span", {
+							class: [{ "scale-110": zoom.value }, "w-full h-56 sm:h-64 lg:h-72 object-cover rounded-2xl transition-transform duration-500 ease-in-out"],
+							src: __props.project.logo_url
+						}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"])) : createCommentVNode("", true), createVNode("div", { class: "space-y-4 flex flex-col items-center w-full" }, [
+							createVNode("div", { class: "flex items-center justify-center flex-wrap gap-2 text-xs tracking-widest uppercase" }, [createVNode("span", {
 								class: "inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700",
 								textContent: toDisplayString(__props.project.type_label)
-							}, null, 8, ["textContent"]), createVNode("div", { class: "flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
+							}, null, 8, ["textContent"]), createVNode("div", { class: "flex flex-wrap items-center justify-center gap-2 text-xs tracking-widest uppercase text-gray-600" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
 								return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
 									key: 0,
 									class: "opacity-30"
 								}, " • ")) : createCommentVNode("", true)], 64);
 							}), 128))])]),
 							createVNode("h3", {
-								class: "block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display",
+								class: "block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center",
 								textContent: toDisplayString(__props.project.header)
 							}, null, 8, ["textContent"]),
 							__props.project.description ? (openBlock(), createBlock("p", {
 								key: 0,
-								class: "line-clamp-3 text-start leading-relaxed text-gray-600 text-sm sm:text-base",
+								class: "line-clamp-3 text-center leading-relaxed text-gray-600 text-sm sm:text-base",
 								innerHTML: __props.project.description
 							}, null, 8, ["innerHTML"])) : createCommentVNode("", true)
 						])]),
-						createVNode("div", { class: "mt-8 pt-4" }, [createVNode(_sfc_main$3, {
+						createVNode("div", { class: "mt-8 pt-4 flex justify-center w-full" }, [createVNode(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
 							"project-title": __props.project.header,
@@ -186,12 +190,14 @@ var _sfc_main$1 = {
 						])]),
 						__props.reverse ? (openBlock(), createBlock("div", {
 							key: 0,
-							class: "mt-6"
+							class: "mt-10 sm:mt-12 lg:mt-14 overflow-hidden rounded-2xl w-full cursor-pointer",
+							onMouseenter: ($event) => zoom.value = true,
+							onMouseleave: ($event) => zoom.value = false
 						}, [createVNode("img", {
 							alt: __props.project.header,
-							src: __props.project.logo_url,
-							class: "w-full h-auto object-contain max-h-48"
-						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true)
+							class: [{ "scale-110": zoom.value }, "w-full h-56 sm:h-64 lg:h-72 object-cover rounded-2xl transition-transform duration-500 ease-in-out"],
+							src: __props.project.logo_url
+						}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"])) : createCommentVNode("", true)
 					], 2)];
 				}),
 				_: 1
@@ -211,6 +217,10 @@ var _sfc_main = {
 	__name: "IndexView",
 	__ssrInlineRender: true,
 	props: {
+		header: {
+			type: Object,
+			default: null
+		},
 		projects: {
 			type: Object,
 			required: true
@@ -243,7 +253,19 @@ var _sfc_main = {
 			_push(ssrRenderComponent(_sfc_main$4, null, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
-						_push(`<section class="relative mx-auto max-w-6xl space-y-8 px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10 md:space-y-16 lg:pb-32"${_scopeId}><div class="mt-10 flex flex-wrap justify-center gap-3"${_scopeId}><button class="${ssrRenderClass([{
+						_push(`<section class="relative mx-auto max-w-6xl space-y-8 px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10 md:space-y-16 lg:pb-32"${_scopeId}>`);
+						if (__props.header) {
+							_push(`<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 w-full pt-8 sm:pt-10"${_scopeId}>`);
+							_push(ssrRenderComponent(Subtitle_default, { class: "text-start mt-2 sm:mt-3" }, {
+								default: withCtx((_, _push, _parent, _scopeId) => {
+									if (_push) _push(`${ssrInterpolate(__props.header.title)}`);
+									else return [createTextVNode(toDisplayString(__props.header.title), 1)];
+								}),
+								_: 1
+							}, _parent, _scopeId));
+							_push(`<p class="text-lg lg:text-xl text-start text-gray-700 max-w-xl lg:max-w-2xl"${_scopeId}>${__props.header.description ?? ""}</p></div>`);
+						} else _push(`<!---->`);
+						_push(`<div class="mt-10 flex flex-wrap justify-start gap-3"${_scopeId}><button class="${ssrRenderClass([{
 							"bg-primary-700 text-white shadow-lg": !__props.selectedRole,
 							"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedRole
 						}, "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"])}"${_scopeId}>${ssrInterpolate(__props.translations.projects.all)}</button><!--[-->`);
@@ -270,7 +292,17 @@ var _sfc_main = {
 						}, null, _parent, _scopeId));
 						_push(`</section>`);
 					} else return [createVNode("section", { class: "relative mx-auto max-w-6xl space-y-8 px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10 md:space-y-16 lg:pb-32" }, [
-						createVNode("div", { class: "mt-10 flex flex-wrap justify-center gap-3" }, [createVNode("button", {
+						__props.header ? (openBlock(), createBlock("div", {
+							key: 0,
+							class: "flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 w-full pt-8 sm:pt-10"
+						}, [createVNode(Subtitle_default, { class: "text-start mt-2 sm:mt-3" }, {
+							default: withCtx(() => [createTextVNode(toDisplayString(__props.header.title), 1)]),
+							_: 1
+						}), createVNode("p", {
+							class: "text-lg lg:text-xl text-start text-gray-700 max-w-xl lg:max-w-2xl",
+							innerHTML: __props.header.description
+						}, null, 8, ["innerHTML"])])) : createCommentVNode("", true),
+						createVNode("div", { class: "mt-10 flex flex-wrap justify-start gap-3" }, [createVNode("button", {
 							class: [{
 								"bg-primary-700 text-white shadow-lg": !__props.selectedRole,
 								"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedRole
@@ -321,4 +353,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-BBuh58Zh.js.map
+//# sourceMappingURL=IndexView-WIJHn4-L.js.map

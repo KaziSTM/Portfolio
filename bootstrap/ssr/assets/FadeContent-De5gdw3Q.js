@@ -25,6 +25,14 @@ var _sfc_main = {
 		translations: {
 			type: Object,
 			required: true
+		},
+		hasBorder: {
+			type: Boolean,
+			default: true
+		},
+		plain: {
+			type: Boolean,
+			default: false
 		}
 	},
 	setup(__props) {
@@ -38,13 +46,13 @@ var _sfc_main = {
 			_push(ssrRenderComponent(unref(Link), {
 				"aria-label": `${label.value}: ${__props.projectTitle}`,
 				href: __props.url,
-				class: "group flex items-center space-x-2 text-sm font-medium text-primary-700",
+				class: [__props.plain ? "group inline-flex items-center gap-2 text-sm font-semibold text-primary-700 transition-all duration-300 hover:text-primary-800" : "group inline-flex items-center gap-2 rounded-full bg-secondary-50 px-5 py-2.5 text-sm font-semibold text-primary-700 transition-all duration-300 hover:bg-secondary-100 hover:scale-[1.02] active:scale-[0.98]", !__props.plain && __props.hasBorder ? "shadow-xs border border-secondary-200/60 hover:shadow-md" : ""],
 				target: "_blank"
 			}, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) _push(`<span${_scopeId}>${ssrInterpolate(label.value)}</span><svg class="h-4 w-4 transform transition-transform duration-300 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"${_scopeId}><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"${_scopeId}></path></svg>`);
+					if (_push) _push(`<span${_scopeId}>${ssrInterpolate(label.value)}</span><svg class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"${_scopeId}><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"${_scopeId}></path></svg>`);
 					else return [createVNode("span", { textContent: toDisplayString(label.value) }, null, 8, ["textContent"]), (openBlock(), createBlock("svg", {
-						class: "h-4 w-4 transform transition-transform duration-300 group-hover:-translate-y-0.5",
+						class: "h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
 						fill: "none",
 						stroke: "currentColor",
 						viewBox: "0 0 24 24"
@@ -133,4 +141,4 @@ var FadeContent_default = FadeContent_vue_vue_type_script_setup_true_lang_defaul
 //#endregion
 export { _sfc_main as n, FadeContent_default as t };
 
-//# sourceMappingURL=FadeContent-BwB3jZkL.js.map
+//# sourceMappingURL=FadeContent-De5gdw3Q.js.map
