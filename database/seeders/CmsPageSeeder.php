@@ -589,6 +589,39 @@ class CmsPageSeeder extends Seeder
                     ],
                 ],
             ],
+
+            [
+                'key' => 'projects',
+                'name' => [
+                    'en' => 'Projects Page',
+                    'fr' => 'Page Projets',
+                    'ar' => 'صفحة المشاريع',
+                ],
+                'sections' => [
+                    [
+                        'key' => 'header',
+                        'label' => [
+                            'en' => 'Page Header',
+                            'fr' => 'En-tête de la page',
+                            'ar' => 'عنوان الصفحة',
+                        ],
+                        'data' => [
+                            'en' => [
+                                'title' => 'Case Studies',
+                                'description' => 'Dive into my diverse range of projects, showcasing my expertise in software development, design, and dedication to delivering exceptional results.',
+                            ],
+                            'fr' => [
+                                'title' => 'Études de cas',
+                                'description' => 'Plongez dans mes divers projets, illustrant mon expertise en développement logiciel, en design et mon engagement à fournir des résultats exceptionnels.',
+                            ],
+                            'ar' => [
+                                'title' => 'دراسات الحالة',
+                                'description' => 'غوص في مجموعة مشاريعي المتنوعة، التي تعرض خبرتي في تطوير البرمجيات والتصميم والالتزام بتقديم نتائج استثنائية.',
+                            ],
+                        ],
+                    ],
+                ],
+            ],
         ];
     }
 }

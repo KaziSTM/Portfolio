@@ -7,6 +7,7 @@ use App\Enums\ProjectRole;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Projects\ProjectsListingResource;
 use App\Models\Project;
+use App\Support\Cms;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -29,6 +30,11 @@ class ProjectsListController extends Controller
             ->paginate(6);
 
         return Inertia::render('Projects/IndexView', [
+            'header' => Cms::section('projects', 'header', [
+                'title' => 'Case Studies',
+                'description' => 'Dive into my diverse range of projects, showcasing my expertise in software development, design, and dedication to delivering exceptional results.',
+            ]),
+
             'selectedRole' => $role,
 
             'roles' => collect(ProjectRole::cases())
