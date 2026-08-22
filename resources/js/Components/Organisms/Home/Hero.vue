@@ -1,9 +1,10 @@
 <script setup>
-import { Link, usePage } from '@inertiajs/vue3'
+import { usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import Section from '@/Components/Atoms/Section.vue'
 import Title from '@/Components/Atoms/Title.vue'
 import BaseButton from '@/Components/Atoms/BaseButton.vue'
+import SpecularButton from '@/Components/Atoms/SpecularButton.vue'
 import Underline from '@/Components/Icons/Underline.vue'
 import HeroArrow from '../../Icons/HeroArrow.vue'
 
@@ -57,18 +58,33 @@ const socials = computed(() => page.props.socials)
                         ></p>
 
                         <div
-                            class="mt-8 flex flex-col sm:flex-row items-center sm:items-start sm:justify-center lg:justify-start gap-4"
+                            class="mt-8 flex flex-col sm:flex-row items-center sm:justify-center lg:justify-start gap-4"
                         >
-                            <Link
-                                class="bg-secondary-950 py-2 px-6 border border-secondary-200 rounded-2xl transition-colors focus:outline-hidden hover:bg-primary-800 duration-75 hover:text-secondary-50"
-                                href="/contact"
-                            >
-                                <span
-                                    class="capitalize font-semibold text-secondary-100"
-                                    v-text="heroSection.hero_cta_label"
+                            <a href="/contact">
+                                <SpecularButton
+                                    size="md"
+                                    :radius="14"
+                                    tint="#030712"
+                                    :tint-opacity="1"
+                                    :blur="0"
+                                    text-color="#f3f4f6"
+                                    line-color="#21e0c0"
+                                    base-color="#0c635a"
+                                    :intensity="1.5"
+                                    :shine-size="12"
+                                    :shine-fade="38"
+                                    :thickness="1"
+                                    :speed="0.35"
+                                    follow-mouse
+                                    :proximity="280"
+                                    :auto-animate="false"
                                 >
-                                </span>
-                            </Link>
+                                    <span
+                                        class="capitalize font-semibold"
+                                        v-text="heroSection.hero_cta_label"
+                                    />
+                                </SpecularButton>
+                            </a>
 
                             <div class="flex justify-center items-center gap-4">
                                 <BaseButton
