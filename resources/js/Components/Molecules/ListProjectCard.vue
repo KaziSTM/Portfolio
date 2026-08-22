@@ -32,10 +32,10 @@ defineProps({
             }"
             class="bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"
         >
-            <div class="grid gap-10">
+            <div class="grid gap-6">
                 <!--       IMAGE (TOP OR BOTTOM) -->
 
-                <div v-if="!reverse" class="mb-2">
+                <div v-if="!reverse" class="mb-1">
                     <img
                         :alt="project.header"
                         :src="project.logo_url"
@@ -44,11 +44,11 @@ defineProps({
                 </div>
 
                 <!--           CONTENT -->
-                <div class="space-y-10">
-                    <div class="flex items-center justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between flex-wrap gap-2">
                         <!--                     TYPE -->
                         <span
-                            class="inline-block rounded border border-gray-400 px-2 py-1 text-[10px] font-medium tracking-widest uppercase text-gray-700"
+                            class="inline-block rounded border border-gray-400 px-2 py-0.5 text-[10px] font-medium tracking-widest uppercase text-gray-700"
                             v-text="project.type_label"
                         ></span>
 
@@ -73,7 +73,7 @@ defineProps({
 
                     <!--                TITLE-->
                     <span
-                        class="text-2xl font-semibold text-gray-900 leading-tight max-w-xs"
+                        class="block text-xl font-semibold text-gray-900 leading-snug"
                         v-text="project.header"
                     ></span>
                 </div>

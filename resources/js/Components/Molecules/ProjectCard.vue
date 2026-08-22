@@ -82,12 +82,12 @@ const formattedDates = computed(() => {
             </div>
 
             <!-- Content -->
-            <div class="order-2 grid gap-5 p-4 sm:pe-4 sm:ps-16 sm:pb-24 sm:pt-8 xl:order-1">
+            <div class="order-2 flex flex-col justify-center p-4 sm:pe-4 sm:ps-12 sm:pb-12 sm:pt-6 lg:ps-16 xl:order-1">
                 <!-- Meta -->
-                <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest">
+                <div class="mb-2 sm:mb-2.5 flex flex-wrap items-center gap-2.5 text-xs uppercase tracking-widest">
                     <!-- Type -->
                     <span
-                        class="rounded-md border border-gray-300 px-2 py-1 font-medium text-gray-600"
+                        class="rounded-md border border-gray-300 px-2 py-0.5 font-medium text-gray-600"
                         v-text="project.type_label"
                     ></span>
 
@@ -110,25 +110,25 @@ const formattedDates = computed(() => {
                     <!-- Progress -->
                     <span
                         v-if="project.is_in_progress"
-                        class="rounded-md bg-amber-100 px-2 py-1 normal-case tracking-normal text-amber-600"
+                        class="rounded-md bg-amber-100 px-2 py-0.5 normal-case tracking-normal text-amber-600 font-medium"
                     >
                         In Progress
                     </span>
                 </div>
 
                 <!-- Title -->
-                <h3 class="text-start text-xl font-semibold leading-snug lg:text-2xl font-display">
+                <h3 class="mb-2 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900">
                     {{ project.header }}
                 </h3>
 
                 <!-- Description -->
                 <p
-                    class="line-clamp-3 text-start leading-relaxed text-gray-600"
+                    class="mb-4 sm:mb-5 line-clamp-3 text-start leading-relaxed text-gray-600"
                     v-html="project.description"
                 />
 
                 <!-- Footer -->
-                <div class="mt-2 flex flex-col items-start gap-4">
+                <div class="flex flex-col items-start gap-3">
                     <!-- Dates -->
                     <div
                         v-if="formattedDates"
