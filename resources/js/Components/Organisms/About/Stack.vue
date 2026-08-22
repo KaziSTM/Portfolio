@@ -7,7 +7,7 @@ defineProps({
         required: true,
     },
 })
-const portrait_url = '/assets/images/portrait-3.webp'
+const portrait_url = '/assets/images/portrait-4.webp'
 </script>
 <template>
     <section class="container mx-auto text-start pb-6 mt-16 md:mt-0">

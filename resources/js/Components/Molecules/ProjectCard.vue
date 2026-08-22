@@ -50,15 +50,15 @@ const formattedDates = computed(() => {
         <article
             class="relative grid max-w-6xl grid-cols-1 gap-4 rounded-b-xl bg-slate-100 px-4 py-0 pt-4 md:h-140 md:pt-8 lg:gap-16 lg:px-0 lg:pt-14 xl:grid-cols-2 xl:pt-16"
         >
-            <!-- Background -->
-            <img
-                :src="'/assets/svg/home-hero-gradient.svg'"
-                alt="Background Gradient"
-                class="absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block"
-                height="794"
-                loading="lazy"
-                width="1528"
-            />
+            <!--            &lt;!&ndash; Background &ndash;&gt;-->
+            <!--            <img-->
+            <!--                :src="'/assets/svg/home-hero-gradient.svg'"-->
+            <!--                alt="Background Gradient"-->
+            <!--                class="absolute -top-10 -start-120 hidden rotate-180 rtl:end-120 rtl:start-auto rtl:scale-x-[-1] lg:block"-->
+            <!--                height="794"-->
+            <!--                loading="lazy"-->
+            <!--                width="1528"-->
+            <!--            />-->
 
             <!-- Image -->
             <div
