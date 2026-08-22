@@ -115,17 +115,17 @@ var _sfc_main$1 = {
 						_push(`<div class="${ssrRenderClass([{
 							"md:mt-24 lg:mt-32 rounded-br-[3rem]": __props.reverse,
 							"rounded-tl-[3rem]": !__props.reverse
-						}, "bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"])}"${_scopeId}><div class="grid gap-6"${_scopeId}>`);
-						if (!__props.reverse) _push(`<div class="mb-1"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain"${_scopeId}></div>`);
+						}, "bg-slate-100 p-8 sm:p-10 h-full rounded-2xl flex flex-col justify-between"])}"${_scopeId}><div class="space-y-6"${_scopeId}>`);
+						if (!__props.reverse) _push(`<div class="mb-4"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain max-h-48"${_scopeId}></div>`);
 						else _push(`<!---->`);
-						_push(`<div class="space-y-3"${_scopeId}><div class="flex items-center justify-between flex-wrap gap-2"${_scopeId}><span class="inline-block rounded border border-gray-400 px-2 py-0.5 text-[10px] font-medium tracking-widest uppercase text-gray-700"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600"${_scopeId}><!--[-->`);
+						_push(`<div class="space-y-4"${_scopeId}><div class="flex items-center justify-between flex-wrap gap-2 text-xs tracking-widest uppercase"${_scopeId}><span class="inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.project.role_labels, (role, index) => {
 							_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 							if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
 							else _push(`<!---->`);
 							_push(`<!--]-->`);
 						});
-						_push(`<!--]--></div></div><span class="block text-xl font-semibold text-gray-900 leading-snug"${_scopeId}>${ssrInterpolate(__props.project.header)}</span></div>`);
+						_push(`<!--]--></div></div><h3 class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3></div></div><div class="mt-8 pt-4"${_scopeId}>`);
 						_push(ssrRenderComponent(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
@@ -133,34 +133,34 @@ var _sfc_main$1 = {
 							translations: __props.translations,
 							url: __props.project.project_url
 						}, null, _parent, _scopeId));
-						if (__props.reverse) _push(`<div class="mt-2"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain"${_scopeId}></div>`);
+						_push(`</div>`);
+						if (__props.reverse) _push(`<div class="mt-6"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)}${ssrRenderAttr("src", __props.project.logo_url)} class="w-full h-auto object-contain max-h-48"${_scopeId}></div>`);
 						else _push(`<!---->`);
-						_push(`</div></div>`);
+						_push(`</div>`);
 					} else return [createVNode("div", { class: [{
 						"md:mt-24 lg:mt-32 rounded-br-[3rem]": __props.reverse,
 						"rounded-tl-[3rem]": !__props.reverse
-					}, "bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"] }, [createVNode("div", { class: "grid gap-6" }, [
-						!__props.reverse ? (openBlock(), createBlock("div", {
+					}, "bg-slate-100 p-8 sm:p-10 h-full rounded-2xl flex flex-col justify-between"] }, [
+						createVNode("div", { class: "space-y-6" }, [!__props.reverse ? (openBlock(), createBlock("div", {
 							key: 0,
-							class: "mb-1"
+							class: "mb-4"
 						}, [createVNode("img", {
 							alt: __props.project.header,
 							src: __props.project.logo_url,
-							class: "w-full h-auto object-contain"
-						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true),
-						createVNode("div", { class: "space-y-3" }, [createVNode("div", { class: "flex items-center justify-between flex-wrap gap-2" }, [createVNode("span", {
-							class: "inline-block rounded border border-gray-400 px-2 py-0.5 text-[10px] font-medium tracking-widest uppercase text-gray-700",
+							class: "w-full h-auto object-contain max-h-48"
+						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true), createVNode("div", { class: "space-y-4" }, [createVNode("div", { class: "flex items-center justify-between flex-wrap gap-2 text-xs tracking-widest uppercase" }, [createVNode("span", {
+							class: "inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700",
 							textContent: toDisplayString(__props.project.type_label)
 						}, null, 8, ["textContent"]), createVNode("div", { class: "flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
 							return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
 								key: 0,
 								class: "opacity-30"
 							}, " • ")) : createCommentVNode("", true)], 64);
-						}), 128))])]), createVNode("span", {
-							class: "block text-xl font-semibold text-gray-900 leading-snug",
+						}), 128))])]), createVNode("h3", {
+							class: "block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display",
 							textContent: toDisplayString(__props.project.header)
-						}, null, 8, ["textContent"])]),
-						createVNode(_sfc_main$3, {
+						}, null, 8, ["textContent"])])]),
+						createVNode("div", { class: "mt-8 pt-4" }, [createVNode(_sfc_main$3, {
 							"is-package": __props.project.is_package,
 							"project-id": __props.project.id,
 							"project-title": __props.project.header,
@@ -172,16 +172,16 @@ var _sfc_main$1 = {
 							"project-title",
 							"translations",
 							"url"
-						]),
+						])]),
 						__props.reverse ? (openBlock(), createBlock("div", {
-							key: 1,
-							class: "mt-2"
+							key: 0,
+							class: "mt-6"
 						}, [createVNode("img", {
 							alt: __props.project.header,
 							src: __props.project.logo_url,
-							class: "w-full h-auto object-contain"
+							class: "w-full h-auto object-contain max-h-48"
 						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true)
-					])], 2)];
+					], 2)];
 				}),
 				_: 1
 			}, _parent));
@@ -310,4 +310,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-D0fwjdbr.js.map
+//# sourceMappingURL=IndexView-DRF0Uo7C.js.map
