@@ -30,29 +30,28 @@ defineProps({
                 'md:mt-24 lg:mt-32 rounded-br-[3rem]': reverse,
                 'rounded-tl-[3rem]': !reverse,
             }"
-            class="bg-slate-100 p-8 md:py-10 md:px-16 h-full rounded-2xl"
+            class="bg-slate-100 p-8 sm:p-10 h-full rounded-2xl flex flex-col justify-between"
         >
-            <div class="grid gap-6">
-                <!--       IMAGE (TOP OR BOTTOM) -->
-
-                <div v-if="!reverse" class="mb-1">
+            <div class="space-y-6">
+                <!--       IMAGE (TOP) -->
+                <div v-if="!reverse" class="mb-4">
                     <img
                         :alt="project.header"
                         :src="project.logo_url"
-                        class="w-full h-auto object-contain"
+                        class="w-full h-auto object-contain max-h-48"
                     />
                 </div>
 
                 <!--           CONTENT -->
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between flex-wrap gap-2">
-                        <!--                     TYPE -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between flex-wrap gap-2 text-xs tracking-widest uppercase">
+                        <!-- TYPE -->
                         <span
-                            class="inline-block rounded border border-gray-400 px-2 py-0.5 text-[10px] font-medium tracking-widest uppercase text-gray-700"
+                            class="inline-block rounded-md border border-gray-400 px-2.5 py-1 text-[10px] font-medium text-gray-700"
                             v-text="project.type_label"
                         ></span>
 
-                        <!--                    ROLES -->
+                        <!-- ROLES -->
                         <div
                             class="flex flex-wrap gap-2 text-xs tracking-widest uppercase text-gray-600"
                         >
@@ -71,16 +70,16 @@ defineProps({
                         </div>
                     </div>
 
-                    <!--                TITLE-->
-                    <span
-                        class="block text-xl font-semibold text-gray-900 leading-snug"
+                    <!-- TITLE -->
+                    <h3
+                        class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display"
                         v-text="project.header"
-                    ></span>
+                    ></h3>
                 </div>
+            </div>
 
-                <!--            FOOTER -->
-
-                <!-- CTA -->
+            <!-- FOOTER / CTA -->
+            <div class="mt-8 pt-4">
                 <Cta
                     :is-package="project.is_package"
                     :project-id="project.id"
@@ -88,16 +87,15 @@ defineProps({
                     :translations="translations"
                     :url="project.project_url"
                 />
+            </div>
 
-                <!--             IMAGE (BOTTOM ON REVERSED)-->
-
-                <div v-if="reverse" class="mt-2">
-                    <img
-                        :alt="project.header"
-                        :src="project.logo_url"
-                        class="w-full h-auto object-contain"
-                    />
-                </div>
+            <!-- IMAGE (BOTTOM ON REVERSED) -->
+            <div v-if="reverse" class="mt-6">
+                <img
+                    :alt="project.header"
+                    :src="project.logo_url"
+                    class="w-full h-auto object-contain max-h-48"
+                />
             </div>
         </div>
     </FadeContent>
