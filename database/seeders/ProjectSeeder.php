@@ -68,9 +68,9 @@ class ProjectSeeder extends Seeder
                     'ar' => 'منصة مدعومة بالذكاء الاصطناعي لأتمتة الأعمال وفهم البيانات بشكل سياقي.',
                 ],
                 'description' => [
-                    'en' => 'Enterprise AI platform integrating LLMs, RAG pipelines, and automation.',
-                    'fr' => 'Plateforme IA entreprise intégrant LLM, pipelines RAG et automatisation.',
-                    'ar' => 'منصة ذكاء اصطناعي للمؤسسات تدمج نماذج اللغة الكبيرة وأنظمة RAG والأتمتة.',
+                    'en' => 'Enterprise AI platform integrating LLMs, custom RAG pipelines, vector search, and automated business workflow agents.',
+                    'fr' => 'Plateforme IA entreprise intégrant des modèles LLM, des pipelines RAG sur mesure et des agents d’automatisation métier.',
+                    'ar' => 'منصة ذكاء اصطناعي للمؤسسات تدمج نماذج اللغة الكبيرة وأنظمة RAG المخصصة وكلاء أتمتة العمليات.',
                 ],
                 'link' => 'https://kheops.ai',
                 'main_tags' => [
@@ -236,9 +236,9 @@ Kheops هي منصة ذكاء اصطناعي موجهة للمؤسسات، ته�
                     'ar' => 'نظام حجز مرن يدعم تعدد المستخدمين.',
                 ],
                 'description' => [
-                    'en' => 'Advanced booking platform with shared capacity logic.',
-                    'fr' => 'Plateforme de réservation avancée avec gestion de capacité partagée.',
-                    'ar' => 'منصة حجز متقدمة تعتمد على منطق السعة المشتركة.',
+                    'en' => 'Advanced capacity-driven booking engine designed for shared event spaces with real-time concurrency control and atomic validations.',
+                    'fr' => 'Moteur de réservation basé sur la capacité pour espaces partagés avec contrôle de concurrence en temps réel et validations atomiques.',
+                    'ar' => 'محرك حجز متقدم يعتمد على إدارة السعة الديناميكية للمساحات المشتركة مع تحكم كامل في التزامن في الوقت الفعلي.',
                 ],
                 'link' => 'https://reservation.gcco.dz/',
                 'main_tags' => [
@@ -406,9 +406,9 @@ Ce projet met en évidence l’importance de la **gestion de la concurrence et d
                     'ar' => 'منصة ذكاء اصطناعي لتنظيم وتحويل قصص الحياة.',
                 ],
                 'description' => [
-                    'en' => 'Dynamic data collection and processing system.',
-                    'fr' => 'Système dynamique de collecte et de traitement des données.',
-                    'ar' => 'نظام ديناميكي لجمع ومعالجة البيانات.',
+                    'en' => 'Healthcare AI platform transforming unstructured personal interviews and audio recordings into structured digital life stories.',
+                    'fr' => 'Plateforme IA de santé transformant les récits oraux et enregistrements audio en histoires de vie numériques structurées.',
+                    'ar' => 'منصة ذكاء اصطناعي لمؤسسات الرعاية تحول التسجيلات والمقابلة الشفهية إلى قصص حياة رقمية منظمة ومفيدة.',
                 ],
                 'link' => 'https://passmemo.fr/fr',
                 'main_tags' => [
@@ -579,9 +579,9 @@ PASSMEMO هي منصة ذكاء اصطناعي موجهة لمؤسسات الر�
                     'ar' => 'منصة ERP متكاملة مع نظام تهيئة وتشغيل لمتاجر التجارة الإلكترونية.',
                 ],
                 'description' => [
-                    'en' => 'Comprehensive ERP system combined with automated onboarding and provisioning for e-commerce businesses.',
-                    'fr' => 'Système ERP complet combiné à une plateforme d’onboarding et de provisioning automatisée.',
-                    'ar' => 'نظام ERP متكامل مع منصة تهيئة وإنشاء تلقائي لمتاجر التجارة الإلكترونية.',
+                    'en' => 'All-in-one multi-tenant SaaS ERP combining modular inventory, orders, and CRM with an automated store provisioning engine.',
+                    'fr' => 'Solution ERP SaaS multi-tenant tout-en-un associant gestion des stocks, commandes, CRM et provisioning automatique de magasins.',
+                    'ar' => 'نظام ERP SaaS متكامل متعدد المستأجرين يجمع بين إدارة المخزون، الطلبات، والعملاء مع محرك تهيئة تلقائي إطلاق المتاجر.',
                 ],
                 'link' => 'https://myecom.dev/fr',
                 'main_tags' => [
@@ -758,9 +758,9 @@ MyEcom هي منصة SaaS متكاملة تهدف إلى **توحيد وأتمت
                     'ar' => 'صفحة هبوط حديثة لخدمات التدقيق والشهادات الحلال.',
                 ],
                 'description' => [
-                    'en' => 'Corporate landing page focused on clarity, trust, and conversion.',
-                    'fr' => 'Site corporate axé sur la clarté, la confiance et la conversion.',
-                    'ar' => 'موقع تعريفي يركز على الوضوح وبناء الثقة وتحقيق التحويل.',
+                    'en' => 'Corporate platform designed for international halal certification and audit services, focused on content hierarchy, trust, and conversion.',
+                    'fr' => 'Plateforme corporate axée sur la certification et l’audit halal international, optimisée pour la clarté, la confiance et la conversion.',
+                    'ar' => 'منصة تعريفية واحترافية لعرض خدمات التدقيق والشهادات الحلال الدولية مع تركيز عالي على الوضوح وبناء الثقة وتحقيق التحويل.',
                 ],
                 'link' => 'https://halal-audit.com/en/',
                 'main_tags' => [
@@ -927,9 +927,9 @@ Halal Audit هو موقع تعريفي تم تطويره لعرض **خدمات �
                     'ar' => 'مجموعة بيانات جغرافية جزائرية موحدة لتطبيقات لارافيل.',
                 ],
                 'description' => [
-                    'en' => 'Laravel package providing structured wilaya and commune data with a clean API for consistent location handling.',
-                    'fr' => 'Package Laravel fournissant des données structurées des wilayas et communes avec une API propre pour une gestion cohérente des localisations.',
-                    'ar' => 'حزمة لارافيل توفر بيانات منظمة للولايات والبلديات مع واجهة برمجية نظيفة لضمان توحيد التعامل مع المواقع.',
+                    'en' => 'Standardized open-source Laravel package providing normalized Algerian wilaya and commune data, eloquent relationships, and query helpers.',
+                    'fr' => 'Package Laravel open-source fournissant des données structurées des wilayas et communes d’Algérie avec des helpers fluides et multilingues.',
+                    'ar' => 'حزمة لارافيل مفتوحة المصدر توفر قاعدة بيانات جغرافية جزائرية موحدة للولايات والبلديات مع واجهة برمجية سريعة ودعم متعدد اللغات.',
                 ],
                 'link' => 'https://github.com/KaziSTM/algeria-geo',
                 'main_tags' => [
@@ -1087,7 +1087,11 @@ Algeria Geo هي حزمة Laravel تهدف إلى توفير **بيانات جغ
                 'slug' => Str::slug('Subscriptions Package'),
                 'name' => 'Laravel Subscriptions',
                 'header' => 'Flexible subscription engine with feature-based limitations.',
-                'description' => 'Custom Laravel subscription system supporting modular features, limitations, and scalable SaaS billing logic.',
+                'description' => [
+                    'en' => 'Modular SaaS subscription engine for Laravel supporting feature-based limitations, period resets, and flexible billing logic.',
+                    'fr' => 'Moteur d’abonnement SaaS modulaire pour Laravel gérant les limitations de fonctionnalités, la réinitialisation des périodes et la facturation.',
+                    'ar' => 'محرك اشتراكات مرن لتطبيقات SaaS في لارافيل يوفر إدارة الباقات، القيود الديناميكية للميزات، وبنية قابلة للتوسع.',
+                ],
                 'link' => 'https://github.com/KaziSTM/subscriptions',
                 'main_tags' => [
                     ProjectRole::BACKEND,
@@ -1124,9 +1128,9 @@ Designed to support complex billing logic while remaining extensible and develop
                     'ar' => 'منصة موحدة لدمج خدمات التوصيل في الجزائر.',
                 ],
                 'description' => [
-                    'en' => 'Platform and SDK ecosystem enabling integration with multiple delivery providers through a unified API.',
-                    'fr' => 'Plateforme et SDK permettant d’intégrer plusieurs services de livraison عبر une API unifiée.',
-                    'ar' => 'منصة وSDK لدمج عدة مزودي توصيل عبر واجهة API موحدة.',
+                    'en' => 'Logistics integration layer and SDK standardizing Algerian delivery carriers behind a unified, driver-based API interface.',
+                    'fr' => 'Moteur d’intégration logistique et SDK unifiant les API des transporteurs algériens sous une interface basée sur des drivers.',
+                    'ar' => 'منصة وSDK لدمج خدمات التوصيل في الجزائر عبر واجهة برمجية موحدة ونظام Drivers لتبسيط التتبع وإنشاء الشحنات.',
                 ],
                 'link' => 'https://github.com/KaziSTM/vargo',
                 'main_tags' => [
