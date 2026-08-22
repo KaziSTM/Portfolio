@@ -1,18 +1,33 @@
 <script setup>
-import { ref } from 'vue'
+import { computed } from 'vue'
+import LogoLoop from '@/Components/Atoms/LogoLoop.vue'
 
-defineProps({
+const props = defineProps({
     companiesSection: {
         type: Object,
         required: true,
     },
 })
 
-const hoveredCompany = ref(null)
+// Map companies data into LogoLoop's LogoItem[] format.
+// We duplicate the list several times so that with a small number of
+// logos the marquee looks dense and the loop-around is not obvious.
+const LOGO_REPEAT = 6
+const companyLogos = computed(() => {
+    const mapped = props.companiesSection.companies.data.map((company) => ({
+        src: company.logo,
+        alt: company.name,
+        href: company.website,
+        title: company.name,
+        height: 28,
+        width: 28,
+    }))
+    return Array.from({ length: LOGO_REPEAT }, () => mapped).flat()
+})
 </script>
 
 <template>
-    <section class="mb-16 mt-12 bg-slate-100 p-4 sm:p-6 lg:p-8">
+    <section class="mb-16 mt-12 bg-slate-100 p-4 pb-6 sm:p-6 sm:pb-8 lg:p-8 lg:pb-10">
         <div class="container mx-auto text-center lg:text-start">
             <!-- Header -->
             <div class="relative flex items-start justify-center lg:justify-start">
@@ -41,40 +56,20 @@ const hoveredCompany = ref(null)
                 />
             </div>
 
-            <!-- Grid -->
-            <div
-                class="grid grid-cols-2 gap-2 px-0 py-6 sm:grid-cols-3 sm:gap-3 sm:px-4 sm:py-8 md:grid-cols-4 lg:grid-cols-5 lg:px-8 lg:py-10 xl:py-14"
-            >
-                <a
-                    v-for="company in companiesSection.companies.data"
-                    :key="company.id"
-                    :href="company.website"
-                    class="group flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/60 px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md sm:flex-row sm:px-4 sm:py-4 lg:px-6"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    @mouseenter="hoveredCompany = company.id"
-                    @mouseleave="hoveredCompany = null"
-                >
-                    <img
-                        :alt="company.name"
-                        :class="{
-                            'scale-110': hoveredCompany === company.id,
-                            'group-hover:scale-110': hoveredCompany !== company.id,
-                        }"
-                        :src="company.logo"
-                        class="h-7 w-7 object-contain transition-transform duration-300 ease-in-out sm:h-9 sm:w-9 lg:h-10 lg:w-10"
-                        decoding="async"
-                        height="50"
-                        loading="lazy"
-                        width="50"
-                    />
-
-                    <h2
-                        class="text-center text-xs font-semibold leading-tight text-slate-900 sm:text-sm lg:text-base"
-                    >
-                        {{ company.name }}
-                    </h2>
-                </a>
+            <!-- Logo Loop -->
+            <div class="mt-8 mb-2 sm:mt-10 sm:mb-4 lg:mt-12 lg:mb-6">
+                <LogoLoop
+                    :logos="companyLogos"
+                    :speed="40"
+                    direction="left"
+                    :logo-height="28"
+                    :gap="64"
+                    :hover-speed="15"
+                    :fade-out="true"
+                    fade-out-color="#f1f5f9"
+                    :scale-on-hover="true"
+                    aria-label="Companies I've worked with"
+                />
             </div>
         </div>
     </section>
