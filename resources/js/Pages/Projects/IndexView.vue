@@ -4,9 +4,14 @@ import { Head, router } from '@inertiajs/vue3'
 import AppLayout from '@/Components/Layouts/AppLayout.vue'
 import Pagination from '@/Components/Atoms/Pagination.vue'
 import ListProjectCard from '@/Components/Molecules/ListProjectCard.vue'
+import Subtitle from '@/Components/Atoms/Subtitle.vue'
 import useGetTitle from '@/Composables/useGetTitle.js'
 
 defineProps({
+    header: {
+        type: Object,
+        default: null,
+    },
     projects: {
         type: Object,
         required: true,
@@ -49,8 +54,22 @@ function setRole(role = null) {
         <section
             class="relative mx-auto max-w-6xl space-y-8 px-4 pb-24 pt-8 sm:px-6 sm:pb-28 sm:pt-10 md:space-y-16 lg:pb-32"
         >
+            <!-- Header -->
+            <div
+                v-if="header"
+                class="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 w-full pt-8 sm:pt-10"
+            >
+                <Subtitle class="text-start mt-2 sm:mt-3">
+                    {{ header.title }}
+                </Subtitle>
+
+                <p
+                    class="text-lg lg:text-xl text-start text-gray-700 max-w-xl lg:max-w-2xl"
+                    v-html="header.description"
+                ></p>
+            </div>
             <!-- Filters -->
-            <div class="mt-10 flex flex-wrap justify-center gap-3">
+            <div class="mt-10 flex flex-wrap justify-start gap-3">
                 <button
                     :class="{
                         'bg-primary-700 text-white shadow-lg': !selectedRole,

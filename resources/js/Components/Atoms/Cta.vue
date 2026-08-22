@@ -24,6 +24,14 @@ const props = defineProps({
         type: Object,
         required: true,
     },
+    hasBorder: {
+        type: Boolean,
+        default: true,
+    },
+    plain: {
+        type: Boolean,
+        default: false,
+    },
 })
 
 const page = usePage()
@@ -38,13 +46,18 @@ const label = computed(() => {
         <Link
             :aria-label="`${label}: ${projectTitle}`"
             :href="url"
-            class="group flex items-center space-x-2 text-sm font-medium text-primary-700"
+            :class="[
+                plain
+                    ? 'group inline-flex items-center gap-2 text-sm font-semibold text-primary-700 transition-all duration-300 hover:text-primary-800'
+                    : 'group inline-flex items-center gap-2 rounded-full bg-secondary-50 px-5 py-2.5 text-sm font-semibold text-primary-700 transition-all duration-300 hover:bg-secondary-100 hover:scale-[1.02] active:scale-[0.98]',
+                !plain && hasBorder ? 'shadow-xs border border-secondary-200/60 hover:shadow-md' : ''
+            ]"
             target="_blank"
         >
             <span v-text="label"></span>
 
             <svg
-                class="h-4 w-4 transform transition-transform duration-300 group-hover:-translate-y-0.5"
+                class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
