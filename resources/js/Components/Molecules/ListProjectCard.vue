@@ -75,6 +75,13 @@ defineProps({
                         class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display"
                         v-text="project.header"
                     ></h3>
+
+                    <!-- DESCRIPTION -->
+                    <p
+                        v-if="project.description"
+                        class="line-clamp-3 text-start leading-relaxed text-gray-600 text-sm sm:text-base"
+                        v-html="project.description"
+                    />
                 </div>
             </div>
 
