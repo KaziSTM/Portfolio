@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { Link, usePage } from '@inertiajs/vue3'
 
 import BaseButton from '@/Components/Atoms/BaseButton.vue'
+import SpecularButton from '@/Components/Atoms/SpecularButton.vue'
 import Subtitle from '@/Components/Atoms/Subtitle.vue'
 import FooterContactArrow from '@/Components/Icons/FooterContactArrow.vue'
 
@@ -24,20 +25,31 @@ const navigation = computed(() => page.props.footerNavigation)
                     </Subtitle>
 
                     <div class="flex justify-start">
-                        <Link
-                            class="group relative inline-flex items-center gap-2 rounded-full border border-white/10 bg-white px-4 py-2 text-secondary-950 backdrop-blur-md transition-all duration-300"
-                            href="/contact"
-                        >
-                            <span
-                                class="pointer-events-none absolute left-1/2 top-1/2 h-12 w-28 -translate-x-1/2 -translate-y-1/2 scale-75 rounded-full bg-[radial-gradient(circle,rgba(2,129,199,0.45)_0%,transparent_70%)] opacity-0 blur-xl transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
-                            />
-
-                            <span class="relative z-10 font-medium">
-                                {{ footer.button_label }}
-                            </span>
-
-                            <FooterContactArrow />
-                        </Link>
+                        <a href="/contact">
+                            <SpecularButton
+                                size="sm"
+                                :radius="999"
+                                tint="#0f172a"
+                                :tint-opacity="1"
+                                :blur="0"
+                                text-color="#f3f4f6"
+                                line-color="#21e0c0"
+                                base-color="#0c635a"
+                                :intensity="1.5"
+                                :shine-size="12"
+                                :shine-fade="38"
+                                :thickness="1"
+                                :speed="0.35"
+                                follow-mouse
+                                :proximity="280"
+                                :auto-animate="false"
+                            >
+                                <span class="relative font-medium">
+                                    {{ footer.button_label }}
+                                </span>
+                                <FooterContactArrow />
+                            </SpecularButton>
+                        </a>
                     </div>
                 </div>
 

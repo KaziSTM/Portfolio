@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useForm, usePage } from '@inertiajs/vue3'
+import SpecularButton from '@/Components/Atoms/SpecularButton.vue'
 
 const page = usePage()
 
@@ -160,19 +161,36 @@ function submit() {
                     </p>
                 </div>
 
-                <button
-                    :disabled="form.processing"
-                    class="mt-4 w-full rounded-full bg-gray-900 py-3.5 text-sm font-medium text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
-                    type="submit"
-                >
-                    <span v-if="!form.processing">
-                        {{ formContent.submit_label }}
-                    </span>
-
-                    <span v-else>
-                        {{ formContent.submitting_label }}
-                    </span>
-                </button>
+                <div class="mt-4 w-full">
+                    <SpecularButton
+                        type="submit"
+                        size="sm"
+                        :radius="999"
+                        tint="#030712"
+                        :tint-opacity="1"
+                        :blur="0"
+                        text-color="#f3f4f6"
+                        line-color="#21e0c0"
+                        base-color="#0c635a"
+                        :intensity="1.5"
+                        :shine-size="12"
+                        :shine-fade="38"
+                        :thickness="1"
+                        :speed="0.35"
+                        follow-mouse
+                        :proximity="280"
+                        :auto-animate="false"
+                        :disabled="form.processing"
+                        class="w-full"
+                    >
+                        <span v-if="!form.processing" class="font-medium">
+                            {{ formContent.submit_label }}
+                        </span>
+                        <span v-else class="font-medium">
+                            {{ formContent.submitting_label }}
+                        </span>
+                    </SpecularButton>
+                </div>
             </form>
         </div>
     </div>
