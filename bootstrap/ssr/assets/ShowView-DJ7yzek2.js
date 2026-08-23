@@ -145,7 +145,7 @@ var _sfc_main = {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) {
 						_push(ssrRenderComponent(_sfc_main$2, { project: __props.project.data }, null, _parent, _scopeId));
-						if (__props.project.data.logo_url) _push(`<section class="mx-auto max-w-7xl"${_scopeId}><img${ssrRenderAttr("alt", __props.project.data.header)}${ssrRenderAttr("src", __props.project.data.logo_url)} class="w-full rounded-xl object-cover"${_scopeId}></section>`);
+						if (__props.project.data.main_url) _push(`<section class="w-full"${_scopeId}><img${ssrRenderAttr("alt", __props.project.data.header)}${ssrRenderAttr("src", __props.project.data.main_url)} class="w-full h-auto max-h-[85vh] object-cover"${_scopeId}></section>`);
 						else _push(`<!---->`);
 						_push(ssrRenderComponent(_sfc_main$1, { project: __props.project.data }, null, _parent, _scopeId));
 						if (__props.project.data.gallery?.length) {
@@ -159,13 +159,13 @@ var _sfc_main = {
 						else _push(`<!---->`);
 					} else return [
 						createVNode(_sfc_main$2, { project: __props.project.data }, null, 8, ["project"]),
-						__props.project.data.logo_url ? (openBlock(), createBlock("section", {
+						__props.project.data.main_url ? (openBlock(), createBlock("section", {
 							key: 0,
-							class: "mx-auto max-w-7xl"
+							class: "w-full"
 						}, [createVNode("img", {
 							alt: __props.project.data.header,
-							src: __props.project.data.logo_url,
-							class: "w-full rounded-xl object-cover"
+							src: __props.project.data.main_url,
+							class: "w-full h-auto max-h-[85vh] object-cover"
 						}, null, 8, ["alt", "src"])])) : createCommentVNode("", true),
 						createVNode(_sfc_main$1, { project: __props.project.data }, null, 8, ["project"]),
 						__props.project.data.gallery?.length ? (openBlock(), createBlock("section", {
@@ -200,4 +200,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ShowView-DTv9zogF.js.map
+//# sourceMappingURL=ShowView-DJ7yzek2.js.map

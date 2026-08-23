@@ -247,7 +247,7 @@ var _sfc_main = {
 	setup(__props) {
 		const Features = defineAsyncComponent(() => import("./Features-C-VLKSHU.js"));
 		const Tools = defineAsyncComponent(() => import("./Tools-dsWekzrf.js"));
-		const LatestWork = defineAsyncComponent(() => import("./LatestWork-Dl1nNED2.js"));
+		const LatestWork = defineAsyncComponent(() => import("./LatestWork-BW5IPwFz.js"));
 		const Companies = defineAsyncComponent(() => import("./Companies-DW7fCs0a.js"));
 		const title = useGetTitle("home");
 		return (_ctx, _push, _parent, _attrs) => {
@@ -284,4 +284,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=HomeView-D02jG52T.js.map
+//# sourceMappingURL=HomeView-Dbstyr_K.js.map

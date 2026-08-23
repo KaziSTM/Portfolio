@@ -1,7 +1,8 @@
 import { t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { t as Section_default } from "./Section-CcmBDABV.js";
 import { n as _sfc_main$2, r as BorderGlow_default, t as FadeContent_default } from "./FadeContent-_tRcBepR.js";
-import { Fragment, computed, createBlock, createCommentVNode, createVNode, mergeProps, openBlock, ref, renderList, toDisplayString, useSSRContext, withCtx } from "vue";
+import { Fragment, computed, createBlock, createCommentVNode, createVNode, mergeProps, openBlock, ref, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
+import { Link } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList } from "vue/server-renderer";
 //#region resources/js/Components/Molecules/ProjectCard.vue
 var _sfc_main$1 = {
@@ -58,7 +59,29 @@ var _sfc_main$1 = {
 					}, {
 						default: withCtx((_, _push, _parent, _scopeId) => {
 							if (_push) {
-								_push(`<article class="relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full"${_scopeId}><div class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full"${_scopeId}><img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}></div><div class="order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full"${_scopeId}><div${_scopeId}><div class="mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
+								_push(`<article class="relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full"${_scopeId}>`);
+								_push(ssrRenderComponent(unref(Link), {
+									href: __props.project.project_url,
+									class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full block",
+									onMouseenter: ($event) => zoom.value = true,
+									onMouseleave: ($event) => zoom.value = false
+								}, {
+									default: withCtx((_, _push, _parent, _scopeId) => {
+										if (_push) _push(`<img${ssrRenderAttr("alt", __props.project.header)} class="${ssrRenderClass([{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"])}"${ssrRenderAttr("src", __props.project.logo_url)} aria-hidden="true" decoding="async" height="1000" loading="lazy" width="1088"${_scopeId}>`);
+										else return [createVNode("img", {
+											alt: __props.project.header,
+											class: [{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"],
+											src: __props.project.logo_url,
+											"aria-hidden": "true",
+											decoding: "async",
+											height: "1000",
+											loading: "lazy",
+											width: "1088"
+										}, null, 10, ["alt", "src"])];
+									}),
+									_: 1
+								}, _parent, _scopeId));
+								_push(`<div class="order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full"${_scopeId}><div${_scopeId}><div class="mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
 								ssrRenderList(__props.project.role_labels, (role, index) => {
 									_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 									if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
@@ -80,20 +103,28 @@ var _sfc_main$1 = {
 									url: __props.project.project_url
 								}, null, _parent, _scopeId));
 								_push(`</div></div></article>`);
-							} else return [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full" }, [createVNode("div", {
-								class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full",
+							} else return [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full" }, [createVNode(unref(Link), {
+								href: __props.project.project_url,
+								class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full block",
 								onMouseenter: ($event) => zoom.value = true,
 								onMouseleave: ($event) => zoom.value = false
-							}, [createVNode("img", {
-								alt: __props.project.header,
-								class: [{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"],
-								src: __props.project.logo_url,
-								"aria-hidden": "true",
-								decoding: "async",
-								height: "1000",
-								loading: "lazy",
-								width: "1088"
-							}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full" }, [createVNode("div", null, [
+							}, {
+								default: withCtx(() => [createVNode("img", {
+									alt: __props.project.header,
+									class: [{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"],
+									src: __props.project.logo_url,
+									"aria-hidden": "true",
+									decoding: "async",
+									height: "1000",
+									loading: "lazy",
+									width: "1088"
+								}, null, 10, ["alt", "src"])]),
+								_: 1
+							}, 8, [
+								"href",
+								"onMouseenter",
+								"onMouseleave"
+							]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full" }, [createVNode("div", null, [
 								createVNode("div", { class: "mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
 									createVNode("span", {
 										class: "rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600",
@@ -152,20 +183,28 @@ var _sfc_main$1 = {
 						"card-shadow": "0 2px 8px var(--color-secondary-200, #e2e8f0), 0 1px 3px var(--color-secondary-300, #cbd5e1)",
 						"class-name": "max-w-6xl w-full"
 					}, {
-						default: withCtx(() => [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full" }, [createVNode("div", {
-							class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full",
+						default: withCtx(() => [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full" }, [createVNode(unref(Link), {
+							href: __props.project.project_url,
+							class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full block",
 							onMouseenter: ($event) => zoom.value = true,
 							onMouseleave: ($event) => zoom.value = false
-						}, [createVNode("img", {
-							alt: __props.project.header,
-							class: [{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"],
-							src: __props.project.logo_url,
-							"aria-hidden": "true",
-							decoding: "async",
-							height: "1000",
-							loading: "lazy",
-							width: "1088"
-						}, null, 10, ["alt", "src"])], 40, ["onMouseenter", "onMouseleave"]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full" }, [createVNode("div", null, [
+						}, {
+							default: withCtx(() => [createVNode("img", {
+								alt: __props.project.header,
+								class: [{ "scale-110": zoom.value }, "h-full w-full transition-transform duration-500 ease-in-out object-cover"],
+								src: __props.project.logo_url,
+								"aria-hidden": "true",
+								decoding: "async",
+								height: "1000",
+								loading: "lazy",
+								width: "1088"
+							}, null, 10, ["alt", "src"])]),
+							_: 1
+						}, 8, [
+							"href",
+							"onMouseenter",
+							"onMouseleave"
+						]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full" }, [createVNode("div", null, [
 							createVNode("div", { class: "mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
 								createVNode("span", {
 									class: "rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600",
@@ -273,4 +312,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=LatestWork-Dl1nNED2.js.map
+//# sourceMappingURL=LatestWork-BW5IPwFz.js.map
