@@ -20,6 +20,7 @@ it('loads work page with correct filter options and translations for english', f
         ->where('translations.filters.company_projects', 'Company Projects')
         ->where('translations.filters.personal_projects', 'Personal Projects')
         ->where('translations.filters.packages', 'Packages')
+        ->where('header.header_cta_label', 'Book a call')
     );
 });
 

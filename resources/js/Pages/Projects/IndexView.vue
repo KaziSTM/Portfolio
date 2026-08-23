@@ -8,6 +8,10 @@ import Subtitle from '@/Components/Atoms/Subtitle.vue'
 import useGetTitle from '@/Composables/useGetTitle.js'
 
 defineProps({
+    pageHeader: {
+        type: Object,
+        default: null,
+    },
     header: {
         type: Object,
         default: null,
@@ -64,16 +68,16 @@ function setFilter(filter = null) {
         >
             <!-- Header -->
             <div
-                v-if="header"
+                v-if="pageHeader || (header && header.title)"
                 class="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12 w-full pt-8 sm:pt-10"
             >
                 <Subtitle class="text-start mt-2 sm:mt-3">
-                    {{ header.title }}
+                    {{ (pageHeader || header).title }}
                 </Subtitle>
 
                 <p
                     class="text-lg lg:text-xl text-start text-gray-700 max-w-xl lg:max-w-2xl"
-                    v-html="header.description"
+                    v-html="(pageHeader || header).description"
                 ></p>
             </div>
             <!-- Filters -->

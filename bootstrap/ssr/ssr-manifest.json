@@ -34,7 +34,7 @@
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Atoms/Pagination.vue": [
-    "/build/assets/IndexView-CTzYGu6B.js"
+    "/build/assets/IndexView-DarIpihc.js"
   ],
   "resources/js/Components/Atoms/Section.vue": [
     "/build/assets/Section-CcmBDABV.js"
@@ -113,7 +113,7 @@
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Molecules/ListProjectCard.vue": [
-    "/build/assets/IndexView-CTzYGu6B.js"
+    "/build/assets/IndexView-DarIpihc.js"
   ],
   "resources/js/Components/Molecules/ProjectCard.vue": [
     "/build/assets/LatestWork-GoOV4j2Q.js"
@@ -195,7 +195,7 @@
     "/build/assets/HomeView-BzoxX79o.js"
   ],
   "resources/js/Pages/Projects/IndexView.vue": [
-    "/build/assets/IndexView-CTzYGu6B.js"
+    "/build/assets/IndexView-DarIpihc.js"
   ],
   "resources/js/Pages/Projects/ShowView.vue": [
     "/build/assets/ShowView-DTv9zogF.js"

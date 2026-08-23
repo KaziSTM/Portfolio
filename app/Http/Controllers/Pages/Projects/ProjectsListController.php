@@ -44,7 +44,7 @@ class ProjectsListController extends Controller
         ];
 
         return Inertia::render('Projects/IndexView', [
-            'header' => Cms::section('projects', 'header', [
+            'pageHeader' => Cms::section('projects', 'header', [
                 'title' => 'Case Studies',
                 'description' => 'Dive into my diverse range of projects, showcasing my expertise in software development, design, and dedication to delivering exceptional results.',
             ]),

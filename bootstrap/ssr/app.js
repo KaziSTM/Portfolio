@@ -16,7 +16,7 @@ var render = await createInertiaApp({
 		"./Pages/AboutView.vue": () => import("./assets/AboutView-D5HaClIE.js"),
 		"./Pages/ContactView.vue": () => import("./assets/ContactView-CUCXtIW7.js"),
 		"./Pages/HomeView.vue": () => import("./assets/HomeView-BzoxX79o.js"),
-		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-CTzYGu6B.js"),
+		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-DarIpihc.js"),
 		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-DTv9zogF.js")
 	})),
 	setup({ el, App, props, plugin }) {
