@@ -1,6 +1,6 @@
 import { t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { n as _sfc_main$3, r as BorderGlow_default, t as FadeContent_default } from "./FadeContent-_tRcBepR.js";
-import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-d87yLauo.js";
+import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-D2RcYPjL.js";
 import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, defineComponent, mergeProps, openBlock, ref, renderList, renderSlot, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, Link, router, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList, ssrRenderSlot } from "vue/server-renderer";
@@ -186,7 +186,7 @@ var _sfc_main$1 = {
 					}, {
 						default: withCtx((_, _push, _parent, _scopeId) => {
 							if (_push) {
-								_push(`<div class="p-6 sm:p-7 lg:p-8 h-full flex flex-col justify-between items-center text-center"${_scopeId}><div class="space-y-4 flex flex-col items-center w-full"${_scopeId}>`);
+								_push(`<div class="px-6 py-8 sm:px-7 sm:py-10 lg:px-8 lg:py-11 h-full flex flex-col justify-between items-center text-center"${_scopeId}><div class="space-y-4 flex flex-col items-center w-full"${_scopeId}>`);
 								if (!__props.reverse) _push(ssrRenderComponent(unref(Link), {
 									href: __props.project.project_url,
 									class: "mb-5 sm:mb-6 lg:mb-7 overflow-hidden rounded-2xl w-full cursor-pointer block",
@@ -244,7 +244,7 @@ var _sfc_main$1 = {
 								}, _parent, _scopeId));
 								else _push(`<!---->`);
 								_push(`</div>`);
-							} else return [createVNode("div", { class: "p-6 sm:p-7 lg:p-8 h-full flex flex-col justify-between items-center text-center" }, [
+							} else return [createVNode("div", { class: "px-6 py-8 sm:px-7 sm:py-10 lg:px-8 lg:py-11 h-full flex flex-col justify-between items-center text-center" }, [
 								createVNode("div", { class: "space-y-4 flex flex-col items-center w-full" }, [!__props.reverse ? (openBlock(), createBlock(unref(Link), {
 									key: 0,
 									href: __props.project.project_url,
@@ -328,7 +328,7 @@ var _sfc_main$1 = {
 						reverse: __props.reverse,
 						"class-name": __props.reverse ? "md:mt-24 lg:mt-32" : ""
 					}, {
-						default: withCtx(() => [createVNode("div", { class: "p-6 sm:p-7 lg:p-8 h-full flex flex-col justify-between items-center text-center" }, [
+						default: withCtx(() => [createVNode("div", { class: "px-6 py-8 sm:px-7 sm:py-10 lg:px-8 lg:py-11 h-full flex flex-col justify-between items-center text-center" }, [
 							createVNode("div", { class: "space-y-4 flex flex-col items-center w-full" }, [!__props.reverse ? (openBlock(), createBlock(unref(Link), {
 								key: 0,
 								href: __props.project.project_url,
@@ -573,4 +573,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-BontNNau.js.map
+//# sourceMappingURL=IndexView-GEcHdX-0.js.map

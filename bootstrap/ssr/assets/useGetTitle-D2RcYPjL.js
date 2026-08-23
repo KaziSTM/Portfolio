@@ -219,10 +219,19 @@ var _sfc_main$6 = {
 		const page = usePage();
 		computed(() => page.props.header.content);
 		const ctaLabel = computed(() => page.props.header.header_cta_label);
+		const homeUrl = computed(() => route("home", { locale: page.props.locale }));
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<header${ssrRenderAttrs(mergeProps({ class: "relative z-99 border-b border-secondary-200 py-4 md:py-6" }, _attrs))}><div class="mx-auto flex w-full max-w-8xl items-center justify-between px-6 md:px-32"><div class="shrink-0">`);
-			_push(ssrRenderComponent(Logo_default, { class: "h-10 w-12" }, null, _parent));
-			_push(`</div>`);
+			_push(`<header${ssrRenderAttrs(mergeProps({ class: "relative z-99 border-b border-secondary-200 py-4 md:py-6" }, _attrs))}><div class="mx-auto flex w-full max-w-8xl items-center justify-between px-6 md:px-32">`);
+			_push(ssrRenderComponent(unref(Link), {
+				href: homeUrl.value,
+				class: "shrink-0 hover:opacity-85 transition-opacity"
+			}, {
+				default: withCtx((_, _push, _parent, _scopeId) => {
+					if (_push) _push(ssrRenderComponent(Logo_default, { class: "h-10 w-12" }, null, _parent, _scopeId));
+					else return [createVNode(Logo_default, { class: "h-10 w-12" })];
+				}),
+				_: 1
+			}, _parent));
 			_push(ssrRenderComponent(_sfc_main$8, null, null, _parent));
 			_push(`<div class="hidden items-center gap-4 md:flex">`);
 			_push(ssrRenderComponent(_sfc_main$7, null, null, _parent));
@@ -738,6 +747,7 @@ var _sfc_main$1 = {
 		const footer = computed(() => page.props.footer);
 		const socials = computed(() => page.props.socials);
 		const navigation = computed(() => page.props.footerNavigation);
+		const contactUrl = computed(() => route("contact", { locale: page.props.locale }));
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-slate-900 py-10 sm:pt-16 lg:pt-24" }, _attrs))}><div class="mx-auto max-w-7xl px-4 sm:px-12 lg:px-8"><div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-32"><div class="space-y-16">`);
 			_push(ssrRenderComponent(Subtitle_default, { class: "text-start text-white" }, {
@@ -747,32 +757,58 @@ var _sfc_main$1 = {
 				}),
 				_: 1
 			}, _parent));
-			_push(`<div class="flex justify-start"><a href="/contact">`);
-			_push(ssrRenderComponent(SpecularButton_default, {
-				"auto-animate": false,
-				blur: 0,
-				intensity: 1.5,
-				proximity: 280,
-				radius: 14,
-				"shine-fade": 38,
-				"shine-size": 12,
-				speed: .35,
-				thickness: 1,
-				"tint-opacity": 1,
-				"base-color": "#0c635a",
-				"follow-mouse": "",
-				"line-color": "#21e0c0",
-				size: "md",
-				"text-color": "#030712",
-				tint: "#ffffff"
-			}, {
+			_push(`<div class="flex justify-start">`);
+			_push(ssrRenderComponent(unref(Link), { href: contactUrl.value }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) _push(`<span class="relative font-medium"${_scopeId}>${ssrInterpolate(footer.value.button_label)}</span>`);
-					else return [createVNode("span", { class: "relative font-medium" }, toDisplayString(footer.value.button_label), 1)];
+					if (_push) _push(ssrRenderComponent(SpecularButton_default, {
+						"auto-animate": false,
+						blur: 0,
+						intensity: 1.5,
+						proximity: 280,
+						radius: 14,
+						"shine-fade": 38,
+						"shine-size": 12,
+						speed: .35,
+						thickness: 1,
+						"tint-opacity": 1,
+						"base-color": "#0c635a",
+						"follow-mouse": "",
+						"line-color": "#21e0c0",
+						size: "md",
+						"text-color": "#030712",
+						tint: "#ffffff"
+					}, {
+						default: withCtx((_, _push, _parent, _scopeId) => {
+							if (_push) _push(`<span class="relative font-medium"${_scopeId}>${ssrInterpolate(footer.value.button_label)}</span>`);
+							else return [createVNode("span", { class: "relative font-medium" }, toDisplayString(footer.value.button_label), 1)];
+						}),
+						_: 1
+					}, _parent, _scopeId));
+					else return [createVNode(SpecularButton_default, {
+						"auto-animate": false,
+						blur: 0,
+						intensity: 1.5,
+						proximity: 280,
+						radius: 14,
+						"shine-fade": 38,
+						"shine-size": 12,
+						speed: .35,
+						thickness: 1,
+						"tint-opacity": 1,
+						"base-color": "#0c635a",
+						"follow-mouse": "",
+						"line-color": "#21e0c0",
+						size: "md",
+						"text-color": "#030712",
+						tint: "#ffffff"
+					}, {
+						default: withCtx(() => [createVNode("span", { class: "relative font-medium" }, toDisplayString(footer.value.button_label), 1)]),
+						_: 1
+					})];
 				}),
 				_: 1
 			}, _parent));
-			_push(`</a></div></div><div class="flex flex-col space-y-10"><p class="mt-4 inline-flex pe-32 text-start text-secondary-100">${ssrInterpolate(footer.value.description)}</p><div class="flex flex-wrap gap-4"><!--[-->`);
+			_push(`</div></div><div class="flex flex-col space-y-10"><p class="mt-4 inline-flex pe-32 text-start text-secondary-100">${ssrInterpolate(footer.value.description)}</p><div class="flex flex-wrap gap-4"><!--[-->`);
 			ssrRenderList(socials.value, (social) => {
 				_push(ssrRenderComponent(_sfc_main$2, {
 					key: social.name,
@@ -854,4 +890,4 @@ function useGetTitle(page) {
 //#endregion
 export { _sfc_main$2 as i, _sfc_main as n, SpecularButton_default as r, useGetTitle as t };
 
-//# sourceMappingURL=useGetTitle-d87yLauo.js.map
+//# sourceMappingURL=useGetTitle-D2RcYPjL.js.map

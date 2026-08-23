@@ -13,11 +13,11 @@ router.on("navigate", (event) => {
 var render = await createInertiaApp({
 	title: (title) => `${title} - ${appName}`,
 	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* #__PURE__ */ Object.assign({
-		"./Pages/AboutView.vue": () => import("./assets/AboutView-DioPD-Ld.js"),
-		"./Pages/ContactView.vue": () => import("./assets/ContactView-DCokKObf.js"),
-		"./Pages/HomeView.vue": () => import("./assets/HomeView-Dbstyr_K.js"),
-		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-BontNNau.js"),
-		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-DJ7yzek2.js")
+		"./Pages/AboutView.vue": () => import("./assets/AboutView-BbQaZKX4.js"),
+		"./Pages/ContactView.vue": () => import("./assets/ContactView-BhW-Igsy.js"),
+		"./Pages/HomeView.vue": () => import("./assets/HomeView-PPBc5yS1.js"),
+		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-GEcHdX-0.js"),
+		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-CE242hsJ.js")
 	})),
 	setup({ el, App, props, plugin }) {
 		return createApp({ render: () => h(App, props) }).use(plugin).mount(el);

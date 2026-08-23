@@ -1,6 +1,6 @@
 import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { t as DownloadSimple_default } from "./DownloadSimple-HqfXmc8B.js";
-import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle-d87yLauo.js";
+import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle-D2RcYPjL.js";
 import { createTextVNode, createVNode, mergeProps, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderStyle } from "vue/server-renderer";
@@ -185,4 +185,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=AboutView-DioPD-Ld.js.map
+//# sourceMappingURL=AboutView-BbQaZKX4.js.map

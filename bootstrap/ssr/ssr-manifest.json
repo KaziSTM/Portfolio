@@ -13,7 +13,7 @@
     "/build/assets/mr-dafoe-latin-400-normal-CbwCR40x.woff2"
   ],
   "resources/js/Components/Atoms/BaseButton.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Atoms/BorderGlow.vue": [
@@ -26,13 +26,13 @@
     "/build/assets/FadeContent-_tRcBepR.js"
   ],
   "resources/js/Components/Atoms/ListCardGlow.vue": [
-    "/build/assets/IndexView-BontNNau.js"
+    "/build/assets/IndexView-GEcHdX-0.js"
   ],
   "resources/js/Components/Atoms/ListCardGlow.vue?vue&type=script&setup=true&lang.ts": [
-    "/build/assets/IndexView-BontNNau.js"
+    "/build/assets/IndexView-GEcHdX-0.js"
   ],
   "resources/js/Components/Atoms/Logo.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Atoms/LogoLoop.vue": [
@@ -42,43 +42,43 @@
     "/build/assets/Companies-DW7fCs0a.js"
   ],
   "resources/js/Components/Atoms/NavLink.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Atoms/Pagination.vue": [
-    "/build/assets/IndexView-BontNNau.js"
+    "/build/assets/IndexView-GEcHdX-0.js"
   ],
   "resources/js/Components/Atoms/Section.vue": [
     "/build/assets/Section-CcmBDABV.js"
   ],
   "resources/js/Components/Atoms/SpecularButton.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Atoms/SpecularButton.vue?vue&type=script&setup=true&lang.ts": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Atoms/Subtitle.vue": [
     "/build/assets/Subtitle-DtkDPELn.js"
   ],
   "resources/js/Components/Atoms/Title.vue": [
-    "/build/assets/HomeView-Dbstyr_K.js"
+    "/build/assets/HomeView-PPBc5yS1.js"
   ],
   "resources/js/Components/Icons/AtSymbol.vue": [
-    "/build/assets/ContactView-DCokKObf.js"
+    "/build/assets/ContactView-BhW-Igsy.js"
   ],
   "resources/js/Components/Icons/CheckCircle.vue": [
     "/build/assets/Features-C-VLKSHU.js"
   ],
   "resources/js/Components/Icons/CirclesBackground.vue": [
-    "/build/assets/AboutView-DioPD-Ld.js"
+    "/build/assets/AboutView-BbQaZKX4.js"
   ],
   "resources/js/Components/Icons/CodeBracket.vue": [
     "/build/assets/Features-C-VLKSHU.js"
   ],
   "resources/js/Components/Icons/ContactArrow.vue": [
-    "/build/assets/ContactView-DCokKObf.js"
+    "/build/assets/ContactView-BhW-Igsy.js"
   ],
   "resources/js/Components/Icons/DownloadSimple.vue": [
     "/build/assets/DownloadSimple-HqfXmc8B.js"
@@ -87,31 +87,31 @@
     "/build/assets/Features-C-VLKSHU.js"
   ],
   "resources/js/Components/Icons/GithubLogo.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Icons/HeroArrow.vue": [
-    "/build/assets/HomeView-Dbstyr_K.js"
+    "/build/assets/HomeView-PPBc5yS1.js"
   ],
   "resources/js/Components/Icons/InstagramLogo.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Icons/LinkedinLogo.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Icons/Phone.vue": [
-    "/build/assets/ContactView-DCokKObf.js"
+    "/build/assets/ContactView-BhW-Igsy.js"
   ],
   "resources/js/Components/Icons/RectangleStack.vue": [
     "/build/assets/Features-C-VLKSHU.js"
   ],
   "resources/js/Components/Icons/Underline.vue": [
-    "/build/assets/HomeView-Dbstyr_K.js"
+    "/build/assets/HomeView-PPBc5yS1.js"
   ],
   "resources/js/Components/Layouts/AppLayout.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Molecules/FadeContent.vue": [
@@ -121,36 +121,36 @@
     "/build/assets/FadeContent-_tRcBepR.js"
   ],
   "resources/js/Components/Molecules/LangSwitch.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Molecules/ListProjectCard.vue": [
-    "/build/assets/IndexView-BontNNau.js"
+    "/build/assets/IndexView-GEcHdX-0.js"
   ],
   "resources/js/Components/Molecules/ProjectCard.vue": [
     "/build/assets/LatestWork-BW5IPwFz.js"
   ],
   "resources/js/Components/Organisms/About/Careers.vue": [
-    "/build/assets/AboutView-DioPD-Ld.js"
+    "/build/assets/AboutView-BbQaZKX4.js"
   ],
   "resources/js/Components/Organisms/About/Intro.vue": [
-    "/build/assets/AboutView-DioPD-Ld.js"
+    "/build/assets/AboutView-BbQaZKX4.js"
   ],
   "resources/js/Components/Organisms/About/Stack.vue": [
-    "/build/assets/AboutView-DioPD-Ld.js"
+    "/build/assets/AboutView-BbQaZKX4.js"
   ],
   "resources/js/Components/Organisms/Contact/ContactContent.vue": [
-    "/build/assets/ContactView-DCokKObf.js"
+    "/build/assets/ContactView-BhW-Igsy.js"
   ],
   "resources/js/Components/Organisms/Contact/ContactForm.vue": [
-    "/build/assets/ContactView-DCokKObf.js"
+    "/build/assets/ContactView-BhW-Igsy.js"
   ],
   "resources/js/Components/Organisms/Footer.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Organisms/Header.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Organisms/Home/Companies.vue": [
@@ -160,7 +160,7 @@
     "/build/assets/Features-C-VLKSHU.js"
   ],
   "resources/js/Components/Organisms/Home/Hero.vue": [
-    "/build/assets/HomeView-Dbstyr_K.js"
+    "/build/assets/HomeView-PPBc5yS1.js"
   ],
   "resources/js/Components/Organisms/Home/LatestWork.vue": [
     "/build/assets/LatestWork-BW5IPwFz.js"
@@ -169,48 +169,48 @@
     "/build/assets/Tools-dsWekzrf.js"
   ],
   "resources/js/Components/Organisms/MobileMenu.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Organisms/MobileMenu.vue?vue&type=style&index=0&scoped=6ef2af54&lang.css": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Organisms/Navbar.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Organisms/Projects/ProjectContent.vue": [
-    "/build/assets/ShowView-DJ7yzek2.js"
+    "/build/assets/ShowView-CE242hsJ.js"
   ],
   "resources/js/Components/Organisms/Projects/ProjectHero.vue": [
-    "/build/assets/ShowView-DJ7yzek2.js"
+    "/build/assets/ShowView-CE242hsJ.js"
   ],
   "resources/js/Components/Organisms/Projects/Testimonials.vue": [
-    "/build/assets/ShowView-DJ7yzek2.js"
+    "/build/assets/ShowView-CE242hsJ.js"
   ],
   "resources/js/Components/Organisms/TheMenu.vue": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Composables/useGetTitle.js": [
-    "/build/assets/useGetTitle-d87yLauo.js",
+    "/build/assets/useGetTitle-D2RcYPjL.js",
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Pages/AboutView.vue": [
-    "/build/assets/AboutView-DioPD-Ld.js"
+    "/build/assets/AboutView-BbQaZKX4.js"
   ],
   "resources/js/Pages/ContactView.vue": [
-    "/build/assets/ContactView-DCokKObf.js"
+    "/build/assets/ContactView-BhW-Igsy.js"
   ],
   "resources/js/Pages/HomeView.vue": [
-    "/build/assets/HomeView-Dbstyr_K.js"
+    "/build/assets/HomeView-PPBc5yS1.js"
   ],
   "resources/js/Pages/Projects/IndexView.vue": [
-    "/build/assets/IndexView-BontNNau.js"
+    "/build/assets/IndexView-GEcHdX-0.js"
   ],
   "resources/js/Pages/Projects/ShowView.vue": [
-    "/build/assets/ShowView-DJ7yzek2.js"
+    "/build/assets/ShowView-CE242hsJ.js"
   ],
   "resources/js/app.js": [
     "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
