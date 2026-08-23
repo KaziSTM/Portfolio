@@ -47,9 +47,9 @@ class ProjectShowResource extends JsonResource
 
             'is_in_progress' => (bool) $this->is_in_progress,
 
-            'start' => $this->start?->format('M Y'),
+            'start' => $this->start?->translatedFormat('M Y'),
 
-            'end' => $this->end?->format('M Y'),
+            'end' => $this->end?->translatedFormat('M Y'),
 
             'link' => $this->link,
 

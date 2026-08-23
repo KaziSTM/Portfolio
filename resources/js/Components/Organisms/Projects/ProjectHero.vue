@@ -1,9 +1,18 @@
 <script setup>
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/vue3'
+
 defineProps({
     project: {
         type: Object,
         required: true,
     },
+})
+
+const page = usePage()
+
+const ongoingLabel = computed(() => {
+    return page.props.translations?.projects?.ongoing ?? page.props.translations?.projects?.in_progress ?? 'Ongoing'
 })
 </script>
 
@@ -14,6 +23,12 @@ defineProps({
             <span
                 class="rounded-full bg-slate-200 px-4 py-2 text-sm font-semibold text-slate-900"
                 v-text="project.type_label"
+            ></span>
+
+            <span
+                v-if="!project.end && project.is_in_progress"
+                class="rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-700"
+                v-text="ongoingLabel"
             ></span>
 
             <span

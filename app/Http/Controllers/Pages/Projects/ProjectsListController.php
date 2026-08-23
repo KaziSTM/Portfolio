@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Pages\Projects;
 
 use App\Actions\Translations\GetProjectPageTranslations;
-use App\Enums\ProjectRole;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Projects\ProjectsListingResource;
 use App\Models\Project;
@@ -17,17 +16,32 @@ class ProjectsListController extends Controller
         Request $request,
         GetProjectPageTranslations $getProjectPageTranslations,
     ) {
-        $role = $request->string('role')->toString();
+        $filter = $request->string('filter')->toString() ?: $request->string('role')->toString();
 
         $projects = Project::query()
-            ->with('tags', 'media')
-            ->when(
-                $role,
-                fn ($query) => $query->withAnyTags([$role], 'main')
-            )
+            ->with('tags', 'media', 'company')
+            ->when($filter === 'company_projects', fn ($query) => $query->companyProjects())
+            ->when($filter === 'personal_projects', fn ($query) => $query->personalProjects())
+            ->when($filter === 'packages', fn ($query) => $query->packages())
             ->active()
-            ->latest()
-            ->paginate(6);
+            ->ordered()
+            ->paginate(6)
+            ->withQueryString();
+
+        $filters = [
+            [
+                'value' => 'company_projects',
+                'label' => __('ui.filters.company_projects'),
+            ],
+            [
+                'value' => 'personal_projects',
+                'label' => __('ui.filters.personal_projects'),
+            ],
+            [
+                'value' => 'packages',
+                'label' => __('ui.filters.packages'),
+            ],
+        ];
 
         return Inertia::render('Projects/IndexView', [
             'header' => Cms::section('projects', 'header', [
@@ -35,14 +49,12 @@ class ProjectsListController extends Controller
                 'description' => 'Dive into my diverse range of projects, showcasing my expertise in software development, design, and dedication to delivering exceptional results.',
             ]),
 
-            'selectedRole' => $role,
+            'selectedFilter' => $filter,
+            'filters' => $filters,
 
-            'roles' => collect(ProjectRole::cases())
-                ->map(fn (ProjectRole $role) => [
-                    'value' => $role->value,
-                    'label' => $role->label(),
-                ])
-                ->values(),
+            // Kept for backward compatibility
+            'selectedRole' => $filter,
+            'roles' => $filters,
 
             'projects' => ProjectsListingResource::collection($projects),
             'translations' => $getProjectPageTranslations(),

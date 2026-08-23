@@ -30,6 +30,7 @@ use Spatie\Translatable\HasTranslations;
     'type',
     'is_in_progress',
     'is_active',
+    'position',
 )]
 #[Table('projects')]
 class Project extends Model implements HasMedia
@@ -129,9 +130,29 @@ class Project extends Model implements HasMedia
     }
 
     #[Scope]
+    public function companyProjects($query)
+    {
+        return $query->where('type', ProjectType::PROJECT)
+            ->whereNotNull('company_id');
+    }
+
+    #[Scope]
+    public function personalProjects($query)
+    {
+        return $query->where('type', ProjectType::PROJECT)
+            ->whereNull('company_id');
+    }
+
+    #[Scope]
     public function packages($query)
     {
         return $query->where('type', ProjectType::PACKAGE);
+    }
+
+    #[Scope]
+    public function ordered($query)
+    {
+        return $query->orderBy('position', 'asc')->latest('id');
     }
 
     /*
@@ -145,6 +166,7 @@ class Project extends Model implements HasMedia
             'is_featured' => 'boolean',
             'is_active' => 'boolean',
             'is_in_progress' => 'boolean',
+            'position' => 'integer',
             'start' => 'date',
             'end' => 'date',
             'type' => ProjectType::class,

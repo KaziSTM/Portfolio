@@ -23,9 +23,16 @@ return [
         'features_caption' => 'Ce qui me differencie des autres',
         'tools_caption' => "Les outils que j'utilise au quotidien",
     ],
+    'filters' => [
+        'all' => 'Tous',
+        'company_projects' => 'Projets professionnels',
+        'personal_projects' => 'Projets personnels',
+        'packages' => 'Packages',
+    ],
     'projects' => [
         'all' => 'Tous',
         'in_progress' => 'En cours',
+        'ongoing' => 'En cours',
         'present' => "Aujourd'hui",
         'client' => 'Client',
         'industry' => 'Secteur',

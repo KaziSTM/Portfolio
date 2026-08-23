@@ -64,15 +64,21 @@ const companyHost = computed(() => {
             </div>
 
             <!-- Duration -->
-            <div>
+            <div v-if="project.start || project.end || (!project.end && project.is_in_progress)">
                 <p class="mb-1 font-medium text-gray-900" v-text="translations.duration"></p>
 
                 <p>
-                    {{ project.start }}
-                    <template v-if="project.end"> — {{ project.end }} </template>
+                    <template v-if="project.start">
+                        {{ project.start }}
+                        <template v-if="project.end"> — {{ project.end }} </template>
 
-                    <template v-else-if="project.is_in_progress">
-                        — {{ translations.present }}
+                        <template v-else-if="!project.end && project.is_in_progress">
+                            — {{ translations.ongoing ?? translations.in_progress }}
+                        </template>
+                    </template>
+
+                    <template v-else-if="!project.end && project.is_in_progress">
+                        {{ translations.ongoing ?? translations.in_progress }}
                     </template>
                 </p>
             </div>

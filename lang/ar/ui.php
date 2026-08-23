@@ -23,9 +23,16 @@ return [
         'features_caption' => 'ما الذي يميزني عن الآخرين',
         'tools_caption' => 'الادوات التي استخدمها يوميا',
     ],
+    'filters' => [
+        'all' => 'الكل',
+        'company_projects' => 'المشاريع المهنية',
+        'personal_projects' => 'المشاريع الشخصية',
+        'packages' => 'الحزم',
+    ],
     'projects' => [
         'all' => 'الكل',
         'in_progress' => 'قيد التنفيذ',
+        'ongoing' => 'مستمر',
         'present' => 'حتى الآن',
         'client' => 'العميل',
         'industry' => 'القطاع',

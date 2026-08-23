@@ -8,9 +8,17 @@ class GetProjectPageTranslations
     {
         return [
 
+            'filters' => [
+                'all' => __('ui.filters.all'),
+                'company_projects' => __('ui.filters.company_projects'),
+                'personal_projects' => __('ui.filters.personal_projects'),
+                'packages' => __('ui.filters.packages'),
+            ],
+
             'projects' => [
-                'all' => __('ui.projects.all'),
+                'all' => __('ui.filters.all'),
                 'in_progress' => __('ui.projects.in_progress'),
+                'ongoing' => __('ui.projects.ongoing'),
                 'present' => __('ui.projects.present'),
                 'client' => __('ui.projects.client'),
                 'industry' => __('ui.projects.industry'),
