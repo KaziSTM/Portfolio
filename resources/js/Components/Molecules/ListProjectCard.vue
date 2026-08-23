@@ -35,7 +35,7 @@ const zoom = ref(false)
             :class-name="reverse ? 'md:mt-24 lg:mt-32' : ''"
         >
             <!-- Inner padding wrapper — same classes as original card, background removed (BorderGlow provides it) -->
-            <div class="p-6 sm:p-7 lg:p-8 h-full flex flex-col justify-between items-center text-center">
+            <div class="px-6 py-8 sm:px-7 sm:py-10 lg:px-8 lg:py-11 h-full flex flex-col justify-between items-center text-center">
                 <div class="space-y-4 flex flex-col items-center w-full">
                     <!--  IMAGE (TOP) -->
                     <Link

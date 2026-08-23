@@ -11,14 +11,16 @@ const page = usePage()
 const headerContent = computed(() => page.props.header.content)
 
 const ctaLabel = computed(() => page.props.header.header_cta_label)
+
+const homeUrl = computed(() => route('home', { locale: page.props.locale }))
 </script>
 
 <template>
     <header class="relative z-99 border-b border-secondary-200 py-4 md:py-6">
         <div class="mx-auto flex w-full max-w-8xl items-center justify-between px-6 md:px-32">
-            <div class="shrink-0">
+            <Link :href="homeUrl" class="shrink-0 hover:opacity-85 transition-opacity">
                 <Logo class="h-10 w-12" />
-            </div>
+            </Link>
 
             <TheMenu />
 

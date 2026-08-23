@@ -1,5 +1,5 @@
 <script setup>
-import { usePage } from '@inertiajs/vue3'
+import { usePage, Link } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import Section from '@/Components/Atoms/Section.vue'
 import Title from '@/Components/Atoms/Title.vue'
@@ -18,6 +18,7 @@ defineProps({
 })
 
 const socials = computed(() => page.props.socials)
+const contactUrl = computed(() => route('contact', { locale: page.props.locale }))
 </script>
 
 <template>
@@ -60,7 +61,7 @@ const socials = computed(() => page.props.socials)
                         <div
                             class="mt-8 flex flex-col sm:flex-row items-center sm:justify-center lg:justify-start gap-4"
                         >
-                            <a href="/contact">
+                            <Link :href="contactUrl">
                                 <SpecularButton
                                     size="md"
                                     :radius="14"
@@ -84,7 +85,7 @@ const socials = computed(() => page.props.socials)
                                         v-text="heroSection.hero_cta_label"
                                     />
                                 </SpecularButton>
-                            </a>
+                            </Link>
 
                             <div class="flex justify-center items-center gap-4">
                                 <BaseButton

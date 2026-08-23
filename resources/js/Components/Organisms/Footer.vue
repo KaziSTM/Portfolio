@@ -11,6 +11,7 @@ const page = usePage()
 const footer = computed(() => page.props.footer)
 const socials = computed(() => page.props.socials)
 const navigation = computed(() => page.props.footerNavigation)
+const contactUrl = computed(() => route('contact', { locale: page.props.locale }))
 </script>
 
 <template>
@@ -24,7 +25,7 @@ const navigation = computed(() => page.props.footerNavigation)
                     </Subtitle>
 
                     <div class="flex justify-start">
-                        <a href="/contact">
+                        <Link :href="contactUrl">
                             <SpecularButton
                                 :auto-animate="false"
                                 :blur="0"
@@ -47,7 +48,7 @@ const navigation = computed(() => page.props.footerNavigation)
                                     {{ footer.button_label }}
                                 </span>
                             </SpecularButton>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
