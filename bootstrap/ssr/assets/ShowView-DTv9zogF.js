@@ -36,8 +36,15 @@ var _sfc_main$2 = {
 		required: true
 	} },
 	setup(__props) {
+		const page = usePage();
+		const ongoingLabel = computed(() => {
+			return page.props.translations?.projects?.ongoing ?? page.props.translations?.projects?.in_progress ?? "Ongoing";
+		});
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<section${ssrRenderAttrs(mergeProps({ class: "mx-auto max-w-6xl px-6 pb-20 pt-28" }, _attrs))}><div class="mb-8 flex flex-wrap items-center gap-3"><span class="rounded-full bg-slate-200 px-4 py-2 text-sm font-semibold text-slate-900">${ssrInterpolate(__props.project.type_label)}</span><!--[-->`);
+			_push(`<section${ssrRenderAttrs(mergeProps({ class: "mx-auto max-w-6xl px-6 pb-20 pt-28" }, _attrs))}><div class="mb-8 flex flex-wrap items-center gap-3"><span class="rounded-full bg-slate-200 px-4 py-2 text-sm font-semibold text-slate-900">${ssrInterpolate(__props.project.type_label)}</span>`);
+			if (!__props.project.end && __props.project.is_in_progress) _push(`<span class="rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-700">${ssrInterpolate(ongoingLabel.value)}</span>`);
+			else _push(`<!---->`);
+			_push(`<!--[-->`);
 			ssrRenderList(__props.project.role_labels, (role) => {
 				_push(`<span class="rounded-full bg-white px-4 py-2 text-sm text-gray-700 ring-1 ring-gray-200 transition hover:bg-gray-50">${ssrInterpolate(role)}</span>`);
 			});
@@ -94,11 +101,18 @@ var _sfc_main$1 = {
 			else _push(`<!---->`);
 			if (__props.project.company?.headquarter) _push(`<div><p class="mb-1 font-medium text-gray-900">${ssrInterpolate(translations.value.headquarters)}</p><p>${ssrInterpolate(__props.project.company.headquarter)}</p></div>`);
 			else _push(`<!---->`);
-			_push(`<div><p class="mb-1 font-medium text-gray-900">${ssrInterpolate(translations.value.duration)}</p><p>${ssrInterpolate(__props.project.start)} `);
-			if (__props.project.end) _push(`<!--[--> — ${ssrInterpolate(__props.project.end)}<!--]-->`);
-			else if (__props.project.is_in_progress) _push(`<!--[--> — ${ssrInterpolate(translations.value.present)}<!--]-->`);
-			else _push(`<!---->`);
-			_push(`</p></div>`);
+			if (__props.project.start || __props.project.end || !__props.project.end && __props.project.is_in_progress) {
+				_push(`<div><p class="mb-1 font-medium text-gray-900">${ssrInterpolate(translations.value.duration)}</p><p>`);
+				if (__props.project.start) {
+					_push(`<!--[-->${ssrInterpolate(__props.project.start)} `);
+					if (__props.project.end) _push(`<!--[--> — ${ssrInterpolate(__props.project.end)}<!--]-->`);
+					else if (!__props.project.end && __props.project.is_in_progress) _push(`<!--[--> — ${ssrInterpolate(translations.value.ongoing ?? translations.value.in_progress)}<!--]-->`);
+					else _push(`<!---->`);
+					_push(`<!--]-->`);
+				} else if (!__props.project.end && __props.project.is_in_progress) _push(`<!--[-->${ssrInterpolate(translations.value.ongoing ?? translations.value.in_progress)}<!--]-->`);
+				else _push(`<!---->`);
+				_push(`</p></div>`);
+			} else _push(`<!---->`);
 			if (companyHost.value) _push(`<div><p class="mb-1 font-medium text-gray-900">${ssrInterpolate(translations.value.website)}</p><a${ssrRenderAttr("href", __props.project.company.website)} class="text-gray-700 hover:underline" rel="noopener noreferrer" target="_blank">${ssrInterpolate(companyHost.value)}</a></div>`);
 			else _push(`<!---->`);
 			if (__props.project.link) _push(`<div><a${ssrRenderAttr("href", __props.project.link)} class="inline-flex items-center rounded-full bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800" rel="noopener noreferrer" target="_blank">${ssrInterpolate(ctaTranslation.value)} <svg class="ms-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></div>`);
@@ -186,4 +200,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ShowView-CEIaV2YU.js.map
+//# sourceMappingURL=ShowView-DTv9zogF.js.map

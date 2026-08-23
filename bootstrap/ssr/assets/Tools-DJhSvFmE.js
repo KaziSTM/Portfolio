@@ -35,6 +35,10 @@ var _sfc_main = {
 				alt: "Mysql"
 			},
 			{
+				src: "assets/svg/icons/postgres.svg",
+				alt: "Postgres"
+			},
+			{
 				src: "assets/svg/icons/javascript.svg",
 				alt: "Javascript"
 			},
@@ -61,4 +65,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=Tools-CMrSFF5Y.js.map
+//# sourceMappingURL=Tools-DJhSvFmE.js.map

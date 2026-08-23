@@ -1,5 +1,4 @@
 <script setup>
-
 defineProps({
     toolsSectionCaption: {
         type: String,
@@ -31,6 +30,10 @@ const tools = [
     {
         src: 'assets/svg/icons/mysql.svg',
         alt: 'Mysql',
+    },
+    {
+        src: 'assets/svg/icons/postgres.svg',
+        alt: 'Postgres',
     },
     {
         src: 'assets/svg/icons/javascript.svg',

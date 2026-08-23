@@ -225,13 +225,21 @@ var _sfc_main = {
 			type: Object,
 			required: true
 		},
+		filters: {
+			type: Array,
+			default: () => []
+		},
+		selectedFilter: {
+			type: String,
+			default: ""
+		},
 		roles: {
-			type: Object,
-			required: true
+			type: Array,
+			default: () => []
 		},
 		selectedRole: {
 			type: String,
-			required: true
+			default: ""
 		},
 		translations: {
 			type: Object,
@@ -240,8 +248,8 @@ var _sfc_main = {
 	},
 	setup(__props) {
 		const title = useGetTitle("work");
-		function setRole(role = null) {
-			router.get(route("work"), { role }, {
+		function setFilter(filter = null) {
+			router.get(route("work"), { filter }, {
 				preserveState: true,
 				preserveScroll: true,
 				replace: true
@@ -266,14 +274,14 @@ var _sfc_main = {
 							_push(`<p class="text-lg lg:text-xl text-start text-gray-700 max-w-xl lg:max-w-2xl"${_scopeId}>${__props.header.description ?? ""}</p></div>`);
 						} else _push(`<!---->`);
 						_push(`<div class="mt-10 flex flex-wrap justify-start gap-3"${_scopeId}><button class="${ssrRenderClass([{
-							"bg-primary-700 text-white shadow-lg": !__props.selectedRole,
-							"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedRole
-						}, "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"])}"${_scopeId}>${ssrInterpolate(__props.translations.projects.all)}</button><!--[-->`);
-						ssrRenderList(__props.roles, (role) => {
+							"bg-primary-700 text-white shadow-lg": !(__props.selectedFilter || __props.selectedRole),
+							"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedFilter || __props.selectedRole
+						}, "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"])}"${_scopeId}>${ssrInterpolate(__props.translations.filters?.all ?? __props.translations.projects.all)}</button><!--[-->`);
+						ssrRenderList(__props.filters.length ? __props.filters : __props.roles, (item) => {
 							_push(`<button class="${ssrRenderClass([{
-								"bg-primary-700 text-white shadow-lg": __props.selectedRole === role.value,
-								"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedRole !== role.value
-							}, "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"])}"${_scopeId}>${ssrInterpolate(role.label)}</button>`);
+								"bg-primary-700 text-white shadow-lg": (__props.selectedFilter || __props.selectedRole) === item.value,
+								"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": (__props.selectedFilter || __props.selectedRole) !== item.value
+							}, "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"])}"${_scopeId}>${ssrInterpolate(item.label)}</button>`);
 						});
 						_push(`<!--]--></div><div class="grid grid-cols-1 items-start gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-10 md:gap-y-16 lg:gap-x-14 lg:gap-y-20"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.projects.data, (project, index) => {
@@ -304,19 +312,19 @@ var _sfc_main = {
 						}, null, 8, ["innerHTML"])])) : createCommentVNode("", true),
 						createVNode("div", { class: "mt-10 flex flex-wrap justify-start gap-3" }, [createVNode("button", {
 							class: [{
-								"bg-primary-700 text-white shadow-lg": !__props.selectedRole,
-								"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedRole
+								"bg-primary-700 text-white shadow-lg": !(__props.selectedFilter || __props.selectedRole),
+								"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedFilter || __props.selectedRole
 							}, "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"],
-							onClick: ($event) => setRole()
-						}, toDisplayString(__props.translations.projects.all), 11, ["onClick"]), (openBlock(true), createBlock(Fragment, null, renderList(__props.roles, (role) => {
+							onClick: ($event) => setFilter()
+						}, toDisplayString(__props.translations.filters?.all ?? __props.translations.projects.all), 11, ["onClick"]), (openBlock(true), createBlock(Fragment, null, renderList(__props.filters.length ? __props.filters : __props.roles, (item) => {
 							return openBlock(), createBlock("button", {
-								key: role.value,
+								key: item.value,
 								class: [{
-									"bg-primary-700 text-white shadow-lg": __props.selectedRole === role.value,
-									"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": __props.selectedRole !== role.value
+									"bg-primary-700 text-white shadow-lg": (__props.selectedFilter || __props.selectedRole) === item.value,
+									"bg-secondary-100 text-secondary-600 hover:bg-secondary-200": (__props.selectedFilter || __props.selectedRole) !== item.value
 								}, "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"],
-								onClick: ($event) => setRole(role.value)
-							}, toDisplayString(role.label), 11, ["onClick"]);
+								onClick: ($event) => setFilter(item.value)
+							}, toDisplayString(item.label), 11, ["onClick"]);
 						}), 128))]),
 						createVNode("div", { class: "grid grid-cols-1 items-start gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-10 md:gap-y-16 lg:gap-x-14 lg:gap-y-20" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.projects.data, (project, index) => {
 							return openBlock(), createBlock("div", {
@@ -353,4 +361,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-WIJHn4-L.js.map
+//# sourceMappingURL=IndexView-CTzYGu6B.js.map
