@@ -13,10 +13,10 @@ router.on("navigate", (event) => {
 var render = await createInertiaApp({
 	title: (title) => `${title} - ${appName}`,
 	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* #__PURE__ */ Object.assign({
-		"./Pages/AboutView.vue": () => import("./assets/AboutView-D5HaClIE.js"),
+		"./Pages/AboutView.vue": () => import("./assets/AboutView-DioPD-Ld.js"),
 		"./Pages/ContactView.vue": () => import("./assets/ContactView-CUCXtIW7.js"),
-		"./Pages/HomeView.vue": () => import("./assets/HomeView-DLAJlBPr.js"),
-		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-DTPD_7Jf.js"),
+		"./Pages/HomeView.vue": () => import("./assets/HomeView-D02jG52T.js"),
+		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-BUr5DTfc.js"),
 		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-DTv9zogF.js")
 	})),
 	setup({ el, App, props, plugin }) {
