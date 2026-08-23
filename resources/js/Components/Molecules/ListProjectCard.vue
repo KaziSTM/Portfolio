@@ -34,12 +34,12 @@ const zoom = ref(false)
             :class-name="reverse ? 'md:mt-24 lg:mt-32' : ''"
         >
             <!-- Inner padding wrapper — same classes as original card, background removed (BorderGlow provides it) -->
-            <div class="p-8 sm:p-10 h-full flex flex-col justify-between items-center text-center">
-                <div class="space-y-6 flex flex-col items-center w-full">
+            <div class="p-6 sm:p-7 lg:p-8 h-full flex flex-col justify-between items-center text-center">
+                <div class="space-y-4 flex flex-col items-center w-full">
                     <!--  IMAGE (TOP) -->
                     <div
                         v-if="!reverse"
-                        class="mb-10 sm:mb-12 lg:mb-14 overflow-hidden rounded-2xl w-full cursor-pointer"
+                        class="mb-5 sm:mb-6 lg:mb-7 overflow-hidden rounded-2xl w-full cursor-pointer"
                         @mouseenter="zoom = true"
                         @mouseleave="zoom = false"
                     >
@@ -47,12 +47,12 @@ const zoom = ref(false)
                             :alt="project.header"
                             :class="{ 'scale-110': zoom }"
                             :src="project.logo_url"
-                            class="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-2xl transition-transform duration-500 ease-in-out"
+                            class="w-full h-64 sm:h-72 lg:h-80 xl:h-84 object-cover rounded-2xl transition-transform duration-500 ease-in-out"
                         />
                     </div>
 
                     <!-- CONTENT -->
-                    <div class="space-y-4 flex flex-col items-center w-full">
+                    <div class="space-y-3.5 sm:space-y-4 flex flex-col items-center w-full">
                         <div class="flex items-center justify-center flex-wrap gap-2 text-xs tracking-widest uppercase">
                             <!-- TYPE -->
                             <span
@@ -84,7 +84,7 @@ const zoom = ref(false)
 
                         <!-- TITLE -->
                         <h3
-                            class="block text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center"
+                            class="block mt-2.5 sm:mt-3.5 text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center"
                             v-text="project.header"
                         ></h3>
 
@@ -98,7 +98,7 @@ const zoom = ref(false)
                 </div>
 
                 <!-- FOOTER / CTA -->
-                <div class="mt-8 pt-4 flex justify-center w-full">
+                <div class="mt-5 pt-2 flex justify-center w-full">
                     <Cta
                         :is-package="project.is_package"
                         :project-id="project.id"
@@ -111,7 +111,7 @@ const zoom = ref(false)
                 <!-- IMAGE (BOTTOM ON REVERSED) -->
                 <div
                     v-if="reverse"
-                    class="mt-10 sm:mt-12 lg:mt-14 overflow-hidden rounded-2xl w-full cursor-pointer"
+                    class="mt-5 sm:mt-6 lg:mt-7 overflow-hidden rounded-2xl w-full cursor-pointer"
                     @mouseenter="zoom = true"
                     @mouseleave="zoom = false"
                 >
@@ -119,7 +119,7 @@ const zoom = ref(false)
                         :alt="project.header"
                         :class="{ 'scale-110': zoom }"
                         :src="project.logo_url"
-                        class="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-2xl transition-transform duration-500 ease-in-out"
+                        class="w-full h-64 sm:h-72 lg:h-80 xl:h-84 object-cover rounded-2xl transition-transform duration-500 ease-in-out"
                     />
                 </div>
             </div>
