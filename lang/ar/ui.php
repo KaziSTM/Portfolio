@@ -27,7 +27,7 @@ return [
         'all' => 'الكل',
         'company_projects' => 'مشاريع الشركات',
         'freelance_projects' => 'المشاريع المستقلة',
-        'packages' => 'الحزم',
+        'open_source' => 'مفتوحة المصدر',
     ],
     'projects' => [
         'all' => 'الكل',

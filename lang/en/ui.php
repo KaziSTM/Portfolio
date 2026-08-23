@@ -27,7 +27,7 @@ return [
         'all' => 'All',
         'company_projects' => 'Company Projects',
         'freelance_projects' => 'Freelance Projects',
-        'packages' => 'Packages',
+        'open_source' => 'Open Source',
     ],
     'projects' => [
         'all' => 'All',

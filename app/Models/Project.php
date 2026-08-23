@@ -150,9 +150,15 @@ class Project extends Model implements HasMedia
     }
 
     #[Scope]
-    public function packages($query)
+    public function openSource($query)
     {
         return $query->where('type', ProjectType::PACKAGE);
+    }
+
+    #[Scope]
+    public function packages($query)
+    {
+        return $this->openSource($query);
     }
 
     #[Scope]

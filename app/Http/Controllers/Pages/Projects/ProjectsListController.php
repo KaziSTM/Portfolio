@@ -22,7 +22,7 @@ class ProjectsListController extends Controller
             ->with('tags', 'media', 'company')
             ->when($filter === 'company_projects', fn ($query) => $query->companyProjects())
             ->when($filter === 'freelance_projects' || $filter === 'personal_projects', fn ($query) => $query->freelanceProjects())
-            ->when($filter === 'packages', fn ($query) => $query->packages())
+            ->when($filter === 'open_source' || $filter === 'packages', fn ($query) => $query->openSource())
             ->active()
             ->ordered()
             ->paginate(6)
@@ -38,8 +38,8 @@ class ProjectsListController extends Controller
                 'label' => __('ui.filters.freelance_projects'),
             ],
             [
-                'value' => 'packages',
-                'label' => __('ui.filters.packages'),
+                'value' => 'open_source',
+                'label' => __('ui.filters.open_source'),
             ],
         ];
 

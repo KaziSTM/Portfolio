@@ -14,12 +14,12 @@ it('loads work page with correct filter options and translations for english', f
         ->where('filters.0.label', 'Company Projects')
         ->where('filters.1.value', 'freelance_projects')
         ->where('filters.1.label', 'Freelance Projects')
-        ->where('filters.2.value', 'packages')
-        ->where('filters.2.label', 'Packages')
+        ->where('filters.2.value', 'open_source')
+        ->where('filters.2.label', 'Open Source')
         ->where('translations.filters.all', 'All')
         ->where('translations.filters.company_projects', 'Company Projects')
         ->where('translations.filters.freelance_projects', 'Freelance Projects')
-        ->where('translations.filters.packages', 'Packages')
+        ->where('translations.filters.open_source', 'Open Source')
         ->where('header.header_cta_label', 'Book a call')
     );
 });
@@ -32,11 +32,11 @@ it('loads work page with correct translations for french', function () {
         ->component('Projects/IndexView', false)
         ->where('filters.0.label', 'Projets en entreprise')
         ->where('filters.1.label', 'Projets freelance')
-        ->where('filters.2.label', 'Packages')
+        ->where('filters.2.label', 'Open Source')
         ->where('translations.filters.all', 'Tous')
         ->where('translations.filters.company_projects', 'Projets en entreprise')
         ->where('translations.filters.freelance_projects', 'Projets freelance')
-        ->where('translations.filters.packages', 'Packages')
+        ->where('translations.filters.open_source', 'Open Source')
     );
 });
 
@@ -48,11 +48,11 @@ it('loads work page with correct translations for arabic', function () {
         ->component('Projects/IndexView', false)
         ->where('filters.0.label', 'مشاريع الشركات')
         ->where('filters.1.label', 'المشاريع المستقلة')
-        ->where('filters.2.label', 'الحزم')
+        ->where('filters.2.label', 'مفتوحة المصدر')
         ->where('translations.filters.all', 'الكل')
         ->where('translations.filters.company_projects', 'مشاريع الشركات')
         ->where('translations.filters.freelance_projects', 'المشاريع المستقلة')
-        ->where('translations.filters.packages', 'الحزم')
+        ->where('translations.filters.open_source', 'مفتوحة المصدر')
     );
 });
 
@@ -76,13 +76,13 @@ it('filters freelance projects correctly', function () {
     );
 });
 
-it('filters packages correctly', function () {
-    $response = $this->get('/en/projects?filter=packages');
+it('filters open source projects correctly', function () {
+    $response = $this->get('/en/projects?filter=open_source');
 
     $response->assertStatus(200);
     $response->assertInertia(fn (Assert $page) => $page
         ->component('Projects/IndexView', false)
-        ->where('selectedFilter', 'packages')
+        ->where('selectedFilter', 'open_source')
     );
 });
 

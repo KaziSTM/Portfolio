@@ -12,7 +12,7 @@ class GetProjectPageTranslations
                 'all' => __('ui.filters.all'),
                 'company_projects' => __('ui.filters.company_projects'),
                 'freelance_projects' => __('ui.filters.freelance_projects'),
-                'packages' => __('ui.filters.packages'),
+                'open_source' => __('ui.filters.open_source'),
             ],
 
             'projects' => [
