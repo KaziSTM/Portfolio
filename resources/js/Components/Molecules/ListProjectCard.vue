@@ -62,6 +62,14 @@ const zoom = ref(false)
                             v-text="project.type_label"
                         ></span>
 
+                        <!-- PROGRESS -->
+                        <span
+                            v-if="project.is_in_progress"
+                            class="inline-block rounded-md bg-amber-100 px-2.5 py-1 text-[10px] font-medium text-amber-700 normal-case tracking-normal"
+                        >
+                            {{ translations.projects?.ongoing ?? translations.projects?.in_progress ?? 'Ongoing' }}
+                        </span>
+
                         <!-- ROLES -->
                         <div
                             class="flex flex-wrap items-center justify-center gap-2 text-xs tracking-widest uppercase text-gray-600"

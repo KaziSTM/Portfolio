@@ -104,7 +104,7 @@ const formattedDates = computed(() => {
                             v-if="project.is_in_progress"
                             class="rounded-md bg-amber-100 px-2.5 py-1 normal-case tracking-normal text-amber-600 font-medium"
                         >
-                            In Progress
+                            {{ translations.projects?.ongoing ?? translations.projects?.in_progress ?? 'Ongoing' }}
                         </span>
                     </div>
 
