@@ -62,6 +62,8 @@ class ProjectForm
                             ->default(0),
                         Toggle::make('is_featured'),
                         Toggle::make('is_in_progress'),
+                        Toggle::make('is_active')
+                            ->default(true),
                         CheckboxList::make('main_tags')
                             ->options(collect(ProjectRole::cases())
                                 ->mapWithKeys(fn (ProjectRole $role): array => [$role->value => $role->label()])
