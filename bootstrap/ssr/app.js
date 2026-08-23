@@ -14,9 +14,9 @@ var render = await createInertiaApp({
 	title: (title) => `${title} - ${appName}`,
 	resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* #__PURE__ */ Object.assign({
 		"./Pages/AboutView.vue": () => import("./assets/AboutView-DioPD-Ld.js"),
-		"./Pages/ContactView.vue": () => import("./assets/ContactView-Ccgbpz92.js"),
+		"./Pages/ContactView.vue": () => import("./assets/ContactView-mxokJU6H.js"),
 		"./Pages/HomeView.vue": () => import("./assets/HomeView-D02jG52T.js"),
-		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-BUr5DTfc.js"),
+		"./Pages/Projects/IndexView.vue": () => import("./assets/IndexView-BS9CQfRu.js"),
 		"./Pages/Projects/ShowView.vue": () => import("./assets/ShowView-DTv9zogF.js")
 	})),
 	setup({ el, App, props, plugin }) {
