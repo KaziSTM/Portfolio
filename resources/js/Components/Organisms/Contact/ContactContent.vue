@@ -38,9 +38,9 @@ function getContactIcon(iconName) {
 
             <div class="relative flex justify-center lg:block">
                 <img
-                    :src="'/assets/images/feature_section.webp'"
+                    :src="'/assets/images/portrait-5.webp'"
                     alt="Contact"
-                    class="mx-auto h-56 w-full max-w-65 rounded-2xl object-cover shadow-lg sm:h-64 sm:max-w-75 md:h-72 md:max-w-85 lg:h-64 lg:max-w-none xl:h-72 md:translate-x-14 lg:translate-x-16 xl:translate-x-24 rtl:md:-translate-x-14 rtl:lg:-translate-x-16 rtl:xl:-translate-x-24"
+                    class="mx-auto h-56 w-full max-w-65 rounded-2xl object-cover shadow-lg sm:h-64 sm:max-w-75 md:h-72 md:max-w-85 lg:h-64 lg:max-w-none xl:h-72 2xl:h-88 2xl:max-w-xl md:translate-x-14 lg:translate-x-16 xl:translate-x-24 2xl:translate-x-36 rtl:md:-translate-x-14 rtl:lg:-translate-x-16 rtl:xl:-translate-x-24 rtl:2xl:-translate-x-36"
                 />
             </div>
 
