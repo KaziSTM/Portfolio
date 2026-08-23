@@ -25,11 +25,11 @@ const title = useGetTitle('project')
         <ProjectHero :project="project.data" />
 
         <!-- HERO IMAGE -->
-        <section v-if="project.data.logo_url" class="mx-auto max-w-7xl">
+        <section v-if="project.data.main_url" class="w-full">
             <img
                 :alt="project.data.header"
-                :src="project.data.logo_url"
-                class="w-full rounded-xl object-cover"
+                :src="project.data.main_url"
+                class="w-full h-auto max-h-[85vh] object-cover"
             />
         </section>
 

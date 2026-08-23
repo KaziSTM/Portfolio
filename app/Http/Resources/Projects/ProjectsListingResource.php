@@ -25,7 +25,9 @@ class ProjectsListingResource extends JsonResource
 
             'details' => $this->getTranslation('details', $locale),
 
-            'logo_url' => $this->getFirstMediaUrl('logo'),
+            'logo_url' => $this->getFirstMediaUrl('logo') ?: $this->getFirstMediaUrl('main'),
+
+            'main_url' => $this->getFirstMediaUrl('main') ?: $this->getFirstMediaUrl('logo'),
 
             'type_label' => $this->type?->label(),
 

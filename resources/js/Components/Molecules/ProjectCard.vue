@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { Link } from '@inertiajs/vue3'
 
 import BorderGlow from '@/Components/Atoms/BorderGlow.vue'
 import Cta from '@/Components/Atoms/Cta.vue'
@@ -65,8 +66,9 @@ const formattedDates = computed(() => {
                 class="relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full"
             >
                 <!-- Image -->
-                <div
-                    class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full"
+                <Link
+                    :href="project.project_url"
+                    class="relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full block"
                     @mouseenter="zoom = true"
                     @mouseleave="zoom = false"
                 >
@@ -83,7 +85,7 @@ const formattedDates = computed(() => {
                         loading="lazy"
                         width="1088"
                     />
-                </div>
+                </Link>
 
                 <!-- Content -->
                 <div class="order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full">

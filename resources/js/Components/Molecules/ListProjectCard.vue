@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { Link } from '@inertiajs/vue3'
 import ListCardGlow from '@/Components/Atoms/ListCardGlow.vue'
 import Cta from '@/Components/Atoms/Cta.vue'
 import FadeContent from '@/Components/Molecules/FadeContent.vue'
@@ -37,9 +38,10 @@ const zoom = ref(false)
             <div class="p-6 sm:p-7 lg:p-8 h-full flex flex-col justify-between items-center text-center">
                 <div class="space-y-4 flex flex-col items-center w-full">
                     <!--  IMAGE (TOP) -->
-                    <div
+                    <Link
                         v-if="!reverse"
-                        class="mb-5 sm:mb-6 lg:mb-7 overflow-hidden rounded-2xl w-full cursor-pointer"
+                        :href="project.project_url"
+                        class="mb-5 sm:mb-6 lg:mb-7 overflow-hidden rounded-2xl w-full cursor-pointer block"
                         @mouseenter="zoom = true"
                         @mouseleave="zoom = false"
                     >
@@ -49,7 +51,7 @@ const zoom = ref(false)
                             :src="project.logo_url"
                             class="w-full h-64 sm:h-72 lg:h-80 xl:h-84 object-cover rounded-2xl transition-transform duration-500 ease-in-out"
                         />
-                    </div>
+                    </Link>
 
                     <!-- CONTENT -->
                     <div class="space-y-3.5 sm:space-y-4 flex flex-col items-center w-full">
@@ -109,9 +111,10 @@ const zoom = ref(false)
                 </div>
 
                 <!-- IMAGE (BOTTOM ON REVERSED) -->
-                <div
+                <Link
                     v-if="reverse"
-                    class="mt-5 sm:mt-6 lg:mt-7 overflow-hidden rounded-2xl w-full cursor-pointer"
+                    :href="project.project_url"
+                    class="mt-5 sm:mt-6 lg:mt-7 overflow-hidden rounded-2xl w-full cursor-pointer block"
                     @mouseenter="zoom = true"
                     @mouseleave="zoom = false"
                 >
@@ -121,7 +124,7 @@ const zoom = ref(false)
                         :src="project.logo_url"
                         class="w-full h-64 sm:h-72 lg:h-80 xl:h-84 object-cover rounded-2xl transition-transform duration-500 ease-in-out"
                     />
-                </div>
+                </Link>
             </div>
         </ListCardGlow>
     </FadeContent>
