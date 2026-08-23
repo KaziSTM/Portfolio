@@ -199,7 +199,7 @@ Algeria Geo هي حزمة Laravel تهدف إلى توفير **بيانات جغ
                 'main_tags' => [
                     ProjectRole::BACKEND,
                 ],
-                'is_active' => false,
+                'is_active' => true,
                 'tags' => [
                     'Laravel Package',
                     'SaaS',
