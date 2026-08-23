@@ -43,6 +43,18 @@ const tools = [
         src: 'assets/svg/icons/vue.svg',
         alt: 'VueJs',
     },
+    {
+        src: 'assets/svg/icons/filament.svg',
+        alt: 'FilamentPHP',
+    },
+    {
+        src: 'assets/svg/icons/phpstorm.svg',
+        alt: 'PhpStorm',
+    },
+    {
+        src: 'assets/svg/icons/nginx.svg',
+        alt: 'Nginx',
+    },
 ]
 </script>
 

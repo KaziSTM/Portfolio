@@ -358,219 +358,219 @@ Ce projet met en évidence l’importance de la **gestion de la concurrence et d
 هذا المشروع يوضح أن أنظمة الحجز تتطلب **تحكم دقيق في التزامن والمعاملات** لضمان الموثوقية.',
                 ],
             ],
-            [
-                'company' => 'Techfly',
-                'slug' => Str::slug('GED'),
-                'name' => 'GED',
-                'header' => [
-                    'en' => 'Multi-company electronic document management system.',
-                    'fr' => 'Système de gestion électronique des documents multi-entreprises.',
-                    'ar' => 'نظام متعدد الشركات لإدارة الوثائق إلكترونيًا.',
-                ],
-                'description' => [
-                    'en' => 'Enterprise electronic document management system built with Laravel and Filament, designed to centralize document workflows across multiple subsidiary companies.',
-                    'fr' => 'Système de gestion électronique des documents développé avec Laravel et Filament, conçu pour centraliser les workflows documentaires de plusieurs filiales.',
-                    'ar' => 'نظام مؤسسي لإدارة الوثائق إلكترونيًا مبني باستخدام Laravel وFilament، مصمم لمركزة سير عمل الوثائق عبر عدة شركات فرعية.',
-                ],
-                'link' => null,
-                'main_tags' => [
-                    ProjectRole::BACKEND,
-                    ProjectRole::FULLSTACK,
-                ],
-                'is_featured' => false,
-                'tags' => ['Laravel', 'Filament', 'GED', 'Document Management', 'Multi-Company'],
-                'start' => '2024-08-01',
-                'end' => '2024-10-01',
-                'details' => [
-                    'en' => '# GED — Engineering a Multi-Company Document Management System
-
-GED (Gestion Électronique des Documents) is an enterprise document management platform designed to centralize and manage documents across **multiple subsidiary companies** within a single application.
-
-The platform provides each company with its own operational environment while maintaining centralized administration, access control, and document workflows.
-
-## The Challenge
-
-Managing documents across multiple companies requires strong organizational and access-control mechanisms.
-
-The system needed to support:
-
-- Multiple subsidiary companies within the same platform
-- Company-level data isolation
-- Role-based access and permissions
-- Centralized document management
-- Structured document workflows
-- Administrative oversight across multiple entities
-
-## The Approach
-
-The platform was built with **Laravel and Filament**, using a multi-company architecture to allow different subsidiaries to operate within the same application.
-
-Key components include:
-
-- Multi-company and subsidiary management
-- Document storage and organization
-- Document categorization
-- Role and permission management
-- Company-level access control
-- Document workflows and lifecycle management
-- Centralized administration through Filament
-
-Filament provided the foundation for the internal administration interface, allowing complex business operations to be managed through a structured and maintainable dashboard.
-
-## My Contribution
-
-- Designed and implemented the backend architecture
-- Developed the multi-company architecture
-- Built the document management system
-- Implemented roles, permissions, and access control
-- Developed Filament resources and administrative interfaces
-- Implemented company-level data isolation
-- Developed document workflows and business logic
-- Contributed to the frontend and internal management interfaces
-
-## Outcome
-
-GED provides a centralized document management environment where multiple subsidiary companies can operate independently while remaining within the same platform.
-
-The system enables organizations to:
-
-- Centralize their document management
-- Maintain separation between subsidiaries
-- Control access through roles and permissions
-- Standardize document workflows
-- Manage multiple companies from a centralized administration interface
-
-## Takeaways
-
-Building a multi-company document management system requires careful consideration of **data isolation, authorization, document lifecycle management, and workflow architecture**.
-
-This project strengthened my experience in designing enterprise applications that support multiple organizational entities within a single scalable platform.',
-
-                    'fr' => '# GED — Conception d’un système de gestion électronique des documents multi-entreprises
-
-La GED (Gestion Électronique des Documents) est une plateforme documentaire d’entreprise conçue pour centraliser et gérer les documents de **plusieurs sociétés filiales** au sein d’une même application.
-
-La plateforme permet à chaque société de disposer de son propre environnement opérationnel tout en conservant une administration centralisée, une gestion fine des accès et des workflows documentaires.
-
-## Le défi
-
-La gestion documentaire dans un environnement multi-entreprises nécessite une architecture capable de garantir la séparation des données tout en conservant une administration commune.
-
-Le système devait notamment gérer :
-
-- Plusieurs sociétés filiales
-- L’isolation des données par société
-- Les rôles et permissions
-- La gestion centralisée des documents
-- Les workflows documentaires
-- La supervision globale des différentes entités
-
-## L’approche
-
-La plateforme a été développée avec **Laravel et Filament**, autour d’une architecture multi-entreprises permettant à plusieurs filiales d’utiliser la même application.
-
-Les principales fonctionnalités comprennent :
-
-- Gestion des sociétés et filiales
-- Stockage et organisation des documents
-- Catégorisation documentaire
-- Gestion des rôles et permissions
-- Contrôle des accès par société
-- Gestion du cycle de vie des documents
-- Administration centralisée avec Filament
-
-Filament constitue la base de l’interface d’administration et permet de gérer les différentes opérations métier à travers un dashboard structuré.
-
-## Ma contribution
-
-- Conception et développement de l’architecture backend
-- Mise en place de l’architecture multi-entreprises
-- Développement du système de gestion documentaire
-- Implémentation des rôles, permissions et contrôles d’accès
-- Développement des ressources et interfaces Filament
-- Mise en place de l’isolation des données par société
-- Développement des workflows documentaires et de la logique métier
-- Contribution aux interfaces frontend et d’administration
-
-## Résultat
-
-La GED fournit un environnement centralisé permettant à plusieurs sociétés filiales de travailler indépendamment tout en utilisant la même plateforme.
-
-Le système permet notamment de :
-
-- Centraliser la gestion documentaire
-- Séparer les données entre les filiales
-- Contrôler les accès avec des rôles et permissions
-- Standardiser les workflows documentaires
-- Administrer plusieurs sociétés depuis une interface centralisée
-
-## Conclusion
-
-La conception d’une GED multi-entreprises nécessite une attention particulière à **l’isolation des données, l’autorisation, la gestion du cycle de vie documentaire et l’architecture des workflows**.',
-
-                    'ar' => '# GED — بناء نظام متعدد الشركات لإدارة الوثائق إلكترونيًا
-
-GED (Gestion Électronique des Documents) هي منصة مؤسسية لإدارة الوثائق، تم تصميمها لمركزة وإدارة وثائق **عدة شركات فرعية** ضمن تطبيق واحد.
-
-تتيح المنصة لكل شركة العمل ضمن بيئتها الخاصة، مع الحفاظ على إدارة مركزية وصلاحيات دقيقة وسير عمل موحد للوثائق.
-
-## التحدي
-
-تتطلب إدارة الوثائق في بيئة متعددة الشركات بنية قوية تضمن فصل البيانات مع الحفاظ على إدارة مركزية.
-
-كان النظام بحاجة إلى دعم:
-
-- عدة شركات فرعية
-- عزل البيانات حسب الشركة
-- إدارة الأدوار والصلاحيات
-- الإدارة المركزية للوثائق
-- سير العمل الخاص بالوثائق
-- الإشراف على مختلف الشركات من خلال إدارة موحدة
-
-## الحل
-
-تم تطوير المنصة باستخدام **Laravel وFilament**، مع بنية متعددة الشركات تسمح لعدة شركات فرعية باستخدام نفس التطبيق.
-
-تشمل المكونات الرئيسية:
-
-- إدارة الشركات والفروع
-- تخزين وتنظيم الوثائق
-- تصنيف الوثائق
-- إدارة الأدوار والصلاحيات
-- التحكم في الوصول حسب الشركة
-- إدارة دورة حياة الوثائق
-- الإدارة المركزية باستخدام Filament
-
-تم استخدام Filament كأساس لواجهة الإدارة، مما سمح ببناء لوحة تحكم منظمة لإدارة العمليات المختلفة.
-
-## مساهمتي
-
-- تصميم وتطوير البنية الخلفية
-- بناء البنية متعددة الشركات
-- تطوير نظام إدارة الوثائق
-- تنفيذ الأدوار والصلاحيات والتحكم في الوصول
-- تطوير موارد وواجهات Filament
-- تطبيق عزل البيانات حسب الشركة
-- تطوير سير عمل الوثائق ومنطق الأعمال
-- المساهمة في واجهات المستخدم والإدارة
-
-## النتيجة
-
-توفر GED بيئة مركزية لإدارة الوثائق، حيث يمكن لعدة شركات فرعية العمل بشكل مستقل ضمن نفس المنصة مع الحفاظ على فصل البيانات والصلاحيات.
-
-يسمح النظام بـ:
-
-- مركزة إدارة الوثائق
-- فصل بيانات الشركات الفرعية
-- التحكم في الوصول باستخدام الأدوار والصلاحيات
-- توحيد سير العمل الخاص بالوثائق
-- إدارة عدة شركات من خلال واجهة مركزية
-
-## الخلاصة
-
-ركز المشروع على **عزل البيانات، إدارة الصلاحيات، إدارة دورة حياة الوثائق، وتصميم سير العمل** لبناء نظام مؤسسي قابل للتوسع.',
-                ],
-            ],
+//            [
+//                'company' => 'Techfly',
+//                'slug' => Str::slug('GED'),
+//                'name' => 'GED',
+//                'header' => [
+//                    'en' => 'Multi-company electronic document management system.',
+//                    'fr' => 'Système de gestion électronique des documents multi-entreprises.',
+//                    'ar' => 'نظام متعدد الشركات لإدارة الوثائق إلكترونيًا.',
+//                ],
+//                'description' => [
+//                    'en' => 'Enterprise electronic document management system built with Laravel and Filament, designed to centralize document workflows across multiple subsidiary companies.',
+//                    'fr' => 'Système de gestion électronique des documents développé avec Laravel et Filament, conçu pour centraliser les workflows documentaires de plusieurs filiales.',
+//                    'ar' => 'نظام مؤسسي لإدارة الوثائق إلكترونيًا مبني باستخدام Laravel وFilament، مصمم لمركزة سير عمل الوثائق عبر عدة شركات فرعية.',
+//                ],
+//                'link' => null,
+//                'main_tags' => [
+//                    ProjectRole::BACKEND,
+//                    ProjectRole::FULLSTACK,
+//                ],
+//                'is_featured' => false,
+//                'tags' => ['Laravel', 'Filament', 'GED', 'Document Management', 'Multi-Company'],
+//                'start' => '2024-08-01',
+//                'end' => '2024-10-01',
+//                'details' => [
+//                    'en' => '# GED — Engineering a Multi-Company Document Management System
+//
+//GED (Gestion Électronique des Documents) is an enterprise document management platform designed to centralize and manage documents across **multiple subsidiary companies** within a single application.
+//
+//The platform provides each company with its own operational environment while maintaining centralized administration, access control, and document workflows.
+//
+//## The Challenge
+//
+//Managing documents across multiple companies requires strong organizational and access-control mechanisms.
+//
+//The system needed to support:
+//
+//- Multiple subsidiary companies within the same platform
+//- Company-level data isolation
+//- Role-based access and permissions
+//- Centralized document management
+//- Structured document workflows
+//- Administrative oversight across multiple entities
+//
+//## The Approach
+//
+//The platform was built with **Laravel and Filament**, using a multi-company architecture to allow different subsidiaries to operate within the same application.
+//
+//Key components include:
+//
+//- Multi-company and subsidiary management
+//- Document storage and organization
+//- Document categorization
+//- Role and permission management
+//- Company-level access control
+//- Document workflows and lifecycle management
+//- Centralized administration through Filament
+//
+//Filament provided the foundation for the internal administration interface, allowing complex business operations to be managed through a structured and maintainable dashboard.
+//
+//## My Contribution
+//
+//- Designed and implemented the backend architecture
+//- Developed the multi-company architecture
+//- Built the document management system
+//- Implemented roles, permissions, and access control
+//- Developed Filament resources and administrative interfaces
+//- Implemented company-level data isolation
+//- Developed document workflows and business logic
+//- Contributed to the frontend and internal management interfaces
+//
+//## Outcome
+//
+//GED provides a centralized document management environment where multiple subsidiary companies can operate independently while remaining within the same platform.
+//
+//The system enables organizations to:
+//
+//- Centralize their document management
+//- Maintain separation between subsidiaries
+//- Control access through roles and permissions
+//- Standardize document workflows
+//- Manage multiple companies from a centralized administration interface
+//
+//## Takeaways
+//
+//Building a multi-company document management system requires careful consideration of **data isolation, authorization, document lifecycle management, and workflow architecture**.
+//
+//This project strengthened my experience in designing enterprise applications that support multiple organizational entities within a single scalable platform.',
+//
+//                    'fr' => '# GED — Conception d’un système de gestion électronique des documents multi-entreprises
+//
+//La GED (Gestion Électronique des Documents) est une plateforme documentaire d’entreprise conçue pour centraliser et gérer les documents de **plusieurs sociétés filiales** au sein d’une même application.
+//
+//La plateforme permet à chaque société de disposer de son propre environnement opérationnel tout en conservant une administration centralisée, une gestion fine des accès et des workflows documentaires.
+//
+//## Le défi
+//
+//La gestion documentaire dans un environnement multi-entreprises nécessite une architecture capable de garantir la séparation des données tout en conservant une administration commune.
+//
+//Le système devait notamment gérer :
+//
+//- Plusieurs sociétés filiales
+//- L’isolation des données par société
+//- Les rôles et permissions
+//- La gestion centralisée des documents
+//- Les workflows documentaires
+//- La supervision globale des différentes entités
+//
+//## L’approche
+//
+//La plateforme a été développée avec **Laravel et Filament**, autour d’une architecture multi-entreprises permettant à plusieurs filiales d’utiliser la même application.
+//
+//Les principales fonctionnalités comprennent :
+//
+//- Gestion des sociétés et filiales
+//- Stockage et organisation des documents
+//- Catégorisation documentaire
+//- Gestion des rôles et permissions
+//- Contrôle des accès par société
+//- Gestion du cycle de vie des documents
+//- Administration centralisée avec Filament
+//
+//Filament constitue la base de l’interface d’administration et permet de gérer les différentes opérations métier à travers un dashboard structuré.
+//
+//## Ma contribution
+//
+//- Conception et développement de l’architecture backend
+//- Mise en place de l’architecture multi-entreprises
+//- Développement du système de gestion documentaire
+//- Implémentation des rôles, permissions et contrôles d’accès
+//- Développement des ressources et interfaces Filament
+//- Mise en place de l’isolation des données par société
+//- Développement des workflows documentaires et de la logique métier
+//- Contribution aux interfaces frontend et d’administration
+//
+//## Résultat
+//
+//La GED fournit un environnement centralisé permettant à plusieurs sociétés filiales de travailler indépendamment tout en utilisant la même plateforme.
+//
+//Le système permet notamment de :
+//
+//- Centraliser la gestion documentaire
+//- Séparer les données entre les filiales
+//- Contrôler les accès avec des rôles et permissions
+//- Standardiser les workflows documentaires
+//- Administrer plusieurs sociétés depuis une interface centralisée
+//
+//## Conclusion
+//
+//La conception d’une GED multi-entreprises nécessite une attention particulière à **l’isolation des données, l’autorisation, la gestion du cycle de vie documentaire et l’architecture des workflows**.',
+//
+//                    'ar' => '# GED — بناء نظام متعدد الشركات لإدارة الوثائق إلكترونيًا
+//
+//GED (Gestion Électronique des Documents) هي منصة مؤسسية لإدارة الوثائق، تم تصميمها لمركزة وإدارة وثائق **عدة شركات فرعية** ضمن تطبيق واحد.
+//
+//تتيح المنصة لكل شركة العمل ضمن بيئتها الخاصة، مع الحفاظ على إدارة مركزية وصلاحيات دقيقة وسير عمل موحد للوثائق.
+//
+//## التحدي
+//
+//تتطلب إدارة الوثائق في بيئة متعددة الشركات بنية قوية تضمن فصل البيانات مع الحفاظ على إدارة مركزية.
+//
+//كان النظام بحاجة إلى دعم:
+//
+//- عدة شركات فرعية
+//- عزل البيانات حسب الشركة
+//- إدارة الأدوار والصلاحيات
+//- الإدارة المركزية للوثائق
+//- سير العمل الخاص بالوثائق
+//- الإشراف على مختلف الشركات من خلال إدارة موحدة
+//
+//## الحل
+//
+//تم تطوير المنصة باستخدام **Laravel وFilament**، مع بنية متعددة الشركات تسمح لعدة شركات فرعية باستخدام نفس التطبيق.
+//
+//تشمل المكونات الرئيسية:
+//
+//- إدارة الشركات والفروع
+//- تخزين وتنظيم الوثائق
+//- تصنيف الوثائق
+//- إدارة الأدوار والصلاحيات
+//- التحكم في الوصول حسب الشركة
+//- إدارة دورة حياة الوثائق
+//- الإدارة المركزية باستخدام Filament
+//
+//تم استخدام Filament كأساس لواجهة الإدارة، مما سمح ببناء لوحة تحكم منظمة لإدارة العمليات المختلفة.
+//
+//## مساهمتي
+//
+//- تصميم وتطوير البنية الخلفية
+//- بناء البنية متعددة الشركات
+//- تطوير نظام إدارة الوثائق
+//- تنفيذ الأدوار والصلاحيات والتحكم في الوصول
+//- تطوير موارد وواجهات Filament
+//- تطبيق عزل البيانات حسب الشركة
+//- تطوير سير عمل الوثائق ومنطق الأعمال
+//- المساهمة في واجهات المستخدم والإدارة
+//
+//## النتيجة
+//
+//توفر GED بيئة مركزية لإدارة الوثائق، حيث يمكن لعدة شركات فرعية العمل بشكل مستقل ضمن نفس المنصة مع الحفاظ على فصل البيانات والصلاحيات.
+//
+//يسمح النظام بـ:
+//
+//- مركزة إدارة الوثائق
+//- فصل بيانات الشركات الفرعية
+//- التحكم في الوصول باستخدام الأدوار والصلاحيات
+//- توحيد سير العمل الخاص بالوثائق
+//- إدارة عدة شركات من خلال واجهة مركزية
+//
+//## الخلاصة
+//
+//ركز المشروع على **عزل البيانات، إدارة الصلاحيات، إدارة دورة حياة الوثائق، وتصميم سير العمل** لبناء نظام مؤسسي قابل للتوسع.',
+//                ],
+//            ],
 
             [
                 'company' => 'Techfly',
@@ -960,267 +960,267 @@ PASSMEMO هي منصة ذكاء اصطناعي موجهة لمؤسسات الر�
 هذا المشروع يبرز أهمية **المرونة في تصميم البيانات** عند التعامل مع معلومات بشرية غير منظمة.',
                 ],
             ],
-            [
-                'company' => 'Techfly',
-                'slug' => Str::slug('Carloue'),
-                'name' => 'Carloue',
-                'header' => [
-                    'en' => 'Peer-to-peer car rental marketplace.',
-                    'fr' => 'Marketplace de location de voitures entre particuliers.',
-                    'ar' => 'منصة لتأجير السيارات بين الأفراد.',
-                ],
-                'description' => [
-                    'en' => 'Peer-to-peer car rental platform connecting private vehicle owners with renters through a Laravel API, with booking, availability, identity verification, contracts, and secure payment workflows.',
-                    'fr' => 'Plateforme de location de voitures entre particuliers mettant en relation propriétaires et locataires via une API Laravel avec gestion des réservations, disponibilités, vérification d’identité, contrats et paiements sécurisés.',
-                    'ar' => 'منصة لتأجير السيارات بين الأفراد تربط أصحاب المركبات بالمستأجرين عبر واجهة API مبنية باستخدام Laravel، مع إدارة الحجوزات والتوفر والتحقق من الهوية والعقود والمدفوعات الآمنة.',
-                ],
-                'link' => null,
-                'main_tags' => [
-                    ProjectRole::BACKEND,
-                    ProjectRole::FULLSTACK,
-                ],
-                'is_featured' => false,
-                'tags' => ['Car Rental', 'Marketplace', 'Laravel', 'API', 'Booking', 'Flutter'],
-                'start' => '2023-01-01',
-                'end' => '2023-12-01',
-                'details' => [
-                    'en' => '# Carloue — Engineering a Peer-to-Peer Car Rental Marketplace
-
-Carloue is a **peer-to-peer car rental marketplace** designed to connect private vehicle owners with individuals looking to rent cars.
-
-The platform provides the infrastructure required to manage the complete rental lifecycle, from vehicle listing and availability to booking, identity verification, contracts, and payment processing.
-
-## The Challenge
-
-A peer-to-peer rental platform requires significantly more than a standard booking system.
-
-The backend needed to handle:
-
-- Multiple user roles including owners and renters
-- Detailed vehicle listings and specifications
-- Dynamic availability calendars
-- Geo-location based vehicle discovery
-- Booking and rental lifecycle management
-- Identity verification
-- Digital rental contracts
-- Secure financial transactions
-- Protection against double-booking
-- Communication between the different actors involved in a rental
-
-The system also needed to provide a reliable API consumed by the Flutter mobile application.
-
-## The Approach
-
-The platform was built around a **Laravel backend and API-first architecture**, with the web back office handling the core management operations and the Flutter application consuming the APIs.
-
-Key components include:
-
-- Owner and renter role management
-- Vehicle listing and media management
-- Availability calendar and scheduling
-- Geo-location search and filtering
-- Booking workflow and validation
-- Identity verification
-- Digital contract management
-- Payment processing
-- Rental lifecycle management
-- Administrative and operational dashboards
-
-Strong emphasis was placed on keeping booking and availability logic consistent to prevent conflicting reservations across independently managed vehicles.
-
-## My Contribution
-
-I was responsible for the **backend, API, business logic, and web back office** of the platform.
-
-My work included:
-
-- Designed and implemented the backend architecture
-- Developed the complete business logic
-- Built the Laravel API consumed by the mobile application
-- Implemented owner and renter workflows
-- Developed vehicle listing and availability management
-- Built the booking and reservation logic
-- Implemented identity verification workflows
-- Developed digital contract functionality
-- Implemented payment-related business logic
-- Developed the web back office and management interfaces
-
-The Flutter mobile application was developed by other developers, while I was responsible for the backend ecosystem and the web-based management interface.
-
-## Outcome
-
-Carloue provides a complete infrastructure for peer-to-peer vehicle rental, allowing:
-
-- Owners to publish and manage their vehicles
-- Renters to discover and book available cars
-- The platform to manage availability and prevent conflicts
-- Users to go through identity and contract workflows
-- Transactions to be handled through a centralized backend
-- Mobile applications to consume a consistent and secure API
-
-## Takeaways
-
-Peer-to-peer rental platforms combine several complex domains: **marketplace logic, scheduling, identity verification, contracts, payments, and multi-role authorization**.
-
-This project strengthened my experience in designing API-driven Laravel applications with complex business workflows and transaction lifecycles.',
-
-                    'fr' => '# Carloue — Conception d’une marketplace de location de voitures entre particuliers
-
-Carloue est une **marketplace de location de voitures entre particuliers** permettant de mettre en relation des propriétaires de véhicules avec des personnes souhaitant louer une voiture.
-
-La plateforme gère l’ensemble du cycle de location, de la publication du véhicule jusqu’à la réservation, la vérification d’identité, la signature des contrats et les paiements.
-
-## Le défi
-
-Une plateforme de location entre particuliers nécessite une logique métier plus complexe qu’un simple système de réservation.
-
-Le backend devait notamment gérer :
-
-- Plusieurs rôles utilisateur : propriétaire et locataire
-- Les informations détaillées des véhicules
-- Les calendriers de disponibilité
-- La recherche géolocalisée
-- Le processus de réservation
-- La vérification d’identité
-- Les contrats de location numériques
-- Les transactions financières
-- La prévention des doubles réservations
-- Les différents acteurs du processus de location
-
-## L’approche
-
-La plateforme repose sur une **architecture Laravel orientée API**, avec un back office web chargé de la gestion opérationnelle et une application Flutter consommant les APIs.
-
-Les principales fonctionnalités comprennent :
-
-- Gestion des rôles propriétaires et locataires
-- Gestion des véhicules et de leurs médias
-- Calendrier de disponibilité
-- Recherche et filtres géolocalisés
-- Workflow de réservation
-- Vérification d’identité
-- Gestion des contrats numériques
-- Gestion des paiements
-- Gestion du cycle de vie des locations
-- Interfaces d’administration et de gestion
-
-Une attention particulière a été portée à la cohérence des disponibilités et des réservations afin d’éviter les conflits.
-
-## Ma contribution
-
-J’étais responsable du **backend, des APIs, de la logique métier et du back office web**.
-
-Mes principales contributions :
-
-- Conception et développement de l’architecture backend
-- Développement de l’ensemble de la logique métier
-- Création de l’API Laravel consommée par l’application mobile
-- Implémentation des workflows propriétaires et locataires
-- Gestion des véhicules et de leurs disponibilités
-- Développement de la logique de réservation
-- Mise en place de la vérification d’identité
-- Développement de la gestion des contrats numériques
-- Implémentation de la logique liée aux paiements
-- Développement du back office web
-
-L’application mobile Flutter a été développée par d’autres développeurs. J’ai pris en charge l’ensemble de l’écosystème backend ainsi que l’interface de gestion web.
-
-## Résultat
-
-Carloue fournit une infrastructure complète permettant :
-
-- Aux propriétaires de publier et gérer leurs véhicules
-- Aux locataires de rechercher et réserver des voitures
-- À la plateforme de gérer les disponibilités et les conflits
-- Aux utilisateurs de suivre les processus de vérification et de contractualisation
-- De centraliser les transactions et la logique métier
-- Aux applications mobiles de consommer une API cohérente et sécurisée
-
-## Conclusion
-
-Les plateformes de location entre particuliers combinent plusieurs domaines complexes : **marketplace, planification, vérification d’identité, contrats, paiements et gestion des rôles**.
-
-Ce projet a renforcé mon expérience dans la conception d’applications Laravel orientées API avec des workflows métier complexes.',
-
-                    'ar' => '# Carloue — بناء منصة لتأجير السيارات بين الأفراد
-
-Carloue هي **منصة لتأجير السيارات بين الأفراد** تربط أصحاب السيارات بالأشخاص الراغبين في استئجار المركبات.
-
-تدير المنصة دورة الإيجار كاملة، بدءًا من إضافة السيارة وإدارة توفرها، وصولًا إلى الحجز والتحقق من الهوية والعقود والمدفوعات.
-
-## التحدي
-
-تتطلب منصة تأجير السيارات بين الأفراد منطق أعمال أكثر تعقيدًا من نظام حجز تقليدي.
-
-كان على النظام التعامل مع:
-
-- أدوار متعددة للمستخدمين، بما في ذلك المالك والمستأجر
-- معلومات ومواصفات السيارات
-- جداول التوفر
-- البحث الجغرافي
-- عمليات الحجز
-- التحقق من الهوية
-- العقود الرقمية
-- المعاملات المالية
-- منع الحجوزات المتعارضة
-- دورة الإيجار بمختلف مراحلها
-
-## الحل
-
-تم بناء المنصة باستخدام **Laravel وبنية تعتمد على API**، مع نظام إدارة ويب لمعالجة العمليات الإدارية، بينما يستهلك تطبيق Flutter واجهات الـ API.
-
-تشمل المكونات الرئيسية:
-
-- إدارة أدوار المالكين والمستأجرين
-- إدارة السيارات والوسائط
-- إدارة جداول التوفر
-- البحث والتصفية حسب الموقع
-- نظام الحجز
-- التحقق من الهوية
-- إدارة العقود الرقمية
-- منطق المدفوعات
-- إدارة دورة الإيجار
-- لوحات الإدارة والتسيير
-
-تم التركيز بشكل خاص على ضمان اتساق منطق الحجز والتوفر لمنع الحجوزات المتعارضة.
-
-## مساهمتي
-
-كنت مسؤولًا عن **الـ backend والـ API ومنطق الأعمال وواجهة الإدارة على الويب**.
-
-شملت مساهمتي:
-
-- تصميم وتطوير البنية الخلفية
-- تطوير كامل منطق الأعمال
-- بناء Laravel API المستخدم من طرف تطبيق الهاتف
-- تطوير workflows الخاصة بالمالكين والمستأجرين
-- إدارة السيارات والتوفر
-- تطوير نظام الحجز
-- تنفيذ عمليات التحقق من الهوية
-- تطوير نظام العقود الرقمية
-- تنفيذ منطق المدفوعات
-- تطوير لوحة الإدارة على الويب
-
-تم تطوير تطبيق Flutter من طرف مطورين آخرين، بينما توليت كامل منظومة الـ backend وواجهة الإدارة الخاصة بالويب.
-
-## النتيجة
-
-توفر Carloue بنية متكاملة تسمح بـ:
-
-- للمالكين بنشر سياراتهم وإدارتها
-- للمستأجرين بالبحث عن السيارات وحجزها
-- للمنصة بإدارة التوفر ومنع التعارضات
-- للمستخدمين بإتمام عمليات التحقق والتعاقد
-- بإدارة المعاملات ومنطق الأعمال بشكل مركزي
-- للتطبيقات المحمولة باستهلاك API موحدة وآمنة
-
-## الخلاصة
-
-تجمع منصات تأجير السيارات بين الأفراد عدة مجالات معقدة مثل **منطق الـ marketplace، إدارة الجداول الزمنية، التحقق من الهوية، العقود، المدفوعات وإدارة الأدوار**.
-
-عزز هذا المشروع خبرتي في بناء تطبيقات Laravel تعتمد على API وتحتوي على workflows ومنطق أعمال معقد.',
-                ],
-            ],
+//            [
+//                'company' => 'Techfly',
+//                'slug' => Str::slug('Carloue'),
+//                'name' => 'Carloue',
+//                'header' => [
+//                    'en' => 'Peer-to-peer car rental marketplace.',
+//                    'fr' => 'Marketplace de location de voitures entre particuliers.',
+//                    'ar' => 'منصة لتأجير السيارات بين الأفراد.',
+//                ],
+//                'description' => [
+//                    'en' => 'Peer-to-peer car rental platform connecting private vehicle owners with renters through a Laravel API, with booking, availability, identity verification, contracts, and secure payment workflows.',
+//                    'fr' => 'Plateforme de location de voitures entre particuliers mettant en relation propriétaires et locataires via une API Laravel avec gestion des réservations, disponibilités, vérification d’identité, contrats et paiements sécurisés.',
+//                    'ar' => 'منصة لتأجير السيارات بين الأفراد تربط أصحاب المركبات بالمستأجرين عبر واجهة API مبنية باستخدام Laravel، مع إدارة الحجوزات والتوفر والتحقق من الهوية والعقود والمدفوعات الآمنة.',
+//                ],
+//                'link' => null,
+//                'main_tags' => [
+//                    ProjectRole::BACKEND,
+//                    ProjectRole::FULLSTACK,
+//                ],
+//                'is_featured' => false,
+//                'tags' => ['Car Rental', 'Marketplace', 'Laravel', 'API', 'Booking', 'Flutter'],
+//                'start' => '2023-01-01',
+//                'end' => '2023-12-01',
+//                'details' => [
+//                    'en' => '# Carloue — Engineering a Peer-to-Peer Car Rental Marketplace
+//
+//Carloue is a **peer-to-peer car rental marketplace** designed to connect private vehicle owners with individuals looking to rent cars.
+//
+//The platform provides the infrastructure required to manage the complete rental lifecycle, from vehicle listing and availability to booking, identity verification, contracts, and payment processing.
+//
+//## The Challenge
+//
+//A peer-to-peer rental platform requires significantly more than a standard booking system.
+//
+//The backend needed to handle:
+//
+//- Multiple user roles including owners and renters
+//- Detailed vehicle listings and specifications
+//- Dynamic availability calendars
+//- Geo-location based vehicle discovery
+//- Booking and rental lifecycle management
+//- Identity verification
+//- Digital rental contracts
+//- Secure financial transactions
+//- Protection against double-booking
+//- Communication between the different actors involved in a rental
+//
+//The system also needed to provide a reliable API consumed by the Flutter mobile application.
+//
+//## The Approach
+//
+//The platform was built around a **Laravel backend and API-first architecture**, with the web back office handling the core management operations and the Flutter application consuming the APIs.
+//
+//Key components include:
+//
+//- Owner and renter role management
+//- Vehicle listing and media management
+//- Availability calendar and scheduling
+//- Geo-location search and filtering
+//- Booking workflow and validation
+//- Identity verification
+//- Digital contract management
+//- Payment processing
+//- Rental lifecycle management
+//- Administrative and operational dashboards
+//
+//Strong emphasis was placed on keeping booking and availability logic consistent to prevent conflicting reservations across independently managed vehicles.
+//
+//## My Contribution
+//
+//I was responsible for the **backend, API, business logic, and web back office** of the platform.
+//
+//My work included:
+//
+//- Designed and implemented the backend architecture
+//- Developed the complete business logic
+//- Built the Laravel API consumed by the mobile application
+//- Implemented owner and renter workflows
+//- Developed vehicle listing and availability management
+//- Built the booking and reservation logic
+//- Implemented identity verification workflows
+//- Developed digital contract functionality
+//- Implemented payment-related business logic
+//- Developed the web back office and management interfaces
+//
+//The Flutter mobile application was developed by other developers, while I was responsible for the backend ecosystem and the web-based management interface.
+//
+//## Outcome
+//
+//Carloue provides a complete infrastructure for peer-to-peer vehicle rental, allowing:
+//
+//- Owners to publish and manage their vehicles
+//- Renters to discover and book available cars
+//- The platform to manage availability and prevent conflicts
+//- Users to go through identity and contract workflows
+//- Transactions to be handled through a centralized backend
+//- Mobile applications to consume a consistent and secure API
+//
+//## Takeaways
+//
+//Peer-to-peer rental platforms combine several complex domains: **marketplace logic, scheduling, identity verification, contracts, payments, and multi-role authorization**.
+//
+//This project strengthened my experience in designing API-driven Laravel applications with complex business workflows and transaction lifecycles.',
+//
+//                    'fr' => '# Carloue — Conception d’une marketplace de location de voitures entre particuliers
+//
+//Carloue est une **marketplace de location de voitures entre particuliers** permettant de mettre en relation des propriétaires de véhicules avec des personnes souhaitant louer une voiture.
+//
+//La plateforme gère l’ensemble du cycle de location, de la publication du véhicule jusqu’à la réservation, la vérification d’identité, la signature des contrats et les paiements.
+//
+//## Le défi
+//
+//Une plateforme de location entre particuliers nécessite une logique métier plus complexe qu’un simple système de réservation.
+//
+//Le backend devait notamment gérer :
+//
+//- Plusieurs rôles utilisateur : propriétaire et locataire
+//- Les informations détaillées des véhicules
+//- Les calendriers de disponibilité
+//- La recherche géolocalisée
+//- Le processus de réservation
+//- La vérification d’identité
+//- Les contrats de location numériques
+//- Les transactions financières
+//- La prévention des doubles réservations
+//- Les différents acteurs du processus de location
+//
+//## L’approche
+//
+//La plateforme repose sur une **architecture Laravel orientée API**, avec un back office web chargé de la gestion opérationnelle et une application Flutter consommant les APIs.
+//
+//Les principales fonctionnalités comprennent :
+//
+//- Gestion des rôles propriétaires et locataires
+//- Gestion des véhicules et de leurs médias
+//- Calendrier de disponibilité
+//- Recherche et filtres géolocalisés
+//- Workflow de réservation
+//- Vérification d’identité
+//- Gestion des contrats numériques
+//- Gestion des paiements
+//- Gestion du cycle de vie des locations
+//- Interfaces d’administration et de gestion
+//
+//Une attention particulière a été portée à la cohérence des disponibilités et des réservations afin d’éviter les conflits.
+//
+//## Ma contribution
+//
+//J’étais responsable du **backend, des APIs, de la logique métier et du back office web**.
+//
+//Mes principales contributions :
+//
+//- Conception et développement de l’architecture backend
+//- Développement de l’ensemble de la logique métier
+//- Création de l’API Laravel consommée par l’application mobile
+//- Implémentation des workflows propriétaires et locataires
+//- Gestion des véhicules et de leurs disponibilités
+//- Développement de la logique de réservation
+//- Mise en place de la vérification d’identité
+//- Développement de la gestion des contrats numériques
+//- Implémentation de la logique liée aux paiements
+//- Développement du back office web
+//
+//L’application mobile Flutter a été développée par d’autres développeurs. J’ai pris en charge l’ensemble de l’écosystème backend ainsi que l’interface de gestion web.
+//
+//## Résultat
+//
+//Carloue fournit une infrastructure complète permettant :
+//
+//- Aux propriétaires de publier et gérer leurs véhicules
+//- Aux locataires de rechercher et réserver des voitures
+//- À la plateforme de gérer les disponibilités et les conflits
+//- Aux utilisateurs de suivre les processus de vérification et de contractualisation
+//- De centraliser les transactions et la logique métier
+//- Aux applications mobiles de consommer une API cohérente et sécurisée
+//
+//## Conclusion
+//
+//Les plateformes de location entre particuliers combinent plusieurs domaines complexes : **marketplace, planification, vérification d’identité, contrats, paiements et gestion des rôles**.
+//
+//Ce projet a renforcé mon expérience dans la conception d’applications Laravel orientées API avec des workflows métier complexes.',
+//
+//                    'ar' => '# Carloue — بناء منصة لتأجير السيارات بين الأفراد
+//
+//Carloue هي **منصة لتأجير السيارات بين الأفراد** تربط أصحاب السيارات بالأشخاص الراغبين في استئجار المركبات.
+//
+//تدير المنصة دورة الإيجار كاملة، بدءًا من إضافة السيارة وإدارة توفرها، وصولًا إلى الحجز والتحقق من الهوية والعقود والمدفوعات.
+//
+//## التحدي
+//
+//تتطلب منصة تأجير السيارات بين الأفراد منطق أعمال أكثر تعقيدًا من نظام حجز تقليدي.
+//
+//كان على النظام التعامل مع:
+//
+//- أدوار متعددة للمستخدمين، بما في ذلك المالك والمستأجر
+//- معلومات ومواصفات السيارات
+//- جداول التوفر
+//- البحث الجغرافي
+//- عمليات الحجز
+//- التحقق من الهوية
+//- العقود الرقمية
+//- المعاملات المالية
+//- منع الحجوزات المتعارضة
+//- دورة الإيجار بمختلف مراحلها
+//
+//## الحل
+//
+//تم بناء المنصة باستخدام **Laravel وبنية تعتمد على API**، مع نظام إدارة ويب لمعالجة العمليات الإدارية، بينما يستهلك تطبيق Flutter واجهات الـ API.
+//
+//تشمل المكونات الرئيسية:
+//
+//- إدارة أدوار المالكين والمستأجرين
+//- إدارة السيارات والوسائط
+//- إدارة جداول التوفر
+//- البحث والتصفية حسب الموقع
+//- نظام الحجز
+//- التحقق من الهوية
+//- إدارة العقود الرقمية
+//- منطق المدفوعات
+//- إدارة دورة الإيجار
+//- لوحات الإدارة والتسيير
+//
+//تم التركيز بشكل خاص على ضمان اتساق منطق الحجز والتوفر لمنع الحجوزات المتعارضة.
+//
+//## مساهمتي
+//
+//كنت مسؤولًا عن **الـ backend والـ API ومنطق الأعمال وواجهة الإدارة على الويب**.
+//
+//شملت مساهمتي:
+//
+//- تصميم وتطوير البنية الخلفية
+//- تطوير كامل منطق الأعمال
+//- بناء Laravel API المستخدم من طرف تطبيق الهاتف
+//- تطوير workflows الخاصة بالمالكين والمستأجرين
+//- إدارة السيارات والتوفر
+//- تطوير نظام الحجز
+//- تنفيذ عمليات التحقق من الهوية
+//- تطوير نظام العقود الرقمية
+//- تنفيذ منطق المدفوعات
+//- تطوير لوحة الإدارة على الويب
+//
+//تم تطوير تطبيق Flutter من طرف مطورين آخرين، بينما توليت كامل منظومة الـ backend وواجهة الإدارة الخاصة بالويب.
+//
+//## النتيجة
+//
+//توفر Carloue بنية متكاملة تسمح بـ:
+//
+//- للمالكين بنشر سياراتهم وإدارتها
+//- للمستأجرين بالبحث عن السيارات وحجزها
+//- للمنصة بإدارة التوفر ومنع التعارضات
+//- للمستخدمين بإتمام عمليات التحقق والتعاقد
+//- بإدارة المعاملات ومنطق الأعمال بشكل مركزي
+//- للتطبيقات المحمولة باستهلاك API موحدة وآمنة
+//
+//## الخلاصة
+//
+//تجمع منصات تأجير السيارات بين الأفراد عدة مجالات معقدة مثل **منطق الـ marketplace، إدارة الجداول الزمنية، التحقق من الهوية، العقود، المدفوعات وإدارة الأدوار**.
+//
+//عزز هذا المشروع خبرتي في بناء تطبيقات Laravel تعتمد على API وتحتوي على workflows ومنطق أعمال معقد.',
+//                ],
+//            ],
         ];
     }
 

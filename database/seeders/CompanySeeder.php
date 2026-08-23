@@ -76,7 +76,6 @@ class CompanySeeder extends Seeder
                     'size' => '11-50',
                     'website' => 'https://www.musicspacedz.com/en',
                 ],
-
                 [
                     'name' => 'CCO',
                     'headquarter' => [
@@ -124,69 +123,69 @@ class CompanySeeder extends Seeder
                     'website' => 'https://kheops.ai',
                 ],
 
-                [
-                    'name' => 'Klassty',
-                    'headquarter' => [
-                        'en' => 'La Zone d’Activités, Lot 21 au 30, Dar El Beida 16100, Algeria',
-                        'fr' => 'La Zone d’Activités, Lot 21 au 30, Dar El Beida 16100, Algérie',
-                        'ar' => 'منطقة النشاطات، القطعة 21 إلى 30، الدار البيضاء 16100، الجزائر',
-                    ],
-                    'industry' => [
-                        'en' => 'E-Learning & Education',
-                        'fr' => 'E-learning et éducation',
-                        'ar' => 'التعليم الإلكتروني والتعليم',
-                    ],
-                    'size' => '11-50',
-                    'website' => 'https://klassty.com/',
-                ],
+//                [
+//                    'name' => 'Klassty',
+//                    'headquarter' => [
+//                        'en' => 'La Zone d’Activités, Lot 21 au 30, Dar El Beida 16100, Algeria',
+//                        'fr' => 'La Zone d’Activités, Lot 21 au 30, Dar El Beida 16100, Algérie',
+//                        'ar' => 'منطقة النشاطات، القطعة 21 إلى 30، الدار البيضاء 16100، الجزائر',
+//                    ],
+//                    'industry' => [
+//                        'en' => 'E-Learning & Education',
+//                        'fr' => 'E-learning et éducation',
+//                        'ar' => 'التعليم الإلكتروني والتعليم',
+//                    ],
+//                    'size' => '11-50',
+//                    'website' => 'https://klassty.com/',
+//                ],
 
-                [
-                    'name' => 'DZignerd',
-                    'headquarter' => [
-                        'en' => 'Algeria',
-                        'fr' => 'Algérie',
-                        'ar' => 'الجزائر',
-                    ],
-                    'industry' => [
-                        'en' => 'E-Commerce & Artisan Products',
-                        'fr' => 'E-commerce et produits artisanaux',
-                        'ar' => 'التجارة الإلكترونية والمنتجات الحرفية',
-                    ],
-                    'size' => '1-50',
-                    'website' => 'https://dzignerd.com/',
-                ],
+//                [
+//                    'name' => 'DZignerd',
+//                    'headquarter' => [
+//                        'en' => 'Algeria',
+//                        'fr' => 'Algérie',
+//                        'ar' => 'الجزائر',
+//                    ],
+//                    'industry' => [
+//                        'en' => 'E-Commerce & Artisan Products',
+//                        'fr' => 'E-commerce et produits artisanaux',
+//                        'ar' => 'التجارة الإلكترونية والمنتجات الحرفية',
+//                    ],
+//                    'size' => '1-50',
+//                    'website' => 'https://dzignerd.com/',
+//                ],
 
-                [
-                    'name' => 'Mobius Solutions',
-                    'headquarter' => [
-                        'en' => 'N°O-6 Cité Patrimoine, Hussein Dey 16040, Algeria',
-                        'fr' => 'N°O-6 Cité Patrimoine, Hussein Dey 16040, Algérie',
-                        'ar' => 'رقم O-6، حي باتريموان، حسين داي 16040، الجزائر',
-                    ],
-                    'industry' => [
-                        'en' => 'Construction & Building Services',
-                        'fr' => 'Construction et services du bâtiment',
-                        'ar' => 'البناء وخدمات التشييد',
-                    ],
-                    'size' => '1-50',
-                    'website' => 'http://www.mobiusdz.com/',
-                ],
+//                [
+//                    'name' => 'Mobius Solutions',
+//                    'headquarter' => [
+//                        'en' => 'N°O-6 Cité Patrimoine, Hussein Dey 16040, Algeria',
+//                        'fr' => 'N°O-6 Cité Patrimoine, Hussein Dey 16040, Algérie',
+//                        'ar' => 'رقم O-6، حي باتريموان، حسين داي 16040، الجزائر',
+//                    ],
+//                    'industry' => [
+//                        'en' => 'Construction & Building Services',
+//                        'fr' => 'Construction et services du bâtiment',
+//                        'ar' => 'البناء وخدمات التشييد',
+//                    ],
+//                    'size' => '1-50',
+//                    'website' => 'http://www.mobiusdz.com/',
+//                ],
 
-                [
-                    'name' => 'Carloue',
-                    'headquarter' => [
-                        'en' => 'Algeria',
-                        'fr' => 'Algérie',
-                        'ar' => 'الجزائر',
-                    ],
-                    'industry' => [
-                        'en' => 'Car Rental & Mobility',
-                        'fr' => 'Location de voitures et mobilité',
-                        'ar' => 'تأجير السيارات والتنقل',
-                    ],
-                    'size' => '1-50',
-                    'website' => null,
-                ],
+//                [
+//                    'name' => 'Carloue',
+//                    'headquarter' => [
+//                        'en' => 'Algeria',
+//                        'fr' => 'Algérie',
+//                        'ar' => 'الجزائر',
+//                    ],
+//                    'industry' => [
+//                        'en' => 'Car Rental & Mobility',
+//                        'fr' => 'Location de voitures et mobilité',
+//                        'ar' => 'تأجير السيارات والتنقل',
+//                    ],
+//                    'size' => '1-50',
+//                    'website' => null,
+//                ],
 
                 [
                     'name' => 'Freelance',

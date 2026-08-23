@@ -45,7 +45,7 @@ defineProps({
             <!--             Desktop Image -->
             <div class="relative hidden lg:block">
                 <img
-                    :src="'/assets/images/portrait-3.webp'"
+                    :src="'/assets/images/portrait-2.webp'"
                     alt="Portrait"
                     class="absolute inset-0 w-full h-full object-cover object-top"
                     style="filter: grayscale(15%) contrast(1.05)"
