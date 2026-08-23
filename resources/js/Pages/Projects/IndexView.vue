@@ -16,13 +16,21 @@ defineProps({
         type: Object,
         required: true,
     },
+    filters: {
+        type: Array,
+        default: () => [],
+    },
+    selectedFilter: {
+        type: String,
+        default: '',
+    },
     roles: {
-        type: Object,
-        required: true,
+        type: Array,
+        default: () => [],
     },
     selectedRole: {
         type: String,
-        required: true,
+        default: '',
     },
     translations: {
         type: Object,
@@ -32,11 +40,11 @@ defineProps({
 
 const title = useGetTitle('work')
 
-function setRole(role = null) {
+function setFilter(filter = null) {
     router.get(
         route('work'),
         {
-            role,
+            filter,
         },
         {
             preserveState: true,
@@ -72,29 +80,29 @@ function setRole(role = null) {
             <div class="mt-10 flex flex-wrap justify-start gap-3">
                 <button
                     :class="{
-                        'bg-primary-700 text-white shadow-lg': !selectedRole,
+                        'bg-primary-700 text-white shadow-lg': !(selectedFilter || selectedRole),
 
-                        'bg-secondary-100 text-secondary-600 hover:bg-secondary-200': selectedRole,
+                        'bg-secondary-100 text-secondary-600 hover:bg-secondary-200': (selectedFilter || selectedRole),
                     }"
                     class="rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"
-                    @click="setRole()"
+                    @click="setFilter()"
                 >
-                    {{ translations.projects.all }}
+                    {{ translations.filters?.all ?? translations.projects.all }}
                 </button>
 
                 <button
-                    v-for="role in roles"
-                    :key="role.value"
+                    v-for="item in (filters.length ? filters : roles)"
+                    :key="item.value"
                     :class="{
-                        'bg-primary-700 text-white shadow-lg': selectedRole === role.value,
+                        'bg-primary-700 text-white shadow-lg': (selectedFilter || selectedRole) === item.value,
 
                         'bg-secondary-100 text-secondary-600 hover:bg-secondary-200':
-                            selectedRole !== role.value,
+                            (selectedFilter || selectedRole) !== item.value,
                     }"
                     class="rounded-full px-5 py-2 text-sm font-medium transition-all duration-200"
-                    @click="setRole(role.value)"
+                    @click="setFilter(item.value)"
                 >
-                    {{ role.label }}
+                    {{ item.label }}
                 </button>
             </div>
 

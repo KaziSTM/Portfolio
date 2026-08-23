@@ -141,6 +141,54 @@ class CompanySeeder extends Seeder
                 ],
 
                 [
+                    'name' => 'DZignerd',
+                    'headquarter' => [
+                        'en' => 'Algeria',
+                        'fr' => 'Algérie',
+                        'ar' => 'الجزائر',
+                    ],
+                    'industry' => [
+                        'en' => 'E-Commerce & Artisan Products',
+                        'fr' => 'E-commerce et produits artisanaux',
+                        'ar' => 'التجارة الإلكترونية والمنتجات الحرفية',
+                    ],
+                    'size' => '1-50',
+                    'website' => 'https://dzignerd.com/',
+                ],
+
+                [
+                    'name' => 'Mobius Solutions',
+                    'headquarter' => [
+                        'en' => 'N°O-6 Cité Patrimoine, Hussein Dey 16040, Algeria',
+                        'fr' => 'N°O-6 Cité Patrimoine, Hussein Dey 16040, Algérie',
+                        'ar' => 'رقم O-6، حي باتريموان، حسين داي 16040، الجزائر',
+                    ],
+                    'industry' => [
+                        'en' => 'Construction & Building Services',
+                        'fr' => 'Construction et services du bâtiment',
+                        'ar' => 'البناء وخدمات التشييد',
+                    ],
+                    'size' => '1-50',
+                    'website' => 'http://www.mobiusdz.com/',
+                ],
+
+                [
+                    'name' => 'Carloue',
+                    'headquarter' => [
+                        'en' => 'Algeria',
+                        'fr' => 'Algérie',
+                        'ar' => 'الجزائر',
+                    ],
+                    'industry' => [
+                        'en' => 'Car Rental & Mobility',
+                        'fr' => 'Location de voitures et mobilité',
+                        'ar' => 'تأجير السيارات والتنقل',
+                    ],
+                    'size' => '1-50',
+                    'website' => null,
+                ],
+
+                [
                     'name' => 'Freelance',
                     'headquarter' => [
                         'en' => 'Remote',
