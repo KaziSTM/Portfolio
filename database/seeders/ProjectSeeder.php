@@ -66,30 +66,50 @@ class ProjectSeeder extends Seeder
     {
         $slug = $project->slug;
 
-        $logoPath = public_path("assets/images/projects/{$slug}-logo.webp");
-        $main = public_path("assets/images/projects/{$slug}-main.webp");
+        $slugCandidates = array_unique(array_filter([
+            $slug,
+            $slug === 'tradetenant' ? 'trade-connect' : null,
+        ]));
 
-        if (is_file($logoPath) && $project->getFirstMedia('logo')?->file_name !== basename($logoPath)) {
+        $logoPath = null;
+        $mainPath = null;
+
+        foreach ($slugCandidates as $candidate) {
+            foreach (['webp', 'png', 'jpg', 'jpeg'] as $ext) {
+                if (! $logoPath && is_file(public_path("assets/images/projects/{$candidate}-logo.{$ext}"))) {
+                    $logoPath = public_path("assets/images/projects/{$candidate}-logo.{$ext}");
+                }
+                if (! $mainPath && is_file(public_path("assets/images/projects/{$candidate}-main.{$ext}"))) {
+                    $mainPath = public_path("assets/images/projects/{$candidate}-main.{$ext}");
+                }
+            }
+        }
+
+        if ($logoPath && $project->getFirstMedia('logo')?->file_name !== basename($logoPath)) {
             $project->clearMediaCollection('logo');
             $project->addMedia($logoPath)->preservingOriginal()->toMediaCollection('logo');
         }
 
-        if (is_file($logoPath) && $project->getFirstMedia('main')?->file_name !== basename($logoPath)) {
+        if ($mainPath && $project->getFirstMedia('main')?->file_name !== basename($mainPath)) {
             $project->clearMediaCollection('main');
-            $project->addMedia($logoPath)->preservingOriginal()->toMediaCollection('main');
+            $project->addMedia($mainPath)->preservingOriginal()->toMediaCollection('main');
         }
 
-        $imagePaths = collect(range(1, 9))
-            ->map(fn(int $index) => public_path("assets/images/projects/{$slug}-{$index}.webp"))
-            ->filter(fn($path) => is_file($path))
-            ->values();
+        $imagePaths = collect();
+        foreach ($slugCandidates as $candidate) {
+            $paths = collect(range(1, 9))
+                ->map(fn (int $index) => public_path("assets/images/projects/{$candidate}-{$index}.webp"))
+                ->filter(fn ($path) => is_file($path));
+            $imagePaths = $imagePaths->concat($paths);
+        }
+        $imagePaths = $imagePaths->unique()->values();
 
         if ($imagePaths->isEmpty()) {
             return;
         }
 
         $currentImages = $project->getMedia('images')->pluck('file_name');
-        $expectedImages = $imagePaths->map(fn($path) => basename($path));
+        $expectedImages = $imagePaths->map(fn ($path) => basename($path));
 
         if ($currentImages->values()->all() === $expectedImages->all()) {
             return;
