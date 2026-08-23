@@ -35,7 +35,7 @@ class GetWorkSection
         return Project::query()
             ->with('tags', 'media')
             ->featured()
-            ->latest()
+            ->ordered()
             ->limit(4)
             ->get();
     }

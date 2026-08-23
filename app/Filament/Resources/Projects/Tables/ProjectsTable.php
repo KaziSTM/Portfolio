@@ -16,7 +16,12 @@ class ProjectsTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->defaultSort('position', 'asc')
+            ->reorderable('position')
             ->columns([
+                TextColumn::make('position')
+                    ->label('Order')
+                    ->sortable(),
                 SpatieMediaLibraryImageColumn::make('logo')
                     ->collection('logo')
                     ->label('Logo')

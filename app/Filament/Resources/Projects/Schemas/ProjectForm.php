@@ -56,6 +56,10 @@ class ProjectForm
                             ->maxLength(255),
                         DatePicker::make('start'),
                         DatePicker::make('end'),
+                        TextInput::make('position')
+                            ->label('Order')
+                            ->numeric()
+                            ->default(0),
                         Toggle::make('is_featured'),
                         Toggle::make('is_in_progress'),
                         CheckboxList::make('main_tags')
