@@ -21,7 +21,7 @@ class ProjectsListController extends Controller
         $projects = Project::query()
             ->with('tags', 'media', 'company')
             ->when($filter === 'company_projects', fn ($query) => $query->companyProjects())
-            ->when($filter === 'personal_projects', fn ($query) => $query->personalProjects())
+            ->when($filter === 'freelance_projects' || $filter === 'personal_projects', fn ($query) => $query->freelanceProjects())
             ->when($filter === 'packages', fn ($query) => $query->packages())
             ->active()
             ->ordered()
@@ -34,8 +34,8 @@ class ProjectsListController extends Controller
                 'label' => __('ui.filters.company_projects'),
             ],
             [
-                'value' => 'personal_projects',
-                'label' => __('ui.filters.personal_projects'),
+                'value' => 'freelance_projects',
+                'label' => __('ui.filters.freelance_projects'),
             ],
             [
                 'value' => 'packages',

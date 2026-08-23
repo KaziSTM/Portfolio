@@ -26,7 +26,7 @@ return [
     'filters' => [
         'all' => 'All',
         'company_projects' => 'Company Projects',
-        'personal_projects' => 'Personal Projects',
+        'freelance_projects' => 'Freelance Projects',
         'packages' => 'Packages',
     ],
     'projects' => [

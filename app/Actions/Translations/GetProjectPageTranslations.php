@@ -11,7 +11,7 @@ class GetProjectPageTranslations
             'filters' => [
                 'all' => __('ui.filters.all'),
                 'company_projects' => __('ui.filters.company_projects'),
-                'personal_projects' => __('ui.filters.personal_projects'),
+                'freelance_projects' => __('ui.filters.freelance_projects'),
                 'packages' => __('ui.filters.packages'),
             ],
 

@@ -12,13 +12,13 @@ it('loads work page with correct filter options and translations for english', f
         ->has('filters', 3)
         ->where('filters.0.value', 'company_projects')
         ->where('filters.0.label', 'Company Projects')
-        ->where('filters.1.value', 'personal_projects')
-        ->where('filters.1.label', 'Personal Projects')
+        ->where('filters.1.value', 'freelance_projects')
+        ->where('filters.1.label', 'Freelance Projects')
         ->where('filters.2.value', 'packages')
         ->where('filters.2.label', 'Packages')
         ->where('translations.filters.all', 'All')
         ->where('translations.filters.company_projects', 'Company Projects')
-        ->where('translations.filters.personal_projects', 'Personal Projects')
+        ->where('translations.filters.freelance_projects', 'Freelance Projects')
         ->where('translations.filters.packages', 'Packages')
         ->where('header.header_cta_label', 'Book a call')
     );
@@ -30,12 +30,12 @@ it('loads work page with correct translations for french', function () {
     $response->assertStatus(200);
     $response->assertInertia(fn (Assert $page) => $page
         ->component('Projects/IndexView', false)
-        ->where('filters.0.label', 'Projets professionnels')
-        ->where('filters.1.label', 'Projets personnels')
+        ->where('filters.0.label', 'Projets en entreprise')
+        ->where('filters.1.label', 'Projets freelance')
         ->where('filters.2.label', 'Packages')
         ->where('translations.filters.all', 'Tous')
-        ->where('translations.filters.company_projects', 'Projets professionnels')
-        ->where('translations.filters.personal_projects', 'Projets personnels')
+        ->where('translations.filters.company_projects', 'Projets en entreprise')
+        ->where('translations.filters.freelance_projects', 'Projets freelance')
         ->where('translations.filters.packages', 'Packages')
     );
 });
@@ -46,12 +46,12 @@ it('loads work page with correct translations for arabic', function () {
     $response->assertStatus(200);
     $response->assertInertia(fn (Assert $page) => $page
         ->component('Projects/IndexView', false)
-        ->where('filters.0.label', 'المشاريع المهنية')
-        ->where('filters.1.label', 'المشاريع الشخصية')
+        ->where('filters.0.label', 'مشاريع الشركات')
+        ->where('filters.1.label', 'المشاريع المستقلة')
         ->where('filters.2.label', 'الحزم')
         ->where('translations.filters.all', 'الكل')
-        ->where('translations.filters.company_projects', 'المشاريع المهنية')
-        ->where('translations.filters.personal_projects', 'المشاريع الشخصية')
+        ->where('translations.filters.company_projects', 'مشاريع الشركات')
+        ->where('translations.filters.freelance_projects', 'المشاريع المستقلة')
         ->where('translations.filters.packages', 'الحزم')
     );
 });
@@ -66,13 +66,13 @@ it('filters company projects correctly', function () {
     );
 });
 
-it('filters personal projects correctly', function () {
-    $response = $this->get('/en/projects?filter=personal_projects');
+it('filters freelance projects correctly', function () {
+    $response = $this->get('/en/projects?filter=freelance_projects');
 
     $response->assertStatus(200);
     $response->assertInertia(fn (Assert $page) => $page
         ->component('Projects/IndexView', false)
-        ->where('selectedFilter', 'personal_projects')
+        ->where('selectedFilter', 'freelance_projects')
     );
 });
 

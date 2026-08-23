@@ -137,10 +137,16 @@ class Project extends Model implements HasMedia
     }
 
     #[Scope]
-    public function personalProjects($query)
+    public function freelanceProjects($query)
     {
         return $query->where('type', ProjectType::PROJECT)
             ->whereNull('company_id');
+    }
+
+    #[Scope]
+    public function personalProjects($query)
+    {
+        return $this->freelanceProjects($query);
     }
 
     #[Scope]

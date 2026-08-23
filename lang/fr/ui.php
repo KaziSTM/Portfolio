@@ -25,8 +25,8 @@ return [
     ],
     'filters' => [
         'all' => 'Tous',
-        'company_projects' => 'Projets professionnels',
-        'personal_projects' => 'Projets personnels',
+        'company_projects' => 'Projets en entreprise',
+        'freelance_projects' => 'Projets freelance',
         'packages' => 'Packages',
     ],
     'projects' => [

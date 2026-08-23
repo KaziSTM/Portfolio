@@ -25,8 +25,8 @@ return [
     ],
     'filters' => [
         'all' => 'الكل',
-        'company_projects' => 'المشاريع المهنية',
-        'personal_projects' => 'المشاريع الشخصية',
+        'company_projects' => 'مشاريع الشركات',
+        'freelance_projects' => 'المشاريع المستقلة',
         'packages' => 'الحزم',
     ],
     'projects' => [
