@@ -35,9 +35,9 @@ const companyHost = computed(() => {
 </script>
 
 <template>
-    <section class="mx-auto grid max-w-6xl grid-cols-1 gap-16 px-6 py-24 md:grid-cols-3">
+    <section class="mx-auto grid max-w-6xl grid-cols-1 gap-10 md:gap-16 px-4 sm:px-6 py-10 sm:py-16 md:py-24 md:grid-cols-3">
         <!-- META -->
-        <aside class="space-y-8 text-sm text-gray-600">
+        <aside class="grid grid-cols-2 sm:grid-cols-3 md:block gap-6 md:space-y-8 text-sm text-gray-600 min-w-0">
             <!-- Client -->
             <div>
                 <p class="mb-1 font-medium text-gray-900" v-text="translations.client"></p>
@@ -88,7 +88,7 @@ const companyHost = computed(() => {
                 <p class="mb-1 font-medium text-gray-900" v-text="translations.website"></p>
                 <a
                     :href="project.company.website"
-                    class="text-gray-700 hover:underline"
+                    class="text-gray-700 hover:underline break-all"
                     rel="noopener noreferrer"
                     target="_blank"
                     v-text="companyHost"
@@ -96,7 +96,7 @@ const companyHost = computed(() => {
             </div>
 
             <!-- Visit Project -->
-            <div v-if="project.link">
+            <div v-if="project.link" class="col-span-full md:col-span-1 pt-2 md:pt-0">
                 <a
                     :href="project.link"
                     class="inline-flex items-center rounded-full bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
@@ -117,13 +117,13 @@ const companyHost = computed(() => {
         </aside>
 
         <!-- CONTENT -->
-        <div class="space-y-10 text-gray-700 md:col-span-2">
+        <div class="space-y-6 sm:space-y-10 text-gray-700 md:col-span-2 min-w-0">
             <div
-                class="text-xl font-medium leading-relaxed text-gray-900"
+                class="text-lg sm:text-xl font-medium leading-relaxed text-gray-900 break-words [overflow-wrap:anywhere]"
                 v-html="project.description"
             />
 
-            <div class="prose prose-lg max-w-none prose-gray" v-html="project.details" />
+            <div class="prose prose-base sm:prose-lg max-w-none prose-gray min-w-0 break-words [overflow-wrap:anywhere]" v-html="project.details" />
         </div>
     </section>
 </template>
