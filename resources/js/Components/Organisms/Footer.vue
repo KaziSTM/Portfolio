@@ -19,12 +19,12 @@ const contactUrl = computed(() => route('contact', { locale: page.props.locale }
         <div class="mx-auto max-w-7xl px-4 sm:px-12 lg:px-8">
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-32">
                 <!-- Left -->
-                <div class="space-y-16">
-                    <Subtitle class="text-start text-white">
+                <div class="flex flex-col items-center text-center space-y-10 md:items-start md:text-left md:space-y-16">
+                    <Subtitle class="text-center text-white md:text-start">
                         {{ footer.title }}
                     </Subtitle>
 
-                    <div class="flex justify-start">
+                    <div class="flex justify-center md:justify-start">
                         <Link :href="contactUrl">
                             <SpecularButton
                                 :auto-animate="false"
@@ -53,19 +53,19 @@ const contactUrl = computed(() => route('contact', { locale: page.props.locale }
                 </div>
 
                 <!-- Right -->
-                <div class="flex flex-col space-y-10">
-                    <p class="mt-4 inline-flex pe-32 text-start text-secondary-100">
+                <div class="flex flex-col items-center text-center space-y-8 md:items-start md:text-left md:space-y-10">
+                    <p class="mt-4 text-center text-secondary-100 md:pe-32 md:text-start">
                         {{ footer.description }}
                     </p>
 
-                    <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-nowrap items-center justify-center gap-2 max-w-full overflow-x-auto py-1 sm:gap-4 md:justify-start">
                         <BaseButton
                             v-for="social in socials"
                             :key="social.name"
                             :href="social.link"
                             :icon="social.icon"
                             :label="social.name"
-                            class="bg-transparent backdrop-blur-md border border-white/10 text-secondary-50 hover:bg-secondary-700"
+                            class="bg-transparent backdrop-blur-md border border-white/10 text-secondary-50 hover:bg-secondary-700 px-3 py-1.5 text-xs whitespace-nowrap shrink-0 sm:px-4 sm:py-2 sm:text-sm"
                             external
                             position="right"
                             rounded
@@ -79,8 +79,8 @@ const contactUrl = computed(() => route('contact', { locale: page.props.locale }
             <hr class="mb-10 mt-16 border-secondary-200/10" />
 
             <!-- Bottom -->
-            <div class="flex flex-col gap-4 md:flex-row md:justify-between">
-                <div class="flex w-full flex-wrap items-center gap-4">
+            <div class="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
+                <div class="flex w-full flex-wrap items-center justify-center gap-4 md:justify-start">
                     <Link
                         v-for="link in navigation"
                         :key="link.route"
@@ -91,7 +91,7 @@ const contactUrl = computed(() => route('contact', { locale: page.props.locale }
                     </Link>
                 </div>
 
-                <p class="block w-full text-end text-sm text-secondary-300">
+                <p class="block w-full text-center text-sm text-secondary-300 md:text-end">
                     {{ footer.copyright }}
                 </p>
             </div>
