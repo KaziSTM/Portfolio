@@ -796,16 +796,12 @@ The platform was built around a modern Laravel stack:
 - **Filament 5**
 - **TALL Stack**
 - **MySQL / MariaDB**
-- **Eloquent ORM**
-- **Laravel Modules**
-- **Laravel Sanctum**
-- **Tenancy Framework**
-- **Livewire 3**
+- **Livewire 4**
 - **Alpine.js**
 - **Tailwind CSS v4**
 - **Vite 7**
 
-Key packages include Spatie Permission, Spatie Translatable, Spatie Media Library, Laravel Modules, Laravel Enum, and an adjacency-list package for hierarchical data.
+Key packages include Spatie Permission, Spatie Translatable, Spatie Media Library, Laravel Enum, and an adjacency-list package for hierarchical data.
 
 ## Architecture & Engineering Principles
 
@@ -1051,11 +1047,7 @@ Elle combine :
 - **Filament 5**
 - **TALL Stack**
 - **MySQL / MariaDB**
-- **Eloquent**
-- **Laravel Modules**
-- **Sanctum**
-- **Tenancy Framework**
-- **Livewire 3**
+- **Livewire 4**
 - **Alpine.js**
 - **Tailwind CSS v4**
 - **Vite 7**
@@ -1249,11 +1241,7 @@ TradeConnect هي **منصة B2B متعددة المستأجرين موجهة ل
 - **Filament 5**
 - **TALL Stack**
 - **MySQL / MariaDB**
-- **Eloquent**
-- **Laravel Modules**
-- **Sanctum**
-- **Tenancy Framework**
-- **Livewire 3**
+- **Livewire 4**
 - **Alpine.js**
 - **Tailwind CSS v4**
 - **Vite 7**
