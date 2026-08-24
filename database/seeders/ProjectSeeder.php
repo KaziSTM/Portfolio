@@ -68,7 +68,8 @@ class ProjectSeeder extends Seeder
 
         $slugCandidates = array_unique(array_filter([
             $slug,
-            $slug === 'tradetenant' ? 'trade-connect' : null,
+            in_array($slug, ['tradeconnect', 'trade-connect', 'tradetenant']) ? 'trade-connect' : null,
+            in_array($slug, ['tradeconnect', 'trade-connect', 'tradetenant']) ? 'tradetenant' : null,
         ]));
 
         $logoPath = null;

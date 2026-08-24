@@ -543,9 +543,9 @@ Halal Audit هو موقع تعريفي تم تطويره لعرض **خدمات �
             ],
             [
                 'company' => null,
-                'slug' => Str::slug('TradeTenant'),
+                'slug' => Str::slug('TradeConnect'),
                 'type' => ProjectType::PROJECT,
-                'name' => 'TradeTenant',
+                'name' => 'TradeConnect',
                 'header' => [
                     'en' => 'Multi-tenant B2B trade marketing and field operations platform.',
                     'fr' => 'Plateforme B2B multi-tenant de trade marketing et de gestion des opérations terrain.',
@@ -576,11 +576,11 @@ Halal Audit هو موقع تعريفي تم تطويره لعرض **خدمات �
                 'start' => '2025-04-12',
                 'end' => null,
                 'details' => [
-                    'en' => '# TradeTenant — Engineering a Multi-Tenant B2B Trade Marketing Platform
+                    'en' => '# TradeConnect — Engineering a Multi-Tenant B2B Trade Marketing Platform
 
-TradeTenant is a **multi-tenant B2B platform designed for FMCG companies and their subsidiaries** to manage, monitor, and optimize trade marketing activities and field operations from a centralized system.
+TradeConnect is a **multi-tenant B2B platform designed for FMCG companies and their subsidiaries** to manage, monitor, and optimize trade marketing activities and field operations from a centralized system.
 
-The platform combines organizational management, field execution, product catalogue management, inventory tracking, geographic intelligence, and reporting into a single enterprise application. :contentReference[oaicite:1]{index=1}
+The platform combines organizational management, field execution, product catalogue management, inventory tracking, geographic intelligence, and reporting into a single enterprise application.
 
 ## The Challenge
 
@@ -615,7 +615,7 @@ The main domains include:
 - **Products** — brands, categories, products, and variants
 - **Stock** — warehouses, stock levels, and stock movements
 
-Each module maintains its own models, migrations, API controllers, resources, routes, and domain-specific authorization logic. :contentReference[oaicite:2]{index=2}
+Each module maintains its own models, migrations, API controllers, resources, routes, and domain-specific authorization logic.
 
 ## Multi-Tenancy
 
@@ -623,7 +623,7 @@ A major part of the platform is its multi-tenant architecture.
 
 Tenant context is resolved through middleware and used to isolate application data. Users belong to tenants, while roles and permissions are managed within the tenant context.
 
-The architecture supports tenant-specific database connections and configurable tenant isolation strategies. :contentReference[oaicite:3]{index=3}
+The architecture supports tenant-specific database connections and configurable tenant isolation strategies.
 
 ## Organization & Geographic Management
 
@@ -646,7 +646,7 @@ Geographic zones use spatial data and support:
 - Distance calculations
 - Geographic filtering
 
-Clients can be associated with zones and divisions and can be located using latitude and longitude coordinates. :contentReference[oaicite:4]{index=4}
+Clients can be associated with zones and divisions and can be located using latitude and longitude coordinates.
 
 ## Field Task Management
 
@@ -666,7 +666,7 @@ The platform supports:
 - Photo evidence
 - Supervisor review workflows
 
-Tasks can be associated with both geographic zones and individual clients, while instructions can be reused across multiple tasks. :contentReference[oaicite:5]{index=5}
+Tasks can be associated with both geographic zones and individual clients, while instructions can be reused across multiple tasks.
 
 ## Status & Audit Management
 
@@ -674,71 +674,71 @@ One of the key architectural features is the centralized **polymorphic status hi
 
 Instead of overwriting an entity\'s status, every status transition is stored in `status_histories`.
 
-    Each transition records:
+Each transition records:
 
 - Current status
-    - Previous status
-    - User who made the change
-    - Timestamp
-    - Reason for the change
-    - Entity being modified
+- Previous status
+- User who made the change
+- Timestamp
+- Reason for the change
+- Entity being modified
 
-The latest status is exposed through a virtual model accessor while the complete history remains available for auditing, compliance, and reporting. :contentReference[oaicite:6]{index=6}
+The latest status is exposed through a virtual model accessor while the complete history remains available for auditing, compliance, and reporting.
 
-This same mechanism can be shared by different entities such as tasks and instructions through polymorphic relationships. :contentReference[oaicite:7]{index=7}
+This same mechanism can be shared by different entities such as tasks and instructions through polymorphic relationships.
 
 ## Product Catalogue
 
 The catalogue domain provides centralized product management for trade marketing operations.
 
-    It supports:
+It supports:
 
 - Brand management
-    - Hierarchical categories
-    - Products
-    - Product variants
-    - SKU management
-    - Product/category relationships
-    - Brand/category relationships
-    - Product assignments to divisions
-    - Variant pricing
+- Hierarchical categories
+- Products
+- Product variants
+- SKU management
+- Product/category relationships
+- Brand/category relationships
+- Product assignments to divisions
+- Variant pricing
 
-The catalogue is separated from inventory so that products and their variants can be managed independently from their physical stock. :contentReference[oaicite:8]{index=8}
+The catalogue is separated from inventory so that products and their variants can be managed independently from their physical stock.
 
 ## Inventory Management
 
 The inventory domain manages stock across multiple warehouses and locations.
 
-    The system supports:
+The system supports:
 
 - Warehouse management
-    - Warehouse managers
-    - Stock levels
-    - Variant-level inventory
-    - Stock movement history
-    - Inbound and outbound movements
-    - Movement reasons
-    - Real-time stock quantities
-    - Inventory tracking across locations
+- Warehouse managers
+- Stock levels
+- Variant-level inventory
+- Stock movement history
+- Inbound and outbound movements
+- Movement reasons
+- Real-time stock quantities
+- Inventory tracking across locations
 
-Stock movements provide a historical record while `StockLevel` represents the current inventory state. :contentReference[oaicite:9]{index=9}
+Stock movements provide a historical record while `StockLevel` represents the current inventory state.
 
 ## Field Execution & Reporting
 
 Field teams can execute assigned tasks and provide evidence of their work.
 
-    The reporting layer supports:
+The reporting layer supports:
 
 - Task execution reports
-    - Photo evidence
-    - POS material information
-    - Shelf photos
-    - Pricing information
-    - Stock information
-    - Compliance monitoring
-    - Supervisor review and approval
+- Photo evidence
+- POS material information
+- Shelf photos
+- Pricing information
+- Stock information
+- Compliance monitoring
+- Supervisor review and approval
 
-This allows field execution to be connected directly to the operational and commercial data managed by the platform. :contentReference[oaicite:10]{index=10}
+This allows field execution to be connected directly to the operational and commercial data managed by the platform.
 
 ## Authentication & Authorization
 
@@ -747,18 +747,18 @@ The platform exposes a REST API secured using **Laravel Sanctum**.
 The authorization model combines:
 
 - Authentication tokens
-    - Role-Based Access Control
-    - Granular permissions
-    - Policy-based authorization
-    - Tenant-level isolation
+- Role-Based Access Control
+- Granular permissions
+- Policy-based authorization
+- Tenant-level isolation
 
-The documented role hierarchy includes Super Admin, Admin, Manager, and Staff, with permissions controlling operations such as viewing, creating, updating, and deleting resources. :contentReference[oaicite:11]{index=11}
+The documented role hierarchy includes Super Admin, Admin, Manager, and Staff, with permissions controlling operations such as viewing, creating, updating, and deleting resources.
 
 ## API Architecture
 
 The system follows a RESTful API architecture with versioned endpoints.
 
-    API requests follow a layered flow:
+API requests follow a layered flow:
 
 1. Authentication
 2. Tenant context resolution
@@ -770,9 +770,9 @@ The system follows a RESTful API architecture with versioned endpoints.
 8. JSON serialization
 9. Pagination and metadata
 
-The API supports resource collections, individual resources, related resources, pagination, and standardized response structures. :contentReference[oaicite:12]{index=12}
+The API supports resource collections, individual resources, related resources, pagination, and standardized response structures.
 
-Examples include task resources and related endpoints for notes, status histories, and reports. :contentReference[oaicite:13]{index=13}
+Examples include task resources and related endpoints for notes, status histories, and reports.
 
 ## Multi-Language Support
 
@@ -782,140 +782,140 @@ The platform supports:
 - French
 - Arabic
 - User-specific language preferences
-    - UTF-8 content
-    - Right-to-left interfaces
+- UTF-8 content
+- Right-to-left interfaces
 
-Translatable domain content is handled using dedicated translation support. :contentReference[oaicite:14]{index=14}
+Translatable domain content is handled using dedicated translation support.
 
 ## Technical Architecture
 
 The platform was built around a modern Laravel stack:
 
 - **Laravel 12**
-    - **PHP 8.4+**
+- **PHP 8.4+**
 - **Filament 4**
-    - **TALL Stack**
-    - **MySQL / MariaDB**
-    - **Eloquent ORM**
-    - **Laravel Modules**
-    - **Laravel Sanctum**
-    - **Tenancy Framework**
-    - **Livewire 3**
-    - **Alpine.js**
-    - **Tailwind CSS**
-    - **Vite**
+- **TALL Stack**
+- **MySQL / MariaDB**
+- **Eloquent ORM**
+- **Laravel Modules**
+- **Laravel Sanctum**
+- **Tenancy Framework**
+- **Livewire 3**
+- **Alpine.js**
+- **Tailwind CSS**
+- **Vite**
 
-    Key packages include Spatie Permission, Spatie Translatable, Spatie Media Library, Laravel Modules, Laravel Enum, and an adjacency-list package for hierarchical data. :contentReference[oaicite:15]{index=15}
+Key packages include Spatie Permission, Spatie Translatable, Spatie Media Library, Laravel Modules, Laravel Enum, and an adjacency-list package for hierarchical data.
 
 ## Architecture & Engineering Principles
 
 The system follows several architectural patterns:
 
 - Domain-Driven Design
-        - Modular architecture
-        - Service layer pattern
-        - Repository-style Eloquent usage
-        - Polymorphic relationships
-        - Observer/event-based behavior
-        - Trait-based reusable functionality
-        - Virtual model accessors
-        - Policy-based authorization
-        - SOLID principles
+- Modular architecture
+- Service layer pattern
+- Repository-style Eloquent usage
+- Polymorphic relationships
+- Observer/event-based behavior
+- Trait-based reusable functionality
+- Virtual model accessors
+- Policy-based authorization
+- SOLID principles
 
-The modular structure keeps Organization, Tasks, Products, and Stock domains independently maintainable while allowing them to interact through defined relationships. :contentReference[oaicite:16]{index=16}
+The modular structure keeps Organization, Tasks, Products, and Stock domains independently maintainable while allowing them to interact through defined relationships.
 
 ## Performance & Data Integrity
 
 The platform uses several database and application-level optimizations:
 
 - Foreign-key indexes
-        - Compound indexes
-        - Spatial indexes
-        - Eager loading
-        - Pagination
-        - Redis caching
-        - Tenant-aware cache keys
-        - Query result caching
-        - Database transactions
-        - Soft deletes
+- Compound indexes
+- Spatial indexes
+- Eager loading
+- Pagination
+- Redis caching
+- Tenant-aware cache keys
+- Query result caching
+- Database transactions
+- Soft deletes
 
-The database follows a normalized 3NF structure with explicit foreign keys and strategic indexing. :contentReference[oaicite:17]{index=17}
+The database follows a normalized 3NF structure with explicit foreign keys and strategic indexing.
 
 ## Security
 
 Security was implemented across several layers:
 
 - Sanctum token authentication
-        - RBAC
-        - Granular permissions
-        - Policy authorization
-        - Tenant isolation
-        - Password hashing
-        - CSRF protection
-        - API rate limiting
-        - Audit trails
-        - Soft deletion
-        - Configurable tenant-specific encryption
-        - Optional separate databases per tenant
+- RBAC
+- Granular permissions
+- Policy authorization
+- Tenant isolation
+- Password hashing
+- CSRF protection
+- API rate limiting
+- Audit trails
+- Soft deletion
+- Configurable tenant-specific encryption
+- Optional separate databases per tenant
 
-Tenant context is validated during requests so users cannot access data belonging to another tenant. :contentReference[oaicite:18]{index=18}
+Tenant context is validated during requests so users cannot access data belonging to another tenant.
 
 ## My Contribution
 
 - Designed and implemented the backend architecture
-        - Built the multi-tenant infrastructure
-        - Developed the core business logic
-        - Designed the modular domain architecture
-        - Implemented authentication and authorization
-        - Developed the Organization domain
-        - Built the field task and instruction management system
-        - Implemented the polymorphic status history architecture
-        - Developed the product catalogue
-        - Implemented inventory and stock movement management
-        - Built RESTful APIs and API resources
-        - Implemented geographic and spatial functionality
-        - Developed administrative interfaces with Filament
-        - Implemented multilingual functionality
-        - Worked on data integrity, authorization, and performance optimization
+- Built the multi-tenant infrastructure
+- Developed the core business logic
+- Designed the modular domain architecture
+- Implemented authentication and authorization
+- Developed the Organization domain
+- Built the field task and instruction management system
+- Implemented the polymorphic status history architecture
+- Developed the product catalogue
+- Implemented inventory and stock movement management
+- Built RESTful APIs and API resources
+- Implemented geographic and spatial functionality
+- Developed administrative interfaces with Filament
+- Implemented multilingual functionality
+- Worked on data integrity, authorization, and performance optimization
 
 ## Outcome
 
-TradeTenant provides FMCG organizations with a centralized operational platform capable of connecting:
+TradeConnect provides FMCG organizations with a centralized operational platform capable of connecting:
 
 **Organization → Geography → Clients → Field Teams → Tasks → Products → Inventory → Reports**
 
-        The result is a scalable system that gives companies greater visibility over field execution while maintaining strict tenant isolation and detailed operational auditability.
+The result is a scalable system that gives companies greater visibility over field execution while maintaining strict tenant isolation and detailed operational auditability.
 
 ## Takeaways
 
-        TradeTenant was a technically demanding enterprise application because it combined several complex domains into a single platform.
+TradeConnect was a technically demanding enterprise application because it combined several complex domains into a single platform.
 
-        The project provided extensive experience with **multi-tenancy, modular architecture, RBAC, spatial data, field operations, inventory management, REST APIs, polymorphic audit trails, and enterprise-grade Laravel architecture**.',
+The project provided extensive experience with **multi-tenancy, modular architecture, RBAC, spatial data, field operations, inventory management, REST APIs, polymorphic audit trails, and enterprise-grade Laravel architecture**.',
 
-                    'fr' => '# TradeTenant — Conception d’une plateforme B2B multi-tenant de trade marketing
+                    'fr' => '# TradeConnect — Conception d’une plateforme B2B multi-tenant de trade marketing
 
-TradeTenant est une **plateforme B2B multi-tenant destinée aux entreprises FMCG et à leurs filiales** pour gérer, suivre et optimiser les opérations de trade marketing et les activités terrain depuis un système centralisé.
+TradeConnect est une **plateforme B2B multi-tenant destinée aux entreprises FMCG et à leurs filiales** pour gérer, suivre et optimiser les opérations de trade marketing et les activités terrain depuis un système centralisé.
 
-        La plateforme regroupe la gestion organisationnelle, les opérations terrain, le catalogue produits, les stocks, les données géographiques et le reporting au sein d’une même application. :contentReference[oaicite:19]{index=19}
+La plateforme regroupe la gestion organisationnelle, les opérations terrain, le catalogue produits, les stocks, les données géographiques et le reporting au sein d’une même application.
 
 ## Le défi
 
 Les opérations de trade marketing impliquent plusieurs entités organisationnelles, équipes terrain, points de vente, produits, entrepôts et territoires géographiques.
 
-        La plateforme devait notamment gérer :
+La plateforme devait notamment gérer :
 
 - L’isolation multi-tenant
-        - Les rôles et permissions hiérarchiques
-        - Les divisions organisationnelles
-        - Les zones géographiques
-        - Les clients et points de vente
-        - Les tâches terrain
-        - Les instructions opérationnelles réutilisables
-        - Les catalogues et variantes produits
-        - Les stocks multi-emplacements
-        - Les rapports terrain et preuves photographiques
-        - L’historique complet des statuts
-        - Une API REST centralisée
+- Les rôles et permissions hiérarchiques
+- Les divisions organisationnelles
+- Les zones géographiques
+- Les clients et points de vente
+- Les tâches terrain
+- Les instructions opérationnelles réutilisables
+- Les catalogues et variantes produits
+- Les stocks multi-emplacements
+- Les rapports terrain et preuves photographiques
+- L’historique complet des statuts
+- Une API REST centralisée
 
 ## L’approche
 
@@ -924,118 +924,112 @@ L’application repose sur une **architecture modulaire inspirée du Domain-Driv
 Les principaux domaines sont :
 
 - **Core** — authentification, autorisation, tenants et paramètres
-        - **Organization** — divisions, zones et clients
-        - **Tasks** — tâches, instructions et historiques de statuts
-        - **Products** — marques, catégories, produits et variantes
-        - **Stock** — entrepôts, niveaux de stock et mouvements
+- **Organization** — divisions, zones et clients
+- **Tasks** — tâches, instructions et historiques de statuts
+- **Products** — marques, catégories, produits et variantes
+- **Stock** — entrepôts, niveaux de stock et mouvements
 
-Chaque module possède ses propres modèles, migrations, routes API, ressources et mécanismes d’autorisation. :contentReference[oaicite:20]{index=20}
+Chaque module possède ses propres modèles, migrations, routes API, ressources et mécanismes d’autorisation.
 
 ## Multi-tenancy
 
 La plateforme utilise une architecture multi-tenant permettant d’isoler les données et la configuration de chaque organisation.
 
-        Le contexte du tenant est résolu par middleware et utilisé pour filtrer les accès aux données. L’architecture prend également en charge les connexions de base de données spécifiques aux tenants. :contentReference[oaicite:21]{index=21}
+Le contexte du tenant est résolu par middleware et utilisé pour filtrer les accès aux données. L’architecture prend également en charge les connexions de base de données spécifiques aux tenants.
 
 ## Organisation & géographie
 
 Le domaine Organization permet de représenter la structure opérationnelle des entreprises à travers des divisions hiérarchiques.
 
-        Il comprend :
+Il comprend :
 
 - Divisions parent/enfant
-        - Affectation des utilisateurs
-        - Affectation aux zones
-        - Zones géographiques hiérarchiques
-        - Polygones géographiques
-        - Coordonnées WGS84
-        - Requêtes spatiales
-        - Calculs de distance
-        - Gestion des clients et points de vente
+- Affectation des utilisateurs
+- Affectation aux zones
+- Zones géographiques hiérarchiques
+- Polygones géographiques
+- Coordonnées WGS84
+- Requêtes spatiales
+- Calculs de distance
+- Gestion des clients et points de vente
 
-Les zones peuvent être utilisées pour filtrer et organiser les opérations terrain. :contentReference[oaicite:22]{index=22}
+Les zones peuvent être utilisées pour filtrer et organiser les opérations terrain.
 
 ## Gestion des tâches terrain
 
 Le module Tasks permet de gérer l’exécution des opérations terrain.
 
-        Il prend en charge :
+Il prend en charge :
 
 - Création et affectation des tâches
-        - Affectation aux merchandisers
-        - Affectation aux superviseurs
-        - Association aux zones et clients
-        - Instructions réutilisables
-        - Priorités
-        - Tri selon la distance
-        - Notes
-        - Rapports
-        - Preuves photographiques
-        - Validation par les superviseurs
+- Affectation aux merchandisers
+- Affectation aux superviseurs
+- Association aux zones et clients
+- Instructions réutilisables
+- Priorités
+- Tri selon la distance
+- Notes
+- Rapports
+- Preuves photographiques
+- Validation par les superviseurs
 
 ## Gestion des statuts & audit
 
 Une architecture de **Status History polymorphe** permet de conserver chaque changement de statut au lieu de l’écraser.
 
-        Chaque changement conserve :
+Chaque changement conserve :
 
 - Le statut actuel
-        - Le statut précédent
-        - L’utilisateur responsable
-        - La date
-        - La raison du changement
-        - L’entité concernée
+- Le statut précédent
+- L’utilisateur responsable
+- La date
+- La raison du changement
+- L’entité concernée
 
-Cela fournit un historique complet et immuable exploitable pour l’audit, la conformité et le reporting. :contentReference[oaicite:23]{index=23}
+Cela fournit un historique complet et immuable exploitable pour l’audit, la conformité et le reporting.
 
 ## Catalogue produits
 
 Le catalogue permet de gérer :
 
 - Les marques
-        - Les catégories hiérarchiques
-        - Les produits
-        - Les variantes
-        - Les SKU
-        - Les relations produits/catégories
-        - Les relations marques/catégories
-        - L’affectation des produits aux divisions
-        - Les prix des variantes
-
-        :contentReference[oaicite:24]{index=24}
+- Les catégories hiérarchiques
+- Les produits
+- Les variantes
+- Les SKU
+- Les relations produits/catégories
+- Les relations marques/catégories
+- L’affectation des produits aux divisions
+- Les prix des variantes
 
 ## Gestion des stocks
 
 Le module Stock permet de gérer les stocks sur plusieurs entrepôts.
 
-        Il comprend :
+Il comprend :
 
 - Gestion des entrepôts
-        - Gestion des responsables
-        - Niveaux de stock
-        - Stock par variante
-        - Mouvements de stock
-        - Entrées et sorties
-        - Historique des mouvements
-        - Motifs des mouvements
-        - Suivi des quantités
-
-        :contentReference[oaicite:25]{index=25}
+- Gestion des responsables
+- Niveaux de stock
+- Stock par variante
+- Mouvements de stock
+- Entrées et sorties
+- Historique des mouvements
+- Motifs des mouvements
+- Suivi des quantités
 
 ## Reporting terrain
 
 Les équipes terrain peuvent documenter l’exécution de leurs tâches grâce à :
 
 - Rapports d’exécution
-        - Preuves photographiques
-        - Informations sur les supports POS
-        - Photos des rayons
-        - Informations de prix
-        - Données de stock
-        - Suivi de conformité
-        - Validation par les superviseurs
-
-        :contentReference[oaicite:26]{index=26}
+- Preuves photographiques
+- Informations sur les supports POS
+- Photos des rayons
+- Informations de prix
+- Données de stock
+- Suivi de conformité
+- Validation par les superviseurs
 
 ## API & sécurité
 
@@ -1044,86 +1038,82 @@ L’application expose une API REST sécurisée avec **Laravel Sanctum**.
 Elle combine :
 
 - Authentification par token
-        - RBAC
-        - Permissions granulaires
-        - Policies
-        - Isolation tenant
-        - Validation des accès
-
-        :contentReference[oaicite:27]{index=27}
+- RBAC
+- Permissions granulaires
+- Policies
+- Isolation tenant
+- Validation des accès
 
 ## Architecture technique
 
 - **Laravel 12**
-        - **PHP 8.4+**
+- **PHP 8.4+**
 - **Filament 4**
-        - **TALL Stack**
-        - **MySQL / MariaDB**
-        - **Eloquent**
-        - **Laravel Modules**
-        - **Sanctum**
-        - **Tenancy Framework**
-        - **Livewire 3**
-        - **Alpine.js**
-        - **Tailwind CSS**
-        - **Vite**
-
-:contentReference[oaicite:28]{index=28}
+- **TALL Stack**
+- **MySQL / MariaDB**
+- **Eloquent**
+- **Laravel Modules**
+- **Sanctum**
+- **Tenancy Framework**
+- **Livewire 3**
+- **Alpine.js**
+- **Tailwind CSS**
+- **Vite**
 
 ## Ma contribution
 
 - Conception et développement de l’architecture backend
-        - Mise en place de la multi-tenancy
-        - Développement de la logique métier
-        - Conception de l’architecture modulaire
-        - Authentification et autorisation
-        - Développement du domaine Organization
-        - Développement du système de tâches terrain
-        - Mise en place de l’historique polymorphe des statuts
-        - Développement du catalogue produits
-        - Gestion des stocks
-        - Développement des APIs REST
-        - Fonctionnalités géographiques et spatiales
-        - Interfaces d’administration avec Filament
-        - Support multilingue
-        - Optimisation des performances et de l’intégrité des données
+- Mise en place de la multi-tenancy
+- Développement de la logique métier
+- Conception de l’architecture modulaire
+- Authentification et autorisation
+- Développement du domaine Organization
+- Développement du système de tâches terrain
+- Mise en place de l’historique polymorphe des statuts
+- Développement du catalogue produits
+- Gestion des stocks
+- Développement des APIs REST
+- Fonctionnalités géographiques et spatiales
+- Interfaces d’administration avec Filament
+- Support multilingue
+- Optimisation des performances et de l’intégrité des données
 
 ## Résultat
 
-TradeTenant permet de connecter au sein d’un même système :
+TradeConnect permet de connecter au sein d’un même système :
 
 **Organisation → Géographie → Clients → Équipes terrain → Tâches → Produits → Stocks → Rapports**
 
-        La plateforme fournit ainsi une visibilité centralisée sur les opérations terrain tout en garantissant l’isolation des tenants et une traçabilité complète des opérations.
+La plateforme fournit ainsi une visibilité centralisée sur les opérations terrain tout en garantissant l’isolation des tenants et une traçabilité complète des opérations.
 
 ## Conclusion
 
-        TradeTenant a constitué un projet particulièrement riche techniquement en combinant **multi-tenancy, architecture modulaire, RBAC, données spatiales, opérations terrain, gestion des stocks, APIs REST et audit polymorphe** dans une architecture Laravel d’entreprise.',
+TradeConnect a constitué un projet particulièrement riche techniquement en combinant **multi-tenancy, architecture modulaire, RBAC, données spatiales, opérations terrain, gestion des stocks, APIs REST et audit polymorphe** dans une architecture Laravel d’entreprise.',
 
-                    'ar' => '# TradeTenant — بناء منصة B2B متعددة المستأجرين لإدارة التسويق التجاري
+                    'ar' => '# TradeConnect — بناء منصة B2B متعددة المستأجرين لإدارة التسويق التجاري
 
-TradeTenant هي **منصة B2B متعددة المستأجرين موجهة لشركات السلع الاستهلاكية سريعة التداول وفروعها** لإدارة ومتابعة وتحسين عمليات التسويق التجاري والعمليات الميدانية من خلال نظام مركزي.
+TradeConnect هي **منصة B2B متعددة المستأجرين موجهة لشركات السلع الاستهلاكية سريعة التداول وفروعها** لإدارة ومتابعة وتحسين عمليات التسويق التجاري والعمليات الميدانية من خلال نظام مركزي.
 
-        تجمع المنصة بين إدارة الهيكل التنظيمي والعمليات الميدانية وكتالوج المنتجات والمخزون والمعلومات الجغرافية والتقارير في تطبيق مؤسسي واحد. :contentReference[oaicite:29]{index=29}
+تجمع المنصة بين إدارة الهيكل التنظيمي والعمليات الميدانية وكتالوج المنتجات والمخزون والمعلومات الجغرافية والتقارير في تطبيق مؤسسي واحد.
 
 ## التحدي
 
 تتضمن عمليات التسويق التجاري عدة كيانات تنظيمية وفرق ميدانية ونقاط بيع ومنتجات ومستودعات ومناطق جغرافية.
 
-        كان النظام بحاجة إلى دعم:
+كان النظام بحاجة إلى دعم:
 
 - عزل بيانات المستأجرين
-        - الأدوار والصلاحيات الهرمية
-        - إدارة الأقسام التنظيمية
-        - إدارة المناطق الجغرافية
-        - إدارة العملاء ونقاط البيع
-        - إدارة المهام الميدانية
-        - التعليمات التشغيلية القابلة لإعادة الاستخدام
-        - كتالوج المنتجات والمتغيرات
-        - إدارة المخزون في عدة مواقع
-        - تقارير العمليات الميدانية والأدلة المصورة
-        - سجل كامل لتغييرات الحالات
-        - REST API مركزية
+- الأدوار والصلاحيات الهرمية
+- إدارة الأقسام التنظيمية
+- إدارة المناطق الجغرافية
+- إدارة العملاء ونقاط البيع
+- إدارة المهام الميدانية
+- التعليمات التشغيلية القابلة لإعادة الاستخدام
+- كتالوج المنتجات والمتغيرات
+- إدارة المخزون في عدة مواقع
+- تقارير العمليات الميدانية والأدلة المصورة
+- سجل كامل لتغييرات الحالات
+- REST API مركزية
 
 ## الحل
 
@@ -1132,118 +1122,112 @@ TradeTenant هي **منصة B2B متعددة المستأجرين موجهة ل�
 تشمل المجالات الرئيسية:
 
 - **Core** — المصادقة والصلاحيات والمستأجرون والإعدادات
-        - **Organization** — الأقسام والمناطق والعملاء
-        - **Tasks** — المهام والتعليمات وسجل الحالات
-        - **Products** — العلامات التجارية والفئات والمنتجات والمتغيرات
-        - **Stock** — المستودعات ومستويات المخزون وحركاته
+- **Organization** — الأقسام والمناطق والعملاء
+- **Tasks** — المهام والتعليمات وسجل الحالات
+- **Products** — العلامات التجارية والفئات والمنتجات والمتغيرات
+- **Stock** — المستودعات ومستويات المخزون وحركاته
 
-كل وحدة مستقلة وتحتوي على نماذجها وعمليات الترحيل ومسارات API وموارد API وآليات الصلاحيات الخاصة بها. :contentReference[oaicite:30]{index=30}
+كل وحدة مستقلة وتحتوي على نماذجها وعمليات الترحيل ومسارات API وموارد API وآليات الصلاحيات الخاصة بها.
 
 ## تعدد المستأجرين
 
 تعتمد المنصة على بنية Multi-Tenant تسمح بعزل بيانات وإعدادات كل مؤسسة.
 
-        يتم تحديد سياق المستأجر من خلال Middleware، ثم استخدامه لعزل البيانات والطلبات. كما تدعم البنية اتصالات قواعد بيانات مخصصة لكل مستأجر. :contentReference[oaicite:31]{index=31}
+يتم تحديد سياق المستأجر من خلال Middleware، ثم استخدامه لعزل البيانات والطلبات. كما تدعم البنية اتصالات قواعد بيانات مخصصة لكل مستأجر.
 
 ## الهيكل التنظيمي والموقع الجغرافي
 
 يسمح نطاق Organization بتمثيل الهيكل التشغيلي للشركات من خلال أقسام هرمية.
 
-        تشمل الوظائف:
+تشمل الوظائف:
 
 - أقسام مترابطة بنظام أب/أبناء
-        - ربط المستخدمين بالأقسام
-        - ربط الأقسام بالمناطق
-        - مناطق جغرافية هرمية
-        - مضلعات جغرافية
-        - إحداثيات WGS84
-        - استعلامات مكانية
-        - حساب المسافات
-        - إدارة العملاء ونقاط البيع
+- ربط المستخدمين بالأقسام
+- ربط الأقسام بالمناطق
+- مناطق جغرافية هرمية
+- مضلعات جغرافية
+- إحداثيات WGS84
+- استعلامات مكانية
+- حساب المسافات
+- إدارة العملاء ونقاط البيع
 
-يمكن استخدام المناطق الجغرافية لتنظيم وتصفية العمليات الميدانية. :contentReference[oaicite:32]{index=32}
+يمكن استخدام المناطق الجغرافية لتنظيم وتصفية العمليات الميدانية.
 
 ## إدارة المهام الميدانية
 
 يوفر نظام Tasks طبقة كاملة لإدارة العمليات الميدانية.
 
-        يدعم:
+يدعم:
 
 - إنشاء وإسناد المهام
-        - إسناد المهام إلى فرق الـ Merchandisers
-        - إسناد المشرفين
-        - ربط المهام بالمناطق والعملاء
-        - التعليمات التشغيلية القابلة لإعادة الاستخدام
-        - الأولويات
-        - ترتيب المهام حسب المسافة
-        - الملاحظات
-        - التقارير
-        - الأدلة المصورة
-        - مراجعة واعتماد المشرفين
+- إسناد المهام إلى فرق الـ Merchandisers
+- إسناد المشرفين
+- ربط المهام بالمناطق والعملاء
+- التعليمات التشغيلية القابلة لإعادة الاستخدام
+- الأولويات
+- ترتيب المهام حسب المسافة
+- الملاحظات
+- التقارير
+- الأدلة المصورة
+- مراجعة واعتماد المشرفين
 
 ## إدارة الحالات والتدقيق
 
 تم بناء نظام **Polymorphic Status History** بحيث يتم الاحتفاظ بكل تغيير في الحالة بدلًا من استبداله.
 
-        يتم تسجيل:
+يتم تسجيل:
 
 - الحالة الحالية
-        - الحالة السابقة
-        - المستخدم الذي قام بالتغيير
-        - وقت التغيير
-        - سبب التغيير
-        - الكيان المتأثر
+- الحالة السابقة
+- المستخدم الذي قام بالتغيير
+- وقت التغيير
+- سبب التغيير
+- الكيان المتأثر
 
-يوفر ذلك سجلًا كاملًا وغير قابل للتعديل يمكن استخدامه للتدقيق والامتثال والتقارير. :contentReference[oaicite:33]{index=33}
+يوفر ذلك سجلًا كاملًا وغير قابل للتعديل يمكن استخدامه للتدقيق والامتثال والتقارير.
 
 ## كتالوج المنتجات
 
 يدعم النظام:
 
 - إدارة العلامات التجارية
-        - الفئات الهرمية
-        - المنتجات
-        - المتغيرات
-        - SKU
-        - العلاقات بين المنتجات والفئات
-        - العلاقات بين العلامات التجارية والفئات
-        - ربط المنتجات بالأقسام
-        - أسعار المتغيرات
-
-        :contentReference[oaicite:34]{index=34}
+- الفئات الهرمية
+- المنتجات
+- المتغيرات
+- SKU
+- العلاقات بين المنتجات والفئات
+- العلاقات بين العلامات التجارية والفئات
+- ربط المنتجات بالأقسام
+- أسعار المتغيرات
 
 ## إدارة المخزون
 
 يسمح نظام Stock بإدارة المخزون عبر عدة مستودعات.
 
-        يشمل:
+يشمل:
 
 - إدارة المستودعات
-        - إدارة المسؤولين عن المستودعات
-        - مستويات المخزون
-        - المخزون حسب المتغير
-        - حركات المخزون
-        - عمليات الدخول والخروج
-        - سجل حركات المخزون
-        - أسباب الحركات
-        - متابعة الكميات
-
-        :contentReference[oaicite:35]{index=35}
+- إدارة المسؤولين عن المستودعات
+- مستويات المخزون
+- المخزون حسب المتغير
+- حركات المخزون
+- عمليات الدخول والخروج
+- سجل حركات المخزون
+- أسباب الحركات
+- متابعة الكميات
 
 ## التقارير والعمليات الميدانية
 
 يمكن للفرق الميدانية توثيق تنفيذ المهام من خلال:
 
 - تقارير التنفيذ
-        - الأدلة المصورة
-        - معلومات مواد نقاط البيع
-        - صور الرفوف
-        - معلومات الأسعار
-        - بيانات المخزون
-        - متابعة الالتزام
-        - مراجعة واعتماد المشرفين
-
-        :contentReference[oaicite:36]{index=36}
+- الأدلة المصورة
+- معلومات مواد نقاط البيع
+- صور الرفوف
+- معلومات الأسعار
+- بيانات المخزون
+- متابعة الالتزام
+- مراجعة واعتماد المشرفين
 
 ## API والأمان
 
@@ -1252,61 +1236,57 @@ TradeTenant هي **منصة B2B متعددة المستأجرين موجهة ل�
 وتعتمد على:
 
 - المصادقة باستخدام Tokens
-        - RBAC
-        - صلاحيات دقيقة
-        - Policies
-        - عزل المستأجرين
-        - التحقق من الصلاحيات
-
-        :contentReference[oaicite:37]{index=37}
+- RBAC
+- صلاحيات دقيقة
+- Policies
+- عزل المستأجرين
+- التحقق من الصلاحيات
 
 ## البنية التقنية
 
 - **Laravel 12**
-        - **PHP 8.4+**
+- **PHP 8.4+**
 - **Filament 4**
-        - **TALL Stack**
-        - **MySQL / MariaDB**
-        - **Eloquent**
-        - **Laravel Modules**
-        - **Sanctum**
-        - **Tenancy Framework**
-        - **Livewire 3**
-        - **Alpine.js**
-        - **Tailwind CSS**
-        - **Vite**
-
-:contentReference[oaicite:38]{index=38}
+- **TALL Stack**
+- **MySQL / MariaDB**
+- **Eloquent**
+- **Laravel Modules**
+- **Sanctum**
+- **Tenancy Framework**
+- **Livewire 3**
+- **Alpine.js**
+- **Tailwind CSS**
+- **Vite**
 
 ## مساهمتي
 
 - تصميم وتطوير البنية الخلفية
-        - بناء نظام Multi-Tenancy
-        - تطوير منطق الأعمال
-        - تصميم البنية المعيارية
-        - تطوير المصادقة والصلاحيات
-        - تطوير نطاق Organization
-        - تطوير نظام المهام الميدانية
-        - بناء نظام سجل الحالات متعدد الأشكال
-        - تطوير كتالوج المنتجات
-        - تطوير نظام المخزون
-        - بناء REST APIs
-        - تطوير الوظائف الجغرافية والمكانية
-        - تطوير واجهات الإدارة باستخدام Filament
-        - دعم تعدد اللغات
-        - تحسين الأداء وسلامة البيانات
+- بناء نظام Multi-Tenancy
+- تطوير منطق الأعمال
+- تصميم البنية المعيارية
+- تطوير المصادقة والصلاحيات
+- تطوير نطاق Organization
+- تطوير نظام المهام الميدانية
+- بناء نظام سجل الحالات متعدد الأشكال
+- تطوير كتالوج المنتجات
+- تطوير نظام المخزون
+- بناء REST APIs
+- تطوير الوظائف الجغرافية والمكانية
+- تطوير واجهات الإدارة باستخدام Filament
+- دعم تعدد اللغات
+- تحسين الأداء وسلامة البيانات
 
 ## النتيجة
 
-تربط TradeTenant عدة جوانب تشغيلية في نظام واحد:
+تربط TradeConnect عدة جوانب تشغيلية في نظام واحد:
 
 **الهيكل التنظيمي → المناطق الجغرافية → العملاء → الفرق الميدانية → المهام → المنتجات → المخزون → التقارير**
 
-        توفر المنصة بذلك رؤية مركزية للعمليات الميدانية مع الحفاظ على عزل المستأجرين وتوفير سجل كامل للعمليات والتغييرات.
+توفر المنصة بذلك رؤية مركزية للعمليات الميدانية مع الحفاظ على عزل المستأجرين وتوفير سجل كامل للعمليات والتغييرات.
 
 ## الخلاصة
 
-        كان TradeTenant مشروعًا مؤسسيًا غنيًا من الناحية التقنية، حيث جمع بين **Multi-Tenancy وModular Architecture وRBAC والبيانات المكانية والعمليات الميدانية وإدارة المخزون وREST APIs وسجلات التدقيق متعددة الأشكال** ضمن بنية Laravel قابلة للتوسع.',
+كان TradeConnect مشروعًا مؤسسيًا غنيًا من الناحية التقنية، حيث جمع بين **Multi-Tenancy وModular Architecture وRBAC والبيانات المكانية والعمليات الميدانية وإدارة المخزون وREST APIs وسجلات التدقيق متعددة الأشكال** ضمن بنية Laravel قابلة للتوسع.',
                 ],
             ],
         ];
