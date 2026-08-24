@@ -24,6 +24,47 @@ const emit = defineEmits(['close', 'change'])
 
 const activeIndex = ref(props.currentIndex)
 
+const normalizedImages = computed(() => {
+    if (!props.images || props.images.length === 0) return []
+    return props.images.map((img) => {
+        if (typeof img === 'string') {
+            return { url: img, alt: props.alt }
+        }
+        return { url: img.url || img.src || '', alt: img.alt || props.alt }
+    })
+})
+
+const currentImage = computed(() => {
+    if (normalizedImages.value.length === 0) return { url: '', alt: props.alt }
+    const idx = Math.max(0, Math.min(activeIndex.value, normalizedImages.value.length - 1))
+    return normalizedImages.value[idx]
+})
+
+const hasMultiple = computed(() => normalizedImages.value.length > 1)
+
+function close() {
+    emit('close')
+}
+
+function prev() {
+    if (!hasMultiple.value) return
+    activeIndex.value = (activeIndex.value - 1 + normalizedImages.value.length) % normalizedImages.value.length
+    emit('change', activeIndex.value)
+}
+
+function next() {
+    if (!hasMultiple.value) return
+    activeIndex.value = (activeIndex.value + 1) % normalizedImages.value.length
+    emit('change', activeIndex.value)
+}
+
+function handleKeydown(e) {
+    if (!props.open) return
+    if (e.key === 'Escape') close()
+    if (e.key === 'ArrowLeft') prev()
+    if (e.key === 'ArrowRight') next()
+}
+
 watch(
     () => props.currentIndex,
     (val) => {
@@ -52,47 +93,6 @@ onBeforeUnmount(() => {
         document.body.classList.remove('overflow-hidden')
     }
 })
-
-const normalizedImages = computed(() => {
-    if (!props.images || props.images.length === 0) return []
-    return props.images.map((img) => {
-        if (typeof img === 'string') {
-            return { url: img, alt: props.alt }
-        }
-        return { url: img.url || img.src || '', alt: img.alt || props.alt }
-    })
-})
-
-const currentImage = computed(() => {
-    if (normalizedImages.value.length === 0) return { url: '', alt: props.alt }
-    const idx = Math.max(0, Math.min(activeIndex.value, normalizedImages.value.length - 1))
-    return normalizedImages.value[idx]
-})
-
-const hasMultiple = computed(() => normalizedImages.value.length > 1)
-
-const close = () => {
-    emit('close')
-}
-
-const prev = () => {
-    if (!hasMultiple.value) return
-    activeIndex.value = (activeIndex.value - 1 + normalizedImages.value.length) % normalizedImages.value.length
-    emit('change', activeIndex.value)
-}
-
-const next = () => {
-    if (!hasMultiple.value) return
-    activeIndex.value = (activeIndex.value + 1) % normalizedImages.value.length
-    emit('change', activeIndex.value)
-}
-
-const handleKeydown = (e) => {
-    if (!props.open) return
-    if (e.key === 'Escape') close()
-    if (e.key === 'ArrowLeft') prev()
-    if (e.key === 'ArrowRight') next()
-}
 </script>
 
 <template>

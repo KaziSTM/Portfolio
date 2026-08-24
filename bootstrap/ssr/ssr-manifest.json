@@ -121,7 +121,7 @@
     "/build/assets/FadeContent-_tRcBepR.js"
   ],
   "resources/js/Components/Molecules/ImageModal.vue": [
-    "/build/assets/ShowView-CUE6Z3t2.js"
+    "/build/assets/ShowView-BMAFxht2.js"
   ],
   "resources/js/Components/Molecules/LangSwitch.vue": [
     "/build/assets/useGetTitle-DejgjcG2.js",
@@ -184,13 +184,13 @@
     "/build/assets/useGetTitle-CmhFFAVw.css"
   ],
   "resources/js/Components/Organisms/Projects/ProjectContent.vue": [
-    "/build/assets/ShowView-CUE6Z3t2.js"
+    "/build/assets/ShowView-BMAFxht2.js"
   ],
   "resources/js/Components/Organisms/Projects/ProjectHero.vue": [
-    "/build/assets/ShowView-CUE6Z3t2.js"
+    "/build/assets/ShowView-BMAFxht2.js"
   ],
   "resources/js/Components/Organisms/Projects/Testimonials.vue": [
-    "/build/assets/ShowView-CUE6Z3t2.js"
+    "/build/assets/ShowView-BMAFxht2.js"
   ],
   "resources/js/Components/Organisms/TheMenu.vue": [
     "/build/assets/useGetTitle-DejgjcG2.js",
@@ -213,7 +213,7 @@
     "/build/assets/IndexView-O0uU8BkN.js"
   ],
   "resources/js/Pages/Projects/ShowView.vue": [
-    "/build/assets/ShowView-CUE6Z3t2.js"
+    "/build/assets/ShowView-BMAFxht2.js"
   ],
   "resources/js/app.js": [
     "/build/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",

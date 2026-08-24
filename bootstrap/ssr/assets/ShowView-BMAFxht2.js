@@ -155,23 +155,6 @@ var _sfc_main$1 = {
 		const props = __props;
 		const emit = __emit;
 		const activeIndex = ref(props.currentIndex);
-		watch(() => props.currentIndex, (val) => {
-			activeIndex.value = val;
-		});
-		watch(() => props.open, (isOpen) => {
-			if (typeof window === "undefined") return;
-			document.body.classList.toggle("overflow-hidden", isOpen);
-			if (isOpen) {
-				activeIndex.value = props.currentIndex;
-				window.addEventListener("keydown", handleKeydown);
-			} else window.removeEventListener("keydown", handleKeydown);
-		}, { immediate: true });
-		onBeforeUnmount(() => {
-			if (typeof window !== "undefined") {
-				window.removeEventListener("keydown", handleKeydown);
-				document.body.classList.remove("overflow-hidden");
-			}
-		});
 		const normalizedImages = computed(() => {
 			if (!props.images || props.images.length === 0) return [];
 			return props.images.map((img) => {
@@ -194,25 +177,42 @@ var _sfc_main$1 = {
 			return normalizedImages.value[idx];
 		});
 		const hasMultiple = computed(() => normalizedImages.value.length > 1);
-		const close = () => {
+		function close() {
 			emit("close");
-		};
-		const prev = () => {
+		}
+		function prev() {
 			if (!hasMultiple.value) return;
 			activeIndex.value = (activeIndex.value - 1 + normalizedImages.value.length) % normalizedImages.value.length;
 			emit("change", activeIndex.value);
-		};
-		const next = () => {
+		}
+		function next() {
 			if (!hasMultiple.value) return;
 			activeIndex.value = (activeIndex.value + 1) % normalizedImages.value.length;
 			emit("change", activeIndex.value);
-		};
-		const handleKeydown = (e) => {
+		}
+		function handleKeydown(e) {
 			if (!props.open) return;
 			if (e.key === "Escape") close();
 			if (e.key === "ArrowLeft") prev();
 			if (e.key === "ArrowRight") next();
-		};
+		}
+		watch(() => props.currentIndex, (val) => {
+			activeIndex.value = val;
+		});
+		watch(() => props.open, (isOpen) => {
+			if (typeof window === "undefined") return;
+			document.body.classList.toggle("overflow-hidden", isOpen);
+			if (isOpen) {
+				activeIndex.value = props.currentIndex;
+				window.addEventListener("keydown", handleKeydown);
+			} else window.removeEventListener("keydown", handleKeydown);
+		}, { immediate: true });
+		onBeforeUnmount(() => {
+			if (typeof window !== "undefined") {
+				window.removeEventListener("keydown", handleKeydown);
+				document.body.classList.remove("overflow-hidden");
+			}
+		});
 		return (_ctx, _push, _parent, _attrs) => {
 			ssrRenderTeleport(_push, (_push) => {
 				if (__props.open && currentImage.value.url) {
@@ -374,4 +374,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ShowView-CUE6Z3t2.js.map
+//# sourceMappingURL=ShowView-BMAFxht2.js.map
