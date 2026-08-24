@@ -789,20 +789,23 @@ Translatable domain content is handled using dedicated translation support.
 
 ## Technical Architecture
 
-The platform was built around a modern Laravel 13 & Filament 5 stack:
+The platform was built around a modern Laravel stack:
 
-- **Laravel 13** (`laravel/framework ^13.6`)
-- **PHP 8.4+** (`^8.4`)
-- **Filament v5** (`v5.6`)
-- **Tailwind CSS v4** (`@tailwindcss/vite ^4.1`)
-- **Vite 7** (`vite ^7.3`)
-- **Modular Multi-Tenancy Architecture** (`nwidart/laravel-modules ^13.0`, `composer-merge-plugin`)
-- **API & Security**: Laravel Sanctum (`v4.3`), Filament Breezy (`v3.2`), OTP Verification (`ichtrojan/laravel-otp`), Phone Validation (`laravel-phone ^6.0`)
-- **GIS & Mapping Intelligence**: Filament Google Maps (`v5.0`), Filament Pinpoint (`^1.1`), Algeria Geo (`kazistm/algeria-geo ^2.0`), Select Tree (`v4.1`)
-- **Spatie & Filament Plugins**: Spatie Permission (`^7.3`), Spatie Translatable (`2.0`), Spatie Media Library & Tags (`v5.6`), Adjacency List (`staudenmeir/laravel-adjacency-list ^1.26`), Laravel Enum (`^6.12`), Filament Spotlight & Language Switch
-- **Push Notifications & Firebase**: Firebase SDK (`kreait/laravel-firebase ^7.2`), FCM Notification Channels (`^6.1`), Pusher Server & JS (`^7.2` / `^8.5`), Laravel Echo
-- **Exporting & Utilities**: mPDF (`mpdf/mpdf ^8.3`), Predis (`^3.4`), Google Maps JS Loader (`^1.16`)
-- **Testing & Quality Assurance**: Pest v4 (`pestphp/pest ^4.6`, Browser & Laravel plugins), Playwright (`^1.57`), Larastan (`^3.9`), LaraDumps (`^5.3`)
+- **Laravel 13**
+- **PHP 8.4+**
+- **Filament 5**
+- **TALL Stack**
+- **MySQL / MariaDB**
+- **Eloquent ORM**
+- **Laravel Modules**
+- **Laravel Sanctum**
+- **Tenancy Framework**
+- **Livewire 3**
+- **Alpine.js**
+- **Tailwind CSS v4**
+- **Vite 7**
+
+Key packages include Spatie Permission, Spatie Translatable, Spatie Media Library, Laravel Modules, Laravel Enum, and an adjacency-list package for hierarchical data.
 
 ## Architecture & Engineering Principles
 
@@ -1043,20 +1046,19 @@ Elle combine :
 
 ## Architecture technique
 
-L’application repose sur un écosystème moderne basé sur Laravel 13 et Filament 5 :
-
-- **Laravel 13** (`laravel/framework ^13.6`)
-- **PHP 8.4+** (`^8.4`)
-- **Filament v5** (`v5.6`)
-- **Tailwind CSS v4** (`@tailwindcss/vite ^4.1`)
-- **Vite 7** (`vite ^7.3`)
-- **Architecture modulaire & multi-tenancy** (`nwidart/laravel-modules ^13.0`, `composer-merge-plugin`)
-- **API & sécurité** : Laravel Sanctum (`v4.3`), Filament Breezy (`v3.2`), vérification OTP (`ichtrojan/laravel-otp`), validation des numéros (`laravel-phone ^6.0`)
-- **Cartographie & SIG** : Filament Google Maps (`v5.0`), Filament Pinpoint (`^1.1`), Algeria Geo (`kazistm/algeria-geo ^2.0`), Select Tree (`v4.1`)
-- **Écosystème Spatie & Filament** : Spatie Permission (`^7.3`), Spatie Translatable (`2.0`), Spatie Media Library & Tags (`v5.6`), Adjacency List (`staudenmeir/laravel-adjacency-list ^1.26`), Laravel Enum (`^6.12`), Filament Spotlight & Language Switch
-- **Notifications push & Firebase** : SDK Firebase (`kreait/laravel-firebase ^7.2`), canaux FCM (`^6.1`), serveur & JS Pusher (`^7.2` / `^8.5`), Laravel Echo
-- **Génération de documents & utilitaires** : mPDF (`mpdf/mpdf ^8.3`), Predis (`^3.4`), Google Maps JS Loader (`^1.16`)
-- **Tests & qualité du code** : Pest v4 (`pestphp/pest ^4.6`, plugins Browser & Laravel), Playwright (`^1.57`), Larastan (`^3.9`), LaraDumps (`^5.3`)
+- **Laravel 13**
+- **PHP 8.4+**
+- **Filament 5**
+- **TALL Stack**
+- **MySQL / MariaDB**
+- **Eloquent**
+- **Laravel Modules**
+- **Sanctum**
+- **Tenancy Framework**
+- **Livewire 3**
+- **Alpine.js**
+- **Tailwind CSS v4**
+- **Vite 7**
 
 ## Ma contribution
 
@@ -1242,20 +1244,19 @@ TradeConnect هي **منصة B2B متعددة المستأجرين موجهة ل
 
 ## البنية التقنية
 
-تم بناء المنصة على منظومة حديثة تعتمد على Laravel 13 و Filament 5:
-
-- **Laravel 13** (`laravel/framework ^13.6`)
-- **PHP 8.4+** (`^8.4`)
-- **Filament v5** (`v5.6`)
-- **Tailwind CSS v4** (`@tailwindcss/vite ^4.1`)
-- **Vite 7** (`vite ^7.3`)
-- **البنية المعيارية وتعدد المستأجرين** (`nwidart/laravel-modules ^13.0` مع `composer-merge-plugin`)
-- **API والأمان**: Laravel Sanctum (`v4.3`)، Filament Breezy (`v3.2`)، التحقق عبر OTP (`ichtrojan/laravel-otp`)، التحقق من أرقام الهواتف (`laravel-phone ^6.0`)
-- **الخرائط ونظم المعلومات الجغرافية (GIS)**: Filament Google Maps (`v5.0`)، Filament Pinpoint (`^1.1`)، Algeria Geo (`kazistm/algeria-geo ^2.0`)، Select Tree (`v4.1`)
-- **حزم Spatie و Filament**: Spatie Permission (`^7.3`)، Spatie Translatable (`2.0`)، Spatie Media Library & Tags (`v5.6`)، Adjacency List (`staudenmeir/laravel-adjacency-list ^1.26`)، Laravel Enum (`^6.12`)، Filament Spotlight & Language Switch
-- **الإشعارات اللحظية و Firebase**: Firebase SDK (`kreait/laravel-firebase ^7.2`)، قنوات FCM (`^6.1`)، Pusher (`^7.2` / `^8.5`)، Laravel Echo
-- **إنشاء التقارير والأدوات**: mPDF (`mpdf/mpdf ^8.3`)، Predis (`^3.4`)، Google Maps JS Loader (`^1.16`)
-- **الاختبارات وجودة الكود**: Pest v4 (`pestphp/pest ^4.6` مع الإضافات الخاصة بـ Browser و Laravel)، Playwright (`^1.57`)، Larastan (`^3.9`)، LaraDumps (`^5.3`)
+- **Laravel 13**
+- **PHP 8.4+**
+- **Filament 5**
+- **TALL Stack**
+- **MySQL / MariaDB**
+- **Eloquent**
+- **Laravel Modules**
+- **Sanctum**
+- **Tenancy Framework**
+- **Livewire 3**
+- **Alpine.js**
+- **Tailwind CSS v4**
+- **Vite 7**
 
 ## مساهمتي
 
