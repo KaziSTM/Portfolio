@@ -1,5 +1,5 @@
 import { n as _plugin_vue_export_helper_default } from "./Subtitle-DtkDPELn.js";
-import { n as _sfc_main$6, r as SpecularButton_default, t as useGetTitle } from "./useGetTitle-D2RcYPjL.js";
+import { n as _sfc_main$6, r as SpecularButton_default, t as useGetTitle } from "./useGetTitle-DejgjcG2.js";
 import { computed, createBlock, createVNode, mergeProps, openBlock, resolveDynamicComponent, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, useForm, usePage } from "@inertiajs/vue3";
 import { ssrIncludeBooleanAttr, ssrInterpolate, ssrLooseContain, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderDynamicModel, ssrRenderList, ssrRenderVNode } from "vue/server-renderer";
@@ -297,4 +297,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=ContactView-BhW-Igsy.js.map
+//# sourceMappingURL=ContactView-CCaYE05u.js.map

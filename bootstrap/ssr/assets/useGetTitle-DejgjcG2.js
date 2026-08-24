@@ -749,15 +749,15 @@ var _sfc_main$1 = {
 		const navigation = computed(() => page.props.footerNavigation);
 		const contactUrl = computed(() => route("contact", { locale: page.props.locale }));
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-slate-900 py-10 sm:pt-16 lg:pt-24" }, _attrs))}><div class="mx-auto max-w-7xl px-4 sm:px-12 lg:px-8"><div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-32"><div class="space-y-16">`);
-			_push(ssrRenderComponent(Subtitle_default, { class: "text-start text-white" }, {
+			_push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-slate-900 py-10 sm:pt-16 lg:pt-24" }, _attrs))}><div class="mx-auto max-w-7xl px-4 sm:px-12 lg:px-8"><div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-32"><div class="flex flex-col items-center text-center space-y-10 md:items-start md:text-left md:space-y-16">`);
+			_push(ssrRenderComponent(Subtitle_default, { class: "text-center text-white md:text-start" }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) _push(`${ssrInterpolate(footer.value.title)}`);
 					else return [createTextVNode(toDisplayString(footer.value.title), 1)];
 				}),
 				_: 1
 			}, _parent));
-			_push(`<div class="flex justify-start">`);
+			_push(`<div class="flex justify-center md:justify-start">`);
 			_push(ssrRenderComponent(unref(Link), { href: contactUrl.value }, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
 					if (_push) _push(ssrRenderComponent(SpecularButton_default, {
@@ -808,14 +808,14 @@ var _sfc_main$1 = {
 				}),
 				_: 1
 			}, _parent));
-			_push(`</div></div><div class="flex flex-col space-y-10"><p class="mt-4 inline-flex pe-32 text-start text-secondary-100">${ssrInterpolate(footer.value.description)}</p><div class="flex flex-wrap gap-4"><!--[-->`);
+			_push(`</div></div><div class="flex flex-col items-center text-center space-y-8 md:items-start md:text-left md:space-y-10"><p class="mt-4 text-center text-secondary-100 md:pe-32 md:text-start">${ssrInterpolate(footer.value.description)}</p><div class="flex flex-nowrap items-center justify-center gap-2 max-w-full overflow-x-auto py-1 sm:gap-4 md:justify-start"><!--[-->`);
 			ssrRenderList(socials.value, (social) => {
 				_push(ssrRenderComponent(_sfc_main$2, {
 					key: social.name,
 					href: social.link,
 					icon: social.icon,
 					label: social.name,
-					class: "bg-transparent backdrop-blur-md border border-white/10 text-secondary-50 hover:bg-secondary-700",
+					class: "bg-transparent backdrop-blur-md border border-white/10 text-secondary-50 hover:bg-secondary-700 px-3 py-1.5 text-xs whitespace-nowrap shrink-0 sm:px-4 sm:py-2 sm:text-sm",
 					external: "",
 					position: "right",
 					rounded: ""
@@ -827,7 +827,7 @@ var _sfc_main$1 = {
 					_: 2
 				}, _parent));
 			});
-			_push(`<!--]--></div></div></div><hr class="mb-10 mt-16 border-secondary-200/10"><div class="flex flex-col gap-4 md:flex-row md:justify-between"><div class="flex w-full flex-wrap items-center gap-4"><!--[-->`);
+			_push(`<!--]--></div></div></div><hr class="mb-10 mt-16 border-secondary-200/10"><div class="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left"><div class="flex w-full flex-wrap items-center justify-center gap-4 md:justify-start"><!--[-->`);
 			ssrRenderList(navigation.value, (link) => {
 				_push(ssrRenderComponent(unref(Link), {
 					key: link.route,
@@ -841,7 +841,7 @@ var _sfc_main$1 = {
 					_: 2
 				}, _parent));
 			});
-			_push(`<!--]--></div><p class="block w-full text-end text-sm text-secondary-300">${ssrInterpolate(footer.value.copyright)}</p></div></div></footer>`);
+			_push(`<!--]--></div><p class="block w-full text-center text-sm text-secondary-300 md:text-end">${ssrInterpolate(footer.value.copyright)}</p></div></div></footer>`);
 		};
 	}
 };
@@ -890,4 +890,4 @@ function useGetTitle(page) {
 //#endregion
 export { _sfc_main$2 as i, _sfc_main as n, SpecularButton_default as r, useGetTitle as t };
 
-//# sourceMappingURL=useGetTitle-D2RcYPjL.js.map
+//# sourceMappingURL=useGetTitle-DejgjcG2.js.map

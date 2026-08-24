@@ -99,7 +99,7 @@ var _sfc_main = {
 			"heroicon-o-rectangle-stack": RectangleStack_default,
 			"heroicon-o-code-bracket": CodeBracket_default
 		};
-		const resume = computed(() => page.props.locale).value === "fr" ? "assets/docs/Youcef_Nezrek_fr.pdf" : "assets/docs/Youcef_Nezrek_en.pdf";
+		const resume = computed(() => page.props.locale).value === "fr" ? "/assets/docs/Youcef_Nezrek_fr.pdf" : "/assets/docs/Youcef_Nezrek_en.pdf";
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<div${ssrRenderAttrs(_attrs)}>`);
 			_push(ssrRenderComponent(Section_default, { class: "bg-slate-100" }, {
@@ -124,7 +124,7 @@ var _sfc_main = {
 						});
 						_push(`<!--]--><div class="hidden lg:block absolute -bottom-32 left-12"${_scopeId}><h4 class="text-xl w-[60%] translate-y-16 translate-x-20 -rotate-10 rtl:translate-y-20 rtl:translate-x-20"${_scopeId}>${ssrInterpolate(__props.featuresSection.caption)}</h4>`);
 						_push(ssrRenderComponent(FeatureArrow_default, null, null, _parent, _scopeId));
-						_push(`</div></div><div class="relative w-full flex justify-center"${_scopeId}><div class="relative inline-block"${_scopeId}><img${ssrRenderAttr("src", "/assets/images/portrait-5.webp")} alt="Feature Image" class="w-full max-w-125 md:max-w-150 h-80 md:h-130 object-cover rounded-xl shadow-xl" decoding="async" height="1280" loading="lazy" sizes="(min-width: 1024px) 512px, (min-width: 768px) 480px, calc(100vw - 2rem)" width="853"${_scopeId}><img${ssrRenderAttr("src", "/assets/svg/star.svg")} alt="decorative star" class="absolute -top-5 -inset-e-6 w-8 md:w-12 lg:w-14 pointer-events-none select-none"${_scopeId}></div><div class="absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0"${_scopeId}><a${ssrRenderAttr("href", unref(resume))} class="group flex items-center gap-3 bg-white/90 backdrop-blur px-3 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200" target="_blank"${_scopeId}><div class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white"${_scopeId}>`);
+						_push(`</div></div><div class="relative w-full flex justify-center"${_scopeId}><div class="relative inline-block"${_scopeId}><img${ssrRenderAttr("src", "/assets/images/portrait-5.webp")} alt="Feature Image" class="w-full max-w-125 md:max-w-150 h-80 md:h-130 object-cover rounded-xl shadow-xl" decoding="async" height="1280" loading="lazy" sizes="(min-width: 1024px) 512px, (min-width: 768px) 480px, calc(100vw - 2rem)" width="853"${_scopeId}><img${ssrRenderAttr("src", "/assets/svg/star.svg")} alt="decorative star" class="absolute -top-5 -inset-e-6 w-8 md:w-12 lg:w-14 pointer-events-none select-none"${_scopeId}></div><div class="absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-[85%] max-w-xs md:w-auto md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0"${_scopeId}><a${ssrRenderAttr("href", unref(resume))} class="group flex items-center gap-3.5 bg-white/90 backdrop-blur px-4 py-3 md:px-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200 w-full md:w-auto" target="_blank"${_scopeId}><div class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white"${_scopeId}>`);
 						_push(ssrRenderComponent(DownloadSimple_default, { class: "w-5 h-5 group-hover:translate-y-0.5 transition" }, null, _parent, _scopeId));
 						_push(`</div><div class="text-start"${_scopeId}><p class="text-sm font-semibold text-slate-900"${_scopeId}>${ssrInterpolate(__props.featuresSection.download_label)}</p><p class="text-xs text-gray-500"${_scopeId}>${ssrInterpolate(__props.featuresSection.view_experience_label)}</p></div></a></div></div></div></div>`);
 					} else return [createVNode("div", { class: "container mx-auto text-center lg:text-start space-y-20" }, [createVNode("div", { class: "grid grid-cols-1 xl:grid-cols-2 gap-10 md:gap-16 xl:gap-24 items-center px-4 sm:px-8 md:px-12 lg:px-16" }, [createVNode(Subtitle_default, null, {
@@ -163,9 +163,9 @@ var _sfc_main = {
 						src: "/assets/svg/star.svg",
 						alt: "decorative star",
 						class: "absolute -top-5 -inset-e-6 w-8 md:w-12 lg:w-14 pointer-events-none select-none"
-					})]), createVNode("div", { class: "absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0" }, [createVNode("a", {
+					})]), createVNode("div", { class: "absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-[85%] max-w-xs md:w-auto md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0" }, [createVNode("a", {
 						href: unref(resume),
-						class: "group flex items-center gap-3 bg-white/90 backdrop-blur px-3 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200",
+						class: "group flex items-center gap-3.5 bg-white/90 backdrop-blur px-4 py-3 md:px-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200 w-full md:w-auto",
 						target: "_blank"
 					}, [createVNode("div", { class: "w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white" }, [createVNode(DownloadSimple_default, { class: "w-5 h-5 group-hover:translate-y-0.5 transition" })]), createVNode("div", { class: "text-start" }, [createVNode("p", {
 						class: "text-sm font-semibold text-slate-900",
@@ -190,4 +190,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=Features-C-VLKSHU.js.map
+//# sourceMappingURL=Features-CQd80yaI.js.map

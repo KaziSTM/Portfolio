@@ -1,6 +1,6 @@
 import { n as _plugin_vue_export_helper_default } from "./Subtitle-DtkDPELn.js";
 import { t as Section_default } from "./Section-CcmBDABV.js";
-import { i as _sfc_main$5, n as _sfc_main$6, r as SpecularButton_default, t as useGetTitle } from "./useGetTitle-D2RcYPjL.js";
+import { i as _sfc_main$5, n as _sfc_main$6, r as SpecularButton_default, t as useGetTitle } from "./useGetTitle-DejgjcG2.js";
 import { Fragment, computed, createBlock, createTextVNode, createVNode, defineAsyncComponent, mergeProps, openBlock, renderList, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, Link, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderSlot, ssrRenderStyle } from "vue/server-renderer";
@@ -278,9 +278,9 @@ var _sfc_main = {
 		}
 	},
 	setup(__props) {
-		const Features = defineAsyncComponent(() => import("./Features-C-VLKSHU.js"));
+		const Features = defineAsyncComponent(() => import("./Features-CQd80yaI.js"));
 		const Tools = defineAsyncComponent(() => import("./Tools-dsWekzrf.js"));
-		const LatestWork = defineAsyncComponent(() => import("./LatestWork-BW5IPwFz.js"));
+		const LatestWork = defineAsyncComponent(() => import("./LatestWork-CllOt2mo.js"));
 		const Companies = defineAsyncComponent(() => import("./Companies-DW7fCs0a.js"));
 		const title = useGetTitle("home");
 		return (_ctx, _push, _parent, _attrs) => {
@@ -317,4 +317,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=HomeView-PPBc5yS1.js.map
+//# sourceMappingURL=HomeView-D2f0sk1H.js.map

@@ -1,6 +1,6 @@
 import { t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { n as _sfc_main$3, r as BorderGlow_default, t as FadeContent_default } from "./FadeContent-_tRcBepR.js";
-import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-D2RcYPjL.js";
+import { n as _sfc_main$4, t as useGetTitle } from "./useGetTitle-DejgjcG2.js";
 import { Fragment, computed, createBlock, createCommentVNode, createTextVNode, createVNode, defineComponent, mergeProps, openBlock, ref, renderList, renderSlot, toDisplayString, unref, useSSRContext, withCtx } from "vue";
 import { Head, Link, router, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList, ssrRenderSlot } from "vue/server-renderer";
@@ -214,7 +214,7 @@ var _sfc_main$1 = {
 									else _push(`<!---->`);
 									_push(`<!--]-->`);
 								});
-								_push(`<!--]--></div></div><h3 class="block mt-2.5 sm:mt-3.5 text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3>`);
+								_push(`<!--]--></div></div><h3 class="block mt-2.5 sm:mt-3.5 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 leading-snug font-display text-center break-words [overflow-wrap:anywhere] min-w-0"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3>`);
 								if (__props.project.description) _push(`<p class="line-clamp-3 text-center leading-relaxed text-gray-600 text-sm sm:text-base"${_scopeId}>${__props.project.description ?? ""}</p>`);
 								else _push(`<!---->`);
 								_push(`</div></div><div class="mt-5 pt-2 flex justify-center w-full"${_scopeId}>`);
@@ -280,7 +280,7 @@ var _sfc_main$1 = {
 										}), 128))])
 									]),
 									createVNode("h3", {
-										class: "block mt-2.5 sm:mt-3.5 text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center",
+										class: "block mt-2.5 sm:mt-3.5 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 leading-snug font-display text-center break-words [overflow-wrap:anywhere] min-w-0",
 										textContent: toDisplayString(__props.project.header)
 									}, null, 8, ["textContent"]),
 									__props.project.description ? (openBlock(), createBlock("p", {
@@ -364,7 +364,7 @@ var _sfc_main$1 = {
 									}), 128))])
 								]),
 								createVNode("h3", {
-									class: "block mt-2.5 sm:mt-3.5 text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center",
+									class: "block mt-2.5 sm:mt-3.5 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 leading-snug font-display text-center break-words [overflow-wrap:anywhere] min-w-0",
 									textContent: toDisplayString(__props.project.header)
 								}, null, 8, ["textContent"]),
 								__props.project.description ? (openBlock(), createBlock("p", {
@@ -573,4 +573,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=IndexView-GEcHdX-0.js.map
+//# sourceMappingURL=IndexView-O0uU8BkN.js.map

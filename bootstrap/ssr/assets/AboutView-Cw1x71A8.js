@@ -1,8 +1,8 @@
 import { n as _plugin_vue_export_helper_default, t as Subtitle_default } from "./Subtitle-DtkDPELn.js";
 import { t as DownloadSimple_default } from "./DownloadSimple-HqfXmc8B.js";
-import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle-D2RcYPjL.js";
-import { createTextVNode, createVNode, mergeProps, toDisplayString, unref, useSSRContext, withCtx } from "vue";
-import { Head } from "@inertiajs/vue3";
+import { n as _sfc_main$5, t as useGetTitle } from "./useGetTitle-DejgjcG2.js";
+import { computed, createTextVNode, createVNode, mergeProps, toDisplayString, unref, useSSRContext, withCtx } from "vue";
+import { Head, usePage } from "@inertiajs/vue3";
 import { ssrInterpolate, ssrRenderAttr, ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderStyle } from "vue/server-renderer";
 //#region resources/js/Components/Icons/CirclesBackground.vue
 var _sfc_main$4 = {};
@@ -56,7 +56,7 @@ var _sfc_main$3 = {
 				});
 				_push(`<!--]-->`);
 			} else _push(`<!---->`);
-			_push(`<h3 class="text-3xl mt-12 text-start font-script">${ssrInterpolate(__props.intro.signature)}</h3></div></div><div class="relative hidden lg:block"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-4 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-90 lg:w-115 xl:w-130 opacity-80 pointer-events-none select-none rtl:scale-x-[-1]"></div></div><div class="block lg:hidden w-full relative overflow-hidden"><div class="relative h-80 sm:h-95 md:h-105"><img${ssrRenderAttr("src", "/assets/images/portrait.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-0 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-65 sm:w-[320px] md:w-95 opacity-70 pointer-events-none rtl:scale-x-[-1]"></div></div></section>`);
+			_push(`<h3 class="text-3xl mt-12 text-start font-script">${ssrInterpolate(__props.intro.signature)}</h3></div></div><div class="relative hidden lg:block"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-4 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-90 lg:w-115 xl:w-130 opacity-80 pointer-events-none select-none rtl:scale-x-[-1]"></div></div><div class="block lg:hidden w-full relative overflow-hidden"><div class="relative h-80 sm:h-95 md:h-105"><img${ssrRenderAttr("src", "/assets/images/portrait-2.webp")} alt="Portrait" class="absolute inset-0 w-full h-full object-cover object-top" style="${ssrRenderStyle({ "filter": "grayscale(15%) contrast(1.05)" })}"><img${ssrRenderAttr("src", "/assets/svg/about.svg")} alt="" class="absolute bottom-0 inset-s-0 -translate-x-1/3 rtl:translate-x-1/3 w-65 sm:w-[320px] md:w-95 opacity-70 pointer-events-none rtl:scale-x-[-1]"></div></div></section>`);
 		};
 	}
 };
@@ -76,19 +76,21 @@ var _sfc_main$2 = {
 		required: true
 	} },
 	setup(__props) {
+		const page = usePage();
+		const resume = computed(() => page.props.locale).value === "fr" ? "/assets/docs/Youcef_Nezrek_fr.pdf" : "/assets/docs/Youcef_Nezrek_en.pdf";
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<section${ssrRenderAttrs(mergeProps({ class: "container mx-auto text-start mt-16 md:mt-0" }, _attrs))}><div class="grid grid-cols-1 lg:grid-cols-5 xl:gap-12"><div class="col-span-2 lg:ps-32 xl:ps-48 py-4 lg:py-32">`);
+			_push(`<section${ssrRenderAttrs(mergeProps({ class: "container mx-auto text-start mt-16 md:mt-0" }, _attrs))}><div class="grid grid-cols-1 lg:grid-cols-5 xl:gap-12"><div class="col-span-2 px-6 sm:px-8 md:px-12 lg:px-0 lg:ps-32 xl:ps-48 py-4 lg:py-32">`);
 			_push(ssrRenderComponent(Subtitle_default, null, null, _parent));
-			_push(`<p class="mt-6 text-sm lg:text-base text-gray-700">${ssrInterpolate(__props.careers.content.description)}</p><a${ssrRenderAttr("href", "assets/docs/Youcef_Nezrek_CV.pdf")} class="flex gap-2 items-center w-1/2 bg-slate-100 mt-6 py-2 px-6 border rounded-2xl focus:outline-none"><span class="capitalize font-semibold text-secondary-900">${ssrInterpolate(__props.careers.download_label)}</span>`);
+			_push(`<p class="mt-6 text-lg lg:text-xl text-gray-700">${ssrInterpolate(__props.careers.content.description)}</p><a${ssrRenderAttr("href", unref(resume))} class="flex gap-2 items-center w-1/2 min-w-max bg-slate-100 mt-6 py-2 px-6 border rounded-2xl focus:outline-none hover:bg-slate-200 transition-colors" target="_blank" rel="noopener noreferrer"><span class="capitalize font-semibold text-secondary-900">${ssrInterpolate(__props.careers.download_label)}</span>`);
 			_push(ssrRenderComponent(DownloadSimple_default, {
 				class: "h-5 w-5 transform transition-transform duration-300 group-hover:-translate-y-0.5",
 				name: "download-simple"
 			}, null, _parent));
-			_push(`</a></div><ol class="col-span-3 py-4 lg:py-32 lg:pe-28 xl:pe-36 grid grid-cols-1 md:grid-cols-2 gap-6">`);
+			_push(`</a></div><ol class="col-span-3 px-6 sm:px-8 md:px-12 lg:px-0 py-4 lg:py-32 lg:pe-28 xl:pe-36 grid grid-cols-1 md:grid-cols-2 gap-6">`);
 			if (__props.careers.jobs.data.length > 0) {
 				_push(`<!--[-->`);
 				ssrRenderList(__props.careers.jobs.data, (job, index) => {
-					_push(`<div class="relative p-4 rounded-lg"><div class="flex flex-col mb-2 space-y-6"><div class="p-2 rounded-lg border border-slate-200 bg-slate-100 max-w-fit"><img${ssrRenderAttr("alt", job.company.name + "-logo")}${ssrRenderAttr("src", job.company.logo)} class="w-6 h-6"></div><span class="font-semibold text-sm leading-5 text-primary-700">${ssrInterpolate(job.duration)}</span><span class="absolute text-[6rem] font-bold font-mono text-slate-100 inset-e-1 -top-8">${ssrInterpolate(String(index + 1).padStart(2, "0"))}</span></div><h2 class="text-xl font-bold capitalize">${ssrInterpolate(job.company.name)}</h2><p class="mt-6 text-sm lg:text-base text-gray-700">${job.description ?? ""}</p></div>`);
+					_push(`<div class="relative px-0 py-4 sm:p-4 rounded-lg"><div class="flex flex-col mb-2 space-y-6"><div class="p-2 rounded-lg border border-slate-200 bg-slate-100 max-w-fit"><img${ssrRenderAttr("alt", job.company.name + "-logo")}${ssrRenderAttr("src", job.company.logo)} class="w-6 h-6"></div><span class="font-semibold text-sm leading-5 text-primary-700">${ssrInterpolate(job.duration)}</span><span class="absolute text-[6rem] font-bold font-mono text-slate-100 inset-e-1 -top-8">${ssrInterpolate(String(index + 1).padStart(2, "0"))}</span></div><h2 class="text-xl font-bold capitalize">${ssrInterpolate(job.company.name)}</h2><p class="mt-6 text-base text-gray-700 leading-relaxed">${job.description ?? ""}</p></div>`);
 				});
 				_push(`<!--]-->`);
 			} else _push(`<!---->`);
@@ -185,4 +187,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=AboutView-BbQaZKX4.js.map
+//# sourceMappingURL=AboutView-Cw1x71A8.js.map

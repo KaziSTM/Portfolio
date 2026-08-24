@@ -59,10 +59,10 @@ var _sfc_main$1 = {
 					}, {
 						default: withCtx((_, _push, _parent, _scopeId) => {
 							if (_push) {
-								_push(`<article class="relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full"${_scopeId}>`);
+								_push(`<article class="relative grid grid-cols-1 gap-4 px-0 py-0 md:h-120 lg:gap-16 xl:grid-cols-2 h-full w-full"${_scopeId}>`);
 								_push(ssrRenderComponent(unref(Link), {
 									href: __props.project.project_url,
-									class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full block",
+									class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-48 sm:h-64 md:h-80 xl:h-full w-full block",
 									onMouseenter: ($event) => zoom.value = true,
 									onMouseleave: ($event) => zoom.value = false
 								}, {
@@ -81,7 +81,7 @@ var _sfc_main$1 = {
 									}),
 									_: 1
 								}, _parent, _scopeId));
-								_push(`<div class="order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full"${_scopeId}><div${_scopeId}><div class="mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest"${_scopeId}><span class="rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex items-center gap-2 text-gray-400"${_scopeId}><!--[-->`);
+								_push(`<div class="order-2 flex flex-col justify-between p-4 sm:p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full min-w-0"${_scopeId}><div class="min-w-0"${_scopeId}><div class="mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs uppercase tracking-widest min-w-0"${_scopeId}><span class="rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600"${_scopeId}>${ssrInterpolate(__props.project.type_label)}</span><div class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-gray-400 min-w-0"${_scopeId}><!--[-->`);
 								ssrRenderList(__props.project.role_labels, (role, index) => {
 									_push(`<!--[--><span${_scopeId}>${ssrInterpolate(role)}</span>`);
 									if (index !== __props.project.role_labels.length - 1) _push(`<span class="opacity-30"${_scopeId}> • </span>`);
@@ -91,7 +91,7 @@ var _sfc_main$1 = {
 								_push(`<!--]--></div>`);
 								if (__props.project.is_in_progress) _push(`<span class="rounded-md bg-amber-100 px-2.5 py-1 normal-case tracking-normal text-amber-600 font-medium"${_scopeId}>${ssrInterpolate(__props.translations.projects?.ongoing ?? __props.translations.projects?.in_progress ?? "Ongoing")}</span>`);
 								else _push(`<!---->`);
-								_push(`</div><h3 class="mb-3 sm:mb-4 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3><p class="mb-6 sm:mb-8 line-clamp-3 text-start leading-relaxed text-gray-600"${_scopeId}>${__props.project.description ?? ""}</p></div><div class="mt-auto pt-3 pb-1 flex flex-col items-start gap-2"${_scopeId}>`);
+								_push(`</div><h3 class="mb-3 sm:mb-4 text-start text-lg sm:text-xl lg:text-2xl font-semibold leading-snug font-display text-gray-900 break-words [overflow-wrap:anywhere] min-w-0"${_scopeId}>${ssrInterpolate(__props.project.header)}</h3><p class="mb-6 sm:mb-8 line-clamp-3 text-start text-sm sm:text-base leading-relaxed text-gray-600 break-words [overflow-wrap:anywhere]"${_scopeId}>${__props.project.description ?? ""}</p></div><div class="mt-auto pt-3 pb-1 flex flex-col items-start gap-2"${_scopeId}>`);
 								if (formattedDates.value) _push(`<div class="flex items-center gap-1 text-xs text-gray-400"${_scopeId}>${ssrInterpolate(formattedDates.value)}</div>`);
 								else _push(`<!---->`);
 								_push(ssrRenderComponent(_sfc_main$2, {
@@ -103,9 +103,9 @@ var _sfc_main$1 = {
 									url: __props.project.project_url
 								}, null, _parent, _scopeId));
 								_push(`</div></div></article>`);
-							} else return [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full" }, [createVNode(unref(Link), {
+							} else return [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-0 py-0 md:h-120 lg:gap-16 xl:grid-cols-2 h-full w-full" }, [createVNode(unref(Link), {
 								href: __props.project.project_url,
-								class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full block",
+								class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-48 sm:h-64 md:h-80 xl:h-full w-full block",
 								onMouseenter: ($event) => zoom.value = true,
 								onMouseleave: ($event) => zoom.value = false
 							}, {
@@ -124,13 +124,13 @@ var _sfc_main$1 = {
 								"href",
 								"onMouseenter",
 								"onMouseleave"
-							]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full" }, [createVNode("div", null, [
-								createVNode("div", { class: "mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
+							]), createVNode("div", { class: "order-2 flex flex-col justify-between p-4 sm:p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full min-w-0" }, [createVNode("div", { class: "min-w-0" }, [
+								createVNode("div", { class: "mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs uppercase tracking-widest min-w-0" }, [
 									createVNode("span", {
 										class: "rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600",
 										textContent: toDisplayString(__props.project.type_label)
 									}, null, 8, ["textContent"]),
-									createVNode("div", { class: "flex items-center gap-2 text-gray-400" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
+									createVNode("div", { class: "flex flex-wrap items-center gap-1.5 sm:gap-2 text-gray-400 min-w-0" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
 										return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
 											key: 0,
 											class: "opacity-30"
@@ -141,9 +141,9 @@ var _sfc_main$1 = {
 										class: "rounded-md bg-amber-100 px-2.5 py-1 normal-case tracking-normal text-amber-600 font-medium"
 									}, toDisplayString(__props.translations.projects?.ongoing ?? __props.translations.projects?.in_progress ?? "Ongoing"), 1)) : createCommentVNode("", true)
 								]),
-								createVNode("h3", { class: "mb-3 sm:mb-4 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900" }, toDisplayString(__props.project.header), 1),
+								createVNode("h3", { class: "mb-3 sm:mb-4 text-start text-lg sm:text-xl lg:text-2xl font-semibold leading-snug font-display text-gray-900 break-words [overflow-wrap:anywhere] min-w-0" }, toDisplayString(__props.project.header), 1),
 								createVNode("p", {
-									class: "mb-6 sm:mb-8 line-clamp-3 text-start leading-relaxed text-gray-600",
+									class: "mb-6 sm:mb-8 line-clamp-3 text-start text-sm sm:text-base leading-relaxed text-gray-600 break-words [overflow-wrap:anywhere]",
 									innerHTML: __props.project.description
 								}, null, 8, ["innerHTML"])
 							]), createVNode("div", { class: "mt-auto pt-3 pb-1 flex flex-col items-start gap-2" }, [formattedDates.value ? (openBlock(), createBlock("div", {
@@ -183,9 +183,9 @@ var _sfc_main$1 = {
 						"card-shadow": "0 2px 8px var(--color-secondary-200, #e2e8f0), 0 1px 3px var(--color-secondary-300, #cbd5e1)",
 						"class-name": "max-w-6xl w-full"
 					}, {
-						default: withCtx(() => [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-4 py-0 md:h-120 lg:gap-16 lg:px-0 xl:grid-cols-2 h-full w-full" }, [createVNode(unref(Link), {
+						default: withCtx(() => [createVNode("article", { class: "relative grid grid-cols-1 gap-4 px-0 py-0 md:h-120 lg:gap-16 xl:grid-cols-2 h-full w-full" }, [createVNode(unref(Link), {
 							href: __props.project.project_url,
-							class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-full block",
+							class: "relative order-1 overflow-hidden rounded-tl-xl rounded-br-xl hover:cursor-pointer rtl:rounded-bl-xl rtl:rounded-br-none rtl:rounded-tl-none rtl:rounded-tr-xl xl:order-2 h-48 sm:h-64 md:h-80 xl:h-full w-full block",
 							onMouseenter: ($event) => zoom.value = true,
 							onMouseleave: ($event) => zoom.value = false
 						}, {
@@ -204,13 +204,13 @@ var _sfc_main$1 = {
 							"href",
 							"onMouseenter",
 							"onMouseleave"
-						]), createVNode("div", { class: "order-2 flex flex-col justify-between p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full" }, [createVNode("div", null, [
-							createVNode("div", { class: "mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest" }, [
+						]), createVNode("div", { class: "order-2 flex flex-col justify-between p-4 sm:p-6 sm:ps-12 sm:pe-6 sm:pb-6 sm:pt-6 lg:ps-16 xl:order-1 h-full min-w-0" }, [createVNode("div", { class: "min-w-0" }, [
+							createVNode("div", { class: "mt-2 sm:mt-4 mb-4 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs uppercase tracking-widest min-w-0" }, [
 								createVNode("span", {
 									class: "rounded-md border border-gray-300 px-2.5 py-1 font-medium text-gray-600",
 									textContent: toDisplayString(__props.project.type_label)
 								}, null, 8, ["textContent"]),
-								createVNode("div", { class: "flex items-center gap-2 text-gray-400" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
+								createVNode("div", { class: "flex flex-wrap items-center gap-1.5 sm:gap-2 text-gray-400 min-w-0" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.project.role_labels, (role, index) => {
 									return openBlock(), createBlock(Fragment, { key: role }, [createVNode("span", null, toDisplayString(role), 1), index !== __props.project.role_labels.length - 1 ? (openBlock(), createBlock("span", {
 										key: 0,
 										class: "opacity-30"
@@ -221,9 +221,9 @@ var _sfc_main$1 = {
 									class: "rounded-md bg-amber-100 px-2.5 py-1 normal-case tracking-normal text-amber-600 font-medium"
 								}, toDisplayString(__props.translations.projects?.ongoing ?? __props.translations.projects?.in_progress ?? "Ongoing"), 1)) : createCommentVNode("", true)
 							]),
-							createVNode("h3", { class: "mb-3 sm:mb-4 text-start text-xl font-semibold leading-snug lg:text-2xl font-display text-gray-900" }, toDisplayString(__props.project.header), 1),
+							createVNode("h3", { class: "mb-3 sm:mb-4 text-start text-lg sm:text-xl lg:text-2xl font-semibold leading-snug font-display text-gray-900 break-words [overflow-wrap:anywhere] min-w-0" }, toDisplayString(__props.project.header), 1),
 							createVNode("p", {
-								class: "mb-6 sm:mb-8 line-clamp-3 text-start leading-relaxed text-gray-600",
+								class: "mb-6 sm:mb-8 line-clamp-3 text-start text-sm sm:text-base leading-relaxed text-gray-600 break-words [overflow-wrap:anywhere]",
 								innerHTML: __props.project.description
 							}, null, 8, ["innerHTML"])
 						]), createVNode("div", { class: "mt-auto pt-3 pb-1 flex flex-col items-start gap-2" }, [formattedDates.value ? (openBlock(), createBlock("div", {
@@ -274,7 +274,7 @@ var _sfc_main = {
 					if (_push) {
 						_push(`<div class="container mx-auto space-y-20 text-center lg:text-left"${_scopeId}><div class="flex flex-col items-center"${_scopeId}>`);
 						_push(ssrRenderComponent(Subtitle_default, { class: "leading-loose" }, null, _parent, _scopeId));
-						_push(`<div class="wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96"${_scopeId}><p class="mt-6 text-lg text-gray-700 lg:text-xl"${_scopeId}>${__props.latestWorkSection.content.description ?? ""}</p></div></div><div class="mt-20 grid justify-center gap-10 px-10 sm:px-16"${_scopeId}><!--[-->`);
+						_push(`<div class="wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96"${_scopeId}><p class="mt-6 text-lg text-gray-700 lg:text-xl"${_scopeId}>${__props.latestWorkSection.content.description ?? ""}</p></div></div><div class="mt-20 grid justify-center gap-10 px-4 sm:px-10 lg:px-16"${_scopeId}><!--[-->`);
 						ssrRenderList(__props.latestWorkSection.latest_projects.data, (project) => {
 							_push(ssrRenderComponent(_sfc_main$1, {
 								key: project.id,
@@ -289,7 +289,7 @@ var _sfc_main = {
 					}, null, 8, ["innerHTML"]), createVNode("div", { class: "wrap-break-word px-2 text-center md:px-20 lg:px-48 xl:px-96" }, [createVNode("p", {
 						class: "mt-6 text-lg text-gray-700 lg:text-xl",
 						innerHTML: __props.latestWorkSection.content.description
-					}, null, 8, ["innerHTML"])])]), createVNode("div", { class: "mt-20 grid justify-center gap-10 px-10 sm:px-16" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.latestWorkSection.latest_projects.data, (project) => {
+					}, null, 8, ["innerHTML"])])]), createVNode("div", { class: "mt-20 grid justify-center gap-10 px-4 sm:px-10 lg:px-16" }, [(openBlock(true), createBlock(Fragment, null, renderList(__props.latestWorkSection.latest_projects.data, (project) => {
 						return openBlock(), createBlock(_sfc_main$1, {
 							key: project.id,
 							project,
@@ -312,4 +312,4 @@ _sfc_main.setup = (props, ctx) => {
 //#endregion
 export { _sfc_main as default };
 
-//# sourceMappingURL=LatestWork-BW5IPwFz.js.map
+//# sourceMappingURL=LatestWork-CllOt2mo.js.map
