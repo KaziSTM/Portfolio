@@ -26,7 +26,7 @@ const iconMap = {
 const local = computed(() => page.props.locale)
 
 const resume =
-    local.value === 'fr' ? 'assets/docs/Youcef_Nezrek_fr.pdf' : 'assets/docs/Youcef_Nezrek_en.pdf'
+    local.value === 'fr' ? '/assets/docs/Youcef_Nezrek_fr.pdf' : '/assets/docs/Youcef_Nezrek_en.pdf'
 </script>
 
 <template>
@@ -117,11 +117,11 @@ const resume =
 
                         <!--                        CV CTA-->
                         <div
-                            class="absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0"
+                            class="absolute bottom-4 inset-s-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-[85%] max-w-xs md:w-auto md:start-auto md:inset-e-6 md:translate-x-0 rtl:md:translate-x-0"
                         >
                             <a
                                 :href="resume"
-                                class="group flex items-center gap-3 bg-white/90 backdrop-blur px-3 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
+                                class="group flex items-center gap-3.5 bg-white/90 backdrop-blur px-4 py-3 md:px-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200 w-full md:w-auto"
                                 target="_blank"
                             >
                                 <div

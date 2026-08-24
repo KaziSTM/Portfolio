@@ -86,7 +86,7 @@ const zoom = ref(false)
 
                         <!-- TITLE -->
                         <h3
-                            class="block mt-2.5 sm:mt-3.5 text-xl sm:text-2xl font-semibold text-gray-900 leading-snug font-display text-center"
+                            class="block mt-2.5 sm:mt-3.5 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 leading-snug font-display text-center break-words [overflow-wrap:anywhere] min-w-0"
                             v-text="project.header"
                         ></h3>
 

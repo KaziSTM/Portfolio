@@ -28,7 +28,7 @@ defineProps({
                 </div>
 
                 <!-- Projects -->
-                <div class="mt-20 grid justify-center gap-10 px-10 sm:px-16">
+                <div class="mt-20 grid justify-center gap-10 px-4 sm:px-10 lg:px-16">
                     <ProjectCard
                         v-for="project in latestWorkSection.latest_projects.data"
                         :key="project.id"
