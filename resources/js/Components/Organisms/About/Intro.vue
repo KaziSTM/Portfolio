@@ -64,7 +64,7 @@ defineProps({
         <div class="block lg:hidden w-full relative overflow-hidden">
             <div class="relative h-80 sm:h-95 md:h-105">
                 <img
-                    :src="'/assets/images/portrait.webp'"
+                    :src="'/assets/images/portrait-2.webp'"
                     alt="Portrait"
                     class="absolute inset-0 w-full h-full object-cover object-top"
                     style="filter: grayscale(15%) contrast(1.05)"
